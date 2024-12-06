@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.Platform.ClrStack.Worker</name>
+    </assembly>
+    <members>
+        <member name="F:JetBrains.Platform.ClrStack.Worker.ClrStackWorker.StackTracesCaptureTimeout">
+            <summary>
+            Must be in sync with <c>CaptureStackTracesOfAllThreads::StackTracesCaptureTimeout</c>.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,240 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.PsiFeatures.UIInteractive.LiveTemplates</name>
+    </assembly>
+    <members>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.SrcView.TemplateEditor.ConstantMacroParameterView">
+            <summary>
+            ConstantMacroParameterView
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.SrcView.TemplateEditor.ConstantMacroParameterView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.SrcView.TemplateEditor.FieldView">
+            <summary>
+            FieldView
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.SrcView.TemplateEditor.FieldView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.SrcView.TemplateEditor.MultipleEditableOccurrenceView">
+            <summary>
+            MultipleEditableOccurrenceView
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.SrcView.TemplateEditor.MultipleEditableOccurrenceView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.SrcView.TemplateEditor.SingleEditableOccurrenceView">
+            <summary>
+            SingleEditableOccurrenceView
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.SrcView.TemplateEditor.SingleEditableOccurrenceView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.SrcView.TemplateEditor.TemplateEditorViewControl">
+            <summary>
+            TemplateEditorViewControl
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.SrcView.TemplateEditor.TemplateEditorViewControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.SrcView.TemplateEditor.TemplateReferenceMappingView">
+            <summary>
+            TemplateReferenceMappingView
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.SrcView.TemplateEditor.TemplateReferenceMappingView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.SrcView.TemplateEditor.TemplateReferenceSectionView">
+            <summary>
+            TemplateReferenceSectionView
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.SrcView.TemplateEditor.TemplateReferenceSectionView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.SrcView.TemplateEditor.TemplatesFilterPanel">
+            <summary>
+            Interaction logic for TemplatesFilterPanel.xaml
+            </summary>
+            <summary>
+            TemplatesFilterPanel
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.SrcView.TemplateEditor.TemplatesFilterPanel.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.SrcView.TemplateEditor.TemplateTextEditor.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.SrcView.MacroChooserDialog">
+            <summary>
+            MacroChooserDialog
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.SrcView.MacroChooserDialog.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.SrcView.MacroChooserView">
+            <summary>
+            MacroChooserView
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.SrcView.MacroChooserView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.SrcView.TypeMacroParameterView">
+            <summary>
+            TypeMacroParameterView
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.SrcView.TypeMacroParameterView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.SrcView.VariableMacroParameterView">
+            <summary>
+            VariableMacroParameterView
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.SrcView.VariableMacroParameterView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.CSharp.CSharpScopeConfig">
+            <summary>
+            CSharpScopeConfig
+            </summary>
+            <summary>
+            Interaction logic for CSharpScopeConfig.xaml
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.CSharp.CSharpScopeConfig.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.EnterNameDialog.GetNameOrDefault(System.String,System.String,System.Func{System.String,System.Boolean})">
+            <summary>
+            Show the dialog where user can enter name
+            </summary>
+            <param name="what">What is name for</param>
+            <param name="currentName">What should be in the text box initially</param>
+            <param name="validate">Predicate should return true if the string is a correct name</param>
+            <returns>Name or null if user cancels</returns>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.FieldsSelectionDialog">
+            <summary>
+            Summary description for FieldsSelectionDialog.
+            </summary>
+        </member>
+        <member name="F:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.FieldsSelectionDialog.components">
+            <summary>Required designer variable.</summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.FieldsSelectionDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.FieldsSelectionDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.TemplateChooserDialog">
+            <summary>
+            Summary description for TemplateChooserDialog.
+            </summary>
+        </member>
+        <member name="F:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.TemplateChooserDialog.components">
+            <summary>Required designer variable.</summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.TemplateChooserDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.TemplateChooserDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.VB.VBScopeConfig">
+            <summary>
+            Interaction logic for CSharpScopeConfig.xaml
+            </summary>
+            <summary>
+            VBScopeConfig
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.LiveTemplates.VB.VBScopeConfig.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>

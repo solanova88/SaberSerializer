@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.Platform.BuildEvents</name>
+    </assembly>
+    <members>
+        <member name="T:JetBrains.Platform.BuildEvents.BuildEventsModel">
+            <summary>
+            <p>Generated from: BuildEventsModel.kt</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.BuildEvents.BuildEvent">
+            <summary>
+            <p>Generated from: BuildEventsModel.kt</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.BuildEvents.BuildEventKind">
+            <summary>
+            <p>Generated from: BuildEventsModel.kt</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.BuildEvents.MetaItem">
+            <summary>
+            <p>Generated from: BuildEventsModel.kt</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.BuildEvents.OutputBuildEventReference">
+            <summary>
+            <p>Generated from: BuildEventsModel.kt</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.BuildEvents.OutputItemBase">
+            <summary>
+            <p>Generated from: BuildEventsModel.kt</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.BuildEvents.OutputItemWithMessage">
+            <summary>
+            <p>Generated from: BuildEventsModel.kt</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.BuildEvents.OutputKind">
+            <summary>
+            <p>Generated from: BuildEventsModel.kt</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.BuildEvents.ProjectIdEntry">
+            <summary>
+            <p>Generated from: BuildEventsModel.kt</p>
+            </summary>
+        </member>
+    </members>
+</doc>

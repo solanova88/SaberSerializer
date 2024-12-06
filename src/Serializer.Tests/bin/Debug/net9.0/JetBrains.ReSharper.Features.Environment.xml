@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.ReSharper.Features.Environment</name>
+    </assembly>
+    <members>
+        <member name="F:JetBrains.ReSharper.Features.Environment.CopyFqn.PresentableFqn.Mnemonic">
+            <summary>
+            Preferred symbol for mnemonic
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Environment.GitCommandRunner.Run(System.String,JetBrains.Util.VirtualFileSystemPath,System.Int32,System.Boolean)">
+            <summary>
+            Executes a git command a return output.
+            </summary>
+            <returns>command output or null, if git is not available</returns>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Environment.GitCommandRunner.ExpectOneLine(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Environment.Options.FeaturesEnvironmentGeneralPageCaches">
+            <summary>The environment options page.</summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Environment.Options.FeaturesEnvironmentGeneralPageIcons">
+            <summary>The environment options page.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Environment.PackageChecker.VulnerabilitiesApi.Query(System.Collections.Generic.IEnumerable{JetBrains.ProjectModel.Assemblies.Interfaces.INugetPackageName},System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Query JetBrains vulnerabilities service
+            </summary>
+            <param name="packageNames">the list of packages to check. No more than <see cref="F:JetBrains.ReSharper.Features.Environment.PackageChecker.VulnerabilitiesApi.MaxBatchSize"/></param>
+            <param name="uid"></param>
+            <param name="cancel"></param>
+            <returns></returns>
+            <exception cref="T:System.Net.Http.HttpRequestException"></exception>
+            <exception cref="T:Newtonsoft.Json.JsonSerializationException"></exception>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Environment.PackageChecker.VulnerabilitiesApi.Query(JetBrains.ReSharper.Features.Environment.PackageChecker.VulnerabilitiesApi.VulRequest,System.Threading.CancellationToken)">
+            <summary>
+            Query JetBrains vulnerabilities service
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.Net.Http.HttpRequestException"></exception>
+            <exception cref="T:Newtonsoft.Json.JsonSerializationException"></exception>
+        </member>
+        <member name="F:JetBrains.ReSharper.Features.Environment.PackageChecker.VulnerablePackagesTracker.myScheduleNextLifetime">
+            The lifetime of Task in future, which trigger invalidation.
+        </member>
+        <member name="F:JetBrains.ReSharper.Features.Environment.PackageChecker.VulnerablePackagesTracker.myInvalidateRequested">
+            An always available Signal which triggers async flow of retrieving information regarding vulnerable packages.
+            When package checked is disabled does nothing, but still non-null.
+        </member>
+        <member name="F:JetBrains.ReSharper.Features.Environment.PackageChecker.VulnerablePackagesTracker.myNuGetVulnerableStatusMap">
+            Persistent map for known vulnerable packages and non-vulnerable markers, which helping to reduce server load
+        </member>
+        <member name="F:JetBrains.ReSharper.Features.Environment.PackageChecker.VulnerablePackagesTracker.myIgnoredPackages">
+            The list of ignored packages from settings
+        </member>
+        <member name="F:JetBrains.ReSharper.Features.Environment.PackageChecker.VulnerablePackagesTracker.myVulnerableMethodFqns">
+            storage for <see cref="P:JetBrains.ReSharper.Features.Environment.PackageChecker.VulnerablePackagesTracker.VulnerableMethodFqns"/>
+        </member>
+        <member name="F:JetBrains.ReSharper.Features.Environment.PackageChecker.VulnerablePackagesTracker.myVulnerableMethodShortNames">
+            storage for <see cref="P:JetBrains.ReSharper.Features.Environment.PackageChecker.VulnerablePackagesTracker.VulnerableMethodShortNames"/>
+        </member>
+        <member name="P:JetBrains.ReSharper.Features.Environment.PackageChecker.VulnerablePackagesTracker.VulnerableMethodFqns">
+            This dictionary contains vulnerable full qualified method names necessary for enabling highlighting functionality.
+            It is populated upon the detection of a vulnerable package.
+        </member>
+        <member name="P:JetBrains.ReSharper.Features.Environment.PackageChecker.VulnerablePackagesTracker.VulnerableMethodShortNames">
+            This set contains the short names of vulnerable methods.
+            It is used to reduce the number of calls to PSI for retrieving FQNs (Fully Qualified Names).
+        </member>
+        <member name="P:JetBrains.ReSharper.Features.Environment.PackageChecker.VulnerablePackagesTracker.Enabled">
+            Live value bound to settings
+        </member>
+        <member name="P:JetBrains.ReSharper.Features.Environment.PackageChecker.VulnerablePackagesTracker.VulnerablePackages">
+            <inheritdoc />
+        </member>
+        <member name="P:JetBrains.ReSharper.Features.Environment.PackageChecker.VulnerablePackagesTracker.Changed">
+            Fires when the value of <see cref="P:JetBrains.ReSharper.Features.Environment.PackageChecker.VulnerablePackagesTracker.VulnerablePackages"/> is changed
+        </member>
+        <member name="P:JetBrains.ReSharper.Features.Environment.PackageChecker.VulnerablePackagesTracker.InSync">
+            True when the status in <see cref="P:JetBrains.ReSharper.Features.Environment.PackageChecker.VulnerablePackagesTracker.VulnerablePackages"/> is actual with the list of <see cref="T:JetBrains.ReSharper.Feature.Services.PackageChecker.IPackageCheckerPackagesProvider"/>
+        </member>
+        <member name="F:JetBrains.ReSharper.Features.Environment.PackageChecker.VulnerablePackagesTracker.myDefaultMaxAge">
+            Connections issue, when max age isn't set,
+        </member>
+        <member name="F:JetBrains.ReSharper.Features.Environment.PackageChecker.VulnerablePackagesTracker.myLongTermMaxAge">
+            Unknown serialization format, banned regions, wrong format of request.
+        </member>
+        <member name="F:JetBrains.ReSharper.Features.Environment.PackageChecker.VulnerablePackagesTracker.myServerErrorMaxAge">
+            Server-side issues. Grow on each hit.
+        </member>
+        <member name="F:JetBrains.ReSharper.Features.Environment.PackageChecker.VulnerablePackagesTracker.myThrottlingMaxAge">
+            Throttling timeout. Grow on each hit by random amount to reduce probability of collisions with simultaneously active instances
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Environment.PackageChecker.VulnerablePackagesTracker.Invalidate">
+            Forces synchronization of package statuses from Vulnerability checker service.
+        </member>
+    </members>
+</doc>

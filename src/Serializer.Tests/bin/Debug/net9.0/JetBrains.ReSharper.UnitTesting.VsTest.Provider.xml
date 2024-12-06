@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.ReSharper.UnitTesting.VsTest.Provider</name>
+    </assembly>
+    <members>
+        <member name="T:JetBrains.ReSharper.UnitTestProvider.VsTest.Provider.VsTestThemedIcons.VsTest">
+             <summary>
+            	<para>
+            		<para>VsTest Themed Icon generated identifiers:</para>
+            		<para>— <see cref="!:Vstest"></see> identifier class, for use in attributes, XAML, and generic parameters;</para>
+            		<para>— <see cref="F:JetBrains.ReSharper.UnitTestProvider.VsTest.Provider.VsTestThemedIcons.VsTest.Id"></see> identifier object, as a field in the identifier class, for use where an <see cref="T:JetBrains.UI.Icons.IconId"></see> value is expected.</para>
+            		<para>
+            			<code>
+                                             
+                                             
+                                             
+                  `_;!r))ffJ)+~`             
+                `*|/,-`````.:"rffTrrrrrrrrrrr
+               .T):`'----""_::-:s2:        ))
+               \z"-::::::~~~~~~:"ei  NNNN  77
+               FF::,,,,,,!!!!!!^^VV        ll
+               ff__^^^^^^rrrrrr;;EE        CC
+               |2!~~;;;;;)))))c+rh2``NNNN``oo
+               :jF=;;!!!!JJJv7|Te6;````````kk
+                -fe}L+===lllFCy6bb66666666666
+                  :r}2ZZZbbbEuc:             
+                                             
+                                             
+                                             
+            </code>
+            		</para>
+            	</para>
+            </summary>
+            <remarks>
+            	<para>For details on Themed Icons and their use, see Remarks on the outer class.</para>
+            </remarks>
+            <example>
+            	<code>&lt;Image Source="{icons:ThemedIcon myres:VsTestThemedIcons+VsTest}" /&gt;        &lt;!-- XAML --&gt;</code>
+            </example>
+            <example>
+            	<code>[Item(Name="Sample", Icon=typeof(VsTestThemedIcons.VsTest))]        // C# Type attribute</code>
+            </example>
+            <example>
+            	<code>IconId iconid = VsTestThemedIcons.VsTest.Id;        // IconId identifier object</code>
+            </example>
+            <example>
+            	<code>themediconmanager.GetIcon&lt;VsTestThemedIcons.VsTest&gt;()        // Icon image for rendering</code>
+            </example>
+        </member>
+        <member name="F:JetBrains.ReSharper.UnitTestProvider.VsTest.Provider.VsTestThemedIcons.VsTest.Id">
+            <inheritdoc cref="T:JetBrains.ReSharper.UnitTestProvider.VsTest.Provider.VsTestThemedIcons.VsTest">identifier class</inheritdoc>
+        </member>
+        <member name="M:JetBrains.ReSharper.UnitTestProvider.VsTest.Provider.VsTestThemedIcons.VsTest.Load_Color">
+            <summary>Loads the image for Themed Icon Vstest theme aspect Color.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.UnitTestProvider.VsTest.Provider.VsTestThemedIcons.VsTest.Load_Gray">
+            <summary>Loads the image for Themed Icon Vstest theme aspect Gray.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.UnitTestProvider.VsTest.Provider.VsTestThemedIcons.VsTest.Load_GrayDark">
+            <summary>Loads the image for Themed Icon Vstest theme aspect GrayDark.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.UnitTestProvider.VsTest.Provider.VsTestThemedIcons.VsTest.Load_RiderLight">
+            <summary>Loads the image for Themed Icon Vstest theme aspect RiderLight.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.UnitTestProvider.VsTest.Provider.VsTestThemedIcons.VsTest.GetThemeImages">
+            <summary>Returns the set of theme images for Themed Icon Vstest.</summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.PsiFeatures.VisualStudio.Debugger</name>
+    </assembly>
+    <members>
+        <member name="T:JetBrains.PsiFeatures.VisualStudio.Debugger.DebugPropertyNodeView">
+            <summary>
+            DebugPropertyNodeView
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.Debugger.DebugPropertyNodeView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:JetBrains.PsiFeatures.VisualStudio.Debugger.AI.ExceptionExplanationAdornmentCalculator.IsFeatureEnabled">
+            Property from settings that enables/disables the explain exception feature.
+            This property doesn't require AI zone to use.
+        </member>
+        <member name="P:JetBrains.PsiFeatures.VisualStudio.Debugger.CallStack.GotoCallStackManager.ExpressionDirty">
+            <summary>
+            Event raised on context changes in the callstack window.
+            Most notably, when the current frame changed.
+            
+            No reentrancy guard here.
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.Debugger.Predictive.VSExpressionEvaluator.EvaluateAndSaveImpl(JetBrains.ReSharper.Psi.CSharp.Tree.ICSharpExpression,System.String,System.String,JetBrains.ReSharper.Psi.IType,System.Boolean)">
+            templates has this format: $0 - type, $1 - expression
+        </member>
+    </members>
+</doc>

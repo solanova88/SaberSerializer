@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.Platform.UIInteractive.Wpf.Symbols</name>
+    </assembly>
+    <members>
+        <member name="T:JetBrains.Platform.UIInteractive.Wpf.Symbols.Build.Validation.ValidateSymbolsUiShipped">
+            <summary>
+            If smb ships Symbols core feature and WPF UI, must also ship this UI 
+            </summary>
+        </member>
+        <member name="F:JetBrains.Platform.UIInteractive.Wpf.Symbols.Controls.EulaDialogView.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Wpf.Symbols.Controls.EulaDialogView.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Wpf.Symbols.Controls.EulaDialogView.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

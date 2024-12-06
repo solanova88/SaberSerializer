@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.Platform.VisualStudio.Util</name>
+    </assembly>
+    <members>
+        <member name="M:JetBrains.VsIntegration.BuildScript.PreCompile.Autofix.SinceJustVsStages.JetBrains#Application#BuildScript#PreCompile#Autofix#IAutofixSingleProjectStage#RunStage(JetBrains.Application.BuildScript.Solution.SubplatformProjectWrapper,System.Xml.Linq.XDocument)">
+            <inheritdoc />
+        </member>
+        <member name="F:JetBrains.VsIntegration.Shell.Actions.Revised.VsActionsDefs.GuidToVsctSymbolPart">
+            <summary>
+            VsctGuidSymbolAttribute marked type to its vsct guid
+            </summary>
+        </member>
+        <member name="F:JetBrains.VsIntegration.Shell.Actions.Revised.VsActionsDefs.PartTypeToVsAttributes">
+            <summary>
+            VsctIDSymbolAttribute marked class to its command id and command type.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.ReSharper.Feature.Services.AI</name>
+    </assembly>
+    <members>
+        <member name="T:JetBrains.ReSharper.Feature.Services.AI.CodeSetsProviding.Utils.PriorityQueue`1">
+            <summary>
+            Priority queue. Elements with lower priority go out first!
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:JetBrains.ReSharper.Feature.Services.AI.IArtificialIntelligenceAvailability.Available" -->
+    </members>
+</doc>

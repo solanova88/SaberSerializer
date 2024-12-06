@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.PsiFeatures.VisualStudio.SinceVs10</name>
+    </assembly>
+    <members>
+        <member name="T:JetBrains.PsiFeatures.VisualStudio.SinceVs10.NuGet.NuGetBrowser.ToolWindow.Confirmation.ConfirmationView">
+            <summary>
+            ConfirmationView
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.SinceVs10.NuGet.NuGetBrowser.ToolWindow.Confirmation.ConfirmationView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.VisualStudio.SinceVs10.NuGet.NuGetBrowser.ToolWindow.Common.View.ExceptionInformationView">
+            <summary>
+            ExceptionInformationView
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.SinceVs10.NuGet.NuGetBrowser.ToolWindow.Common.View.ExceptionInformationView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.VisualStudio.SinceVs10.NuGet.NuGetBrowser.ToolWindow.Installation.View.InstallationStateView">
+            <summary>
+            InstallationStateView
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.SinceVs10.NuGet.NuGetBrowser.ToolWindow.Installation.View.InstallationStateView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.VisualStudio.SinceVs10.NuGet.NuGetBrowser.ToolWindow.Browser.View.NugetBrowserView">
+            <summary>
+            NugetBrowserView
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.SinceVs10.NuGet.NuGetBrowser.ToolWindow.Browser.View.NugetBrowserView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.VisualStudio.SinceVs10.NuGet.NuGetBrowser.ToolWindow.Default.View.NuGetDefaultView">
+            <summary>
+            NuGetDefaultView
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.SinceVs10.NuGet.NuGetBrowser.ToolWindow.Default.View.NuGetDefaultView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.VisualStudio.SinceVs10.NuGet.NuGetBrowser.ToolWindow.Default.TestSettings.View.TestSettingProviderView">
+            <summary>
+            TestSettingProviderView
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.SinceVs10.NuGet.NuGetBrowser.ToolWindow.Default.TestSettings.View.TestSettingProviderView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.VisualStudio.SinceVs10.NuGet.NuGetBrowser.ToolWindow.Lookup.View.NuGetLookupView">
+            <summary>
+            NuGetLookupView
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.SinceVs10.NuGet.NuGetBrowser.ToolWindow.Lookup.View.NuGetLookupView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.VisualStudio.SinceVs10.NuGet.NuGetBrowser.ToolWindow.Lookup.View.PackageResultFullDescriptionView">
+            <summary>
+            PackageResultFullDescriptionView
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.SinceVs10.NuGet.NuGetBrowser.ToolWindow.Lookup.View.PackageResultFullDescriptionView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.VisualStudio.SinceVs10.NuGet.NuGetBrowser.ToolWindow.Lookup.View.PackageResultShortDescriptionView">
+            <summary>
+            PackageResultShortDescriptionView
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.SinceVs10.NuGet.NuGetBrowser.ToolWindow.Lookup.View.PackageResultShortDescriptionView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.SinceVs10.Debugger.IAsyncVsDebugChildrenBuilder.BuildChildrenAsync(JetBrains.Lifetimes.Lifetime,JetBrains.PsiFeatures.VisualStudio.SinceVs10.Debugger.DebugPropertyOrStackFrame,System.Int32,System.Int32)">
+            <summary>
+            Builds the children of a debug property asynchronously.
+            </summary>
+            <param name="lifetime">Lifetime for operation.</param>
+            <param name="property">
+            The debug property for which to build children.
+            The debug stack frame associated with the property, if IDebugProperty2 represent a root of stack frame.
+            UB if IDebugProperty2 is not representing given IDebugStackFrame2.
+            </param>
+            <exception cref="T:System.Exception">May throw an exception if Property2 represents a stack frame root and StackFrame2 is null.</exception>
+            <exception cref="T:System.NotSupportedException">If provided objects are not supported required version of api/sdk.</exception>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.VisualStudio.SinceVs10.TextControl.Intellisense.VsHotSpotSessionMonitorSinceVs10">
+            <summary>
+            The component monitors hotspot sessions and
+            1) provides other VS extensions with the flag that a R# hotspot session is active at the moment;
+            2) suspends R# dispatcher messages pre-translation.
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>

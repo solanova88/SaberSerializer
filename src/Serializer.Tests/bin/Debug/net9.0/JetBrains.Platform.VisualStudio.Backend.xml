@@ -1,0 +1,718 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.Platform.VisualStudio.Backend</name>
+    </assembly>
+    <members>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.Actions.Defs.IDE.Internal.DebugActions.DTEPropertiesTesterShowAction.JetBrains#Application#UI#ActionsRevised#Menu#IExecutableAction#Execute(JetBrains.Application.DataContext.IDataContext,JetBrains.Application.UI.Actions.DelegateExecute)">
+            <summary>
+            Executes action. Called after Update, that set ActionPresentation.Enabled to true.
+            </summary>
+            <param name="context">DataContext</param>
+            <param name="nextExecute">delegate to call</param>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.Actions.Defs.IDE.Internal.DebugActions.DTEPropertiesTesterShowAction.JetBrains#Application#UI#ActionsRevised#Menu#IExecutableAction#Update(JetBrains.Application.DataContext.IDataContext,JetBrains.Application.UI.Actions.ActionPresentation,JetBrains.Application.UI.Actions.DelegateUpdate)">
+            <summary>
+            Updates action visual presentation. If presentation.Enabled is set to false, Execute
+            will not be called.
+            </summary>
+            <param name="context">DataContext</param>
+            <param name="presentation">presentation to update</param>
+            <param name="nextUpdate">delegate to call</param>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.Actions.Defs.IDE.Internal.DebugActions.UpdateMultiIdeActionMapWithReSharperShortcuts.ReSharperKeymapProvider.ToVsCommandName(System.String)">
+            <summary>
+            When R# actions are exported to VS, all punctuation chars ('.', '_', etc) are removed from action names.
+            See: <see cref="!:JetBrains.Platform.VisualStudio.VsctToCtoCompiler.VsctRevised.VsctBuilder.Mangle"/> and <see cref="M:JetBrains.Util.StringUtil.MakeUpperCamelCaseName(System.String)"/>.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.Actions.Defs.IDE.ProjectDocuments.Builder.Internal.ProjectModelFromFileSystemHelper.DumpWildcardContainer">
+            <summary>
+            Dumps wildcard container
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.Actions.Defs.IDE.ProjectDocuments.Builder.Internal.ProjectModelFromFileSystemHelper.UpdateProjectModelFromFileSystemAsync(JetBrains.ProjectModel.SolutionStructure.SolutionConfigurations.ISolutionConfigurationAndPlatform)">
+            <summary>
+            Async updates project model from file system for currently selected configuration
+            </summary>
+            <param name="solutionConfigurationAndPlatform">Current solution configuration and platform</param>
+            <returns>Task to track its completion</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.Actions.Defs.IDE.ProjectDocuments.Builder.Internal.ProjectModelFromFileSystemHelper.ReloadProjectsFromFileSystemAndCollectLogsAsync(JetBrains.ProjectModel.SolutionStructure.SolutionConfigurations.ISolutionConfigurationAndPlatform,System.Collections.Generic.JetHashSet{JetBrains.Util.VirtualFileSystemPath},JetBrains.Util.FileSystemPath)">
+            <summary>
+            Async updates selected project from file system for currently selected configuration and collects logs
+            </summary>
+            <param name="solutionConfigurationAndPlatform">Current solution configuration and platform</param>
+            <param name="projectFilePaths">Paths to project files (and website locations) to reload.</param>
+            <param name="logFilePath">Path to create log file where solution loader will write it's logs to. Msbuild lof will be created nearby</param>
+            <returns>Task to track its completion</returns>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Backend.Actions.Defs.Shell.Package.PackageSuspendResumeActions">
+            <summary>
+            Stub implementation for the actions. As most of them (resume and toggle-as-resume) must work without any shell running, these actions are intercepted by the package itself and executed without calling this handler thru the Actions Manager.
+            We need to declare the actions in Actions.Xml to be registered with VS, and then provide the dummy handlers for the product to pass load-time validation.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Backend.Actions.Defs.Shell.Package.PackageSuspendResumeActionAttribute">
+            <summary>
+            Drives the filter to pick out the package-universal action parts from the catalog.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.Actions.Defs.UI.WindowManagement.WindowFrameGenericPaneHwndHealthCheckAction.JetBrains#Application#UI#ActionsRevised#Menu#IExecutableAction#Execute(JetBrains.Application.DataContext.IDataContext,JetBrains.Application.UI.Actions.DelegateExecute)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.Actions.Defs.UI.WindowManagement.WindowFrameGenericPaneHwndHealthCheckAction.JetBrains#Application#UI#ActionsRevised#Menu#IExecutableAction#Update(JetBrains.Application.DataContext.IDataContext,JetBrains.Application.UI.Actions.ActionPresentation,JetBrains.Application.UI.Actions.DelegateUpdate)">
+            <inheritdoc />
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Backend.DocumentModel.VsUndoContextBackend">
+            <summary>
+            Track active commands and opens UndoContext on frontend when requested
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.DocumentModel.Whidbey.Alter.VsDOHBackendAlter.SynchronizeDocument(System.Boolean)">
+            <summary>
+            Force reset backend document to the current version of frontend if they are differ
+            </summary>
+            <param name="reconcile"></param>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Backend.DocumentModel.Whidbey.Doh.FileSystemDocumentOperationsHandler">
+            <summary>
+            When the document is not open in Visual Studio RDT, operates on the disk files directly.
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Backend.DocumentModel.Whidbey.Doh.FileSystemDocumentOperationsHandler.FileDidNotExist">
+            <summary>
+            The file did not exist at the moment when the operation handler was created.
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Backend.DocumentModel.Whidbey.Doh.FileSystemDocumentOperationsHandler.Moniker">
+            <summary>
+            Gets the document moniker (an arbitrary string that helps with identifying this document).
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Backend.DocumentModel.Whidbey.Doh.IDocumentOperationsHandler">
+            <summary>
+            Base interface for the pluggable part of the <see cref="T:JetBrains.DocumentModel.IDocument"/> implementation that switches between feeding on file system entities and Visual Studio RDT Text Buffers.
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Backend.DocumentModel.Whidbey.Doh.IDocumentOperationsHandler.Moniker">
+            <summary>
+            Gets the document moniker (an arbitrary string that helps with identifying this document).
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Backend.DocumentModel.Whidbey.Doh.TextDocumentOperationsHandler">
+            <summary>
+            A simple operations handler for in-memory documents.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Backend.DocumentModel.Whidbey.Doh.TransitionalDocumentOperationsHandler">
+            <summary>
+            Document operations handler that exists when backend requested document open but the document is not bound to the frontend yet
+            </summary>
+        </member>
+        <member name="F:JetBrains.Platform.VisualStudio.Backend.DocumentModel.Whidbey.VsDocumentWhidbey.myReadOnlyLockRequests">
+            <summary>
+            Read-only requests for the whole document.
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Backend.DocumentModel.Whidbey.VsDocumentWhidbey.Moniker">
+            <summary>
+            Gets the document moniker (an arbitrary string that helps with identifying this document).
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.DocumentModel.Whidbey.VsDocumentWhidbey.MakeReadonly(JetBrains.Lifetimes.Lifetime,JetBrains.Util.TextRange)">
+            <summary>
+            Locks a document range temporarily to prevent it from being edited. To unlock, dispose of the return value.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.DocumentModel.Whidbey.VsDocumentWhidbey.Release(JetBrains.Util.VirtualFileSystemPath)">
+            <summary>
+            Free resources and make the document ready for subsequent reuse.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.DocumentModel.Whidbey.VsDocumentWhidbey.GetDocumentOperationsHandler">
+            <summary>
+            For testing purposes only. Do not use it in features.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.DocumentModel.Whidbey.VsInMemoryDocumentFactoryWhidbey.CreateIdeDocumentFromText(JetBrains.Lifetimes.Lifetime,System.String,System.String,System.Func{JetBrains.DocumentModel.IDocument,JetBrains.Util.ModificationCookie})">
+            <summary>
+            Creates an <see cref="T:JetBrains.DocumentModel.IDocument"/> from the given text.
+            In tests, that would be a simple implementation (<see cref="M:JetBrains.DocumentModel.IInMemoryDocumentFactory.CreateSimpleDocumentFromText(System.String,System.String,JetBrains.DocumentModel.Transactions.IDocumentTransactionManager)"/>).
+            In VS, that would be a VS text buffer.
+            </summary>
+            <param name="lifetime">Document lifetime.</param>
+            <param name="text">Document text.</param>
+            <param name="moniker">Document moniker that uniquely identifies this document.</param>
+            <param name="ensureWritableHandler">Queries whether the document is allowed to be written.</param>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.IDE.SolutionBuilder.SolutionConfigurationHolder.Recalculate">
+            <summary>
+            Get and store solution configuration(Debug/Release mode, x64/x86) for each project
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Backend.IDE.SolutionBuilder.VsSolutionBuildWatcher">
+            <summary>
+            Invokes Visual Studio to build the projects.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.IDE.SolutionBuilder.VsSolutionBuildWatcher.CreateBuildRequest(JetBrains.ProjectModel.Features.SolutionBuilders.IBuildSessionTarget)">
+            <summary>
+            Creates a new build session.
+            </summary>
+            <param name="target">How to build the projects.</param>
+            <returns>The new session on which the build could be started and the progress could be tracked.</returns>
+        </member>
+        <member name="F:JetBrains.Platform.VisualStudio.Backend.IDE.VsEditorManagerBackend.myEditorOpeningWithActivationSequenceNumber">
+            <summary>
+            Async text control opening processes are numbered (at the moment the call is made, before waiting for prev pending processes).
+            So at any point in process of opening a text control you can see if there were newer processes started.
+            UPD: now only tracking those opening process which would require activating a text control.
+            Use CAS/fences when accessing, since opening sequence goes async and not thread-bound.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.IDE.VsEditorManagerBackend.TryFindExistingTextControl(System.Collections.Immutable.ImmutableArray{JetBrains.ProjectModel.IProjectFile},JetBrains.Util.VirtualFileSystemPath)">
+            <summary>
+            Looks if there's a text control for the conditions we're looking for.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.IDE.VsEditorManagerBackend.WaitForPreviousActivitiesForThisEditorAsync(JetBrains.Lifetimes.Lifetime,JetBrains.Util.VirtualFileSystemPath,System.String)">
+            <summary>
+            When trying to open an editor, if there's ongoing activity for opening the same editor in progress, wait for it to complete first, do not run in parallel.
+            We'd then do regular "already open?" checks and reuse.
+            Instead of tracking activities in this manager, the <see cref="T:JetBrains.Util.DataFlow.Reasons`1" /> mechanism is implicitly reused here.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.IDE.VsEditorManagerBackend.WaitForTextControlForFilesOrErrorAsync(System.Collections.Immutable.ImmutableArray{JetBrains.ProjectModel.IProjectFile})">
+            <summary>
+            Awaits (releasing guard) for front to create a text control bound to desired project file.
+            </summary>
+            <param name="filesToFindTextControlFor">Tries getting file project file (or files) for which we need a text control. Empty list if not ready / not available.</param>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Backend.IDE.VsEnsureWritableHandler">
+            <summary>
+            Attaches to SolutionBase events related to handling making the files writable.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Backend.IDE.VsProjectFileExtensionMappingIdeBackend">
+            <summary>
+            Keeps track of focused text control and sends editorGuid to the backend to discover unknown file extensions based on editor type.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Backend.ProjectDocuments.Transactions.IVsFilesAndFoldersEditor">
+            <summary>
+            Implementation of files and folders operation is Visual Studio for a certain type of project
+            </summary>
+        </member>
+        <member name="F:JetBrains.Platform.VisualStudio.Backend.ProjectModel.FileTypes.StandardEditorsToFileTypeConverter.EditorsMap">
+            <summary>
+            Editor to file type map. Extension is not required. Entities with a given extension can override entities without an extension.
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Backend.ProjectModel.RdProjectModel.DescriptorBuilder.BuildDescriptorsRequest.SolutionConfigurationAndPlatform">
+            <summary>
+            Solution configuration and platform. Necessary to load solution in necessary configuration.
+            TODO: [stepanov] where to take project active configuration from?
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Backend.ProjectModel.RdProjectModel.DescriptorBuilder.BuildDescriptorsRequest.ProjectFilter">
+            <summary>
+            Which projects to include into output. Null means all.
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Backend.ProjectModel.RdProjectModel.DescriptorBuilder.BuildDescriptorsRequest.UnloadedProjectsGuids">
+            <summary>
+            Guids of unloaded projects
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.ProjectModel.RdProjectModel.DescriptorBuilder.BuildDescriptorsRequest.TryGetLogFilePath(JetBrains.Util.ILogger)">
+            <summary>
+            Optional path to the file to write solution loader logs to. Msbuild logs will be created next to it.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Backend.ProjectModel.RdProjectModel.DescriptorBuilder.BuildDescriptorResult">
+            <summary>
+            Built descriptors with their references and errors
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Backend.ProjectModel.RdProjectModel.DescriptorBuilder.BuildDescriptorResult.ProjectDescriptors">
+            <summary>
+            Create project descriptors with their references sorted so Solution folder precedes projects that are contained in it
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Backend.ProjectModel.RdProjectModel.DescriptorBuilder.BuildDescriptorResult.Errors">
+            <summary>
+            Errors happened while loading
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Backend.ProjectModel.RdProjectModel.DescriptorBuilder.IProjectModelDescriptorBuilderFromDisk">
+            <summary>
+            Loads project descriptors from disk using Rider engine upon request
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Backend.ProjectModel.RdProjectModel.DescriptorBuilder.IProjectModelDescriptorBuilderFromDisk.SolutionLoaderArgs">
+            <summary>
+            Currently used solution loader args
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Backend.ProjectModel.RdProjectModel.DescriptorBuilder.IProjectModelDescriptorBuilderFromDisk.RequestBeingProcessed">
+            <summary>
+            Currently processed request if any.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.ProjectModel.RdProjectModel.DescriptorBuilder.IProjectModelDescriptorBuilderFromDisk.RequestBuildDescriptorsAsync(JetBrains.Lifetimes.Lifetime,JetBrains.Platform.VisualStudio.Backend.ProjectModel.RdProjectModel.DescriptorBuilder.BuildDescriptorsRequest)">
+            <summary>
+            Requests building descriptors for project as specified in <see cref="!:request"/>
+            </summary>
+            <param name="requestLifetime">Lifetime for which the <see cref="!:request"/> is valid</param>
+            <param name="request"></param>
+            <returns>Async result</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.Shell.Alter.AlterHacks.SuppressCaretMovementOnDocumentChange">
+             Context: one of the cornerstones of the async typing is that the document on the backend and the text control on the
+             fronted are only eventually consistent. Previously, the synchronization was instantaneous. As a result, there are
+             several (found) backend features that rely on the behavior. To emulate this behavior, when the document is modified
+             from the backend side, we emulate the caret movement accordingly. But the problem arises when Visual Studio produces
+             any actions, that is smarter, than we expect (like executing a complicated undo step from refactoring, which makes
+             a lot of document changes, but the caret stays still). Changing caret is additional commit in the alter history and
+             the backend always wins in the conflict resolution which makes executing the undo step impossible.
+            
+             To overcome this problem, the artificial "source of change" is introduced. We don't move the caret for frontend
+             initiated changes.
+            
+             This behavior is covered by integration tests for AsyncTyping
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.Shell.Alter.AlterHacks.DocumentInitialSync">
+            Frontend side will be notified about these changes, but backend won't apply them to the document itself while the cookie is obtained.
+            Used to set up initial document synchronization, which is currently use sync calls to obtain document texts.
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.Shell.Alter.AlterHacks.NeedWriteLock(JetBrains.Application.Alter.IAlterRunnable)">
+            Detects the presence of the actions, which most likely will require write lock during applying.
+            Can give both type I and type II errors.
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.Shell.Alter.AlterHacks.SyncCloseUndo">
+             Normally, open-close undo units are integrated into alter history to preserve undo scheme, defined by the features. (to support double undo).
+             But hotspot sessions are special, because they open long-living undo unit for the duration of the hotspot session.
+             Opened undo unit undo action unavailable, but we override this action with help of VsOverrideAction and forcefully return true from update if any long-living unit is opened and force close them on undo action execution.
+             The problem is, that the hotspot session can be terminated instantly, but the corresponding undo unit will be closed a little bit later, at the fronted side (is required to be properly integrated into alter history).
+             This cookie changes this behavior and forces closing undo unit instantly.
+            
+             Two other options were considered:
+               1. Replay VsCommand "Undo" after the round-trip (more complex, could be side effects from re-execution of undo action)
+               2. On the frontend side just close linked undo units and close hotspot session asynchronously.
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Backend.Shell.Alter.AlterHackGlueOverridenActions">
+            See <see cref="P:JetBrains.Platform.VisualStudio.Protocol.Common.Alter.AlterState.DisabledCommands"/> for docs
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Backend.Shell.Alter.AlterOutcomeActionEmulation">
+             Well, it is rather complicated to explain what is going on here.
+            
+             Before trying to understand why this class exists, you should know how Actions handlers/typing assists work in sync
+             mode, but nesting into each other and calling callnext delegate, which is eventually reach visual studio handler
+             itself.  The problem is that there is no way we can support this callnext in async typing, this handler operates
+             after the actual action invocation is happened on the frontend side.
+            
+             In async typing mode, we consider backend as "dictator". It is always right and frontend must obey and apply changes
+             the backend wants. Previous approach was to fully emulate visual studio actions, which we use and hope that the
+             histories of changes will be the same, and they won't diverge. But Visual Studio is smart, and proper emulation of
+             actions is consuming and fragile, even small difference in the sequence of changes will produce additional undo
+             step.
+             For example, the paste action not just inserts the string from the clipboard, but can do in line-wise. We do have
+             our assists for paste, which call "callnext" and expects, that after this call the document will be changed.
+             Also, there are implementation details of the visual studio, which I don't want to copy. Like pasting text on the
+             virtual indent produces two notification about caret movement for some reason. With multi carets it became even more
+             complicated.
+            
+             The new approach is record the outcome of the action and apply it (if possible) when the final handler is
+             called. If it is not possible to replay changes from the fronted the fallback emulation is used.
+            
+             What the outcome is, it is easier to explain using the example "paste action on virtual indent"
+             | ID | Request             | Reason                                  | Outcome |
+             |----|---------------------|-----------------------------------------|---------|
+             | 1  | TextControl.Paste   | causal - user activity                  |         |
+             | 2  | Document Changed    | modification, text actually inserted    | +       |
+             | 3  | Selection changed 1 | caret moved from virtual to real indent | +       |
+             | 4  | Selection changed 2 | caret moved to end of pasted text       | +       |
+             | 5  | (no rev id) Marker  | end marker with reference to casual (1) |         |
+            
+             Outcome are 2,3 and 4.
+             This part should be replayed and represent side effect of the action invocation on the frontend side.
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.Shell.Alter.BackendAlter.Request(System.String,JetBrains.Application.Alter.IAlterRunnable)">
+            Usually called by frontend, part of rpc interface.
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.Shell.Alter.BackendAlter.Commit(System.String,JetBrains.Application.Alter.IAlterRequest)">
+            Can only be called from backend, notify frontend about the change, does not perform the change itself
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.Shell.Alter.BackendAlter.ExecuteAlterAction(System.String,JetBrains.Application.Alter.IAlterRequest)">
+            Can only be called from backend, does not produce revision
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Backend.Shell.Alter.CallNextOutcomeFinder">
+            see <see cref="T:JetBrains.Platform.VisualStudio.Backend.Shell.Alter.AlterOutcomeActionEmulation"/> for the definition of the outcome.
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.Shell.Alter.CallNextOutcomeFinder.#ctor(JetBrains.Application.Alter.AlterRevisionId)">
+            see <see cref="T:JetBrains.Platform.VisualStudio.Backend.Shell.Alter.AlterOutcomeActionEmulation"/> for the definition of the outcome.
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Backend.Shell.Alter.IBackendAlterExecutor">
+            <summary>
+            An executor of alter request on the dominant side.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.Shell.Alter.IBackendAlterExecutor.IsApplicable(JetBrains.Application.Alter.IAlterRequest)">
+            <summary>
+            Determines whether the request can be handled by the current executor
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.Shell.Alter.IBackendAlterExecutor.Do(JetBrains.Platform.VisualStudio.Backend.Shell.Alter.BackendAlter,JetBrains.Application.Alter.IAlterRequest)">
+             <summary>
+             Apply change to the model.
+            
+             Caller of this method have to guarantee, that the request is based on the proper state of the world.
+             </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.Shell.Options.OutOfProcessOptionsPage.#ctor(JetBrains.Lifetimes.Lifetime,JetBrains.Application.UI.Options.OptionsDialog.OptionsPageContext,JetBrains.Application.UI.Options.OptionsSettingsSmartContext,JetBrains.Platform.VisualStudio.Protocol.Frontend.Shell.Actions.Internal.IBackendToVisualStudioInternalShellActionsInterop,JetBrains.Application.UI.Components.IUIApplication,JetBrains.Application.Environment.ApplicationShutdownRequests)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.Shell.Options.OutOfProcessOptionsPage.OnOk">
+            <inheritdoc />
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Backend.Shell.TypedBackendAlterExecutor`1">
+            <summary>
+            An base implementation of backend executor with specific request type.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Backend.Shell.WindowManagement.VsPopupWindowContextDataRules">
+            <summary>
+            See <see cref="!:JetBrains.VsIntegration.ProjectModel.VsPopupWindowContextProjectModel"/> for the project-model-aware part of the logic.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Backend.TextControl.Alter.FinalTypingHandlerAlter">
+            Emulation of Visual Studio's behaviour. It uses outcome logic, same as described in <see cref="T:JetBrains.Platform.VisualStudio.Backend.Shell.Alter.AlterOutcomeActionEmulation"/>
+        </member>
+        <member name="F:JetBrains.Platform.VisualStudio.Backend.TextControl.Alter.FinalTypingHandlerAlter.ExplicitTypingHandlerCounter">
+            A counter for detection that <see cref="M:JetBrains.Platform.VisualStudio.Backend.TextControl.Alter.FinalTypingHandlerAlter.ExplicitTypingHandler(JetBrains.TextControl.ITypingContext)"/> was called
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Backend.TextControl.Alter.SelectionExecutorAlter.IsApplying">
+            <summary>
+            True when we are executing changes from frontend in Do action.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.TextControl.Alter.SelectionNotifierAlter.TryShrinkToDocumentLength(JetBrains.TextControl.Transport.DocOffsetAndVirtualRange[],JetBrains.TextControl.DocOffset,JetBrains.TextControl.Transport.DocOffsetAndVirtualRange[]@)">
+            Check and shrink the selection if any of doc offset is located outside of document boundary
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.TextControl.Alter.TextControlActionExecutorAlter.Do(System.String,JetBrains.TextControl.ITextControl)">
+            Executes the text control action with the given ID
+            Returns a boolean value indicating whether the next handler was called
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Backend.TextControl.ErrorStripe.VsErrorStripeAvailableLayoutsBackendPublisher">
+            <summary>
+            Takes value set by front from the transport model, makes available to back features.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.TextControl.ErrorStripe.VsErrorStripeAvailableLayoutsBackendPublisher.#ctor(JetBrains.Platform.VisualStudio.Protocol.Common.TextControl.ErrorStripe.VsErrorStripeShellTransport)">
+            <inheritdoc />
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Backend.TextControl.ErrorStripe.VsErrorStripeAvailableLayoutsBackendPublisher.AvailableLayouts">
+            <inheritdoc />
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Backend.TextControl.VsTextControlUpdateCookieOnBatchChange">
+            <summary>
+            On each batch change, takes an Update Cookie on text controls automatically.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Backend.UI.OptionPages.VsOptionPagesThemedIcons">
+             <summary>
+            	<para>
+            		<para>Autogenerated identifier classes and identifier objects to Themed Icons registered with <see cref="T:JetBrains.Application.Icons.IThemedIconManager"></see>.</para>
+            		<para>Identifier classes should be used in attributes, XAML, or generic parameters. Where an <see cref="T:JetBrains.UI.Icons.IconId"></see> value is expected, use the identifier object in the <c>Id</c> field of the identifier class.</para>
+            	</para>
+            </summary>
+            <remarks>
+            	<para>This code was compile-time generated to support Themed Icons in the JetBrains application.</para>
+            	<para>It has two primary goals: load the icons of this assembly to be registered with <see cref="T:JetBrains.Application.Icons.IThemedIconManager"></see> so that they were WPF-accessible and theme-sensitive; and emit early-bound accessors for referencing icons in codebehind in a compile-time-validated manner.</para>
+            	<h1>XAML</h1>
+            	<para>For performance reasons, the icons are not individually exposed with application resources. There is a custom markup extension to bind an image source in markup.</para>
+            	<para>To use an icon from XAML, set an <see cref="T:System.Windows.Media.ImageSource"></see> property to the <see cref="T:System.CodeDom.CodeTypeReference"></see> markup extension, which takes an icon identifier class (nested in <see cref="T:JetBrains.Platform.VisualStudio.Backend.UI.OptionPages.VsOptionPagesThemedIcons"></see> class) as a parameter.</para>
+            	<para>Example:</para>
+            	<code>&lt;Image Source="{icons:ThemedIcon myres:VsOptionPagesThemedIcons+Trinity}" /&gt;</code>
+            	<h1>Attributes</h1>
+            	<para>Sometimes you have to reference an icon from a type attriute when you're defining objects in code. Typical examples are Options pages and Tool Windows.</para>
+            	<para>To avoid the use of string IDs which are not validated very well, we've emitted identifier classes to be used with <c>typeof()</c> expression, one per each icon. Use the attribute overload which takes a <see cref="T:System.Type"></see> for an image, and choose your icon class from nested classes in the <see cref="T:JetBrains.Platform.VisualStudio.Backend.UI.OptionPages.VsOptionPagesThemedIcons"></see> class.</para>
+            	<para>Example:</para>
+            	<code>[Item(Name="Sample", Icon=typeof(VsOptionPagesThemedIcons.Trinity))]</code>
+            	<h1>CodeBehind</h1>
+            	<para>In codebehind, we have two distinct tasks: (a) specify some icon in the APIs and (b) render icon images onscreen.</para>
+            	<para>On the APIs stage you should only manipulate icon identifier objects (of type <see cref="T:JetBrains.UI.Icons.IconId"></see>, statically defined in <see cref="T:JetBrains.Platform.VisualStudio.Backend.UI.OptionPages.VsOptionPagesThemedIcons"></see> in <c>Id</c> fields). Icon identifier classes (nested in <see cref="T:JetBrains.Platform.VisualStudio.Backend.UI.OptionPages.VsOptionPagesThemedIcons"></see>) should be turned into icon identifier objects as early as possible. Rendering is about getting an <see cref="T:System.Windows.Media.ImageSource"></see> to assign to WPF, or <see cref="T:System.Drawing.Bitmap"></see> to use with GDI+ / Windows Forms.</para>
+            	<para>You should turn an identifier object into a rendered image as late as possible. The identifier is static and lightweight and does not depend on the current theme, while the image is themed and has to be loaded or generated/rasterized. You need an <see cref="T:JetBrains.Application.Icons.IThemedIconManager"></see> instance to get the image out of an icon identifier object. Once you got the image, you should take care to change it with theme changes — either by using a live image property, or by listening to the theme change event. See <see cref="T:JetBrains.Application.Icons.IThemedIconManager"></see> and its extensions for the related facilities.</para>
+            	<para>Example:</para>
+            	<code>// Getting IconId identifier object to use with APIs
+            IconId iconid = VsOptionPagesThemedIcons.Trinity.Id;</code>
+            	<code>// Getting IconId out of an Icon Identifier Class type
+            IconId iconid = new JetBrains.Application.Icons.CompiledIconsCs.CompiledIconCsId(typeof(VsOptionPagesThemedIcons.Trinity));</code>
+            	<code>// Getting image for screen rendering by IconId
+            themediconmanager.Icons[icnoid]</code>
+            	<code>// Getting image for screen rendering by Icon Identifier Class
+            themediconmanager.GetIcon&lt;VsOptionPagesThemedIcons.Trinity&gt;()</code>
+            	<h1>Icons Origin</h1>
+            	<para>This code was generated by a pre-compile build task from a set of input files which are XAML files adhering to a certain convention, as convenient for exporting them from the Illustrator workspace, plus separate PNG files with raster icons. In the projects, these files are designated with <c>ThemedIconsXamlV3</c> and <c>ThemedIconPng</c> build actions and do not themselves get into the output assembly. All of such files are processed, vector images for different themes of the same icon are split and combined into the single list of icons in this assembly. This list is then written into the genearted XAML file (compiled into BAML within assembly), and serves as the source for this generated code.</para>
+            </remarks>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Backend.UI.OptionPages.VsOptionPagesThemedIcons.ProductSuspended">
+             <summary>
+            	<para>
+            		<para>ProductSuspended Themed Icon autogenerated identifier class.</para>
+            		<para>Identifier classes should be used in attributes, XAML, or generic parameters. Where an <see cref="T:JetBrains.UI.Icons.IconId"></see> value is expected, use the identifier object in the <see cref="F:JetBrains.Platform.VisualStudio.Backend.UI.OptionPages.VsOptionPagesThemedIcons.ProductSuspended.Id"></see> field of the identifier class.</para>
+            		<para>
+            			<code>
+             WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+             BB~~~~~~~~~~~~~~~~~~~~~~~~~~~~BB
+             $$==########################==$$
+             QQ!!AAAAAAAAAA    AAAAAAAAAA!!QQ
+             gg!!HHHHHHHHHH    HHHHHHHHHH!!gg
+             gg//bbbbbbbbbb    bbbbbbbbbb//gg
+             gg++wwwwwwwwww    wwwwwwwwww++gg
+             ggrr6666666666    6666666666rrgg
+             gg??XXXXXXXXXX^  _XXXXXXXXXX??gg
+             ggccPPPPPPPPPPy` uPPPPPPPPPPccgg
+             @@||kkkkkkkkkkkkkkkkkkkkkkkk||@@
+             @@TTVVVVVVVVVV!--~VVVVVVVVVVTT@@
+             @@zzyyyyyyyyyy=``,yyyyyyyyyyzz@@
+             @@ll555555555555555555555555ll@@
+             @@}}}}}}}}}}}}}}}}}}}}}}}}}}}}@@
+             @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            </code>
+            		</para>
+            	</para>
+            </summary>
+            <remarks>
+            	<para>For details on Themed Icons and their use, see Remarks on the outer class.</para>
+            </remarks>
+            <example>
+            	<code>&lt;Image Source="{icons:ThemedIcon myres:VsOptionPagesThemedIcons+ProductSuspended}" /&gt;        &lt;!-- XAML --&gt;</code>
+            </example>
+            <example>
+            	<code>[Item(Name="Sample", Icon=typeof(VsOptionPagesThemedIcons.ProductSuspended))]        // C# Type attribute</code>
+            </example>
+            <example>
+            	<code>IconId iconid = VsOptionPagesThemedIcons.ProductSuspended.Id;        // IconId identifier object</code>
+            </example>
+            <example>
+            	<code>themediconmanager.GetIcon&lt;VsOptionPagesThemedIcons.ProductSuspended&gt;()        // Icon image for rendering</code>
+            </example>
+        </member>
+        <member name="F:JetBrains.Platform.VisualStudio.Backend.UI.OptionPages.VsOptionPagesThemedIcons.ProductSuspended.Id">
+             <summary>
+            	<para>
+            		<para>ProductSuspended Themed Icon autogenerated identifier object.</para>
+            		<para>Identifier objects should be used where an <see cref="T:JetBrains.UI.Icons.IconId"></see> value is expected. In attributes, XAML, or generic parameters use the containing <see cref="T:JetBrains.Platform.VisualStudio.Backend.UI.OptionPages.VsOptionPagesThemedIcons.ProductSuspended"></see> identifier class.</para>
+            		<para>
+            			<code>
+             WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+             BB~~~~~~~~~~~~~~~~~~~~~~~~~~~~BB
+             $$==########################==$$
+             QQ!!AAAAAAAAAA    AAAAAAAAAA!!QQ
+             gg!!HHHHHHHHHH    HHHHHHHHHH!!gg
+             gg//bbbbbbbbbb    bbbbbbbbbb//gg
+             gg++wwwwwwwwww    wwwwwwwwww++gg
+             ggrr6666666666    6666666666rrgg
+             gg??XXXXXXXXXX^  _XXXXXXXXXX??gg
+             ggccPPPPPPPPPPy` uPPPPPPPPPPccgg
+             @@||kkkkkkkkkkkkkkkkkkkkkkkk||@@
+             @@TTVVVVVVVVVV!--~VVVVVVVVVVTT@@
+             @@zzyyyyyyyyyy=``,yyyyyyyyyyzz@@
+             @@ll555555555555555555555555ll@@
+             @@}}}}}}}}}}}}}}}}}}}}}}}}}}}}@@
+             @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            </code>
+            		</para>
+            	</para>
+            </summary>
+            <remarks>
+            	<para>For details on Themed Icons and their use, see Remarks on the outer class.</para>
+            </remarks>
+            <example>
+            	<code>&lt;Image Source="{icons:ThemedIcon myres:VsOptionPagesThemedIcons+ProductSuspended}" /&gt;        &lt;!-- XAML --&gt;</code>
+            </example>
+            <example>
+            	<code>[Item(Name="Sample", Icon=typeof(VsOptionPagesThemedIcons.ProductSuspended))]        // C# Type attribute</code>
+            </example>
+            <example>
+            	<code>IconId iconid = VsOptionPagesThemedIcons.ProductSuspended.Id;        // IconId identifier object</code>
+            </example>
+            <example>
+            	<code>themediconmanager.GetIcon&lt;VsOptionPagesThemedIcons.ProductSuspended&gt;()        // Icon image for rendering</code>
+            </example>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.UI.OptionPages.VsOptionPagesThemedIcons.ProductSuspended.Load_Color">
+            <summary>Loads the image for Themed Icon ProductSuspended theme aspect Color.</summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.UI.OptionPages.VsOptionPagesThemedIcons.ProductSuspended.Load_Gray">
+            <summary>Loads the image for Themed Icon ProductSuspended theme aspect Gray.</summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.UI.OptionPages.VsOptionPagesThemedIcons.ProductSuspended.Load_GrayDark">
+            <summary>Loads the image for Themed Icon ProductSuspended theme aspect GrayDark.</summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.UI.OptionPages.VsOptionPagesThemedIcons.ProductSuspended.GetThemeImages">
+            <summary>Returns the set of theme images for Themed Icon ProductSuspended.</summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Backend.UI.OptionPages.VsOptionPagesThemedIcons.VsShortcutOptionsPage">
+             <summary>
+            	<para>
+            		<para>VsShortcutOptionsPage Themed Icon autogenerated identifier class.</para>
+            		<para>Identifier classes should be used in attributes, XAML, or generic parameters. Where an <see cref="T:JetBrains.UI.Icons.IconId"></see> value is expected, use the identifier object in the <see cref="F:JetBrains.Platform.VisualStudio.Backend.UI.OptionPages.VsOptionPagesThemedIcons.VsShortcutOptionsPage.Id"></see> field of the identifier class.</para>
+            		<para>
+            			<code>
+                                             
+                                             
+                  `=tFFt!.      `;tFFF!`     
+                `=C|-  -+xc_  _r1T!~!=s1/`   
+              `;x7,      .;{tJ1c==!+L-_!lI/` 
+             !3l~.`      .!IFr=;\r)7t-_"={oo\
+             55-'.`-r|::|5l/=!+LTJFak|=cji_55
+             yy-'_cyyyyeT!;\rc7l1Vkyyyyt"  yy
+             VV"TV}+Cu?;!+LTJ{oPkn!^tC~.`  VV
+             )EEo=,^~;/rcTlCSXEi"    -'.`-cE7
+              '|UC;^~?|i}3P6Eky;`    -'_TUJ- 
+                'T63+lC564a;``=oPr-  ^J6l_   
+                  -7wwwwF"      :Jwwwwt_     
+                                             
+                                             
+                                             
+            </code>
+            		</para>
+            	</para>
+            </summary>
+            <remarks>
+            	<para>For details on Themed Icons and their use, see Remarks on the outer class.</para>
+            </remarks>
+            <example>
+            	<code>&lt;Image Source="{icons:ThemedIcon myres:VsOptionPagesThemedIcons+VsShortcutOptionsPage}" /&gt;        &lt;!-- XAML --&gt;</code>
+            </example>
+            <example>
+            	<code>[Item(Name="Sample", Icon=typeof(VsOptionPagesThemedIcons.VsShortcutOptionsPage))]        // C# Type attribute</code>
+            </example>
+            <example>
+            	<code>IconId iconid = VsOptionPagesThemedIcons.VsShortcutOptionsPage.Id;        // IconId identifier object</code>
+            </example>
+            <example>
+            	<code>themediconmanager.GetIcon&lt;VsOptionPagesThemedIcons.VsShortcutOptionsPage&gt;()        // Icon image for rendering</code>
+            </example>
+        </member>
+        <member name="F:JetBrains.Platform.VisualStudio.Backend.UI.OptionPages.VsOptionPagesThemedIcons.VsShortcutOptionsPage.Id">
+             <summary>
+            	<para>
+            		<para>VsShortcutOptionsPage Themed Icon autogenerated identifier object.</para>
+            		<para>Identifier objects should be used where an <see cref="T:JetBrains.UI.Icons.IconId"></see> value is expected. In attributes, XAML, or generic parameters use the containing <see cref="T:JetBrains.Platform.VisualStudio.Backend.UI.OptionPages.VsOptionPagesThemedIcons.VsShortcutOptionsPage"></see> identifier class.</para>
+            		<para>
+            			<code>
+                                             
+                                             
+                  `=tFFt!.      `;tFFF!`     
+                `=C|-  -+xc_  _r1T!~!=s1/`   
+              `;x7,      .;{tJ1c==!+L-_!lI/` 
+             !3l~.`      .!IFr=;\r)7t-_"={oo\
+             55-'.`-r|::|5l/=!+LTJFak|=cji_55
+             yy-'_cyyyyeT!;\rc7l1Vkyyyyt"  yy
+             VV"TV}+Cu?;!+LTJ{oPkn!^tC~.`  VV
+             )EEo=,^~;/rcTlCSXEi"    -'.`-cE7
+              '|UC;^~?|i}3P6Eky;`    -'_TUJ- 
+                'T63+lC564a;``=oPr-  ^J6l_   
+                  -7wwwwF"      :Jwwwwt_     
+                                             
+                                             
+                                             
+            </code>
+            		</para>
+            	</para>
+            </summary>
+            <remarks>
+            	<para>For details on Themed Icons and their use, see Remarks on the outer class.</para>
+            </remarks>
+            <example>
+            	<code>&lt;Image Source="{icons:ThemedIcon myres:VsOptionPagesThemedIcons+VsShortcutOptionsPage}" /&gt;        &lt;!-- XAML --&gt;</code>
+            </example>
+            <example>
+            	<code>[Item(Name="Sample", Icon=typeof(VsOptionPagesThemedIcons.VsShortcutOptionsPage))]        // C# Type attribute</code>
+            </example>
+            <example>
+            	<code>IconId iconid = VsOptionPagesThemedIcons.VsShortcutOptionsPage.Id;        // IconId identifier object</code>
+            </example>
+            <example>
+            	<code>themediconmanager.GetIcon&lt;VsOptionPagesThemedIcons.VsShortcutOptionsPage&gt;()        // Icon image for rendering</code>
+            </example>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.UI.OptionPages.VsOptionPagesThemedIcons.VsShortcutOptionsPage.Load_Color">
+            <summary>Loads the image for Themed Icon VsShortcutOptionsPage theme aspect Color.</summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.UI.OptionPages.VsOptionPagesThemedIcons.VsShortcutOptionsPage.Load_Gray">
+            <summary>Loads the image for Themed Icon VsShortcutOptionsPage theme aspect Gray.</summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.UI.OptionPages.VsOptionPagesThemedIcons.VsShortcutOptionsPage.Load_GrayDark">
+            <summary>Loads the image for Themed Icon VsShortcutOptionsPage theme aspect GrayDark.</summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.UI.OptionPages.VsOptionPagesThemedIcons.VsShortcutOptionsPage.GetThemeImages">
+            <summary>Returns the set of theme images for Themed Icon VsShortcutOptionsPage.</summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Backend.UI.OptionPages.VsOptionPagesThemedIcons.Keyboard">
+             <summary>
+            	<para>
+            		<para>Keyboard Themed Icon generated identifiers:</para>
+            		<para>— <see cref="T:JetBrains.Platform.VisualStudio.Backend.UI.OptionPages.VsOptionPagesThemedIcons.Keyboard"></see> identifier class, for use in attributes, XAML, and generic parameters;</para>
+            		<para>— <see cref="F:JetBrains.Platform.VisualStudio.Backend.UI.OptionPages.VsOptionPagesThemedIcons.Keyboard.Id"></see> identifier object, as a field in the identifier class, for use where an <see cref="T:JetBrains.UI.Icons.IconId"></see> value is expected.</para>
+            		<para>
+            			<code>
+                                             
+                                   ZZZZZZ    
+                    .={5444444444444h--46    
+                   ~b2="-------------~JHc    
+                 :rKh:-}EEEEEEEEEEEEEEE5sr:  
+               `}P\_.                  ._=a3-
+               J6_ `.------------------.` -63
+               ww  ..MM..MM..MM..MM..MM..  ww
+               bb``````````````````````````bb
+               dd``````MM``MM``MM``MM``````dd
+               mm``````````````````````````mm
+               ##..      MMMMMMMMMM      ..##
+               PD;.`                    `.:Dw
+               :9m):--------------------~rd#"
+                 ;yqWWWWWWWWWWWWWWWWWWWWRV/` 
+                                             
+            </code>
+            		</para>
+            	</para>
+            </summary>
+            <remarks>
+            	<para>For details on Themed Icons and their use, see Remarks on the outer class.</para>
+            </remarks>
+            <example>
+            	<code>&lt;Image Source="{icons:ThemedIcon myres:CirylutThemedIconsThemedIcons+Keyboard}" /&gt;        &lt;!-- XAML --&gt;</code>
+            </example>
+            <example>
+            	<code>[Item(Name="Sample", Icon=typeof(CirylutThemedIconsThemedIcons.Keyboard))]        // C# Type attribute</code>
+            </example>
+            <example>
+            	<code>IconId iconid = CirylutThemedIconsThemedIcons.Keyboard.Id;        // IconId identifier object</code>
+            </example>
+            <example>
+            	<code>themediconmanager.GetIcon&lt;CirylutThemedIconsThemedIcons.Keyboard&gt;()        // Icon image for rendering</code>
+            </example>
+        </member>
+        <member name="F:JetBrains.Platform.VisualStudio.Backend.UI.OptionPages.VsOptionPagesThemedIcons.Keyboard.Id">
+            <inheritdoc cref="T:JetBrains.Platform.VisualStudio.Backend.UI.OptionPages.VsOptionPagesThemedIcons.Keyboard">identifier class</inheritdoc>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.UI.OptionPages.VsOptionPagesThemedIcons.Keyboard.Load_Color">
+            <summary>Loads the image for Themed Icon Keyboard theme aspect Color.</summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.UI.OptionPages.VsOptionPagesThemedIcons.Keyboard.Load_Gray">
+            <summary>Loads the image for Themed Icon Keyboard theme aspect Gray.</summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.UI.OptionPages.VsOptionPagesThemedIcons.Keyboard.Load_GrayDark">
+            <summary>Loads the image for Themed Icon Keyboard theme aspect GrayDark.</summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Backend.UI.OptionPages.VsOptionPagesThemedIcons.Keyboard.GetThemeImages">
+            <summary>Returns the set of theme images for Themed Icon Keyboard.</summary>
+        </member>
+    </members>
+</doc>

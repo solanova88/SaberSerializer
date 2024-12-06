@@ -1,0 +1,339 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.ReSharper.Features.ReSpeller</name>
+    </assembly>
+    <members>
+        <member name="M:JetBrains.ReSharper.Features.ReSpeller.Analyzers.IPsiHelper.ShouldSkipExpression(JetBrains.ReSharper.Psi.Tree.IExpression)">
+            <summary>
+            Checks if expression matches parameter annotated with [IgnoreSpellingAndGrammarErrors]
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.Grammar">
+             <summary>
+            	<para>
+            		<para>Grammar Themed Icon generated identifiers:</para>
+            		<para>— <see cref="T:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.Grammar"></see> identifier class, for use in attributes, XAML, and generic parameters;</para>
+            		<para>— <see cref="F:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.Grammar.Id"></see> identifier object, as a field in the identifier class, for use where an <see cref="T:JetBrains.UI.Icons.IconId"></see> value is expected.</para>
+            		<para>
+            			<code>
+                                             
+                          `!u2+`             
+                        `=2CrrCj+`           
+                      `=enL!!!!LnSr`         
+                    `/a2c==;'';==c2kr`       
+                  `+Ej|//;-    -;//|jK?`     
+                `+hyT+++-        -+++TyXL`   
+               +XV7+++++ `~    ~` +++++7V6c  
+               vbeTrrrrr;rr    rr;rrrrrTeb{  
+                -JHSTLLLLLL    LLLLLLTSH[:   
+                  -sAkvcccc    ccccvkAC:     
+                    -}RPJ))))))))JPR3:       
+                      -{DXzTTTTzXDu:         
+                        -[D6{{6D2:           
+                          -C88j:             
+                                             
+            </code>
+            		</para>
+            	</para>
+            </summary>
+            <remarks>
+            	<para>For details on Themed Icons and their use, see Remarks on the outer class.</para>
+            </remarks>
+            <example>
+            	<code>&lt;Image Source="{icons:ThemedIcon myres:MezecygThemedIconsThemedIcons+Grammar}" /&gt;        &lt;!-- XAML --&gt;</code>
+            </example>
+            <example>
+            	<code>[Item(Name="Sample", Icon=typeof(MezecygThemedIconsThemedIcons.Grammar))]        // C# Type attribute</code>
+            </example>
+            <example>
+            	<code>IconId iconid = MezecygThemedIconsThemedIcons.Grammar.Id;        // IconId identifier object</code>
+            </example>
+            <example>
+            	<code>themediconmanager.GetIcon&lt;MezecygThemedIconsThemedIcons.Grammar&gt;()        // Icon image for rendering</code>
+            </example>
+        </member>
+        <member name="F:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.Grammar.Id">
+            <inheritdoc cref="T:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.Grammar">identifier class</inheritdoc>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.Grammar.Load_Color">
+            <summary>Loads the image for Themed Icon Grammar theme aspect Color.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.Grammar.Load_Gray">
+            <summary>Loads the image for Themed Icon Grammar theme aspect Gray.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.Grammar.Load_GrayDark">
+            <summary>Loads the image for Themed Icon Grammar theme aspect GrayDark.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.Grammar.GetThemeImages">
+            <summary>Returns the set of theme images for Themed Icon Grammar.</summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.ReSpellerIcon">
+             <summary>
+            	<para>
+            		<para>ReSpellerIcon Themed Icon generated identifiers:</para>
+            		<para>— <see cref="T:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.ReSpellerIcon"></see> identifier class, for use in attributes, XAML, and generic parameters;</para>
+            		<para>— <see cref="F:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.ReSpellerIcon.Id"></see> identifier object, as a field in the identifier class, for use where an <see cref="T:JetBrains.UI.Icons.IconId"></see> value is expected.</para>
+            		<para>
+            			<code>
+                                             
+                    =jjjjjj=                 
+                   -V[    JV-                
+                   CZ- -` -Eu                
+                  =4r  Jr  =4+               
+                 .9E` _bb-  ow-     `;sl!`   
+                 CO"  =cc!  :Oa   `;{|,,|[!` 
+                ;#i  .::::.  c#+`;1T_````_TI=
+               `RR` `d#jjoE. `w92J"``````:L2)
+               CW;  7pes""se+!js"``````:)eT- 
+               $$$$GE{^....^{{^......:Tk7-   
+                   |h7:............:7hJ:     
+                    -T6v,........,v6s:       
+                      -7bs_''''_sb}:         
+                        -Jd}__}d]:           
+                          -lmmf:             
+            </code>
+            		</para>
+            	</para>
+            </summary>
+            <remarks>
+            	<para>For details on Themed Icons and their use, see Remarks on the outer class.</para>
+            </remarks>
+            <example>
+            	<code>&lt;Image Source="{icons:ThemedIcon myres:MezecygThemedIconsThemedIcons+ReSpellerIcon}" /&gt;        &lt;!-- XAML --&gt;</code>
+            </example>
+            <example>
+            	<code>[Item(Name="Sample", Icon=typeof(MezecygThemedIconsThemedIcons.ReSpellerIcon))]        // C# Type attribute</code>
+            </example>
+            <example>
+            	<code>IconId iconid = MezecygThemedIconsThemedIcons.ReSpellerIcon.Id;        // IconId identifier object</code>
+            </example>
+            <example>
+            	<code>themediconmanager.GetIcon&lt;MezecygThemedIconsThemedIcons.ReSpellerIcon&gt;()        // Icon image for rendering</code>
+            </example>
+        </member>
+        <member name="F:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.ReSpellerIcon.Id">
+            <inheritdoc cref="T:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.ReSpellerIcon">identifier class</inheritdoc>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.ReSpellerIcon.Load_Color">
+            <summary>Loads the image for Themed Icon ReSpellerIcon theme aspect Color.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.ReSpellerIcon.Load_Gray">
+            <summary>Loads the image for Themed Icon ReSpellerIcon theme aspect Gray.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.ReSpellerIcon.Load_GrayDark">
+            <summary>Loads the image for Themed Icon ReSpellerIcon theme aspect GrayDark.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.ReSpellerIcon.GetThemeImages">
+            <summary>Returns the set of theme images for Themed Icon ReSpellerIcon.</summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.Spelling">
+             <summary>
+            	<para>
+            		<para>Spelling Themed Icon generated identifiers:</para>
+            		<para>— <see cref="T:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.Spelling"></see> identifier class, for use in attributes, XAML, and generic parameters;</para>
+            		<para>— <see cref="F:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.Spelling.Id"></see> identifier object, as a field in the identifier class, for use where an <see cref="T:JetBrains.UI.Icons.IconId"></see> value is expected.</para>
+            		<para>
+            			<code>
+                                             
+                       eySSaVVaSy            
+               uu222ooeey`-::"~Syeejo222uuu  
+               uu ``-:,ey`-BB"~Sy`.:_~!+Luu  
+               uu `33:,ey`-::"~Sy`.XXXX+Luu  
+               uu `33:,ey`-::"~Sy`.XXXX+Luu  
+               uu ``-:,ey`-::"~Sy`.:_~!+Luu  
+               uu ``-:,ey`-::"~Sy`.:_~!+Luu  
+               uu ``-:,ey`-::"~Sy`.:_~!+Luu  
+               uu ``-:,ey`-::"~Sy`.:_~!+Luu  
+               uu `33:,ey`-BB"~Sy`.XXXX+Luu  
+               uu ``-:,ey`-::"~Sy`.:_~!+Luu  
+               uu `33:,ey`-BB"~Sy`.XXXX+Luu  
+               uu ``-:,ey`-::"~Sy`.:_~!+Luu  
+               uu222ooeeySSaVVaSyeejo222uuu  
+                                             
+            </code>
+            		</para>
+            	</para>
+            </summary>
+            <remarks>
+            	<para>For details on Themed Icons and their use, see Remarks on the outer class.</para>
+            </remarks>
+            <example>
+            	<code>&lt;Image Source="{icons:ThemedIcon myres:MezecygThemedIconsThemedIcons+Spelling}" /&gt;        &lt;!-- XAML --&gt;</code>
+            </example>
+            <example>
+            	<code>[Item(Name="Sample", Icon=typeof(MezecygThemedIconsThemedIcons.Spelling))]        // C# Type attribute</code>
+            </example>
+            <example>
+            	<code>IconId iconid = MezecygThemedIconsThemedIcons.Spelling.Id;        // IconId identifier object</code>
+            </example>
+            <example>
+            	<code>themediconmanager.GetIcon&lt;MezecygThemedIconsThemedIcons.Spelling&gt;()        // Icon image for rendering</code>
+            </example>
+        </member>
+        <member name="F:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.Spelling.Id">
+            <inheritdoc cref="T:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.Spelling">identifier class</inheritdoc>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.Spelling.Load_Color">
+            <summary>Loads the image for Themed Icon Spelling theme aspect Color.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.Spelling.Load_Gray">
+            <summary>Loads the image for Themed Icon Spelling theme aspect Gray.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.Spelling.Load_GrayDark">
+            <summary>Loads the image for Themed Icon Spelling theme aspect GrayDark.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.Spelling.GetThemeImages">
+            <summary>Returns the set of theme images for Themed Icon Spelling.</summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.SpellingGeneral">
+             <summary>
+            	<para>
+            		<para>SpellingGeneral Themed Icon generated identifiers:</para>
+            		<para>— <see cref="T:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.SpellingGeneral"></see> identifier class, for use in attributes, XAML, and generic parameters;</para>
+            		<para>— <see cref="F:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.SpellingGeneral.Id"></see> identifier object, as a field in the identifier class, for use where an <see cref="T:JetBrains.UI.Icons.IconId"></see> value is expected.</para>
+            		<para>
+            			<code>
+                         -ssssss_            
+                   ^~:  `7J`  `Ts`  -~~`     
+                 "J7!)}cc}_    -}|c}T=|i~    
+               `J[~````:~,``````:~:````_Fs.  
+                "Cc````````````````````+C;   
+                `+3(````.-"~;;~":.````r3c`   
+             ;rzf7r~...-"~~!c)=~~"-..."+7CF?;
+             22,-------:::n$$$$P:::-------:22
+             jj:----------S$$$$b----------:jj
+             rieCT+~:::-```"rr~.``-:::^+T[S}L
+                -LV1:::::-``   `':::::sV7-   
+                ,ku^,,,,,,,,,,,,,,,,,,"FE~   
+               `Vhr"""";+!"""""";+;""""=EE-  
+                `+U2TxEEeX+^^^^!USVKITIXc.   
+                  .?|;- .ZE;~~;a6: .~c|-     
+                         ;wwwwww*            
+            </code>
+            		</para>
+            	</para>
+            </summary>
+            <remarks>
+            	<para>For details on Themed Icons and their use, see Remarks on the outer class.</para>
+            </remarks>
+            <example>
+            	<code>&lt;Image Source="{icons:ThemedIcon myres:MezecygThemedIconsThemedIcons+SpellingGeneral}" /&gt;        &lt;!-- XAML --&gt;</code>
+            </example>
+            <example>
+            	<code>[Item(Name="Sample", Icon=typeof(MezecygThemedIconsThemedIcons.SpellingGeneral))]        // C# Type attribute</code>
+            </example>
+            <example>
+            	<code>IconId iconid = MezecygThemedIconsThemedIcons.SpellingGeneral.Id;        // IconId identifier object</code>
+            </example>
+            <example>
+            	<code>themediconmanager.GetIcon&lt;MezecygThemedIconsThemedIcons.SpellingGeneral&gt;()        // Icon image for rendering</code>
+            </example>
+        </member>
+        <member name="F:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.SpellingGeneral.Id">
+            <inheritdoc cref="T:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.SpellingGeneral">identifier class</inheritdoc>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.SpellingGeneral.Load_Color">
+            <summary>Loads the image for Themed Icon SpellingGeneral theme aspect Color.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.SpellingGeneral.Load_Gray">
+            <summary>Loads the image for Themed Icon SpellingGeneral theme aspect Gray.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.SpellingGeneral.Load_GrayDark">
+            <summary>Loads the image for Themed Icon SpellingGeneral theme aspect GrayDark.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.ReSpeller.Icons.GrammarAndSpellingIcons.SpellingGeneral.GetThemeImages">
+            <summary>Returns the set of theme images for Themed Icon SpellingGeneral.</summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.ReSpeller.Icons.ReSpellerThemedIcons.ReSpellerIcon">
+             <summary>
+            	<para>
+            		<para>ReSpeller Themed Icon generated identifiers:</para>
+            		<para>— <see cref="T:JetBrains.ReSharper.Features.ReSpeller.Icons.ReSpellerThemedIcons.ReSpellerIcon"></see> identifier class, for use in attributes, XAML, and generic parameters;</para>
+            		<para>— <see cref="F:JetBrains.ReSharper.Features.ReSpeller.Icons.ReSpellerThemedIcons.ReSpellerIcon.Id"></see> identifier object, as a field in the identifier class, for use where an <see cref="T:JetBrains.UI.Icons.IconId"></see> value is expected.</para>
+            		<para>
+            			<code>
+                                             
+                    *aaaaaa*                 
+                   'V5    CV_                
+                   o4_ '` 'KE                
+                  +A?  C?  *AL               
+                 .bh` "qq'  aX_     `={I!`   
+                 u#"  *77!  _#V   `;Y|::|5+` 
+                ;83  .____-  T8L`;2v,````,vu*
+               `##` `R8Paah. `pby1"``````_Ta(
+               oW;  FqP{~~{PL+P{~------_)Ps_ 
+               NNNNmhY^----^YY^------_|6F_   
+                   |4v:............:v41_     
+                    'iwl,........,lw{_       
+                      'lXt,'''',tXY_         
+                        'CRY""YR5_           
+                          'I##j_             
+            </code>
+            		</para>
+            	</para>
+            </summary>
+            <remarks>
+            	<para>For details on Themed Icons and their use, see Remarks on the outer class.</para>
+            </remarks>
+            <example>
+            	<code>&lt;Image Source="{icons:ThemedIcon myres:GerycylThemedIconsThemedIcons+ReSpeller}" /&gt;        &lt;!-- XAML --&gt;</code>
+            </example>
+            <example>
+            	<code>[Item(Name="Sample", Icon=typeof(GerycylThemedIconsThemedIcons.ReSpeller))]        // C# Type attribute</code>
+            </example>
+            <example>
+            	<code>IconId iconid = GerycylThemedIconsThemedIcons.ReSpeller.Id;        // IconId identifier object</code>
+            </example>
+            <example>
+            	<code>themediconmanager.GetIcon&lt;GerycylThemedIconsThemedIcons.ReSpeller&gt;()        // Icon image for rendering</code>
+            </example>
+        </member>
+        <member name="F:JetBrains.ReSharper.Features.ReSpeller.Icons.ReSpellerThemedIcons.ReSpellerIcon.Id">
+            <inheritdoc cref="T:JetBrains.ReSharper.Features.ReSpeller.Icons.ReSpellerThemedIcons.ReSpellerIcon">identifier class</inheritdoc>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.ReSpeller.Icons.ReSpellerThemedIcons.ReSpellerIcon.Load_Color">
+            <summary>Loads the image for Themed Icon ReSpeller theme aspect Color.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.ReSpeller.Icons.ReSpellerThemedIcons.ReSpellerIcon.Load_Gray">
+            <summary>Loads the image for Themed Icon ReSpeller theme aspect Gray.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.ReSpeller.Icons.ReSpellerThemedIcons.ReSpellerIcon.Load_GrayDark">
+            <summary>Loads the image for Themed Icon ReSpeller theme aspect GrayDark.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.ReSpeller.Icons.ReSpellerThemedIcons.ReSpellerIcon.GetThemeImages">
+            <summary>Returns the set of theme images for Themed Icon ReSpeller.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.ReSpeller.SpellEngine.Sources.DictionarySourceOnSettings.#ctor(JetBrains.Lifetimes.Lifetime,JetBrains.Util.ILogger,JetBrains.Application.Settings.ISettingsStore,JetBrains.Application.Threading.IThreading)">
+            <summary>
+            You must call <see cref="M:JetBrains.ReSharper.Features.ReSpeller.SpellEngine.Sources.DictionarySourceOnSettings.Init"/> in derived constructor
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.ReSpeller.SpellEngine.Sources.DictionarySourceOnSettings.Init">
+            <summary>
+            Must be called in derived constructor to load initial content from settings
+            Can't be called in own ctor because virtual method GetCurrentContent can try accessing uninitialized data in an inheritor (virtual member call in ctor)
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.ReSpeller.SpellEngine.TextSplitter.IsSupportedLetter(System.Char)">
+            <summary>
+            Checks that char is letter and isn't CJK ideograph, because we don't know how to split CJK texts
+            <para>
+            Block                                   Range       Comment
+            Hiragana                                3040 — 309F
+            Katakana                                30A0 — 30FF
+            CJK Unified Ideographs                  4E00-9FFF   Common
+            CJK Unified Ideographs Extension A      3400-4DBF   Rare
+            CJK Unified Ideographs Extension B      20000-2A6DF Rare, historic
+            CJK Unified Ideographs Extension C      2A700–2B73F Rare, historic
+            CJK Unified Ideographs Extension D      2B740–2B81F Uncommon, some in current use
+            CJK Unified Ideographs Extension E      2B820–2CEAF Rare, historic
+            CJK Compatibility Ideographs            F900-FAFF   Duplicates, unifiable variants, corporate characters
+            CJK Compatibility Ideographs Supplement 2F800-2FA1F Unifiable variants
+            </para>
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

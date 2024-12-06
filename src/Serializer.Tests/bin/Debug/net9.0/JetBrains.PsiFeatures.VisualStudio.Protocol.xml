@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.PsiFeatures.VisualStudio.Protocol</name>
+    </assembly>
+    <members>
+        <member name="T:JetBrains.PsiFeatures.VisualStudio.Protocol.Frontend.Debugger.IVsDebuggerInterop">
+            <summary>
+            Protocol component to interact with Visual Studio's debugger interface.
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.Protocol.Frontend.Debugger.IVsDebuggerInterop.QueryExpressionsType(System.String,System.Boolean,System.Boolean,System.String)">
+            <summary>
+            Queries actual type of provided expression.
+            </summary>
+            <param name="expression">the expression or the name of the local variable</param>
+            <param name="allowExpressionEvaluation">whether to allow debugger to evaluate provided expression.</param>
+            <param name="allowSideEffects">Whether to allow side effects evaluation.</param>
+            <param name="documentLocation">The document location in context of which the calculations should be performed.
+              If currently selected frame does not correspond to provided document's location the result will be always
+              null. You can disable this check by providing null to this parameter></param>
+            <returns>FQN of the provided type with type arguments in &lt; and &gt;</returns>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.Protocol.Frontend.Debugger.IVsDebuggerInterop.GetAllowImplicitEvaluation">
+            <summary>
+            Whether implicit property and function evaluation is enabled on frontend.
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

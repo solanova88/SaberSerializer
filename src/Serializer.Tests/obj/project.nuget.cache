@@ -1,0 +1,1776 @@
+{
+  "version": 2,
+  "dgSpecHash": "jFxGyxBhONk=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Максим\\Desktop\\SaberSerializer\\src\\Serializer.Tests\\Serializer.Tests.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Максим\\.nuget\\packages\\antlr2.runtime\\2.7.7.3\\antlr2.runtime.2.7.7.3.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\antlr2.tools\\2.7.6.4\\antlr2.tools.2.7.6.4.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\appccelerate.statemachine\\3.3.0\\appccelerate.statemachine.3.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\bouncycastle.cryptography\\2.4.0\\bouncycastle.cryptography.2.4.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\coverlet.collector\\6.0.2\\coverlet.collector.6.0.2.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\dotnetzip\\1.11.0\\dotnetzip.1.11.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.annotations\\2024.3.0\\jetbrains.annotations.2024.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.build.platform.distributedcache\\1.1.20240726.221\\jetbrains.build.platform.distributedcache.1.1.20240726.221.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.build.platform.tasks.proxytosolutioncompiledtask\\3.2.20230413.1\\jetbrains.build.platform.tasks.proxytosolutioncompiledtask.3.2.20230413.1.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.build.platform.tasks.themediconspacker\\2.0.20151217.1\\jetbrains.build.platform.tasks.themediconspacker.2.0.20151217.1.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.clangformat.linux-x64\\20.0.0\\jetbrains.clangformat.linux-x64.20.0.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.clangformat.macos-arm64\\20.0.0\\jetbrains.clangformat.macos-arm64.20.0.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.clangformat.macos-x64\\20.0.0\\jetbrains.clangformat.macos-x64.20.0.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.clangformat.windows-x86\\20.0.0\\jetbrains.clangformat.windows-x86.20.0.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.clangtidy.windows-x86\\19.1.0\\jetbrains.clangtidy.windows-x86.19.1.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.externalannotations\\10.2.154\\jetbrains.externalannotations.10.2.154.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.formatripper\\2.2.2\\jetbrains.formatripper.2.2.2.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.gitcredentialmanager\\0.1.1\\jetbrains.gitcredentialmanager.0.1.1.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.habitatdetector\\1.4.3\\jetbrains.habitatdetector.1.4.3.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.jsonrpc\\1.0.2\\jetbrains.jsonrpc.1.0.2.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.lifetimes\\2024.3.0\\jetbrains.lifetimes.2024.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.mahapps.metro\\1.5.0.1\\jetbrains.mahapps.metro.1.5.0.1.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.microsoft.deployment.compression.cab\\3.11.0\\jetbrains.microsoft.deployment.compression.cab.3.11.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.microsoft.deployment.windowsinstaller\\3.11.0\\jetbrains.microsoft.deployment.windowsinstaller.3.11.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.microsoft.diagnostics.runtime\\2.1.20241003.5\\jetbrains.microsoft.diagnostics.runtime.2.1.20241003.5.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.microsoft.testplatform.translationlayer\\16.0.0.20191015\\jetbrains.microsoft.testplatform.translationlayer.16.0.0.20191015.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.microsoft.web.webview2\\1.0.1587.40\\jetbrains.microsoft.web.webview2.1.0.1587.40.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.microsoft.web.webview2.windows-arm64\\1.0.1587.40\\jetbrains.microsoft.web.webview2.windows-arm64.1.0.1587.40.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.microsoft.web.webview2.windows-x64\\1.0.1587.40\\jetbrains.microsoft.web.webview2.windows-x64.1.0.1587.40.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.microsoft.web.webview2.windows-x86\\1.0.1587.40\\jetbrains.microsoft.web.webview2.windows-x86.1.0.1587.40.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.nuget.commands\\6.12.20241007.141\\jetbrains.nuget.commands.6.12.20241007.141.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.nuget.common\\6.12.20241007.141\\jetbrains.nuget.common.6.12.20241007.141.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.nuget.configurations\\6.12.20241007.141\\jetbrains.nuget.configurations.6.12.20241007.141.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.nuget.core\\2.14.2.20220408\\jetbrains.nuget.core.2.14.2.20220408.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.nuget.credentials\\6.12.20241007.141\\jetbrains.nuget.credentials.6.12.20241007.141.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.nuget.dependencyresolver.core\\6.12.20241007.141\\jetbrains.nuget.dependencyresolver.core.6.12.20241007.141.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.nuget.frameworks\\6.12.20241007.141\\jetbrains.nuget.frameworks.6.12.20241007.141.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.nuget.librarymodel\\6.12.20241007.141\\jetbrains.nuget.librarymodel.6.12.20241007.141.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.nuget.packagemanagement\\6.12.20241007.141\\jetbrains.nuget.packagemanagement.6.12.20241007.141.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.nuget.packaging\\6.12.20241007.141\\jetbrains.nuget.packaging.6.12.20241007.141.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.nuget.projectmodel\\6.12.20241007.141\\jetbrains.nuget.projectmodel.6.12.20241007.141.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.nuget.protocol\\6.12.20241007.141\\jetbrains.nuget.protocol.6.12.20241007.141.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.nuget.resolver\\6.12.20241007.141\\jetbrains.nuget.resolver.6.12.20241007.141.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.nuget.versioning\\6.12.20241007.141\\jetbrains.nuget.versioning.6.12.20241007.141.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.componentmanager.windows-arm64\\2.0.20220730\\jetbrains.platform.componentmanager.windows-arm64.2.0.20220730.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.componentmanager.windows-x64\\2.0.20220730\\jetbrains.platform.componentmanager.windows-x64.2.0.20220730.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.componentmanager.windows-x86\\2.0.20220730\\jetbrains.platform.componentmanager.windows-x86.2.0.20220730.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.core.clrstack\\243.0.20241113.529\\jetbrains.platform.core.clrstack.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.core.ide\\243.0.20241113.529\\jetbrains.platform.core.ide.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.core.iisexpress\\243.0.20241113.529\\jetbrains.platform.core.iisexpress.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.core.msbuild\\243.0.20241113.529\\jetbrains.platform.core.msbuild.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.core.shell\\243.0.20241111.161016\\jetbrains.platform.core.shell.243.0.20241111.161016.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.core.symbols\\243.0.20241113.529\\jetbrains.platform.core.symbols.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.core.text\\243.0.20241113.529\\jetbrains.platform.core.text.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.core.viewmodels\\243.0.20241113.529\\jetbrains.platform.core.viewmodels.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.installer\\243.0.20241113.529\\jetbrains.platform.installer.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.interop.commandline\\243.0.20241113.529\\jetbrains.platform.interop.commandline.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.interop.dotmemoryunit.interop.console\\243.0.20241113.529\\jetbrains.platform.interop.dotmemoryunit.interop.console.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.interop.dotmemoryunit.interop.ide\\243.0.20241113.529\\jetbrains.platform.interop.dotmemoryunit.interop.ide.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.lib.devexpress\\2.0.20170610\\jetbrains.platform.lib.devexpress.2.0.20170610.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.lib.libleveldb.linux-arm.release\\20221018.88.0\\jetbrains.platform.lib.libleveldb.linux-arm.release.20221018.88.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.lib.libleveldb.linux-arm64.release\\20221018.88.0\\jetbrains.platform.lib.libleveldb.linux-arm64.release.20221018.88.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.lib.libleveldb.linux-musl-arm64.release\\20221018.88.0\\jetbrains.platform.lib.libleveldb.linux-musl-arm64.release.20221018.88.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.lib.libleveldb.linux-musl-x64.release\\20221018.88.0\\jetbrains.platform.lib.libleveldb.linux-musl-x64.release.20221018.88.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.lib.libleveldb.linux-x64.release\\20221018.88.0\\jetbrains.platform.lib.libleveldb.linux-x64.release.20221018.88.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.lib.libleveldb.macos-arm64.release\\20221018.88.0\\jetbrains.platform.lib.libleveldb.macos-arm64.release.20221018.88.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.lib.libleveldb.macos-x64.release\\20221018.88.0\\jetbrains.platform.lib.libleveldb.macos-x64.release.20221018.88.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.lib.libleveldb.windows-arm64.release\\20221018.88.0\\jetbrains.platform.lib.libleveldb.windows-arm64.release.20221018.88.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.lib.libleveldb.windows-x64.release\\20221018.88.0\\jetbrains.platform.lib.libleveldb.windows-x64.release.20221018.88.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.lib.libleveldb.windows-x86.release\\20221018.88.0\\jetbrains.platform.lib.libleveldb.windows-x86.release.20221018.88.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.lib.visualstudio.anyvs.shellinterop.privatebuild\\2.0.20141005.1\\jetbrains.platform.lib.visualstudio.anyvs.shellinterop.privatebuild.2.0.20141005.1.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.lib.wpfcontrib\\2.0.20170610\\jetbrains.platform.lib.wpfcontrib.2.0.20170610.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.msbuild.logger.api\\1.0.20170809\\jetbrains.platform.msbuild.logger.api.1.0.20170809.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.nativehooks.windows-arm64\\5.0.20220801\\jetbrains.platform.nativehooks.windows-arm64.5.0.20220801.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.nativehooks.windows-x64\\5.0.20220801\\jetbrains.platform.nativehooks.windows-x64.5.0.20220801.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.nativehooks.windows-x86\\5.0.20220801\\jetbrains.platform.nativehooks.windows-x86.5.0.20220801.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.rdprotocol\\243.0.20241113.529\\jetbrains.platform.rdprotocol.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.sdk\\243.0.20241113.529\\jetbrains.platform.sdk.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.tests.framework\\243.0.20241113.529\\jetbrains.platform.tests.framework.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.uiinteractive.common\\243.0.20241113.529\\jetbrains.platform.uiinteractive.common.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.uiinteractive.ide\\243.0.20241113.529\\jetbrains.platform.uiinteractive.ide.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.uiinteractive.shell\\243.0.20241113.529\\jetbrains.platform.uiinteractive.shell.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.uiinteractive.text\\243.0.20241113.529\\jetbrains.platform.uiinteractive.text.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.uiinteractive.wpf.symbols\\243.0.20241113.529\\jetbrains.platform.uiinteractive.wpf.symbols.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.visualstudio.backend\\243.0.20241113.529\\jetbrains.platform.visualstudio.backend.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.visualstudio.core\\243.0.20241113.529\\jetbrains.platform.visualstudio.core.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.visualstudio.justvs10\\243.0.20241113.529\\jetbrains.platform.visualstudio.justvs10.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.visualstudio.justvs11\\243.0.20241113.529\\jetbrains.platform.visualstudio.justvs11.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.visualstudio.justvs12\\243.0.20241113.529\\jetbrains.platform.visualstudio.justvs12.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.visualstudio.justvs14\\243.0.20241113.529\\jetbrains.platform.visualstudio.justvs14.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.visualstudio.justvs15\\243.0.20241113.529\\jetbrains.platform.visualstudio.justvs15.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.visualstudio.justvs16\\243.0.20241113.529\\jetbrains.platform.visualstudio.justvs16.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.visualstudio.justvs17\\243.0.20241113.529\\jetbrains.platform.visualstudio.justvs17.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.visualstudio.protocol\\243.0.20241113.529\\jetbrains.platform.visualstudio.protocol.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.visualstudio.sincevs09\\243.0.20241113.529\\jetbrains.platform.visualstudio.sincevs09.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.visualstudio.sincevs10\\243.0.20241113.529\\jetbrains.platform.visualstudio.sincevs10.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.visualstudio.sincevs11\\243.0.20241113.529\\jetbrains.platform.visualstudio.sincevs11.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.visualstudio.sincevs12\\243.0.20241113.529\\jetbrains.platform.visualstudio.sincevs12.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.visualstudio.sincevs14\\243.0.20241113.529\\jetbrains.platform.visualstudio.sincevs14.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.visualstudio.sincevs14roslynaware\\243.0.20241113.529\\jetbrains.platform.visualstudio.sincevs14roslynaware.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.visualstudio.sincevs15\\243.0.20241113.529\\jetbrains.platform.visualstudio.sincevs15.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.visualstudio.sincevs15roslynaware\\243.0.20241113.529\\jetbrains.platform.visualstudio.sincevs15roslynaware.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.visualstudio.sincevs16\\243.0.20241113.529\\jetbrains.platform.visualstudio.sincevs16.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.visualstudio.sincevs16roslynaware\\243.0.20241113.529\\jetbrains.platform.visualstudio.sincevs16roslynaware.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.visualstudio.sincevs16roslynsourcegeneratorsaware\\243.0.20241113.529\\jetbrains.platform.visualstudio.sincevs16roslynsourcegeneratorsaware.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.visualstudio.sincevs17\\243.0.20241113.529\\jetbrains.platform.visualstudio.sincevs17.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.visualstudio.util\\243.0.20241113.529\\jetbrains.platform.visualstudio.util.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.visualstudio.vscttoctocompiler\\243.0.20241113.529\\jetbrains.platform.visualstudio.vscttoctocompiler.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.platform.visualstudio.vsproduct\\243.0.20241113.529\\jetbrains.platform.visualstudio.vsproduct.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.profiler.api\\1.4.8\\jetbrains.profiler.api.1.4.8.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.profiler.selfapi\\2.5.12\\jetbrains.profiler.selfapi.2.5.12.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.ai.src.core\\243.0.20241113.529\\jetbrains.psi.features.ai.src.core.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.core\\243.0.20241113.529\\jetbrains.psi.features.core.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.cpp.src.core\\243.0.20241113.529\\jetbrains.psi.features.cpp.src.core.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.diagramming\\243.0.20241113.529\\jetbrains.psi.features.diagramming.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.solutionbuilder\\243.0.20241113.529\\jetbrains.psi.features.solutionbuilder.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.src\\243.0.20241113.529\\jetbrains.psi.features.src.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.tasks\\243.0.20241113.529\\jetbrains.psi.features.tasks.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.test.framework\\243.0.20241113.529\\jetbrains.psi.features.test.framework.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.uiinteractive.core\\243.0.20241113.529\\jetbrains.psi.features.uiinteractive.core.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.uiinteractive.features\\243.0.20241113.529\\jetbrains.psi.features.uiinteractive.features.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.uiinteractive.livetemplates\\243.0.20241113.529\\jetbrains.psi.features.uiinteractive.livetemplates.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.uiinteractive.refactorings\\243.0.20241113.529\\jetbrains.psi.features.uiinteractive.refactorings.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.uiinteractive.solutionanalysis\\243.0.20241113.529\\jetbrains.psi.features.uiinteractive.solutionanalysis.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.uiinteractive.solutionbuilder\\243.0.20241113.529\\jetbrains.psi.features.uiinteractive.solutionbuilder.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.unittesting\\243.0.20241113.529\\jetbrains.psi.features.unittesting.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.visualstudio.backend\\243.0.20241113.529\\jetbrains.psi.features.visualstudio.backend.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.visualstudio.debugger\\243.0.20241113.529\\jetbrains.psi.features.visualstudio.debugger.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.visualstudio.debuggervisualizers\\243.0.20241113.529\\jetbrains.psi.features.visualstudio.debuggervisualizers.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.visualstudio.externalsources.vs\\243.0.20241113.529\\jetbrains.psi.features.visualstudio.externalsources.vs.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.visualstudio.justvs10\\243.0.20241113.529\\jetbrains.psi.features.visualstudio.justvs10.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.visualstudio.justvs12\\243.0.20241113.529\\jetbrains.psi.features.visualstudio.justvs12.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.visualstudio.protocol\\243.0.20241113.529\\jetbrains.psi.features.visualstudio.protocol.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.visualstudio.respeller\\243.0.20241113.529\\jetbrains.psi.features.visualstudio.respeller.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.visualstudio.sincevs10\\243.0.20241113.529\\jetbrains.psi.features.visualstudio.sincevs10.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.visualstudio.sincevs11\\243.0.20241113.529\\jetbrains.psi.features.visualstudio.sincevs11.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.visualstudio.sincevs12\\243.0.20241113.529\\jetbrains.psi.features.visualstudio.sincevs12.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.visualstudio.sincevs14\\243.0.20241113.529\\jetbrains.psi.features.visualstudio.sincevs14.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.visualstudio.sincevs14roslynaware\\243.0.20241113.529\\jetbrains.psi.features.visualstudio.sincevs14roslynaware.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.visualstudio.sincevs15\\243.0.20241113.529\\jetbrains.psi.features.visualstudio.sincevs15.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.visualstudio.sincevs16\\243.0.20241113.529\\jetbrains.psi.features.visualstudio.sincevs16.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.visualstudio.sincevs16roslynaware\\243.0.20241113.529\\jetbrains.psi.features.visualstudio.sincevs16roslynaware.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.visualstudio.sincevs17\\243.0.20241113.529\\jetbrains.psi.features.visualstudio.sincevs17.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.visualstudio.unittesting\\243.0.20241113.529\\jetbrains.psi.features.visualstudio.unittesting.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.visualstudio.vsproduct\\243.0.20241113.529\\jetbrains.psi.features.visualstudio.vsproduct.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.visualstudio._core\\243.0.20241113.529\\jetbrains.psi.features.visualstudio._core.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.web.core\\243.0.20241113.529\\jetbrains.psi.features.web.core.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.psi.features.web.uiinteractive\\243.0.20241113.529\\jetbrains.psi.features.web.uiinteractive.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.rdframework\\2024.3.0\\jetbrains.rdframework.2024.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.rdframework.reflection\\2024.3.0\\jetbrains.rdframework.reflection.2024.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.resharper.sdk\\2024.3.0\\jetbrains.resharper.sdk.2024.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.resharper.sdk.internal\\243.0.20241113.529\\jetbrains.resharper.sdk.internal.243.0.20241113.529.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.resharper.sdk.tests\\2024.3.0\\jetbrains.resharper.sdk.tests.2024.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.resharper.testrunner\\2.16.1.109\\jetbrains.resharper.testrunner.2.16.1.109.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.resharper.testrunner.abstractions\\2.16.1\\jetbrains.resharper.testrunner.abstractions.2.16.1.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.resharper.testrunner.adapters.mstest\\2.16.1.46\\jetbrains.resharper.testrunner.adapters.mstest.2.16.1.46.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.resharper.testrunner.adapters.mstest.tasks\\2.16.1.12\\jetbrains.resharper.testrunner.adapters.mstest.tasks.2.16.1.12.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.resharper.testrunner.adapters.mstest10\\2.16.1.23\\jetbrains.resharper.testrunner.adapters.mstest10.2.16.1.23.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.resharper.testrunner.adapters.nunit2\\2.16.1.33\\jetbrains.resharper.testrunner.adapters.nunit2.2.16.1.33.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.resharper.testrunner.adapters.nunit2.tasks\\2.16.1.11\\jetbrains.resharper.testrunner.adapters.nunit2.tasks.2.16.1.11.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.resharper.testrunner.adapters.nunit3\\2.16.1.73\\jetbrains.resharper.testrunner.adapters.nunit3.2.16.1.73.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.resharper.testrunner.adapters.nunit3.tasks\\2.16.1.20\\jetbrains.resharper.testrunner.adapters.nunit3.tasks.2.16.1.20.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.resharper.testrunner.adapters.uwp\\2.16.1.36\\jetbrains.resharper.testrunner.adapters.uwp.2.16.1.36.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.resharper.testrunner.adapters.uwp.sincevs15_0_0\\2.16.1.36\\jetbrains.resharper.testrunner.adapters.uwp.sincevs15_0_0.2.16.1.36.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.resharper.testrunner.adapters.uwp.sincevs17_3_0\\2.16.1.36\\jetbrains.resharper.testrunner.adapters.uwp.sincevs17_3_0.2.16.1.36.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.resharper.testrunner.adapters.uwp.tasks\\2.16.1.1\\jetbrains.resharper.testrunner.adapters.uwp.tasks.2.16.1.1.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.resharper.testrunner.adapters.vstest\\2.16.1.14\\jetbrains.resharper.testrunner.adapters.vstest.2.16.1.14.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.resharper.testrunner.adapters.vstest.tasks\\2.16.1.1\\jetbrains.resharper.testrunner.adapters.vstest.tasks.2.16.1.1.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.resharper.testrunner.adapters.xunit\\2.16.1.42\\jetbrains.resharper.testrunner.adapters.xunit.2.16.1.42.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.resharper.testrunner.adapters.xunit.tasks\\2.16.1.11\\jetbrains.resharper.testrunner.adapters.xunit.tasks.2.16.1.11.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.resharper.testrunner.adapters.xunit3\\2.16.1.10\\jetbrains.resharper.testrunner.adapters.xunit3.2.16.1.10.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.resharper.testrunner.utilities\\2.16.1.15\\jetbrains.resharper.testrunner.utilities.2.16.1.15.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.roslyn.references.repack\\42.42.20241023.43555\\jetbrains.roslyn.references.repack.42.42.20241023.43555.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.sharpziplib.stripped\\1.3.3.30\\jetbrains.sharpziplib.stripped.1.3.3.30.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.should\\1.1.20\\jetbrains.should.1.1.20.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.signatureverifier\\2.2.2\\jetbrains.signatureverifier.2.2.2.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.system.windows.interactivity\\3.0.40218.1\\jetbrains.system.windows.interactivity.3.0.40218.1.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.system.xaml\\0.0.7\\jetbrains.system.xaml.0.0.7.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.toolset.scriptsourcescompiler.interface\\1.0.20170420.1\\jetbrains.toolset.scriptsourcescompiler.interface.1.0.20170420.1.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.vestris.resourcelib\\1.4.20210120.2\\jetbrains.vestris.resourcelib.1.4.20210120.2.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.windows7apicodepack.stripped\\1.1.20210120.1\\jetbrains.windows7apicodepack.stripped.1.1.20210120.1.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\jetbrains.windowsdesktop.mock.runtime\\0.0.3\\jetbrains.windowsdesktop.mock.runtime.0.0.3.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\8.0.0\\microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\microsoft.codecoverage\\17.12.0\\microsoft.codecoverage.17.12.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\microsoft.diagnostics.netcore.client\\0.2.221401\\microsoft.diagnostics.netcore.client.0.2.221401.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\microsoft.extensions.dependencymodel\\3.0.0\\microsoft.extensions.dependencymodel.3.0.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\8.0.0\\microsoft.extensions.fileproviders.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\6.0.0\\microsoft.extensions.filesystemglobbing.6.0.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\microsoft.identitymodel.abstractions\\6.35.0\\microsoft.identitymodel.abstractions.6.35.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.35.0\\microsoft.identitymodel.jsonwebtokens.6.35.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\microsoft.identitymodel.logging\\6.35.0\\microsoft.identitymodel.logging.6.35.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.35.0\\microsoft.identitymodel.tokens.6.35.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\microsoft.net.test.sdk\\17.12.0\\microsoft.net.test.sdk.17.12.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.1\\microsoft.netcore.platforms.1.1.1.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\microsoft.owin\\4.2.2\\microsoft.owin.4.2.2.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\microsoft.owin.filesystems\\4.2.2\\microsoft.owin.filesystems.4.2.2.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\microsoft.owin.host.httplistener\\4.2.2\\microsoft.owin.host.httplistener.4.2.2.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\microsoft.owin.hosting\\4.2.2\\microsoft.owin.hosting.4.2.2.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\microsoft.owin.staticfiles\\4.2.2\\microsoft.owin.staticfiles.4.2.2.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.12.0\\microsoft.testplatform.objectmodel.17.12.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\microsoft.testplatform.testhost\\17.12.0\\microsoft.testplatform.testhost.17.12.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\microsoft.web.xdt\\3.0.0\\microsoft.web.xdt.3.0.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0\\microsoft.win32.systemevents.8.0.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\moq\\4.16.1\\moq.4.16.1.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\nhunspell\\1.2.5554.16953\\nhunspell.1.2.5554.16953.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\nunit\\3.13.2\\nunit.3.13.2.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\nvelocity\\1.0.3\\nvelocity.1.0.3.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\owin\\1.0.0\\owin.1.0.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\perfolizer\\0.3.5\\perfolizer.0.3.5.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\sprache.jetbrains\\2.3.1\\sprache.jetbrains.2.3.1.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.codedom\\8.0.0\\system.codedom.8.0.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.collections.immutable\\8.0.0\\system.collections.immutable.8.0.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.collections.nongeneric\\4.3.0\\system.collections.nongeneric.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.collections.specialized\\4.3.0\\system.collections.specialized.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.componentmodel\\4.3.0\\system.componentmodel.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.componentmodel.composition\\4.5.0\\system.componentmodel.composition.4.5.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.componentmodel.primitives\\4.3.0\\system.componentmodel.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.componentmodel.typeconverter\\4.3.0\\system.componentmodel.typeconverter.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.diagnostics.debug\\4.3.0\\system.diagnostics.debug.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.diagnostics.tracesource\\4.3.0\\system.diagnostics.tracesource.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.drawing.common\\8.0.0\\system.drawing.common.8.0.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.dynamic.runtime\\4.3.0\\system.dynamic.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.formats.asn1\\8.0.1\\system.formats.asn1.8.0.1.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.globalization\\4.3.0\\system.globalization.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.globalization.extensions\\4.3.0\\system.globalization.extensions.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.io.filesystem\\4.3.0\\system.io.filesystem.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.io.filesystem.accesscontrol\\5.0.0\\system.io.filesystem.accesscontrol.5.0.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.io.filesystem.primitives\\4.3.0\\system.io.filesystem.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.io.packaging\\8.0.0\\system.io.packaging.8.0.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.linq.expressions\\4.3.0\\system.linq.expressions.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.objectmodel\\4.3.0\\system.objectmodel.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.private.uri\\4.3.2\\system.private.uri.4.3.2.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.reactive\\5.0.0\\system.reactive.5.0.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.reflection.emit\\4.6.0\\system.reflection.emit.4.6.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.3.0\\system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.reflection.emit.lightweight\\4.6.0\\system.reflection.emit.lightweight.4.6.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.reflection.extensions\\4.3.0\\system.reflection.extensions.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.reflection.metadata\\8.0.0\\system.reflection.metadata.8.0.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.reflection.primitives\\4.3.0\\system.reflection.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.reflection.typeextensions\\4.3.0\\system.reflection.typeextensions.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.resources.resourcemanager\\4.3.0\\system.resources.resourcemanager.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.runtime.extensions\\4.3.0\\system.runtime.extensions.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.runtime.handles\\4.3.0\\system.runtime.handles.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.runtime.interopservices\\4.3.0\\system.runtime.interopservices.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.runtime.interopservices.runtimeinformation\\4.3.0\\system.runtime.interopservices.runtimeinformation.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.runtime.loader\\4.0.0\\system.runtime.loader.4.0.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.security.accesscontrol\\6.0.0\\system.security.accesscontrol.6.0.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.security.cryptography.pkcs\\6.0.4\\system.security.cryptography.pkcs.6.0.4.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.4.0\\system.security.cryptography.protecteddata.4.4.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.security.permissions\\8.0.0\\system.security.permissions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.text.encoding.codepages\\8.0.0\\system.text.encoding.codepages.8.0.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.text.encoding.extensions\\4.3.0\\system.text.encoding.extensions.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.text.json\\8.0.4\\system.text.json.8.0.4.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.text.regularexpressions\\4.3.0\\system.text.regularexpressions.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.threading.channels\\8.0.0\\system.threading.channels.8.0.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.windows.extensions\\8.0.0\\system.windows.extensions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\wave\\243.0.0\\wave.243.0.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\ww898.aelauncher\\1.0.2\\ww898.aelauncher.1.0.2.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\xunit\\2.9.2\\xunit.2.9.2.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\xunit.abstractions\\2.0.3\\xunit.abstractions.2.0.3.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\xunit.analyzers\\1.16.0\\xunit.analyzers.1.16.0.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\xunit.assert\\2.9.2\\xunit.assert.2.9.2.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\xunit.core\\2.9.2\\xunit.core.2.9.2.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\xunit.extensibility.core\\2.9.2\\xunit.extensibility.core.2.9.2.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\xunit.extensibility.execution\\2.9.2\\xunit.extensibility.execution.2.9.2.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\xunit.jetbrains\\1.9.2\\xunit.jetbrains.1.9.2.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\xunit.runner.utility\\2.4.1\\xunit.runner.utility.2.4.1.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\xunit.runner.visualstudio\\2.8.2\\xunit.runner.visualstudio.2.8.2.nupkg.sha512",
+    "C:\\Users\\Максим\\.nuget\\packages\\yamldotnet.signed\\5.2.1\\yamldotnet.signed.5.2.1.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'DotNetZip' 1.11.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-xhg6-9j5j-w4vf",
+      "libraryId": "DotNetZip",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.IO.Packaging' 8.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-f32c-w444-8ppv",
+      "libraryId": "System.IO.Packaging",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.IO.Packaging' 8.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-qj66-m88j-hmgj",
+      "libraryId": "System.IO.Packaging",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Text.Json' 8.0.4 has a known high severity vulnerability, https://github.com/advisories/GHSA-8g4q-xg66-9fp4",
+      "libraryId": "System.Text.Json",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Text.RegularExpressions' 4.3.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-cmhx-cq75-c4mj",
+      "libraryId": "System.Text.RegularExpressions",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Antlr2.Runtime 2.7.7.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Antlr2.Runtime",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'DotNetZip 1.11.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "DotNetZip",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.ClangFormat.linux-x64 20.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.ClangFormat.linux-x64",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.ClangFormat.macos-arm64 20.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.ClangFormat.macos-arm64",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.ClangFormat.macos-x64 20.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.ClangFormat.macos-x64",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.ClangFormat.windows-x86 20.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.ClangFormat.windows-x86",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.ClangTidy.windows-x86 19.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.ClangTidy.windows-x86",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.GitCredentialManager 0.1.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.GitCredentialManager",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.MahApps.Metro 1.5.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.MahApps.Metro",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Microsoft.Deployment.Compression.Cab 3.11.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Microsoft.Deployment.Compression.Cab",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Microsoft.Deployment.WindowsInstaller 3.11.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Microsoft.Deployment.WindowsInstaller",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Microsoft.TestPlatform.TranslationLayer 16.0.0.20191015' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Microsoft.TestPlatform.TranslationLayer",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.NuGet.Core 2.14.2.20220408' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.NuGet.Core",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.ComponentManager.windows-arm64 2.0.20220730' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.ComponentManager.windows-arm64",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.ComponentManager.windows-x64 2.0.20220730' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.ComponentManager.windows-x64",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.ComponentManager.windows-x86 2.0.20220730' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.ComponentManager.windows-x86",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.Core.ClrStack 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.Core.ClrStack",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.Core.Ide 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.Core.Ide",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.Core.IisExpress 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.Core.IisExpress",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.Core.MsBuild 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.Core.MsBuild",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.Core.Shell 243.0.20241111.161016' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.Core.Shell",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.Core.Symbols 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.Core.Symbols",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.Core.Text 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.Core.Text",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.Core.ViewModels 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.Core.ViewModels",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.Installer 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.Installer",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.Interop.CommandLine 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.Interop.CommandLine",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.Interop.dotMemoryUnit.Interop.Console 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.Interop.dotMemoryUnit.Interop.Console",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.Interop.dotMemoryUnit.Interop.Ide 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.Interop.dotMemoryUnit.Interop.Ide",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.Lib.DevExpress 2.0.20170610' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.Lib.DevExpress",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.Lib.LibLevelDb.linux-arm.release 20221018.88.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.Lib.LibLevelDb.linux-arm.release",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.Lib.LibLevelDb.linux-arm64.release 20221018.88.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.Lib.LibLevelDb.linux-arm64.release",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.Lib.LibLevelDb.linux-musl-arm64.release 20221018.88.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.Lib.LibLevelDb.linux-musl-arm64.release",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.Lib.LibLevelDb.linux-musl-x64.release 20221018.88.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.Lib.LibLevelDb.linux-musl-x64.release",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.Lib.LibLevelDb.linux-x64.release 20221018.88.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.Lib.LibLevelDb.linux-x64.release",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.Lib.LibLevelDb.macos-arm64.release 20221018.88.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.Lib.LibLevelDb.macos-arm64.release",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.Lib.LibLevelDb.macos-x64.release 20221018.88.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.Lib.LibLevelDb.macos-x64.release",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.Lib.LibLevelDb.windows-arm64.release 20221018.88.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.Lib.LibLevelDb.windows-arm64.release",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.Lib.LibLevelDb.windows-x64.release 20221018.88.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.Lib.LibLevelDb.windows-x64.release",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.Lib.LibLevelDb.windows-x86.release 20221018.88.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.Lib.LibLevelDb.windows-x86.release",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.Lib.VisualStudio.AnyVs.ShellInterop.PrivateBuild 2.0.20141005.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.Lib.VisualStudio.AnyVs.ShellInterop.PrivateBuild",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.Lib.WpfContrib 2.0.20170610' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.Lib.WpfContrib",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.MSBuild.Logger.Api 1.0.20170809' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.MSBuild.Logger.Api",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.NativeHooks.windows-arm64 5.0.20220801' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.NativeHooks.windows-arm64",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.NativeHooks.windows-x64 5.0.20220801' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.NativeHooks.windows-x64",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.NativeHooks.windows-x86 5.0.20220801' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.NativeHooks.windows-x86",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.RdProtocol 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.RdProtocol",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.Sdk 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.Sdk",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.Tests.Framework 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.Tests.Framework",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.UIInteractive.Common 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.UIInteractive.Common",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.UIInteractive.Ide 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.UIInteractive.Ide",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.UIInteractive.Shell 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.UIInteractive.Shell",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.UIInteractive.Text 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.UIInteractive.Text",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.UIInteractive.Wpf.Symbols 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.UIInteractive.Wpf.Symbols",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.VisualStudio.Backend 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.VisualStudio.Backend",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.VisualStudio.Core 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.VisualStudio.Core",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.VisualStudio.JustVs10 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.VisualStudio.JustVs10",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.VisualStudio.JustVs11 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.VisualStudio.JustVs11",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.VisualStudio.JustVs12 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.VisualStudio.JustVs12",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.VisualStudio.JustVs14 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.VisualStudio.JustVs14",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.VisualStudio.JustVs15 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.VisualStudio.JustVs15",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.VisualStudio.JustVs16 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.VisualStudio.JustVs16",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.VisualStudio.JustVs17 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.VisualStudio.JustVs17",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.VisualStudio.Protocol 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.VisualStudio.Protocol",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.VisualStudio.SinceVs09 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.VisualStudio.SinceVs09",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.VisualStudio.SinceVs10 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.VisualStudio.SinceVs10",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.VisualStudio.SinceVs11 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.VisualStudio.SinceVs11",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.VisualStudio.SinceVs12 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.VisualStudio.SinceVs12",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.VisualStudio.SinceVs14 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.VisualStudio.SinceVs14",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.VisualStudio.SinceVs14RoslynAware 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.VisualStudio.SinceVs14RoslynAware",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.VisualStudio.SinceVs15 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.VisualStudio.SinceVs15",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.VisualStudio.SinceVs15RoslynAware 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.VisualStudio.SinceVs15RoslynAware",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.VisualStudio.SinceVs16 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.VisualStudio.SinceVs16",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.VisualStudio.SinceVs16RoslynAware 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.VisualStudio.SinceVs16RoslynAware",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.VisualStudio.SinceVs16RoslynSourceGeneratorsAware 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.VisualStudio.SinceVs16RoslynSourceGeneratorsAware",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.VisualStudio.SinceVs17 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.VisualStudio.SinceVs17",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.VisualStudio.Util 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.VisualStudio.Util",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.VisualStudio.VsctToCtoCompiler 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.VisualStudio.VsctToCtoCompiler",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Platform.VisualStudio.VsProduct 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Platform.VisualStudio.VsProduct",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.AI.Src.Core 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.AI.Src.Core",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.Core 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.Core",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.Cpp.Src.Core 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.Cpp.Src.Core",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.Diagramming 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.Diagramming",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.SolutionBuilder 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.SolutionBuilder",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.src 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.src",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.Tasks 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.Tasks",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.test.Framework 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.test.Framework",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.UIInteractive.Core 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.UIInteractive.Core",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.UIInteractive.Features 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.UIInteractive.Features",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.UIInteractive.LiveTemplates 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.UIInteractive.LiveTemplates",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.UIInteractive.Refactorings 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.UIInteractive.Refactorings",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.UIInteractive.SolutionAnalysis 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.UIInteractive.SolutionAnalysis",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.UIInteractive.SolutionBuilder 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.UIInteractive.SolutionBuilder",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.UnitTesting 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.UnitTesting",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.VisualStudio.Backend 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.VisualStudio.Backend",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.VisualStudio.Debugger 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.VisualStudio.Debugger",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.VisualStudio.DebuggerVisualizers 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.VisualStudio.DebuggerVisualizers",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.VisualStudio.ExternalSources.VS 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.VisualStudio.ExternalSources.VS",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.VisualStudio.JustVs10 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.VisualStudio.JustVs10",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.VisualStudio.JustVs12 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.VisualStudio.JustVs12",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.VisualStudio.Protocol 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.VisualStudio.Protocol",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.VisualStudio.ReSpeller 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.VisualStudio.ReSpeller",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.VisualStudio.SinceVs10 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.VisualStudio.SinceVs10",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.VisualStudio.SinceVs11 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.VisualStudio.SinceVs11",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.VisualStudio.SinceVs12 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.VisualStudio.SinceVs12",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.VisualStudio.SinceVs14 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.VisualStudio.SinceVs14",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.VisualStudio.SinceVs14RoslynAware 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.VisualStudio.SinceVs14RoslynAware",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.VisualStudio.SinceVs15 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.VisualStudio.SinceVs15",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.VisualStudio.SinceVs16 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.VisualStudio.SinceVs16",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.VisualStudio.SinceVs16RoslynAware 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.VisualStudio.SinceVs16RoslynAware",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.VisualStudio.SinceVs17 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.VisualStudio.SinceVs17",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.VisualStudio.UnitTesting 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.VisualStudio.UnitTesting",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.VisualStudio.VsProduct 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.VisualStudio.VsProduct",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.VisualStudio._Core 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.VisualStudio._Core",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.Web.Core 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.Web.Core",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Psi.Features.Web.UIInteractive 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Psi.Features.Web.UIInteractive",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.ReSharper.SDK 2024.3.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.ReSharper.SDK",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.ReSharper.SDK.Internal 243.0.20241113.529' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.ReSharper.SDK.Internal",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.ReSharper.TestRunner 2.16.1.109' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.ReSharper.TestRunner",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.ReSharper.TestRunner.Adapters.MsTest 2.16.1.46' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.ReSharper.TestRunner.Adapters.MsTest",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.ReSharper.TestRunner.Adapters.MsTest10 2.16.1.23' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.ReSharper.TestRunner.Adapters.MsTest10",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.ReSharper.TestRunner.Adapters.NUnit2 2.16.1.33' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.ReSharper.TestRunner.Adapters.NUnit2",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.ReSharper.TestRunner.Adapters.NUnit2.Tasks 2.16.1.11' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.ReSharper.TestRunner.Adapters.NUnit2.Tasks",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.ReSharper.TestRunner.Adapters.NUnit3 2.16.1.73' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.ReSharper.TestRunner.Adapters.NUnit3",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.ReSharper.TestRunner.Adapters.UWP 2.16.1.36' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.ReSharper.TestRunner.Adapters.UWP",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.ReSharper.TestRunner.Adapters.UWP.SinceVs15_0_0 2.16.1.36' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.ReSharper.TestRunner.Adapters.UWP.SinceVs15_0_0",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.ReSharper.TestRunner.Adapters.UWP.SinceVs17_3_0 2.16.1.36' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.ReSharper.TestRunner.Adapters.UWP.SinceVs17_3_0",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.ReSharper.TestRunner.Adapters.UWP.Tasks 2.16.1.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.ReSharper.TestRunner.Adapters.UWP.Tasks",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.ReSharper.TestRunner.Adapters.VsTest 2.16.1.14' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.ReSharper.TestRunner.Adapters.VsTest",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.ReSharper.TestRunner.Adapters.XUnit 2.16.1.42' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.ReSharper.TestRunner.Adapters.XUnit",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.ReSharper.TestRunner.Adapters.XUnit3 2.16.1.10' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.ReSharper.TestRunner.Adapters.XUnit3",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.SharpZipLib.Stripped 1.3.3.30' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.SharpZipLib.Stripped",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JetBrains.Should 1.1.20' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JetBrains.Should",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Owin 4.2.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Owin",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Owin.FileSystems 4.2.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Owin.FileSystems",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Owin.Host.HttpListener 4.2.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Owin.Host.HttpListener",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Owin.Hosting 4.2.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Owin.Hosting",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Owin.StaticFiles 4.2.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Owin.StaticFiles",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'NHunspell 1.2.5554.16953' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "NHunspell",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'NVelocity 1.0.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "NVelocity",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Owin 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Owin",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Wave 243.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Wave",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'xunit.JetBrains 1.9.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "xunit.JetBrains",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    }
+  ]
+}

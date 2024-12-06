@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.Platform.VisualStudio.JustVs17</name>
+    </assembly>
+    <members>
+        <member name="M:JetBrains.Platform.VisualStudio.JustVs17.IDE.PersistableView.VsPersistableViewWindowPane17.OpenVsEditor(Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument,JetBrains.VsIntegration.Util.RawVsServiceProvider,JetBrains.VsIntegration.UI.WindowManagement.VsWindowFrameManager,JetBrains.Application.Interop.NativeHook.IWindowsHookManager,JetBrains.Application.Shortcuts.ShortcutManager.ShortcutScope)">
+            <summary>
+            <para>Opens the window pane in a VS window frame.</para>
+            <para>This actually makes use of the freshly-created pane in VS: VS prepares a window frame in a document tab and calls our IVsWindowPane::CreatePaneWindow to actually create the content control.</para> 
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.JustVs17.IDE.PersistableView.VsPersistableViewWindowPane17.Microsoft#VisualStudio#Shell#Interop#IVsDpiAware#Mode">
+            <summary>
+            Required by VS16 in PMv2 DPI mode.
+            Problem: without this flag, we're created in <see cref="F:JetBrains.VsIntegration.Interop.Declarations.VsShell.VSDPIMODE.VSDM_System" />, and all of the controls on our creation stack also go as System.
+            Then thread is switched to PMv2 for the most of the time.
+            So when we create and add a control later, it becomes PMv2 (derived from thread), and would silently fail to become a child of our UI (this is only a problem with System-PMv2 parenting).
+            Ensure we're ALWAYS operating under PMv2.
+            NOTE: this only applies to VS16+, but as we have it as an embed-interop-type, there's no problem in implementing on the base class.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.JustVs17.Shell.Install.VsPackageInstallHelperJustVs17.#ctor(JetBrains.VsIntegration.Shell.Install.VsPackageAssembly.VsPackageClassEmitters.PackageInfo,JetBrains.Util.ILogger)">
+            <inheritdoc />
+        </member>
+        <member name="F:JetBrains.Platform.VisualStudio.JustVs17.Shell.Package.VsAsyncPackage17.JoinableTaskCollection">
+            <summary>
+            The collection of asynchronous tasks started by this package.
+            </summary>
+        </member>
+        <member name="F:JetBrains.Platform.VisualStudio.JustVs17.Shell.Package.VsAsyncPackage17.JoinableTaskFactory">
+            <summary>
+            Gets the factory to use for asynchronous tasks started by this package.
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.JustVs17.Shell.Package.VsAsyncPackage17.DisposalToken">
+            <summary>
+            Exposes a CancellationToken that can be used to check if the package has been disposed.
+            This can happen for asynchronous tasks that are running on a background thread when Visual Studio has started to shut down.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.JustVs17.Shell.Package.VsAsyncPackage17.Microsoft#VisualStudio#Shell#Interop#IAsyncLoadablePackageInitialize#Initialize(Microsoft.VisualStudio.Shell.Interop.COMAsyncServiceProvider.IAsyncServiceProvider,Microsoft.VisualStudio.Shell.Interop.IProfferAsyncService,Microsoft.VisualStudio.Shell.Interop.IAsyncProgressCallback)">
+            <summary>
+            Initializes the package. Provides a way get access to IAsyncServiceProvider and IProfferAsyncService without needing to use IServiceProvider.
+            </summary>
+            <param name="asyncServiceProvider">An asynchronous service provider.</param>
+            <param name="profferAsyncService">Provides a way to register a provider for services that can be retrieved asynchronously. Similar to IProfferService.</param>
+            <param name="asyncProgressCallback">Provides a way for asynchronous service and package owners to report progress.</param>
+            <returns>Returns IVsTask.</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.JustVs17.Shell.Package.VsAsyncPackage17.Microsoft#VisualStudio#Shell#Interop#COMAsyncServiceProvider#IAsyncServiceProvider#QueryServiceAsync(System.Guid@)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.JustVs17.Shell.Package.VsAsyncPackage17.Microsoft#VisualStudio#Shell#IAsyncServiceProvider#GetServiceAsync(System.Type)">
+            <summary>
+            Gets a service asynchronously.
+            </summary>
+            <param name="serviceType">The type of the service.</param>
+            <returns>Returns a task.</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.JustVs17.Shell.Package.VsAsyncPackage17.Microsoft#VisualStudio#Shell#IAsyncServiceProvider2#GetServiceAsync(System.Type,System.Boolean)">
+            <summary>
+            Gets a service asynchronously.
+            </summary>
+            <param name="serviceType">The type of the service.</param>
+            <param name="swallowExceptions">True not to report exceptions (except critical ones).</param>
+            <returns>Returns a task.</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.JustVs17.Shell.Package.VsAsyncPackage17.Microsoft#VisualStudio#Shell#Interop#IVsAsyncToolWindowFactoryProvider#GetAsyncToolWindowFactory(System.Guid)">
+            <summary>
+            Returns the asynchronous tool window factory interface for the tool window identified by
+            <paramref name="guidPersistenceSlot" />, if asynchronous creation is supported for the tool window.
+            If asynchronous creation is not supported, null is returned.
+            </summary>
+            <param name="guidPersistenceSlot">Type of the window to be created</param>
+            <returns>The asynchronous factory interface, or null if not supported</returns>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.JustVs17.Shell.Package.VsPackageSdkStub17">
+            <summary>
+            The <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsPackage" /> base implementation originally inherited from some early preview of the VS 7 SDK.
+            Probably, could be merged into <see cref="T:JetBrains.VsIntegration.Src.Env.VsPackage" /> class.
+            </summary>
+        </member>
+        <member name="F:JetBrains.Platform.VisualStudio.JustVs17.Shell.Package.VsPackageSdkStub17.Site">
+            <summary>
+            When our package is sited (given its parent Service Provider, and allowed to start working), immediately shows the value. NULLs immediately as well.
+            </summary>
+        </member>
+        <member name="F:JetBrains.Platform.VisualStudio.JustVs17.Shell.Package.VsPackageSdkStub17.SiteDeferred">
+            <summary>
+            When <see cref="F:JetBrains.Platform.VisualStudio.JustVs17.Shell.Package.VsPackageSdkStub17.Site"/> gets a value, defers showing it here with the lowest priority (TODO: make sure that's IDLE priority in Visual Studio already this early on startup).
+            When <see cref="F:JetBrains.Platform.VisualStudio.JustVs17.Shell.Package.VsPackageSdkStub17.Site"/> gets NULLed, gets also NULLed immediately.
+            </summary>
+        </member>
+        <member name="F:JetBrains.Platform.VisualStudio.JustVs17.Shell.Package.VsPackageSdkStub17.myCommandTargetHandlers">
+            <seealso cref="!:QueryStatus" />
+            <seealso cref="!:Exec" />
+        </member>
+        <member name="F:JetBrains.Platform.VisualStudio.JustVs17.Shell.Package.VsPackageSdkStub17.PackageLifetime">
+            <summary>
+            The lifetime until the package is unloaded by VS.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.JustVs17.Shell.Package.VsPackageSdkStub17.ServiceProvider">
+            <summary>TODO (DK) DEV17 rewrite.</summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.JustVs17.Shell.Package.VsPackageSdkStub17.ServiceProvider.#ctor(Microsoft.VisualStudio.OLE.Interop.IServiceProvider)">
+            <summary>Initializes a instance with an existing <see cref="T:Microsoft.VisualStudio.OLE.Interop.IServiceProvider" /> interface.</summary>
+            <param name="sp">A <see cref="T:Microsoft.VisualStudio.OLE.Interop.IServiceProvider" /> interface.</param>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.JustVs17.Shell.Package.VsPackageSdkStub17.ServiceProvider.#ctor(Microsoft.VisualStudio.OLE.Interop.IServiceProvider,System.Boolean)">
+            <summary>Initializes a new instance of the <see cref="T:Microsoft.VisualStudio.Shell.ServiceProvider" /> class with an existing <see cref="T:Microsoft.VisualStudio.OLE.Interop.IServiceProvider" /> object and optionally passes all requests to the underlying service provider.</summary>
+            <param name="sp">An <see cref="T:Microsoft.VisualStudio.OLE.Interop.IServiceProvider" /> interface used to resolve services.</param>
+            <param name="defaultServices">Determines if this service should respond to queries for <see cref="T:Microsoft.VisualStudio.OLE.Interop.IServiceProvider" /> and <see cref="T:Microsoft.VisualStudio.OLE.Interop.IObjectWithSite" />.</param>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.JustVs17.Shell.Package.VsPackageSdkStub17.ServiceProvider.Dispose">
+            <summary>Releases the resources used by the <see cref="T:Microsoft.VisualStudio.Shell.ServiceProvider" /> object.</summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.JustVs17.Shell.Package.VsPackageSdkStub17.ServiceProvider.GetService(System.Type)">
+            <summary>Gets type-based services from the unmanaged service provider.</summary>
+            <returns>The requested service, or null if the service could not be located.</returns>
+            <param name="serviceType">The type of service to retrieve. The GUID of this type is used to obtain the service from the native service provider.</param>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.JustVs17.Shell.Package.VsPackageSdkStub17.ServiceProvider.GetService(System.Guid)">
+            <summary>Gets the specified service from the unmanaged service provider.</summary>
+            <returns>The requested service, or null if the service could not be located.</returns>
+            <param name="guid">The GUID of the service to retrieve.</param>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.JustVs17.Shell.Package.VsPackageSdkStub17.ServiceProvider.Microsoft#VisualStudio#OLE#Interop#IObjectWithSite#GetSite(System.Guid@,System.IntPtr@)">
+            <summary>Gets the current site object to resolve services.</summary>
+            <param name="riid">The GUID of the requested interface.</param>
+            <param name="ppv">The retrieved interface or null.</param>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.JustVs17.Shell.Package.VsPackageSdkStub17.ServiceProvider.Microsoft#VisualStudio#OLE#Interop#IObjectWithSite#SetSite(System.Object)">
+            <summary>Sets the site object to resolve services.</summary>
+            <param name="pUnkSite">The site to be set.</param>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.JustVs17.Shell.Package.VsPackage17">
+            <summary>
+            An <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsPackage" /> implementation that binds the package to the JetBrains .NET Platform.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.JustVs17.Shell.Package.VsPackage17.#ctor">
+            <summary>
+            The base ctor to be called by the auto-emitted derived implementation (see <see cref="T:JetBrains.VsIntegration.Shell.Install.VsPackageAssembly.VsPackageClassEmitters" />).
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.JustVs17.Shell.Package.VsPackage17.Init_CreateHostAndEnvironment(JetBrains.Lifetimes.Lifetime,Microsoft.VisualStudio.OLE.Interop.IServiceProvider)">
+            <summary>
+            Creates the environment which then starts the Shell.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.JustVs17.Shell.Package.VsPackage17.GetPropertyPage_CreateAvalonPage(JetBrains.Lifetimes.Lifetime,Microsoft.VisualStudio.Shell.Interop.VSPROPSHEETPAGE*,System.Func{JetBrains.Lifetimes.Lifetime,System.Windows.Media.Visual})">
+            <summary>
+            Fills in the VS property page request structure at <paramref name="pPage" /> with a HWND host for the <paramref name="FCreateContent" />-emitted content, and disposes of the HWND host when the property page gets released. The content functor is given the lifetime of the page.
+            </summary>
+            <param name="lifetimeParent"></param>
+            <param name="pPage"></param>
+            <param name="FCreateContent"></param>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.JustVs17.Shell.WindowManagement.VsWinFormsToolWindowPane17.Microsoft#VisualStudio#Shell#Interop#IVsDpiAware#Mode">
+            <summary>
+            Required by VS16 in PMv2 DPI mode.
+            Problem: without this flag, we're created in <see cref="F:JetBrains.VsIntegration.Interop.Declarations.VsShell.VSDPIMODE.VSDM_System" />, and all of the controls on our creation stack also go as System.
+            Then thread is switched to PMv2 for the most of the time.
+            So when we create and add a control later, it becomes PMv2 (derived from thread), and would silently fail to become a child of our UI (this is only a problem with System-PMv2 parenting).
+            Ensure we're ALWAYS operating under PMv2.
+            NOTE: this only applies to VS16+, but as we have it as an embed-interop-type, there's no problem in implementing on the base class.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.JustVs17.Shell.WindowManagement.VsWinFormsToolWindowPane17.GetBackgroundColor">
+            <summary>
+            Themed tool window background color.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.JustVs17.Zones.IJustVs17EnvZone">
+            <summary>
+            Visual Studio integrated products, VS 16.0 only.
+            </summary>
+        </member>
+    </members>
+</doc>

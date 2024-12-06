@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.Platform.VisualStudio.SinceVs15</name>
+    </assembly>
+    <members>
+        <member name="T:JetBrains.Platform.VisualStudio.SinceVs15.BackendInterop.Actions.Internal.ProjectModel.IWorkspaceEx">
+            <summary>
+            Helper methods to explore <see cref="T:Microsoft.VisualStudio.Workspace.IWorkspace"/> which is a Visual Studio accessor to solution or folder. 
+            It can be obtained from <see cref="T:JetBrains.VsIntegration.Util.RawVsServiceProvider"/> as rawVsServiceProvider.TryGetService&lt;SVsSolutionWorkspaceService, IVsSolutionWorkspaceService&gt;();
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.SinceVs15.BackendInterop.Actions.Internal.ProjectModel.IWorkspaceEx.GetProjectsInSolutionAsync(Microsoft.VisualStudio.Workspace.IWorkspace,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Collects all the projects in current <see cref="!:workspace"/>
+            </summary>
+            <param name="workspace">Current workspace</param>
+            <param name="solutionFilePath">Solution path. Can be obtained from <see cref="P:Microsoft.VisualStudio.Workspace.VSIntegration.IVsSolutionWorkspaceService.SolutionFile"/></param>
+            <param name="cancellationToken">Optional cancellationToken</param>
+            <returns>Project file paths. Will return duplicates by number of project configurations</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.SinceVs15.BackendInterop.Actions.Internal.ProjectModel.IWorkspaceEx.GetFilesInProjectAsync(Microsoft.VisualStudio.Workspace.IWorkspace,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Collects all the files in project. TODO: check if there're compilable files only
+            </summary>
+            <param name="workspace">Current workspace</param>
+            <param name="projectFilePath">Path to project file</param>
+            <param name="cancellationToken">Optional cancellationToken</param>
+            <returns>List of files in given project</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.SinceVs15.BackendInterop.Actions.Internal.ProjectModel.IWorkspaceEx.GetAllFilesAsync(Microsoft.VisualStudio.Workspace.IWorkspace)">
+            <summary>
+            Returns all the files form given <see cref="!:workspace"/>. Makes more sense to use in Open Folder mode.
+            </summary>
+            <param name="workspace">Solution or Folder workspace</param>
+            <returns>List of files in the workspace</returns>
+        </member>
+        <member name="F:JetBrains.Platform.VisualStudio.SinceVs15.ProjectDocuments.References.VsProjectReferencesSynchronizer15.ourDependencyRegex">
+            <summary>
+            Split dependency component from Solution Explorer tree, samples:
+            
+            netcoreapp2.1\NuGetDependency\.NETCoreApp,Version=v2.1\Newtonsoft.Json\12.0.1
+            .NETCoreApp,Version = v2.1\Newtonsoft.Json\12.0.1
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.SinceVs15.ProjectModel.ResharperOpenFolderNodeExtender.ResharperWorkspaceCommandHandler">
+            <summary>
+            Class for your custom context menu handler
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.SinceVs15.ProjectModel.VisualC.CopyPastedAdapters.VcAdaptersSinceVs15">
+            <summary>
+            This is the entry point — a component implementation which wires up all of the cloned interface implementations.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.SinceVs15.ProjectModel.VisualC.CopyPastedAdapters.VCCLCompilerToolJustVsXXByPropertyStorage">
+            <summary>
+            See C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033\cl.xml
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.SinceVs15.ProjectModel.VisualC.CopyPastedAdapters.VCConfigurationJustVsXX">
+            <summary>
+            Access to <see cref="T:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration"/> properties.
+            See VSInstallDir\Common7\IDE\Vc\VCTargets\1033 for details
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.SinceVs15.ProjectModel.VisualC.CopyPastedAdapters.VCNMakeToolJustVsXXByPropertyStorage">
+            <summary>
+            See C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033\nmake.xml
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.SinceVs15.ProjectModel.VsHierarchyEx.TryGetUnconfiguredProject(Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,JetBrains.VsIntegration.Shell.EnvDte.IEnvDteWrapper)">
+            <summary>
+            Fetches <see cref="T:Microsoft.VisualStudio.ProjectSystem.UnconfiguredProject"/> to access CPS data
+            see https://github.com/Microsoft/VSProjectSystem/blob/master/doc/automation/finding_CPS_in_a_VS_project.md
+            </summary>
+            <param name="hierarchy">Visual Studio hierarchy</param>
+            <param name="dte">Wrapper of DTE</param>
+            <returns>Unconfigured project or null</returns>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.SinceVs15.Zones.ISinceVs15FrontEnvZone">
+            <summary>
+            Visual Studio integrated products, VS 15.0 and above.
+            </summary>
+        </member>
+    </members>
+</doc>

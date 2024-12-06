@@ -1,0 +1,291 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.Platform.UIInteractive.Shell.Common</name>
+    </assembly>
+    <members>
+        <member name="T:JetBrains.UI.SrcView.Application.Env.SplashScreenHwnd">
+            <summary>
+            Wraps the Splash Screen HWND which was created by the bootstrapper for passing it into the application host so that the splash could be closed after the appication is ready to show the main window.
+            </summary>
+        </member>
+        <member name="T:JetBrains.UI.SrcView.Application.Env.WindowsHideSplashScreen">
+            <summary>
+            After the main window is ready, hides the splash screen.
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.Common.JetTextWrapping.WrapWithOverflow">
+            <summary> Line-breaking occurs if the line overflows beyond the available block width. However, a line may overflow beyond the block width if the line breaking algorithm cannot determine a line break opportunity, as in the case of a very long word constrained in a fixed-width container with no scrolling allowed. </summary>
+        </member>
+        <member name="F:JetBrains.UI.Common.JetTextWrapping.NoWrap">
+            <summary> No line wrapping is performed.</summary>
+        </member>
+        <member name="F:JetBrains.UI.Common.JetTextWrapping.Wrap">
+            <summary> Line-breaking occurs if the line overflows beyond the available block width, even if the standard line breaking algorithm cannot determine any line break opportunity, as in the case of a very long word constrained in a fixed-width container with no scrolling allowed. </summary>
+        </member>
+        <member name="F:JetBrains.UI.Common.JetVisibility.Visible">
+            <summary>Display the element.</summary>
+        </member>
+        <member name="F:JetBrains.UI.Common.JetVisibility.Hidden">
+            <summary>Do not display the element, but reserve space for the element in layout.</summary>
+        </member>
+        <member name="F:JetBrains.UI.Common.JetVisibility.Collapsed">
+            <summary>Do not display the element, and do not reserve space for it in layout.</summary>
+        </member>
+        <member name="M:JetBrains.UI.Components.FontsManagerInteractive.GetDefaultDialogFont">
+            <summary>
+            Shares the way we get the dialog font (which is the default UI font in Windows, roughly - OK for use in fallback scenarios).
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JetBrains.UI.Components.FontsManagerInteractive.GetDialogFont">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.UI.Components.FontsManagerInteractive.GetMenuFont">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.UI.Components.FontsManagerInteractive.GetTipFont">
+            <inheritdoc />
+        </member>
+        <member name="T:JetBrains.UI.Components.Unix.Linux.LinuxCommonLocateFile">
+            <inheritdoc cref="T:JetBrains.Application.UI.Controls.FileSystem.ICommonLocateFile"/>
+        </member>
+        <member name="M:JetBrains.UI.Components.Unix.Linux.LinuxCommonLocateFile.LocateActionName">
+            <inheritdoc cref="T:JetBrains.Application.UI.Controls.FileSystem.ICommonLocateFile"/>
+        </member>
+        <member name="M:JetBrains.UI.Components.Unix.Linux.LinuxCommonLocateFile.LocateFile(JetBrains.Util.FileSystemPath)">
+            <inheritdoc cref="T:JetBrains.Application.UI.Controls.FileSystem.ICommonLocateFile"/>
+        </member>
+        <member name="T:JetBrains.UI.Components.Unix.Mac.MacCommonLocateFile">
+            <inheritdoc cref="T:JetBrains.Application.UI.Controls.FileSystem.ICommonLocateFile"/>
+        </member>
+        <member name="M:JetBrains.UI.Components.Unix.Mac.MacCommonLocateFile.LocateActionName">
+            <inheritdoc cref="T:JetBrains.Application.UI.Controls.FileSystem.ICommonLocateFile"/>
+        </member>
+        <member name="M:JetBrains.UI.Components.Unix.Mac.MacCommonLocateFile.LocateFile(JetBrains.Util.FileSystemPath)">
+            <inheritdoc cref="T:JetBrains.Application.UI.Controls.FileSystem.ICommonLocateFile"/>
+        </member>
+        <member name="T:JetBrains.UI.Components.Windows.WindowsCommonLocateFile">
+            <inheritdoc cref="T:JetBrains.Application.UI.Controls.FileSystem.ICommonLocateFile"/>
+        </member>
+        <member name="M:JetBrains.UI.Components.Windows.WindowsCommonLocateFile.LocateActionName">
+            <inheritdoc cref="T:JetBrains.Application.UI.Controls.FileSystem.ICommonLocateFile"/>
+        </member>
+        <member name="M:JetBrains.UI.Components.Windows.WindowsCommonLocateFile.LocateFile(JetBrains.Util.FileSystemPath)">
+            <inheritdoc cref="T:JetBrains.Application.UI.Controls.FileSystem.ICommonLocateFile"/>
+        </member>
+        <member name="T:JetBrains.UI.Controls.Automation.AutomationProviders">
+            <summary>
+            See <see cref="M:JetBrains.UI.Controls.Automation.AutomationProviders.Initialize"/>.
+            Also, if we're running in the mode that includes this assembly, winds up the automation providers automatically.
+            </summary>
+        </member>
+        <member name="M:JetBrains.UI.Controls.Automation.AutomationProviders.Initialize">
+            <summary>
+            Call this method to enable all of the automation peers.
+            </summary>
+        </member>
+        <member name="T:JetBrains.UI.Controls.TrimmingUpdateTrigger">
+            <summary>
+            Defines when IsTrimmed property is calculated
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.Controls.TrimmingUpdateTrigger.MouseEnter">
+            <summary>
+            Default behavior
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.Controls.TrimmingUpdateTrigger.Layout">
+            <summary>
+            Immediate recalculation as anything changes
+            </summary>
+        </member>
+        <member name="T:JetBrains.UI.ExceptionReport.ShellLessExceptionReporting">
+            <summary>
+            Helpers for setting up exception reporting when the product shell is not running yet.
+            User-interactive mode helpers.
+            </summary>
+        </member>
+        <member name="M:JetBrains.UI.ExceptionReport.ShellLessExceptionReporting.CreateAndInstallWithoutContext">
+            <summary>
+            An exception reporter which does not have the product context or any components yet.
+            Shows a primitive message box without the submit-to-tracker capability.
+            Reports failures in creation of the context for the full reporter.
+            We MUST NOT obey <see cref="P:JetBrains.Application.ExceptionReport.IsModeReportExceptionsComponent.IsShowingExceptionsToUser" /> flag here: after we have the context, we push another exception reporter that obeys the flag, but startup-related errors are most likely FATAL and MUST be shown to the user. — NOTE: not necessarily deemed true in wave01
+            </summary>
+        </member>
+        <member name="P:JetBrains.UI.License2.JBAccount.ObtainTrialLicenseViewModel.IsEnabled">
+            <summary>
+            Whether the model should be show to the user at all
+            </summary>
+        </member>
+        <member name="P:JetBrains.UI.License2.JBAccount.ObtainTrialLicenseViewModel.IsLoggedIn">
+            <summary>
+            Whether the user is logged in
+            </summary>
+        </member>
+        <member name="T:JetBrains.UI.Settings.OwnedDialogPosition">
+            <summary>
+            Stores position (location + size) of owned dialogs relatively to the center of their owning window.
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.Settings.OwnedDialogPosition.CenterLocation">
+            <summary>
+            The distance of the child window center from the main/parent window center, in Avalon units.
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.Settings.OwnedDialogPosition.Size">
+            <summary>
+            The size of the child window, in Avalon units.
+            </summary>
+        </member>
+        <member name="T:JetBrains.UI.Settings.PointRelativeToMainWindow">
+            <summary>
+            A screen point relative to the application main window. Wraps the <see cref="T:System.Windows.Point" /> type, but with some additional semantic.
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.Settings.PointRelativeToMainWindow.Value">
+            <summary>
+            The distance of the child window center from the main/parent window center, in Avalon units.
+            </summary>
+        </member>
+        <member name="T:JetBrains.UI.Updates.DefaultSupportUpdates">
+            <summary>
+            By default any UI application supports automatic updates, but does not show Updates option page.
+            </summary>
+        </member>
+        <member name="T:JetBrains.UI.Utils.DpiUtil">
+            <summary>
+            The DPI Utility class which knows about the dynamic DPI.
+            UI-interactive-aware, but not framework-specific.
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.Utils.DpiUtil.BootTimeStaticDpi">
+            <summary>
+              <para>The resolution in which the system has booted (or logged in the current session). On newer Windows, this might be fixed per application start time rather than logon time.</para>
+              <para>If not <seealso cref="F:JetBrains.UI.Utils.DpiUtil.IsDynamicDpi" />, then all of the DPI values in the system will be equal to this.</para>
+              <para>Since DPI is per-window, you should use <c>DpiResolutions::From…()</c> whenever possible. DPI can change in time, so use the live versions and apply changes.</para>
+              <para>If you do not know the window/control you'd be used in, or you are currently not attached to any visual, use <see cref="F:JetBrains.UI.Utils.DpiUtil.FallbackDpi" /> as the safest fallback.</para>
+            </summary>
+            <seealso cref="F:JetBrains.UI.Utils.DpiUtil.FallbackDpi" />
+            <seealso cref="F:JetBrains.UI.Utils.DpiUtil.PrimaryMonitorDpi" />
+        </member>
+        <member name="F:JetBrains.UI.Utils.DpiUtil.DpiMightHaveChanged">
+            <summary>
+            Fires when any of the system DPI-related settings might have changed.
+            For a window, this does not cover all cases because the window could have been moved to another display.
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.Utils.DpiUtil.FallbackDpi">
+            <summary>
+            Gives _some_ DPI value which you should use when you cannot get the real DPI of the location.
+            This might happen if your control has not been placed yet, or you are rendering without connection to the real UI, or if you are waiting to get the real DPI. The point is that you must use _some_ value anyway, and better it match the intended DPI otherwise there will be a mismatch or a resize animation.
+            This should give the DPI of the application main window, if known, otherwise the primary display DPI.
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.Utils.DpiUtil.HighestResolutionScreenDpi">
+            <summary>
+            Of all the current screen DPIs, the highest one.
+            <para>If you do not know the window/control you'd be used in, or you are currently not attached to any visual, use <see cref="F:JetBrains.UI.Utils.DpiUtil.FallbackDpi" /> as the safest fallback.</para>
+            <para>If not <seealso cref="F:JetBrains.UI.Utils.DpiUtil.IsDynamicDpi" />, then same as <seealso cref="F:JetBrains.UI.Utils.DpiUtil.BootTimeStaticDpi" />.</para>
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.Utils.DpiUtil.IsDynamicDpi">
+            <summary>
+            Gets whether the current environment supports dynamic DPI (as opposed to having it statically defined at boot / logon time).
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.Utils.DpiUtil.LowestResolutionScreenDpi">
+            <summary>
+            Of all the current screen DPIs, the lowest one.
+            <para>If you do not know the window/control you'd be used in, or you are currently not attached to any visual, use <see cref="F:JetBrains.UI.Utils.DpiUtil.FallbackDpi" /> as the safest fallback.</para>
+            <para>If not <seealso cref="F:JetBrains.UI.Utils.DpiUtil.IsDynamicDpi" />, then same as <seealso cref="F:JetBrains.UI.Utils.DpiUtil.BootTimeStaticDpi" />.</para>
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.Utils.DpiUtil.PrimaryMonitorDpi">
+            <summary>
+              <para>Current DPI of the primary monitor.</para>
+              <para>If not <seealso cref="F:JetBrains.UI.Utils.DpiUtil.IsDynamicDpi" />, then same as <seealso cref="F:JetBrains.UI.Utils.DpiUtil.BootTimeStaticDpi" />.</para>
+              <para>Since DPI is per-window, you should use <c>DpiResolutions::From…()</c> whenever possible. DPI can change in time, so use the live versions and apply changes.</para>
+              <para>If you do not know the window/control you'd be used in, or you are currently not attached to any visual, use <see cref="F:JetBrains.UI.Utils.DpiUtil.FallbackDpi" /> as the safest fallback.</para>
+            </summary>
+            <seealso cref="F:JetBrains.UI.Utils.DpiUtil.FallbackDpi" />
+            <seealso cref="F:JetBrains.UI.Utils.DpiUtil.BootTimeStaticDpi" />
+        </member>
+        <member name="M:JetBrains.UI.Utils.DpiUtil.EnableNonClientDpiScaling(System.Void*)">
+            <summary>
+            Should be called on OSes which support per-monitor DPI v1 not v2 (that's 8.1 and up to 10.0.14393).
+            </summary>
+            <param name="hwnd"></param>
+        </member>
+        <member name="M:JetBrains.UI.Utils.DpiUtil.GetMonitorCurrentDpi(System.Void*)">
+            <summary>
+            Gets the current DPI resolution of the given monitor. Favors the per-monitor dynamic DPI, if applicable.
+            </summary>
+        </member>
+        <member name="M:JetBrains.UI.Utils.DpiUtil.GetPrimaryMonitorCurrentDpi">
+            <summary>
+            Gets the current DPI resolution of the primary monitor. Favors the per-monitor dynamic DPI, if applicable.
+            This MUST NOT be used as the primary source for resolutions, but MIGHT be used as a sane fallback when the correct DPI retrieval has failed.
+            </summary>
+        </member>
+        <member name="M:JetBrains.UI.Utils.DpiUtil.GetSystemDpiForOurProcess">
+            <summary>
+            Originally, that were the boot time system DPI (hence <see cref="F:JetBrains.UI.Utils.DpiUtil.BootTimeStaticDpi" />).
+            Later on, Windows 10 April 2018 Update added a feature that it snapshots the primary display DPI at the moment a process is started as its per-process system DPI. And added the <see cref="M:JetBrains.Interop.WinApi.User32Dll.GetSystemDpiForProcess(System.Void*)" /> API. Theoretically, it's still static in the process lifetime, and <see cref="F:JetBrains.UI.Utils.DpiUtil.BootTimeStaticDpi" /> should do. But hell knows their ideas. So let's call the function for sure (if OS is new enough).
+            </summary>
+        </member>
+        <member name="M:JetBrains.UI.Utils.DpiUtil.GetSystemMetricInLogicalPixels(JetBrains.Interop.WinApi.SystemMetricsCodes)">
+            <summary>
+            Returns a system metric (which must be in pixels) in logical pixels (i.e. at 96 DPI).
+            </summary>
+        </member>
+        <member name="M:JetBrains.UI.Utils.DpiUtil.GetWindowScreenDpiCurrent(System.Void*)">
+            <summary>
+            Gets the screen DPI for a window at this moment, from the monitor on which it's currently shown.
+            </summary>
+        </member>
+        <member name="M:JetBrains.UI.Utils.DpiUtil.SetProcessAsDpiAware">
+            <summary>
+            Sets the current process as fully aware of per-monitor DPI.
+            </summary>
+        </member>
+        <member name="M:JetBrains.UI.Utils.DpiUtil.CollectCurrentMonitorDpis">
+            <summary>
+            Gets the min/max resolution of the displays currently available.
+            </summary>
+        </member>
+        <member name="M:JetBrains.UI.Utils.DpiUtil.GetBootTimeScreenDpi">
+            <summary>
+            Gets the system-wide boot-time (or logon-time) screen DPI which does not reflect dynamic and per-monitor DPI changes.
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.Utils.DpiUtil.ImplementationDetails.FallbackDpiProviders">
+            <summary>
+            When main window is known, submit its DPI provider here.
+            The last item in the list wins over <see cref="F:JetBrains.UI.Utils.DpiUtil.FallbackDpi" />.
+            </summary>
+        </member>
+        <member name="M:JetBrains.UI.Utils.TextBlockWithHyperlinksUtils.ParseStringWithABandLinks(System.String)">
+            <summary>
+            Creates hyperlinks from HTML-formatted links. Call <see cref="M:JetBrains.UI.Utils.TextBlockWithHyperlinksUtils.ParseStringWithBandLinks(System.String)"/> for plain text pieces
+            </summary>
+            <param name="text">Input text</param>
+            <returns>List of inline for <see cref="!:TextBlockWithHyperlinks"/></returns>
+        </member>
+        <member name="M:JetBrains.UI.Utils.TextBlockWithHyperlinksUtils.ParseStringWithBandLinks(System.String)">
+            <summary>
+            Creates bold inlines from text pieces in b tags. Calls <see cref="M:JetBrains.UI.Utils.TextBlockWithHyperlinksUtils.ParseStringWithLinks(System.String)"/> for plain text pieces
+            </summary>
+            <param name="text">Input text</param>
+            <returns>List of inline for <see cref="!:TextBlockWithHyperlinks"/></returns>
+        </member>
+        <member name="M:JetBrains.UI.Utils.TextBlockWithHyperlinksUtils.ParseStringWithLinks(System.String)">
+            <summary>
+            Creates hyperlinks from text pieces starting with http and inlines for plain text pieces
+            </summary>
+            <param name="value">Input text</param>
+            <returns>List of inline for <see cref="!:TextBlockWithHyperlinks"/></returns>
+        </member>
+    </members>
+</doc>

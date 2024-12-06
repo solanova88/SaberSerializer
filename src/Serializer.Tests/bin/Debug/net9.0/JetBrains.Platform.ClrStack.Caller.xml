@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.Platform.ClrStack.Caller</name>
+    </assembly>
+    <members>
+        <member name="F:JetBrains.Platform.ClrStack.Caller.CaptureStackTracesOfAllThreads.StackTracesCaptureTimeout">
+            <summary>
+            Must be in sync with <c>ClrStackWorker::StackTracesCaptureTimeout</c>.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.ClrStack.Caller.CaptureStackTracesOfAllThreads.StackTraces.ToString">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.Platform.ClrStack.Caller.CaptureStackTracesOfAllThreads.Thread.ToString">
+            <inheritdoc />
+        </member>
+        <member name="T:JetBrains.Platform.ClrStack.Caller.EnrichLoggedExceptions">
+            A component which listen to exceptions and collect full stacks when one of subscribers of <see cref="F:JetBrains.Platform.ClrStack.Caller.EnrichLoggedExceptions.OnExceptionCollectStackFromAllThreads"/>
+        </member>
+        <member name="F:JetBrains.Platform.ClrStack.Caller.EnrichLoggedExceptions.OnExceptionCollectStackFromAllThreads">
+            Passing a true value to Out of this signal will start external debugger, which will collect stack traces from all threads of the current process.
+        </member>
+        <member name="T:JetBrains.Platform.ClrStack.Caller.EnrichLoggedExceptionsInTraceMode">
+            <summary>
+            When TRACE mode for this class is enabled, enriches all reported exceptions with stack frames of all the threads.
+            </summary>
+        </member>
+    </members>
+</doc>

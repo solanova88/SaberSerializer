@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.PsiFeatures.UIInteractive.Refactorings</name>
+    </assembly>
+    <members>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.Refactorings.ObsoletePages.ExistingClassTuningWindow">
+            <summary>
+            ExistingClassTuningWindow
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.Refactorings.ObsoletePages.ExistingClassTuningWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.Refactorings.ObsoletePages.RefactoringNotificationControl">
+            <summary>
+            RefactoringNotificationControl
+            </summary>
+            <summary>
+            Interaction logic for RefactoringNotificationControl.xaml
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.Refactorings.ObsoletePages.RefactoringNotificationControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringsTaskExecutor">
+            <summary>
+            Facilitates implementation of UI-based ITaskExecutors
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringsTaskExecutor.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringWizardForm">
+            <summary>
+            Summary description for RefactoringWizardForm.
+            </summary>
+        </member>
+        <member name="F:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringWizardForm.ContentContinueEnabled">
+            <summary>
+            Binds to the <see cref="P:JetBrains.ReSharper.Feature.Services.Refactorings.IRefactoringPage.ContinueEnabled"/> of the current <see cref="F:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringWizardForm.Content"/>.
+            </summary>
+        </member>
+        <member name="F:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringWizardForm.myBorderedBottom">
+            <summary>
+            On <see cref="F:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringWizardForm.myGridBody"/>, hosts <see cref="F:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringWizardForm.myGridNavigation"/>.
+            </summary>
+        </member>
+        <member name="F:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringWizardForm.myBorderedTop">
+            <summary>
+            On <see cref="F:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringWizardForm.myGridBody"/>, hosts <see cref="F:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringWizardForm.myHeading"/>.
+            </summary>
+        </member>
+        <member name="F:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringWizardForm.myBtnBack">
+            <summary>
+            On <see cref="F:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringWizardForm.myGridNavigation"/>.
+            </summary>
+        </member>
+        <member name="F:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringWizardForm.myBtnCancel">
+            <summary>
+            On <see cref="F:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringWizardForm.myGridNavigation"/>.
+            </summary>
+        </member>
+        <member name="F:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringWizardForm.myBtnContinue">
+            <summary>
+            On <see cref="F:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringWizardForm.myGridNavigation"/>.
+            </summary>
+        </member>
+        <member name="F:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringWizardForm.myCheckBoxOpenFiles">
+            <summary>
+            On <see cref="F:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringWizardForm.myGridNavigation"/>.
+            </summary>
+        </member>
+        <member name="F:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringWizardForm.myGridBody">
+            <summary>
+            The body vert stack-panel that spans the whole dialog client area. Lives on <see cref="T:System.Windows.Forms.Form"/>.
+            </summary>
+        </member>
+        <member name="F:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringWizardForm.myGridNavigation">
+            <summary>
+            The bottom horz stack-panel with checkbox and the buttons. Lives on <see cref="F:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringWizardForm.myBorderedBottom"/>.
+            </summary>
+        </member>
+        <member name="F:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringWizardForm.myHeading">
+            <summary>
+            Heading, on <see cref="F:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringWizardForm.myBorderedTop"/>.
+            </summary>
+        </member>
+        <member name="F:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringWizardForm.myPanelContent">
+            <summary>
+            A panel that hosts the UI content provided by refactoriPulPngs. Lives in <see cref="F:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringWizardForm.myGridBody"/>.
+            </summary>
+        </member>
+        <member name="F:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringWizardForm.myProgress">
+            <summary>
+            Progress at the bottom, on <see cref="F:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringWizardForm.myGridBody"/>.
+            </summary>
+        </member>
+        <member name="F:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringWizardForm.Content">
+            <summary>
+            The page displayed in the dialog, or <c>Null</c> before any is assigned.
+            </summary>
+        </member>
+        <member name="P:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringWizardForm.IsBusy">
+            <summary>
+            Gets or sets whether the workflow is currently running some process, so that the navigation buttons should be disabled.
+            </summary>
+        </member>
+        <member name="F:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringWizardForm.RunningTaskExecutor">
+            <summary>
+            While a task executor is in use, displays its instance.
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringWizardForm.CreateTaskExecutor_AttachUi(JetBrains.Lifetimes.Lifetime,JetBrains.Application.Progress.IProgressIndicatorModel)">
+            <summary>
+            When a task executor is created, binds its status to the dialog UI.
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.RefactoringWizardForm.InitControls_LoadSaveLocationSettings(JetBrains.Lifetimes.Lifetime,System.Windows.Forms.IWin32Window,JetBrains.Application.Settings.ISettingsStore)">
+            <summary>
+            Persists window position.
+            The idea is:
+            (1) The position is relative to the owner window (main window, or tab well if floating).
+            (2) The position is of the title bar center (top-center point of the window), because the window width/height depends on the refactoring control.
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.Refactorings.RefactoringsUI.WorkflowHostWithWizardForm">
+            <summary>
+            Runs refactoring on the refactoring wizard form...
+            </summary>
+        </member>
+    </members>
+</doc>

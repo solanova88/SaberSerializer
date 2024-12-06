@@ -1,0 +1,1048 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.Platform.VisualStudio.Protocol</name>
+    </assembly>
+    <members>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.BuildScript.IVisualStudioBackendOutOfProcessEnvZone">
+            <summary>
+            Zone for real out-of-process Visual Studio integration backend
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.BuildScript.IVisualStudioProtocolEnvZone">
+            <summary>
+            Visual Studio protocol zone
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Backend.Alter.BackendAlterModel">
+             <summary>
+             A way to split circular dependency between IFrontendAlter and IBackendAlter.
+            
+             In OOP mode this circular dependency will be resolved using generated proxy instances.
+             </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Backend.Alter.BackendAlterModel.AfterCommited">
+            Called right after OnCommited.
+            New commits are not allowed during OnCommited call, but can be created here
+            TODO: [au] kind of hack for RSRP-497343
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.Alter.IBackendAlter.Request(System.String,JetBrains.Application.Alter.IAlterRunnable)">
+            Request change from the backend side.
+            Completion of this task means only that the request is received.
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Backend.Diagnostics.IVisualStudioToBackendDiagnosticsActionsInterop">
+            <summary>
+            Calls from Visual Studio internal/diagnostics actions
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.Diagnostics.IVisualStudioToBackendDiagnosticsActionsInterop.TryGetProjectModelElementPresentationAsync(JetBrains.ProjectModel.Search.IProjectModelElementSearchDescriptor)">
+            <summary>
+            Try get presentation for project model element
+            </summary>
+            <param name="projectModelElementSearchDescriptor">Search descriptor to get project model presentation</param>
+            <returns>Project model presentation string, or null in case of missing project model element</returns>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Backend.DocumentModel.IRunningDocumentsFrontToBackInterop.UnboundDocumentId">
+            <summary>
+            <see cref="T:JetBrains.DocumentModel.RunningDocumentId"/> that is unbound from document
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Backend.DocumentModel.IVsDocumentWhidbeyFrontToBack.RunningDocuments">
+            <summary>
+            Set of open documents
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.IDE.IVsEditorManagerFrontToBackInterop.TextControlMatchesProjectFileAsync(JetBrains.DocumentModel.RunningDocumentId,JetBrains.ProjectModel.Search.IProjectFileSearchDescriptor,JetBrains.Util.VirtualFileSystemPath)">
+            <summary>
+            Checks whether specified text control matches project file or project file location
+            </summary>
+            <param name="docid">Text control in question</param>
+            <param name="projectFileSearchDescriptor">Expected project file search descriptor</param>
+            <param name="fallbackFilePath">Optional file location to check if not project file found matching the descriptor</param>
+            <returns>True if matches</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectDocuments.IVisualStudioToBackendInteropDocuments.GetOrCreateDocumentIdAsync(JetBrains.ProjectModel.Search.IProjectFileSearchDescriptor,System.String)">
+            <summary>Returns <see cref="T:JetBrains.DocumentModel.RunningDocumentId"/> corresponding to the document of the project file matching <see cref="!:projectFileSearchDescriptor"/></summary>
+            <param name="projectFileSearchDescriptor">Search descriptor of the file</param>
+            <param name="documentOwner">In most cases it will be doc cookie.</param>
+            <returns><see cref="T:JetBrains.DocumentModel.RunningDocumentId"/> of the corresponding document or <see cref="F:JetBrains.DocumentModel.RunningDocumentId.Invalid"/></returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectDocuments.IVisualStudioToBackendInteropDocuments.LockDocumentAsync(JetBrains.DocumentModel.RunningDocumentId,System.String)">
+            <summary>
+            Produces additional lock on the document. Should call <see cref="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectDocuments.IVisualStudioToBackendInteropDocuments.ReleaseDocumentIdAsync(JetBrains.DocumentModel.RunningDocumentId,System.String)"/> when the document is not needed any more
+            </summary>
+            <param name="documentId">Id of the document to lock</param>
+            <param name="documentOwner">In most cases it will be doc cookie.</param>
+            <returns>Task</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectDocuments.IVisualStudioToBackendInteropDocuments.ReleaseDocumentIdAsync(JetBrains.DocumentModel.RunningDocumentId,System.String)">
+            <summary>
+            Releases document id (i.e. when editor with the id is closed)
+            </summary>
+            <param name="documentId">Id of the document to release</param>
+            <param name="documentOwner">In most cases it will be doc cookie.</param>
+            <returns>Task</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectDocuments.IVisualStudioToBackendInteropDocuments.VisualStudioIsProcessingEvents(System.Boolean)">
+            <summary>
+            Called from VisualStudio to indicate events processing
+            </summary>
+            <param name="isProcessing"></param>
+            <returns></returns>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectDocuments.IVsDocumentManagerWhidbeyFrontToBackInterop.OnTextBufferDataChanged">
+            <summary>
+            Fired to fire OnTextBufferDataChanged on frontend
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectDocuments.IVsDocumentManagerWhidbeyFrontToBackInterop.SynchronizeDocumentAsync(JetBrains.DocumentModel.RunningDocumentId,System.Boolean)">
+            <summary>
+            Synchronizes document 
+            </summary>
+            <param name="documentId">Id of the document to sync</param>
+            <param name="reconcile">Whether to amrk as reconciled</param>
+            <returns>Task when completed</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectDocuments.IVsDocumentManagerWhidbeyFrontToBackInterop.SynchronizeDependentFilesAsync(JetBrains.DocumentModel.RunningDocumentId)">
+            <summary>
+            Synchronizes dependent files on master file change (i.e. generated C# from resources)
+            </summary>
+            <param name="documentId">Id of the document corresponding to a master file</param>
+            <returns>Task when completed</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectDocuments.IVsDocumentManagerWhidbeyFrontToBackInterop.ResetDocumentOperationsHandlerAsync(JetBrains.DocumentModel.RunningDocumentId,System.Boolean)">
+            <summary>
+            Resets document operations handler on text control close
+            </summary>
+            <param name="documentId">Id of the closed document</param>
+            <param name="synchronizeText">Whether to synchronize document text. False if shared document is open</param>
+            <returns>Task when completed</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectDocuments.PeekSessions.IPeekSessionsFrontToBackInterop.AugmentPeekSession(JetBrains.Platform.VisualStudio.Protocol.Common.PeekSessions.PeekSessionId,System.String,JetBrains.DocumentModel.RunningDocumentId,System.Nullable{System.Int32})">
+            <summary>
+            Augment peek session for declared elements, searches etc
+            </summary>
+            <param name="sessionId">Id of the session</param>
+            <param name="predefinedPeekDefinitionRelationshipName">Name of the predefined peek definition relationship name. VS-dependent</param>
+            <param name="documentId">Id of the document in text control</param>
+            <param name="documentOffset">Offset within the document</param>
+            <returns>List of infos to peek</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectDocuments.PeekSessions.IPeekSessionsFrontToBackInterop.FindResults(JetBrains.Platform.VisualStudio.Protocol.Common.PeekSessions.PeekSessionId,JetBrains.Platform.VisualStudio.Protocol.Common.PeekSessions.PeekableItemId,System.Threading.CancellationToken)">
+            <summary>
+            Implements Microsoft.VisualStudio.Language.Intellisense.IPeekResultSource.FindResults for the items returned by <see cref="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectDocuments.PeekSessions.IPeekSessionsFrontToBackInterop.AugmentPeekSession(JetBrains.Platform.VisualStudio.Protocol.Common.PeekSessions.PeekSessionId,System.String,JetBrains.DocumentModel.RunningDocumentId,System.Nullable{System.Int32})"/>
+            </summary>
+            <returns>List of navigation results</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectDocuments.PeekSessions.IPeekSessionsFrontToBackInterop.TryGetTodoUri(JetBrains.Platform.VisualStudio.Protocol.Common.PeekSessions.PeekSessionId,JetBrains.DocumentModel.RunningDocumentId,System.Nullable{System.Int32})">
+            <summary>
+            Fetches the URI of the to-do item
+            </summary>
+            <param name="sessionId">Id of the session</param>
+            <param name="documentId">Id of the document in text control</param>
+            <param name="documentOffset">Offset within the document</param>
+            <returns>Uri if found</returns>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IProjectModelQueryInterop">
+             <summary>
+             Provides a way to query <see cref="T:JetBrains.ProjectModel.Search.IProjectModelElementSearchDescriptor"/> properties, children and parents from
+             ReSharper backend
+            
+             Keep in mind that these methods are relatively slow, as they are forced to query information from backed and
+             perform marshalling twice.
+             </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IProjectModelSynchronizerFromDiskSettingsFrontToBackInterop.ProjectSynchronizationSettings">
+            <summary>
+            Project sync settings as specified in user settings
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IProjectModelSynchronizerFromDiskSettingsFrontToBackInterop.DeferredProjectFilePaths">
+            <summary>
+            Set of project file paths of deferred projects (Visual Studio 15 with LSL)
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IProjectModelSynchronizerFromDiskSettingsFrontToBackInterop.GetSolutionConfigurationAndPlatform">
+            <summary>
+            Returns current solution configuration and platform
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IProjectModelSynchronizerFromDiskSettingsFrontToBackInterop.AddDeferredProject(JetBrains.Util.FileSystemPath)">
+            <summary>
+            Tells the backend the project in deferred state and needs to load from disk
+            </summary>
+            <param name="projectFileLocation">Project file location (or folder in case of a website)</param>
+            <returns>Task</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IProjectModelSynchronizerFromDiskSettingsFrontToBackInterop.RemovedDeferredProject(JetBrains.Util.FileSystemPath)">
+            <summary>
+            Tells the backend project is not in deferred state any more
+            </summary>
+            <param name="projectFileLocation">Project file location (or folder in case of a website)</param>
+            <returns>Task</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IProjectModelSynchronizerFromDiskSettingsFrontToBackInterop.SetSolutionConfigurationAndPlatformAsync(JetBrains.ProjectModel.SolutionStructure.SolutionConfigurations.ISolutionConfigurationAndPlatform)">
+            <summary>
+            Sets new solution 
+            </summary>
+            <param name="solutionConfigurationAndPlatform"></param>
+            <returns></returns>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IProjectModelSynchronizerFromDiskFrontToBackInterop.IsIdle">
+            <summary>
+            True when it is not paused, <see cref="P:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IProjectModelSynchronizerFromDiskFrontToBackInterop.CurrentlyRunningSync"/> is null or empty and not syncs in queue
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IProjectModelSynchronizerFromDiskFrontToBackInterop.CurrentlyRunningSync">
+            <summary>
+            Whether synchronizer is idle
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IProjectModelSynchronizerFromDiskFrontToBackInterop.RecentSyncErrors">
+            <summary>
+            Errors happened while recent synchronization
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IProjectModelSynchronizerFromDiskFrontToBackInterop.ProjectsUpdatedFromDisk">
+            <summary>
+            Descriptors of projects updated from disk
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IProjectModelSynchronizerFromDiskFrontToBackInterop.SynchronizeProjectsAsync(System.String,System.Collections.Generic.IList{JetBrains.Util.VirtualFileSystemPath})">
+            <summary>
+            Requests project sync from disk
+            </summary>
+            <param name="reason">Reason for sync projects request</param>
+            <param name="projectFilePaths">Project file locations (or folder for website) to sync. Empty means all</param>
+            <returns>Task when completed</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IProjectModelSynchronizerFromDiskFrontToBackInterop.ScheduleInitialProjectSync(System.Boolean)">
+            <summary>
+            Schedules initial project synchronization
+            </summary>
+            <param name="isProjectModelLoadedFromCache">Whether project model is loaded from disk</param>
+            <returns>Task to track its completion</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IProjectModelSynchronizerFromDiskFrontToBackInterop.PauseSyncAsync(JetBrains.Lifetimes.Lifetime,System.String)">
+            <summary>
+            Pauses synchronization from disk for a certain <see cref="!:lifetime"/>
+            </summary>
+            <param name="lifetime">Lifetime for which sync is paused</param>
+            <param name="reason">Reason to pause the sync</param>
+            <returns>Task when completed</returns>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IProjectsFrontToBackInterop">
+            <summary>
+            Interop to provide events about backend project add/remove.
+            This should be used only for initial project creation handle and projects lifetime support.
+            No any change events will be supported.
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IProjectsFrontToBackInterop.ProjectAdded">
+            <summary>
+            Fired on backend when project is added.
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IProjectsFrontToBackInterop.ProjectGuids">
+            <summary>
+            Backend project guids. May contain duplicates. 
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IProjectTypeMapperFromEditor.TryDefineProjectTypeMapping(JetBrains.ProjectModel.Search.IProjectFileSearchDescriptor,System.Guid)">
+            <summary>
+            Try to define ProjectFileType for an unknown extension using known editorId
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IUnloadedProjectsFrontToBackInterop">
+            <summary>
+            Unloaded project interop
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IUnloadedProjectsFrontToBackInterop.BeforeProjectsUnloadedAsync(System.Collections.Generic.IReadOnlyList{JetBrains.ProjectModel.Search.IProjectSearchDescriptor})">
+            <summary>
+            Called from frontend when project is being unloaded
+            </summary>
+            <param name="projectSearchDescriptors"></param>
+            <returns>True when project is found</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IUnloadedProjectsFrontToBackInterop.BeforeProjectRemovedAsync(JetBrains.ProjectModel.Search.IProjectSearchDescriptor)">
+            <summary>
+            Called from frontend when project is being removed
+            </summary>
+            <param name="projectSearchDescriptor">Project search descriptors</param>
+            <returns>True when project is found</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IUnloadedProjectsFrontToBackInterop.AfterProjectLoadedAsync(JetBrains.ProjectModel.Search.IProjectSearchDescriptor)">
+            <summary>
+            Called from frontend when project is loaded
+            </summary>
+            <param name="projectSearchDescriptor">Project search descriptors</param>
+            <returns>True when project is found</returns>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IUnloadedProjectsFrontToBackInterop.ReferencesToAdd">
+            <summary>
+            Fired on backend when references to unloaded projects are updated. 
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IUnloadedProjectsFrontToBackInterop.ReferencesToRemove">
+            <summary>
+            Fired on backend when references to unloaded projects are updated. 
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IUnloadedProjectsFrontToBackInterop.BeforeProjectUnloadedSignal">
+            <summary>
+            Fired on backend when project is about to unload
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IUnloadedProjectsFrontToBackInterop.AfterProjectReloadedSignal">
+            <summary>
+            Fired on backend when project is loaded
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IVisualStudioToBackendInterop">
+            <summary>
+            Encapsulate calls from Visual Studio to backend on project model matter
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IVisualStudioToBackendInterop.UpdateOrCreateProjectAsync(JetBrains.ProjectModel.Update.IProjectDescriptor,JetBrains.ProjectModel.Update.UpdateFlags)">
+            <summary>
+            Calls <see cref="M:JetBrains.ProjectModel.Update.IProjectModelUpdater.UpdateOrCreateProjectAsync(JetBrains.ProjectModel.Update.IProjectDescriptor,JetBrains.ProjectModel.Update.UpdateFlags)"/> on backend to update project to desired state 
+            </summary>
+            <param name="projectDescriptor">Desired state of the project</param>
+            <param name="flags">Update flags such as whether to update project structure, send ProjectModelChange etc.</param>
+            <returns>Task with changed or created project. Will continue on random thread without any lock. Don't forget to take read lock and check the returned project for validity</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IVisualStudioToBackendInterop.UpdateProjectReferencesAsync(System.Collections.Generic.IList{JetBrains.Util.Pair{JetBrains.ProjectModel.Search.IProjectSearchDescriptor,System.Collections.Generic.IList{JetBrains.Util.Pair{JetBrains.ProjectModel.Update.IProjectReferenceDescriptor,JetBrains.ProjectModel.Update.IProjectReferenceProperties}}}},System.Boolean)">
+            <summary>
+            Calls <see cref="M:JetBrains.ProjectModel.Update.IProjectModelUpdater.UpdateProjectReferencesAsync(System.Collections.Generic.IList{JetBrains.Util.Pair{JetBrains.ProjectModel.Search.IProjectSearchDescriptor,System.Collections.Generic.IList{JetBrains.Util.Pair{JetBrains.ProjectModel.Update.IProjectReferenceDescriptor,JetBrains.ProjectModel.Update.IProjectReferenceProperties}}}},System.Boolean)"/> to update project references of several projects.
+            </summary>
+            <param name="descriptors">List of project search descriptors with corresponding reference descriptor</param>
+            <param name="notifyChangeManager">Whether change manager needs to be notified</param>
+            <returns>Task that completes when references are updated</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IVisualStudioToBackendInterop.AddReferenceAsync(JetBrains.ProjectModel.SolutionStructure.SolutionConfigurations.ISolutionConfigurationAndPlatform,JetBrains.ProjectModel.Search.IProjectToModuleReferenceSearchDescriptor)">
+            <summary>
+            Find appropriate project host and add project reference 
+            </summary>
+            <param name="solutionConfigurationAndPlatform">Current solution configuration and platform</param>
+            <param name="referenceSearchDescriptor">Search descriptor of reference to add</param>
+            <returns></returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IVisualStudioToBackendInterop.RemoveReferenceAsync(JetBrains.ProjectModel.SolutionStructure.SolutionConfigurations.ISolutionConfigurationAndPlatform,JetBrains.ProjectModel.Search.IProjectToModuleReferenceSearchDescriptor)">
+            <summary>
+            Find appropriate project host and remove project reference 
+            </summary>
+            <param name="solutionConfigurationAndPlatform">Current solution configuration and platform</param>
+            <param name="referenceDescriptor">Descriptor of reference to remove</param>
+            <returns></returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IVisualStudioToBackendInterop.HandleRenameAsync(System.Collections.Generic.IList{JetBrains.ProjectModel.Interop.RenameRequest})">
+            <summary>
+            Calls to <see cref="M:JetBrains.ProjectModel.Interop.IFrontendChangeHandler.HandleRenameAsync(System.Collections.Generic.IList{JetBrains.ProjectModel.Interop.RenameRequest})"/>> to handle rename from frontend.
+            </summary>
+            <param name="renames">List of renames</param>
+            <returns>List of requests failed to be fulfilled</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IVisualStudioToBackendInterop.HandleMoveProjectAsync(JetBrains.ProjectModel.Search.IProjectSearchDescriptor,JetBrains.ProjectModel.Search.IProjectSearchDescriptor)">
+            <summary>
+            Calls to <see cref="M:JetBrains.ProjectModel.Interop.IFrontendChangeHandler.HandleMoveProjectAsync(JetBrains.ProjectModel.Search.IProjectSearchDescriptor,JetBrains.ProjectModel.Search.IProjectSearchDescriptor)"/>> to handle move request from frontend.
+            </summary>
+            <param name="projectSearchDescriptor">Search descriptor of project to move</param>
+            <param name="parentSearchDescriptor">New project's parent</param>
+            <returns>Task to await</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IVisualStudioToBackendInterop.HandleRemoveProjectAsync(JetBrains.ProjectModel.Search.IProjectSearchDescriptor)">
+            <summary>
+            Calls to <see cref="M:JetBrains.ProjectModel.Interop.IFrontendChangeHandler.HandleRemoveProjectAsync(JetBrains.ProjectModel.Search.IProjectSearchDescriptor)"/> to handle remove requests from frontend
+            </summary>
+            <param name="projectSearchDescriptor">Search descriptor of project to remove</param>
+            <returns>Task to await</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IVisualStudioToBackendInterop.HandleRemoveAsync(System.Collections.Generic.IList{JetBrains.ProjectModel.Search.IProjectFileOrFolderSearchDescriptor})">
+            <summary>
+            Calls to <see cref="M:JetBrains.ProjectModel.Interop.IFrontendChangeHandler.HandleRemoveAsync(System.Collections.Generic.IList{JetBrains.ProjectModel.Search.IProjectFileOrFolderSearchDescriptor})"/> to handle remove requests from frontend
+            </summary>
+            <param name="removes">List of requests to remove file or folder from the project</param>
+            <returns>Task to await</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IVisualStudioToBackendInterop.UpdateProjectFilePropertiesAsync(System.Collections.Generic.List{System.Tuple{JetBrains.ProjectModel.Search.IProjectSearchDescriptor,JetBrains.Util.VirtualFileSystemPath,JetBrains.ProjectModel.Properties.IProjectFileProperties}})">
+            <summary>
+            Calls to <see cref="M:JetBrains.ProjectModel.Interop.IFrontendChangeHandler.HandleUpdateProjectFilePropertiesAsync(System.Collections.Generic.List{System.Tuple{JetBrains.ProjectModel.Search.IProjectSearchDescriptor,JetBrains.Util.VirtualFileSystemPath,JetBrains.ProjectModel.Properties.IProjectFileProperties}})"/> to update file properties
+            </summary>
+            <param name="fileProperties">List of file properties to update</param>
+            <returns>Task to await</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IVisualStudioToBackendInterop.UpdateProjectsAsync(System.Collections.Generic.IEnumerable{JetBrains.ProjectModel.Search.IProjectSearchDescriptor},JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.ProjectUpdateReason)">
+            <summary>
+            Update specified projects
+            </summary>
+            <param name="projectSearchDescriptors">Project descriptors to update</param>
+            <param name="updateReason">Reason of required project update</param>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IVisualStudioToBackendInterop.FireUpdateAllProjectsAsync">
+            <summary>
+            Launch update of all projects via <see cref="P:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IVisualStudioToBackendInterop.UpdateProjects" /> signal
+            via <see cref="P:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IVisualStudioToBackendInterop.UpdateProjects" /> signal
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IVisualStudioToBackendInterop.RemoveRedundantProjects(System.Collections.Generic.IEnumerable{JetBrains.ProjectModel.Search.IProjectSearchDescriptor})">
+            <summary>
+            Removes redundant project at the end of solution sync. 
+            </summary>
+            <param name="existingDescriptors">Project search descriptors for check</param>
+            <returns>Set of project descriptors for which projects are missing and they need to be rebuilt.</returns>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IVisualStudioToBackendInterop.UpdateProjects">
+            <summary>
+            Fires on backend when a projects update are required. Frontend advises to the signal
+            </summary>
+            <remarks>Contains projects list for updating as keys and their update flags as values</remarks>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IVisualStudioToBackendInterop.UpdateVcxDebuggerPropertiesAsync(JetBrains.ProjectModel.Search.IProjectSearchDescriptor,JetBrains.ProjectModel.Properties.VCXProj.VcxDebuggerProperties)">
+            <summary>
+            Updates c++ project debugger properties
+            </summary>
+            <param name="projectSearchDescriptor">Descriptor to find project</param>
+            <param name="debuggerProperties">Debugger properties</param>
+            <returns>Task</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.IVisualStudioToBackendInterop.SetIsRoslynUsedToObtainReferences(JetBrains.ProjectModel.Search.IProjectSearchDescriptor,System.Boolean)">
+            <summary>
+            Mark project to use roslyn for references obtain
+            </summary>
+            <param name="projectSearchDescriptor">Descriptor to find project</param>
+            <param name="isRoslynUsed">Is roslyn used</param>
+            <returns>Task</returns>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.ProjectSyncMode">
+            <summary>
+            Specifies how project/ project mark/ IVsHierarchy is synchronized
+            </summary>
+        </member>
+        <member name="F:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.ProjectSyncMode.FULLY_COM">
+            <summary>
+            Everything is done in Visual Studio via COM API
+            </summary>
+        </member>
+        <member name="F:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.ProjectSyncMode.BACKEND_LOAD_COM_WRITE">
+            <summary>
+            Loaded from disk, write operations done in Visual Studio via COM API 
+            </summary>
+        </member>
+        <member name="F:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.ProjectSyncMode.FULLY_BACKEND">
+            <summary>
+            Everything is done on backend (for deferred projects)
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.PropertiesExtender.IPropertiesExtenderFrontToBackInterop">
+            <summary>
+            Backend interface to implement property extenders
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.PropertiesExtender.IPropertiesExtenderFrontToBackInterop.CanExtend(JetBrains.ProjectModel.Search.IProjectItemSearchDescriptor)">
+            <summary>
+            Sync call from frontend to check if there are properties available 
+            </summary>
+            <param name="projectItemSearchDescriptor">Item search descriptor</param>
+            <returns>Whether custom properties are available</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.PropertiesExtender.IPropertiesExtenderFrontToBackInterop.GetPropertyDescriptorArgs(JetBrains.ProjectModel.Search.IProjectItemSearchDescriptor)">
+            <summary>
+            Sync call from frontend to fetch property descriptors
+            </summary>
+            <param name="projectItemSearchDescriptor">Item search descriptor</param>
+            <returns>Property descriptors</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.PropertiesExtender.IPropertiesExtenderFrontToBackInterop.GetPropertyValue(JetBrains.ProjectModel.Search.IProjectItemSearchDescriptor,System.String)">
+            <summary>
+            Sync call from frontend to fetch property value
+            </summary>
+            <param name="projectItemSearchDescriptor">Item search descriptor</param>
+            <param name="propertyName">Name of the changed property</param>
+            <returns>Property value</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.PropertiesExtender.IPropertiesExtenderFrontToBackInterop.SetPropertyValue(JetBrains.ProjectModel.Search.IProjectItemSearchDescriptor,System.String,System.Object)">
+            <summary>
+            Sync call from frontend to set property value
+            </summary>
+            <param name="projectItemSearchDescriptor">Item search descriptor</param>
+            <param name="propertyName">Name of the changed property</param>
+            <param name="value">New property value</param>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.ProjectModel.PropertiesExtender.IPropertiesExtenderFrontToBackInterop.RunModalUIEditor(JetBrains.ProjectModel.Search.IProjectItemSearchDescriptor,System.String)">
+            <summary>
+            Sync call from frontend to run modal UI editor
+            </summary>
+            <param name="projectItemSearchDescriptor">Item search descriptor</param>
+            <param name="propertyName">Name of the changed property</param>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Backend.SinceVs14.RoslynUtil">
+            <summary>
+            We need this code in Platform.VisualStudio.Protocol.Backend only till
+            move ExpandDesignTimeFacadesPatcherVs2015 into VS version specific project 
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Backend.Wire.IFrontToBackWireInterop">
+            <summary>
+            Wire interop back to front
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Backend.Wire.IFrontToBackWireInterop.IsBackendConnected">
+            <summary>
+            Whether backend is running and ready to work. Mostly for testing purposes
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Backend.Wire.IFrontToBackWireInterop.IsAlive">
+            <summary>
+            Recurrent signal whether backend is alive
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.Wire.IFrontToBackWireInterop.SetIsAliveFrequencyAsync(System.Int32)">
+            <summary>
+            Sets the frequency for the <see cref="P:JetBrains.Platform.VisualStudio.Protocol.Backend.Wire.IFrontToBackWireInterop.IsAlive"/> signal to be fired.
+            O or negative means do not fire
+            </summary>
+            <param name="timeoutInMilliseconds">Frequency of the signal firing. O or negative means do not fire</param>
+            <returns>Task when completed</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.Wire.IFrontToBackWireInterop.SetIsApplicationActiveAsync(System.Boolean)">
+            <summary>
+            Set application active state
+            </summary>
+            <param name="isApplicationActive">Whether application is active</param>
+            <returns>Task when completed</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.Wire.IFrontToBackWireInterop.ShutdownBackendAsync">
+            <summary>
+            Asynchronously shuts down the backend
+            </summary>
+            <returns>Task when completed</returns>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Backend.Wire.ProjectModel.IFrontToBackSolutionInterop">
+            <summary>
+            Interop to tell the backend to open/ close solution
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.Wire.ProjectModel.IFrontToBackSolutionInterop.CreateSolutionAsync(JetBrains.ProjectModel.impl.SolutionLocation)">
+            <summary>
+            Opens solution with specified location
+            </summary>
+            <param name="solutionLocation">Solution location</param>
+            <returns>Task</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.Wire.ProjectModel.IFrontToBackSolutionInterop.CloseSolutionAsync">
+            <summary>
+            Closes current solution
+            </summary>
+            <returns>Task</returns>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Backend.Wire.ProjectModel.IFrontToBackSolutionInterop.BackendReadyToRunTaskKind">
+            <summary>
+            Synchronization of solution load per <see cref="T:JetBrains.ProjectModel.Tasks.SolutionLoadTaskKinds"/>.
+            Returns solution load task kinds ready to run
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Backend.Wire.ProjectModel.IFrontToBackSolutionInterop.StartRunTaskKindsAsync(JetBrains.ProjectModel.Tasks.SolutionLoadTaskKinds)">
+            <summary>
+            Synchronization of solution load per <see cref="T:JetBrains.ProjectModel.Tasks.SolutionLoadTaskKinds"/>.
+            Tells the backend to start executing load tasks of specified <see cref="!:kind"/> 
+            </summary>
+            <param name="kind"><see cref="T:JetBrains.ProjectModel.Tasks.SolutionLoadTaskKinds"/> allowed to be executed</param>
+            <returns>Task</returns>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Common.Alter.AlterExecutorsRegistry`1">
+            <summary>
+            Provides a registry for the AlterRequest executors with the optimization for lookup for executor for specific type of AlterRequest.
+            </summary>
+        </member>
+        <member name="F:JetBrains.Platform.VisualStudio.Protocol.Common.Alter.AlterExecutorsRegistry`1.myExecutors">
+            <summary>
+            Inheritors from <see cref="F:JetBrains.Platform.VisualStudio.Protocol.Common.Alter.AlterExecutorsRegistry`1.myKnownIsApplicable"/>, for which the implementation of IsApplicable is known and optimization can be applied.
+            The type of alter request is inferred from the single generic argument of the provided type.
+            </summary>
+        </member>
+        <member name="F:JetBrains.Platform.VisualStudio.Protocol.Common.Alter.AlterExecutorsRegistry`1.myUntypedExecutors">
+            <summary>
+            Executors with unknown IsApplicable implementation. All of them will be asked for <see cref="F:JetBrains.Platform.VisualStudio.Protocol.Common.Alter.AlterExecutorsRegistry`1.myIsApplicable"/> in sequential order when the
+            executor for specific type of alter request isn't found.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Common.Alter.AlterSerializer.Hash(JetBrains.Application.Alter.AlterRevisionId,JetBrains.Application.Alter.IAlterRequest)">
+            <summary>
+            Creates new revision.
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Common.Alter.AlterState.DisabledCommands">
+            A live list of commands which should not be even executed because we intercept them at backend side
+            unconditionally.  Used to reduce amount of flickering. For such commands side effects of execution will be
+            reverted in any case, so it doesn't worth to even render them.
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Common.Alter.AlterState.SelectionSetByStructuralNavigation">
+            Tab key is complicated. We have to respect copilot and vs snippets on frontend, as well as smart features on the backend.
+            Therefore, additional information regarding tab support is required from backend.
+            RSRP-498463 With async typing pressing tab with a block selected deletes block when Resharper isn't available in file
+            RSRP-498495 Tab and async typing: emulation is wrong in embedded javascript files in cshtml
+            RSRP-498487 With async typing, Tab key replaces selection rather than indents
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Common.Alter.NopAlterRequest">
+            <summary>
+            An fake alter request, which serves as sync point to undo unnecessary changes on frontend as result of alter
+            requests.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Common.DocumentModel.VsDocumentModelSynchronization">
+            <summary>
+            Allows callbacks from VS that come in response to our actions to merge into the current transaction.
+            </summary>
+        </member>
+        <member name="F:JetBrains.Platform.VisualStudio.Protocol.Common.DocumentModel.VsDocumentModelSynchronization.UnguardedCallbacks">
+            <summary>
+            Allows callbacks from VS that come in response to our actions to merge into the current transaction.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Common.Ide.RoslynDiagnosticsFeedTransport.DiagnosticData.ToString">
+            <inheritdoc />
+        </member>
+        <member name="F:JetBrains.Platform.VisualStudio.Protocol.Common.Ide.VsProjectFileExtensionMappingTransport.BwdVsEditorTypeGuid">
+            <summary>
+            Handle to the property bag on <see cref="T:JetBrains.TextControl.Transport.TransportTextControl" /> which sends the GUID to back.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Common.LocalProtocolEmulationInRealOutOfProcessModel">
+            <summary>
+            The storage which is connected between the processes.
+            Used by <see cref="T:JetBrains.Platform.RdFramework.Reflection.LocalProtocolEmulation" /> implementation overrides in OOP mode for connection.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Common.LocalProtocolEmulationInRealOutOfProcessModel.#ctor(JetBrains.Lifetimes.Lifetime,JetBrains.Platform.RdFramework.RdVerification.IRdShell)">
+            <inheritdoc />
+        </member>
+        <member name="F:JetBrains.Platform.VisualStudio.Protocol.Common.LocalProtocolEmulationInRealOutOfProcessModel.Storage">
+            <summary>
+            The storage which is connected between the processes.
+            Used by <see cref="T:JetBrains.Platform.RdFramework.Reflection.LocalProtocolEmulation" /> implementation overrides in OOP mode for connection.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Common.PeekSessions.PeekSessionId">
+            <summary>
+            Peek session identifier
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Common.PeekSessions.PeekSessionId.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Common.PeekSessions.PeekSessionId.RelationshipName">
+            <summary>
+            Name of the relationship
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Common.PeekSessions.PeekableItemInfo">
+            <summary>
+            Information to provide to Microsoft.VisualStudio.Language.Intellisense.IPeekableItem
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Common.TextControl.ErrorStripe.VsErrorStripeShellTransport">
+            <summary>
+            Per-shell (non-per-text-control) error stripe transport model.
+            VS-specifics only.
+            </summary>
+        </member>
+        <member name="F:JetBrains.Platform.VisualStudio.Protocol.Env.BackendExceptionPayload.Message">
+            <summary>
+            Message of the exception (usually one line)
+            </summary>
+        </member>
+        <member name="F:JetBrains.Platform.VisualStudio.Protocol.Env.BackendExceptionPayload.Text">
+            <summary>
+            String representation of the exception rendered by collecting all of the data about the original exception and all of the inner/related exceptions in the tree
+            rendered without sensitive data
+            </summary>
+        </member>
+        <member name="F:JetBrains.Platform.VisualStudio.Protocol.Env.BackendExceptionPayload.TextWithSensitive">
+            <summary>
+            The same as above but including sensitive data
+            </summary>
+        </member>
+        <member name="F:JetBrains.Platform.VisualStudio.Protocol.Env.BackendExceptionPayload.StackTrace">
+            <summary>
+            Collected StackTrace string from throw side
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Frontend.DocumentModel.AlterDocumentRequest">
+            <summary>
+            An immutable document change.
+            Describes changes in a document which can be reverted.
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Frontend.DocumentModel.AlterDocumentRequest.OldRange">
+            <summary>
+            The affected text range, before the replacement is performed.
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Frontend.DocumentModel.AlterDocumentRequest.NewRange">
+            <summary>
+            The resulting text range, after the replacement is performed.
+            The length of this range is equal to length of new text and start offset is the same as for old range.
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Frontend.DocumentModel.AlterDocumentRequest.DocumentLength">
+            <summary>
+            Document length after applying this change. Used for verification purposes as a simple checksum.
+            Can be 0 when real length isn't known
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Frontend.DocumentModel.AlterDocumentRequestEx.Optimize(JetBrains.Platform.VisualStudio.Protocol.Frontend.DocumentModel.AlterDocumentRequest,System.Int32)">
+            <summary>
+            Trims same suffix and prefix from new and old texts, optionally remaining context symbols from the start and end
+            of changed range
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Frontend.DocumentModel.AlterDocumentRequestEx.DumpDocumentText(System.String)">
+            <summary>
+            Get cropped presentation of string with an added hash code, when the string is too long or contains control characters.
+            When <see cref="F:JetBrains.Platform.VisualStudio.Protocol.Frontend.DocumentModel.AlterDocumentRequestEx.ExtremeTracing"/> is enabled dumps whole document text as is.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Frontend.DocumentModel.AlterDocumentRequestEx.FromDocumentChange(JetBrains.DocumentModel.RunningDocumentId,JetBrains.DocumentModel.DocumentChange)">
+             <summary>
+             Create a fake <see cref="T:JetBrains.Platform.VisualStudio.Protocol.Frontend.DocumentModel.AlterDocumentRequest"/> from a regualr <see cref="T:JetBrains.DocumentModel.DocumentChange"/>.
+            
+             NOTE: be careful, <see cref="T:JetBrains.DocumentModel.DocumentChange"/> have neither a requirement for undo nor light checksums e.g. document length.
+             This change cannot be included in real alter history! There is assert for such changes.
+             </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Frontend.DocumentModel.AlterDocumentResetRequest">
+            <summary>
+            An "force synchronize" operation.
+            Can be used to resolve conflicts in documents on unexpected changes (like reset operation) or to initial synchronization
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Frontend.DocumentModel.AlterDocumentResetRequest.RewindChanges">
+             <summary>
+             An optional suggestion of the list of changes which a second side probably missed.
+            
+             In case of different content of the documents, the receiving side will try to apply these changes to their copy of
+             the document before attempting to make a full reset. This behaviour was added to reduce the amount of changes in
+             the document on the initial reset, when text control isn't ready yet to accept changes.
+             </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Frontend.DocumentModel.AlterSyncMomentRequest">
+            A request to produce sync moment (from backend).
+            Does not produce revision id (e.g. should be wrapped in alter action)
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Frontend.DocumentModel.AlterSyncMomentRequest.#ctor(JetBrains.DocumentModel.RunningDocumentId,JetBrains.Application.Changes.ModificationStamp,JetBrains.Application.Alter.AlterRevisionId)">
+            A request to produce sync moment (from backend).
+            Does not produce revision id (e.g. should be wrapped in alter action)
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Frontend.DocumentModel.AlterUndoActionRequest">
+            A messy request with multiple responsibilities to interact with all undo-related functionality..
+            Intended to be used as not producing commit action
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Frontend.DocumentModel.AlterUndoActionRequest.#ctor(System.String,JetBrains.DocumentModel.RunningDocumentId,JetBrains.Platform.VisualStudio.Protocol.Frontend.DocumentModel.AlterUndoActionRequest.ActionType,System.Object)">
+            A request to either open or close undo scope.
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Frontend.DocumentModel.IUndoManagerBackToFrontInterop">
+             Change unit interop
+            
+             <see cref="T:JetBrains.DocumentModel.UndoManager"/> and VsUndoManager for description. 
+             Note: create methods returns id of change, which should be disposed in <see cref="M:JetBrains.Platform.VisualStudio.Protocol.Frontend.DocumentModel.IUndoManagerBackToFrontInterop.TerminateChangeUnit(System.Int32)"/>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Frontend.DocumentModel.IUndoManagerBackToFrontInterop.OnExecuteUndoableAction(JetBrains.DocumentModel.IUndoableActionRecord)">
+            Notify frontend that one of the backend features executed the action and request that reversed copy of the action should be placed in the undo stack.
+            The action is direct, i.e. not reversed
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Frontend.DocumentModel.IVsDocumentInSyncMoments">
+            <summary>
+            Exposes moments when documents are in sync
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Frontend.DocumentModel.IVsDocumentInSyncMoments.SyncMoments">
+            <summary>
+            Sync moments for each document.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Frontend.DocumentModel.IVsDocumentReadOnlyRegions">
+            <summary>
+            Can create readonly regions over various VS documents.
+            Brought out of the Markup Model because the latter belongs to the text control zone, and this interface is required even in the DocumentModel zone.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Frontend.DocumentModel.IVsDocumentReadOnlyRegions.MakeReadonly(JetBrains.DocumentModel.RunningDocumentId,JetBrains.Util.TextRange)">
+            <summary>
+            Creates a readonly lock for the given text range.
+            </summary>
+            <param name="documentId">Id of the document to create readonly lock in</param>
+            <param name="range">Range in the document to create readonly lock in</param>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Frontend.DocumentModel.IVsDocumentReadOnlyRegions.MakeWritable(JetBrains.DocumentModel.RunningDocumentId,JetBrains.Util.TextRange)">
+            <summary>
+            Removes a readonly lock for the given text range.
+            </summary>
+            <param name="documentId">Id of the document to remove readonly lock in</param>
+            <param name="range">Range in the document to remove readonly lock in</param>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Frontend.DocumentModel.IVSDOHBackToFront">
+            <summary>
+            VsDocumentOperationsHandlerWhidbey interop called from backend to frontend
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Frontend.IDE.IVsEditorManagerBackToFrontInterop.CloseTextControlAsync(JetBrains.TextControl.RunningTextControlId,JetBrains.IDE.CloseTextControlSaveOptions)">
+            <summary>
+            Closes text control in Visual Studio
+            </summary>
+            <param name="textControl">Text control to close.</param>
+            <param name="mode">Close mode</param>
+            <returns>Task when completed</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Frontend.IDE.IVsEditorManagerBackToFrontInterop.OpenEditorAsync(JetBrains.ProjectModel.Search.IProjectFileSearchDescriptor,JetBrains.Util.VirtualFileSystemPath,JetBrains.IDE.OpenFileOptions)">
+            <summary>
+              <para>Opens an editor in VS, forces its frame to show (this helps with finding editors sometimes), then exists without waiting for a text control to wire up with that.</para>
+              <para>Text controls are wired to open editors elsewhere automatically. Caller is expected to be waiting for a text control on its own.</para>
+              <para>Works in two modes: opening a project file (passed as a search descriptor), or opening a disk file path. Project file might fallback to opening by disk file path if project is not loaded yet.</para>
+            </summary>
+            <param name="filedescDesired">
+            Mode “open project file”: search desc for that project file.
+            Mode “open from disk path”: NULL.
+            </param>
+            <param name="filepathDesired">
+            Mode “open project file”: <see cref="P:JetBrains.ProjectModel.Search.IProjectFileOrFolderSearchDescriptor.Location" />.
+            Mode “open from disk path”: that disk path.
+            </param>
+            <param name="openFileOptions"></param>
+            <returns>Descriptor of the HItem which has actually been open: original <paramref name="filedescDesired" /> if it could be used, or whatever were actually opened from path.</returns>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Frontend.IDE.IVsEnsureWritableHandlerBackToFrontInterop">
+            <summary>
+            Supporting ensure writable handler in Visual Studio
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Frontend.IDE.IVsEnsureWritableHandlerBackToFrontInterop.TryMakeWritable(JetBrains.Platform.VisualStudio.Protocol.Frontend.IDE.MakingWritableInteropArgs)">
+            <summary>
+            Called from backend to make files writable in Visual Studio
+            </summary>
+            <param name="args">Ensure writable args</param>
+            <returns>Ensure writable result</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Frontend.IDE.IVsEnsureWritableHandlerBackToFrontInterop.QueryIsWritable(JetBrains.Util.FileSystemPath,JetBrains.DocumentModel.RunningDocumentId)">
+            <summary>
+            Queries Visual Studio whether the file is writable
+            </summary>
+            <param name="projectFileLocation">Project file path</param>
+            <param name="documentId">Document Id corresponding to the project file</param>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Frontend.IRdDiagnostics.GetActiveExts">
+            <summary>
+            Query FQN to Connected state for each ext in solution container (as well as Shell container)
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Frontend.IVsLanguagesBackToFrontInterop.TryGetLangPreferencesAsync(System.Guid[])">
+            <summary>
+            Returns array of language preferences. The array will only contain languages for which the request was successful.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Frontend.NuGet.IVsNugetModel.InstallPackage(System.String,JetBrains.ProjectModel.Search.IProjectSearchDescriptor,System.String,System.String,System.Boolean)">
+            <summary>
+            These calls are free-threaded, they will be started and there is no way to figure out when they are finished.
+            You can use heuristic-based property <see cref="P:JetBrains.Platform.VisualStudio.Protocol.Frontend.NuGet.IVsNugetModel.IsWorkingAsync"/>
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Frontend.NuGet.IVsNugetModel.GetInstalledPackagesAsync(JetBrains.ProjectModel.Search.IProjectSearchDescriptor)">
+            <summary>
+            Query: FileSystemPath of projects -> List of installed packages
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Frontend.NuGet.RdVsPackageMetadata">
+            <summary>
+            Wrapper of IVsPackageMetadata.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Frontend.NuGet.RdVsPackageProjectMetadata">
+            <summary>
+            Wrapper for VsPackageProject metadata
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Frontend.PeekSessions.IPeekSessionsBackToFrontInterop.IsAvailable">
+            <summary>
+            Whether peeking is available on frontend
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Frontend.PeekSessions.IPeekSessionsBackToFrontInterop.IsPeekSessionActive(JetBrains.TextControl.RunningTextControlId)">
+            <summary>
+            Whether there is an active peek session
+            </summary>
+            <param name="textControl">Text control in which the peek session is being searched</param>
+            <returns>True if there's an active peek session</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Frontend.PeekSessions.IPeekSessionsBackToFrontInterop.TriggerPeekSessionAsync(JetBrains.TextControl.RunningTextControlId,JetBrains.Platform.VisualStudio.Protocol.Common.PeekSessions.PeekSessionId)">
+            <summary>
+            Requests peek session creation. 
+            </summary>
+            <param name="textControl">Text control for which the session is to be started. TODO: replace with text control id when available</param>
+            <param name="sessionId">Peek session id</param>
+            <returns>Whether the session was started</returns>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Frontend.PeekSessions.IPeekSessionsBackToFrontInterop.PeekSessionTerminated">
+            <summary>
+            Fired when peek session is closed
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Frontend.ProjectDocuments.IVsProjectModelEditorInterop.Rename(JetBrains.ProjectModel.Search.IProjectSearchDescriptor,JetBrains.ProjectModel.Search.IProjectModelElementSearchDescriptor,JetBrains.Util.VirtualFileSystemPath,JetBrains.Util.VirtualFileSystemPath,System.String)">
+            <summary>
+            Rename either project, project folder or file. 
+            </summary>
+            <returns>Null if OK. error message if fail. </returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Frontend.ProjectDocuments.IVsProjectModelEditorInterop.GetPropertiesEditor(JetBrains.Lifetimes.Lifetime,JetBrains.ProjectModel.Search.IProjectSearchDescriptor,System.String)">
+            <summary>
+            Get msbuild properties editor which will be valid for specific lifetime.
+            May be not available, in this case null will be returned.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Frontend.ProjectDocuments.IVsProjectModelEditorInterop.DragAndDrop(JetBrains.ProjectModel.Search.IProjectFileOrFolderSearchDescriptor,JetBrains.ProjectModel.Search.IProjectFolderSearchDescriptor,System.UInt32)">
+            <summary>
+            Do drag-and-drop on Visual Studio Solution Explorer
+            </summary>
+            <param name="item"></param>
+            <param name="targetFolder"></param>
+            <param name="keyModifier">Drag-n-and drop effects, see KeyStateMasks or DragDropKeyStates class for reference</param>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Frontend.ProjectModel.IRoslynRoslynAnalyzersDataProvider.SupportedDiagnostics">
+            <summary>
+            Live map of possible analyzers' diagnostics and their severity
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Frontend.ProjectModel.ISolutionExplorerInterop">
+            <summary>
+            Interop for <see cref="T:JetBrains.ProjectModel.ISolutionExplorer"/> interface
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Frontend.ProjectModel.ISourceGeneratorsInterop.ReadyStatus">
+            A three-state live property:
+            NoValue: not yet initialized
+            True: initialized successfully
+            False: source generators interop cannot be initialized
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Frontend.ProjectModel.ISourceGeneratorsInterop.GeneratedFilesDirectory">
+            A directory in which we expect all source generated files will be materialized.
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Frontend.ProjectModel.ISourceGeneratorsInterop.GeneratedSources">
+            <summary>
+            Live map of generated sources
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Frontend.ProjectModel.ISourceGeneratorsInterop.DocumentIdToFileSystemPath">
+            VS materializes source generated files by path, which cannot be predicted on the backend side.
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Frontend.ProjectModel.SolutionBuilder.VsSolutionBuildEvents.OnBuildBegin">
+            <summary>
+            parameter: build action
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Frontend.ProjectModel.SolutionBuilder.VsSolutionBuildEvents.OnBuildProjConfigBegin">
+            <summary>
+            parameter: project
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Frontend.Shell.AlterRequests.IFrontendAlter.Pump">
+            Hack for sync processing changes queue
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Frontend.Shell.AlterRequests.InprocessAlterScheduler">
+            A special scheduler to guarantee sequential execution of actions in inprocess mode.
+            In OOP mode this guarantee comes naturally from the protocol scheduler.
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Frontend.Shell.AlterRequests.InprocessAlterScheduler.Yield">
+            <returns>Use the <c>await</c> construct on this.</returns>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Frontend.Shell.IVsAutoformatSettingsBackToFrontInterop">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Frontend.Shell.IVsToolsOptionsMonitorInterop.VsOptionsMightHaveChanged">
+            <summary>
+            Fired when Visual Studio options has been changed.
+            It's not quite guaranteed that any VS options change will be advertised with this event, but it's a suitable workaround if you haven't gotten the real event.
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Frontend.Shell.IVsToolsOptionsMonitorInterop.VsOptionsDialogHaveBeenClosed">
+            <summary>
+            Fired when one of VS Options dialogs is closed.
+            VS Options dialogs are "Tools | Options", "Tools | Import and Export Settings", and VS17.10+ options in a tool window.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Frontend.TextControl.AlterEndMarker">
+            A marker to indicate that the action or typing is finished processed
+            Should not be represented in the alter history because it doesn't change the state of the worlds, used as alter action
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Frontend.TextControl.AlterEndMarker.#ctor(JetBrains.Application.Alter.AlterRevisionId)">
+            A marker to indicate that the action or typing is finished processed
+            Should not be represented in the alter history because it doesn't change the state of the worlds, used as alter action
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Frontend.TextControl.AlterScrollRequest">
+            Scrolling request from the backend. Should not produce revision id.
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Frontend.TextControl.AlterScrollRequest.#ctor(JetBrains.TextControl.RunningTextControlId,JetBrains.TextControl.Transport.ScrollingRequest)">
+            Scrolling request from the backend. Should not produce revision id.
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.Protocol.Frontend.TextControl.IVsHighlighterCustomization.Cache">
+            Cache of customized values. Filled and invalided by frontend only
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Marshallers.ProjectModel.ProjectSearchDescriptorMarshaller">
+            <summary>
+             Explicit marshaller for protection from VsHierarchyWrapper and VsHierarchyWrapperEx
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.Protocol.Marshallers.ProjectModel.ProjectSearchDescriptorMarshaller.#ctor(JetBrains.Rd.Reflection.ReflectionSerializers)">
+            <summary>
+             Explicit marshaller for protection from VsHierarchyWrapper and VsHierarchyWrapperEx
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.TemporarilyExposedToFront.VsIntegrationOptionsPageTemporarilyExposedToFront">
+            <summary>
+            Should be on backend, but some options pages on front still reference it. Del when done.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.TemporarilyExposedToFront.VsKeyboardOptionsPageTemporarilyExposedToFront">
+            <summary>
+            Should be on backend, but some options pages on front still reference it. Del when done.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Zones.IReSharperOOPModeZone">
+            <summary>
+            Service shell-level zone indicating ReSharper OOP mode activated
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Zones.IVisualStudioAlterZone">
+            Shell-level zone indicating enabled async typing feature (only user facing term, don't use it in code)
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Zones.IVisualStudioBackendZone">
+            <summary>
+            Visual Studio integration backend components shell-level zone. 
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.Protocol.Zones.IVisualStudioFrontendOutOfProcessZone">
+            <summary>
+            Shell-level zone inside Visual Studio that supports out-of-process
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.VisualStudio.Protocol.Frontend.LightBulbs.RoslynActionPriority">
+            <summary>
+            Keep in sync with Microsoft.VisualStudio.Language.Intellisense.SuggestedActionSetPriority
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.Protocol.Frontend.IDE.Xaml.IDisableXamlAutoUpdateTagBackToFrontInterop.TryDisableXamlAutoUpdateTag">
+            <summary>
+            Disables XAML Auto-update tag
+            </summary>
+            <returns>True if it was enabled and needs to be restored</returns>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.Protocol.Frontend.IDE.Xaml.IDisableXamlAutoUpdateTagBackToFrontInterop.TryEnableXamlAutoUpdateTag">
+            <summary>
+            Enables XAML Auto-update tag
+            </summary>
+        </member>
+    </members>
+</doc>

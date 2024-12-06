@@ -1,0 +1,1466 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.Platform.Util.NetFX</name>
+    </assembly>
+    <members>
+        <member name="M:JetBrains.Util.NetFX.Extension.IWin32WindowEx.IsValidWindow(System.Windows.Forms.IWin32Window)">
+            <summary>
+            Checks that the window has a non-Null handle and that it represents a valid Win32 window.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Extension.IWin32WindowEx.PushDisable(System.Windows.Forms.IWin32Window)">
+            <summary>
+            Disables the given window temporarily.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Util.NetFX.Interop.AvalonEx">
+            <summary>
+            The non-interactive part of Avalon-related utilities.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.AvalonEx.EditDpiValue(System.Windows.Media.Imaging.BitmapSource,JetBrains.Util.Interop.DpiResolution)">
+            <summary>
+            Preserves the physical pixels of a bitmap, but changes the DPI resolution to the value specified.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.AvalonEx.GetSize(System.Windows.Media.ImageSource)">
+            <summary>
+            Gets image source size, in logical units.
+            </summary>
+            <param name="thіs"></param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.AvalonEx.GetJetSize(System.Windows.Media.ImageSource)">
+            <summary>
+            Gets image source size, in logical units.
+            </summary>
+            <param name="thіs"></param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.AvalonEx.GetSizeLogical(System.Drawing.Bitmap)">
+            <summary>
+            Gets image source size, in logical units.
+            </summary>
+            <param name="thіs"></param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.AvalonEx.GetSizePhysical(System.Windows.Media.Imaging.BitmapSource)">
+            <summary>
+            Gets image source size, in logical units.
+            </summary>
+            <param name="thіs"></param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.AvalonEx.InverseTransform(System.Windows.Media.Transform)">
+            <summary>
+              <para>Gets an inverse transform which is of type <see cref="T:System.Windows.Media.Transform" /> rather than <see cref="T:System.Windows.Media.GeneralTransform" /> as in the standard <see cref="P:System.Windows.Media.GeneralTransform.Inverse" /> property.</para>
+              <para>Throws if the transform is degenerate.</para>
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.AvalonEx.IsNullOrIdentity(System.Windows.Media.GeneralTransform)">
+            <summary>
+            Gets whether the transform value is <c>NULL</c>, or it's the identity transform (<see cref="P:System.Windows.Media.Transform.Identity" />).
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.AvalonEx.MakeGeometryBrush(System.Windows.Media.Geometry,System.Windows.Media.SolidColorBrush,System.Windows.Media.Pen)">
+            <summary>
+            For a geometry, creates a brush that could be used to paint a rectangle with a geometry.
+            The geometry spans the whole brush area.
+            The coordinate space of the geometry is assumed to be (0,0)-(1000,1000).
+            It would have been better to have (0,0)-(1,1), but some of the Avalon geometry clippers revert to rough edges on sizes less than one.
+            </summary>
+            <param name="geometry">The Geometry.</param>
+            <param name="brush">Brush. Optional.</param>
+            <param name="pen">Pen (brush + thinkness). Optional.</param>
+            <returns>The brush that paints the geometry.</returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.AvalonEx.Rasterize(System.Windows.Media.ImageSource,JetBrains.Util.Interop.DpiResolution,System.Nullable{System.Windows.Size})">
+            <summary>
+            Produces a raster image with the desired resolution. The logical size is either taken from the image or overridden here manually.
+            </summary>
+            <param name="image">The image to ensure rasterization. If this is already a raster, it will be adjusted to have the desired logical size and DPI (which might require resampling physical pixels). Beware writable bitmaps.</param>
+            <param name="resolution">DPI resolution of the resulting raster image.</param>
+            <param name="sizeLogical">Optional expected raster size, in device-independent pixels. If <c>Null</c>, the logical size of the original image will be used. The image will be stretched non-uniformly if the size implies so.</param>
+            <remarks>
+              <para>The logical size of the returned raster image is either <see cref="!:sizeLogical" /> (if given) or the logical size (<paramref name="image" />.<see cref="P:System.Windows.Media.ImageSource.Size" />) of the original image.</para>
+              <para>The DPI resolution of the returned raster image is <paramref name="resolution" />.</para>
+              <para>The physical pixel size of the returned raster image follows from the two above.</para>
+            </remarks>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.AvalonEx.RasterizeDrawing(System.Windows.Media.Drawing,JetBrains.Util.Interop.DpiResolution,System.Nullable{System.Windows.Size})">
+            <summary>
+            Rasterizes a vector image into a raster image of the standard DPI.
+            </summary>
+            <param name="drawing">The vector drawing to be rendered.</param>
+            <param name="resolution">DPI resolution to use when rasterizing.</param>
+            <param name="size">Optional expected raster size, in device-independent pixels. If <c>Null</c>, the image will be rendered in its natural size. Otherwise, it will be rescaled (in vector, if possible). Uniform scaling is not enforced.</param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.AvalonEx.Resample(System.Windows.Media.Imaging.BitmapSource,JetBrains.Util.Interop.DpiResolution)">
+            <summary>
+            Resamples the bitmap to achieve the new DPI resolution preserving the same logical size (which stretches the physical pixels).
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.AvalonEx.Resample(System.Drawing.Bitmap,JetBrains.Util.Interop.DpiResolution)">
+            <summary>
+            Resamples the bitmap to achieve the new DPI resolution preserving the same logical size (which stretches the physical pixels).
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.AvalonEx.SetLogicalSize(System.Windows.Media.Imaging.BitmapSource,System.Windows.Size)">
+            <summary>
+            Preserves the physical pixels of a bitmap, but changes the DPI resolution so that its logical size matched the given dimensions.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.AvalonEx.ToGdiPlusBitmap(System.Windows.Media.Imaging.BitmapSource)">
+            <summary>
+            Converts a raster Avalon image into a raster GDI+ image for use in WinForms UI.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.AvalonEx.Transform(System.Windows.Media.GeneralTransform,System.Windows.Vector)">
+            <summary>
+            Applies transformation to a vector (as a main diagonal of a rectangle). Translation has no effect on a vector.
+            </summary>
+        </member>
+        <member name="F:JetBrains.Util.NetFX.Interop.GraphicsContainers.ControlGraphicsContainer.myControl">
+            <summary>
+            The control to create the DC from. <c>Null</c> after dispose.
+            </summary>
+        </member>
+        <member name="F:JetBrains.Util.NetFX.Interop.GraphicsContainers.ControlGraphicsContainer.myGraphics">
+            <summary>
+            The DC lazily-created from the control, or <c>Null</c> if not created yet.
+            Should be disposed of.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.ControlGraphicsContainer.#ctor(System.Windows.Forms.Control)">
+            <summary>
+            Creates an instance over the control.
+            The graphics is not created until retrieved from the property for the first time.
+            </summary>
+            <param name="control">A non-<c>Null</c> control that must exist with its handle.</param>
+        </member>
+        <member name="P:JetBrains.Util.NetFX.Interop.GraphicsContainers.ControlGraphicsContainer.Graphics">
+            <summary>
+            Gets the device context.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.ControlGraphicsContainer.IsGoodControl(System.Windows.Forms.Control)">
+            <summary>
+            Checks whether it will work on the given control.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.ControlGraphicsContainer.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="T:JetBrains.Util.NetFX.Interop.GraphicsContainers.GetDcGraphicsContainer">
+            <summary>
+            Performs <see cref="M:JetBrains.Interop.WinApi.User32Dll.GetDC(System.Void*)" /> on the given <c>HWND</c> and releases it at the end.
+            </summary>
+        </member>
+        <member name="F:JetBrains.Util.NetFX.Interop.GraphicsContainers.GetDcGraphicsContainer.myGraphics">
+            <summary>
+            Lazy-init data.
+            </summary>
+        </member>
+        <member name="F:JetBrains.Util.NetFX.Interop.GraphicsContainers.GetDcGraphicsContainer.myHdc">
+            <summary>
+            <c>HDC</c>, after one is lazy-created and before it is disposed of.
+            </summary>
+        </member>
+        <member name="F:JetBrains.Util.NetFX.Interop.GraphicsContainers.GetDcGraphicsContainer.myHwnd">
+            <summary>
+            <c>HWND</c>, after the ctor and until the <c>HDC</c> is disposed of.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.GetDcGraphicsContainer.#ctor(System.Void*)">
+            <summary>
+            Creates a new container.
+            The <c>HDC</c> is not created immediately; instead, it's constructed on the first <see cref="P:JetBrains.Util.NetFX.Interop.GraphicsContainers.GetDcGraphicsContainer.Graphics" /> use.
+            </summary>
+            <param name="hwnd">Handle to the window to which the device context should be created.</param>
+        </member>
+        <member name="P:JetBrains.Util.NetFX.Interop.GraphicsContainers.GetDcGraphicsContainer.Graphics">
+            <summary>
+            Gets the device context.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.GetDcGraphicsContainer.Dispose(System.Boolean)">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:JetBrains.Util.NetFX.Interop.GraphicsContainers.GetDcGraphicsContainer.System#Windows#Forms#IWin32Window#Handle">
+            <inheritdoc />
+        </member>
+        <member name="T:JetBrains.Util.NetFX.Interop.GraphicsContainers.GraphicsContainers">
+            <summary>
+            The auto-container for a <see cref="T:System.Drawing.Graphics" /> device context that has several choices for where to create the graphics from.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.GraphicsContainers.FromGetDc(System.Void*)">
+            <summary>
+            Creates a generic device context from a window handle (<see cref="M:JetBrains.Interop.WinApi.User32Dll.GetDC(System.Void*)" />).
+            </summary>
+            <param name="hwnd">The handle of the window to paint into.</param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.GraphicsContainers.FromGraphics(System.Drawing.Graphics)">
+            <summary>
+            Creates a generic device context from Graphics
+            </summary>
+            <param name="g">The DC to use.</param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.GraphicsContainers.FromGraphics(System.Drawing.Graphics,JetBrains.Util.Interop.DpiResolution)">
+            <summary>
+            Creates a generic device context from Graphics
+            </summary>
+            <param name="g">The DC to use.</param>
+            <param name="dpi">The resolution of the DC, explicitly given (you might take it from <paramref name="g" /> with an ext method <c>Dpi()</c> if given, otherwise you must take it elsewhere). To tell resolution from a control, can use <see cref="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.GraphicsContainers.FromGraphicsOrControl(System.Drawing.Graphics,System.Windows.Forms.Control)" />.</param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.GraphicsContainers.FromGraphicsWithoutResolutionKnown(System.Drawing.Graphics)">
+            <summary>
+            Creates a generic device context from Graphics.
+            Wherever you have a source to know the resolution (Control, HWND, etc), you MUST call another method which supplies this resolution.
+            </summary>
+            <param name="g">The DC to use.</param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.GraphicsContainers.FromGraphicsOrControl(System.Drawing.Graphics,System.Windows.Forms.Control)">
+            <summary>
+            If <paramref name="g" /> is non-<c>Null</c>, just uses it.
+            Otherwise, works like <see cref="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.GraphicsContainers.FromControl(System.Windows.Forms.Control)" /> over <paramref name="control" />.
+            </summary>
+            <param name="g">The DC to use if non-<c>Null</c>. May be <c>Null</c>.</param>
+            <param name="control">The control to use for fallback, must not be <c>Null</c>.</param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.GraphicsContainers.FromNothing">
+            <summary>
+            Creates a hollow container that ensures noone ever uses its <see cref="T:System.Drawing.Graphics" />.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.GraphicsContainers.FromPainting(System.Windows.Forms.Control)">
+            <summary>
+            Creates a special painting device context from a control.
+            Must be used within <see cref="F:JetBrains.Interop.WinApi.WindowsMessages.WM_PAINT" /> only.
+            </summary>
+            <param name="control">The control to paint into. Must exist.</param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.GraphicsContainers.FromPainting(System.IntPtr)">
+            <summary>
+            Creates a special painting device context from a window handle.
+            Must be used within <see cref="F:JetBrains.Interop.WinApi.WindowsMessages.WM_PAINT" /> only.
+            Do NOT use on a Windows Forms Control, wrap a Graphics which you get into your Paint processing.
+            </summary>
+            <param name="hwnd">The handle of the window to paint into.</param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.GraphicsContainers.FromScreen">
+            <summary>
+            Creates a screen device context.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.GraphicsContainers.FromNoControlWithResolution(JetBrains.Util.Interop.DpiResolution)">
+            <summary>
+            A special case when you do not have the destination HWND (or WinForms Control) for which to create the Graphics, but know the desired Resolution. In this case, you can use the primary display device's capabilities without much trouble, since you know the target DPI.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.GraphicsContainers.GetNearestColor(System.Drawing.Graphics,JetBrains.Util.Media.JetRgbaColor)">
+            <inheritdoc cref="M:System.Drawing.Graphics.GetNearestColor(System.Drawing.Color)" />
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.GraphicsContainers.FromControl(System.Windows.Forms.Control)">
+            <summary>
+            If the control already exists with its handle, uses its DC, otherwise, a screen DC.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.GraphicsContainers.SetHighQuality(System.Drawing.Graphics)">
+            <summary>
+            Sets up the <see cref="T:System.Drawing.Graphics">graphics context</see> for high-quality rendering regardless of the screen settings.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.GraphicsContainers.SetHighQuality2(System.Drawing.Graphics)">
+            <summary>
+            Sets up the <see cref="T:System.Drawing.Graphics">graphics context</see> for high-quality rendering regardless of the screen settings.
+            Like <see cref="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.GraphicsContainers.SetHighQuality2(System.Drawing.Graphics)" />, but actually does all the things.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Util.NetFX.Interop.GraphicsContainers.GraphicsDpiCache">
+            <summary>
+            <see cref="T:System.Drawing.Graphics" /> <see cref="P:System.Drawing.Graphics.DpiX" /> and <see cref="P:System.Drawing.Graphics.DpiY" /> yield incorrect values in PMv2, so we have to track the correct DPI values externally to the Graphics object.
+            Sometimes we can extract them (either from the originating <see cref="T:JetBrains.Util.NetFX.Interop.GraphicsContainers.IGraphicsContainer" />, or by getting the originating <c>HDC</c> and then the originating <c>HWND</c> of that <c>HDC</c>).
+            In which case we want to cache this info, or to make it available for parties which do not have the original <see cref="T:JetBrains.Util.NetFX.Interop.GraphicsContainers.IGraphicsContainer" />.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.GraphicsDpiCache.SetDpi(System.Drawing.Graphics,JetBrains.Util.Interop.DpiResolution)">
+            <summary>
+            Sets a known value (at the moment when it's known).
+            </summary>
+        </member>
+        <member name="F:JetBrains.Util.NetFX.Interop.GraphicsContainers.GraphicsDpiCache.GraphicsDpiRecord.myOriginatingControl">
+            <summary>
+            Store the control weakly: even though weakly rooted under a <see cref="T:System.Drawing.Graphics" /> which would go away, collecting the dictionary slots might not happen soon enough, and the ref to control would be held for much longer.
+            </summary>
+        </member>
+        <member name="F:JetBrains.Util.NetFX.Interop.GraphicsContainers.GraphicsDpiCache.GraphicsDpiRecord.Dpi">
+            <summary>
+            The DPI, if already calculated.
+            </summary>
+        </member>
+        <member name="P:JetBrains.Util.NetFX.Interop.GraphicsContainers.GraphicsDpiCache.GraphicsDpiRecord.OriginatingControl">
+            <summary>
+            The originating Control instance, if we cannot tell the DPI when writing this struct because we are Util and do not have the methods, or if the Control does not have the Handle created yet.
+            </summary>
+        </member>
+        <member name="F:JetBrains.Util.NetFX.Interop.GraphicsContainers.GraphicsDpiCache.GraphicsDpiRecord.OriginatingHwnd">
+            <summary>
+            The originating window handle, if we cannot tell the DPI when writing this struct because we are Util and do not have the methods.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Util.NetFX.Interop.GraphicsContainers.HollowGraphicsContainer">
+            <summary>
+            An intentionally hollow graphics container that can be passed as a normal one, but will throw if someone actually tries to extract <see cref="P:JetBrains.Util.NetFX.Interop.GraphicsContainers.IGraphicsContainer.Graphics" /> out of it.
+            Can be used if you expect the callee to not use the parameter, but must pass it against the API.
+            </summary>
+        </member>
+        <member name="P:JetBrains.Util.NetFX.Interop.GraphicsContainers.HollowGraphicsContainer.Graphics">
+            <summary>
+            Gets the device context.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.HollowGraphicsContainer.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="T:JetBrains.Util.NetFX.Interop.GraphicsContainers.IGraphicsContainer">
+            <summary>
+            An interface for a class that contains a device context.
+            </summary>
+        </member>
+        <member name="P:JetBrains.Util.NetFX.Interop.GraphicsContainers.IGraphicsContainer.Graphics">
+            <summary>
+            Gets the device context.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Util.NetFX.Interop.GraphicsContainers.IGraphicsContainerDpi">
+            <summary>
+            Tells if it knows its own DPI.
+            </summary>
+        </member>
+        <member name="P:JetBrains.Util.NetFX.Interop.GraphicsContainers.IGraphicsContainerDpi.DpiRecord">
+            <summary>
+            Gets the correct DPI resolution of this device context.
+            If it is not applicable yet (e.g. a control has not been created as a HWND and has not yet obtained its DPI binding), returns a successful NULL value.
+            If this context is missing the correctly supplied DPI, returns an error.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Util.NetFX.Interop.GraphicsContainers.PaintGraphicsContainer">
+            <summary>
+            A must-dispose class for creating a GDI+ graphics object for painting a window in response to WM_PAINT.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.PaintGraphicsContainer.#ctor(System.Void*)">
+            <summary>
+            Creates a painting graphics object against some window.
+            </summary>
+            <param name="hwnd">Handle to the window we're currently painting.</param>
+        </member>
+        <member name="P:JetBrains.Util.NetFX.Interop.GraphicsContainers.PaintGraphicsContainer.Graphics">
+            <summary>
+            Gets the <see cref="P:JetBrains.Util.NetFX.Interop.GraphicsContainers.PaintGraphicsContainer.Graphics" /> object. Don't dispose, dispose the whole <see cref="T:JetBrains.Util.NetFX.Interop.GraphicsContainers.PaintGraphicsContainer" /> instance instead.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.PaintGraphicsContainer.op_Implicit(JetBrains.Util.NetFX.Interop.GraphicsContainers.PaintGraphicsContainer)~System.Drawing.Graphics">
+            <summary>
+            Same as <see cref="P:JetBrains.Util.NetFX.Interop.GraphicsContainers.PaintGraphicsContainer.Graphics" />.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.PaintGraphicsContainer.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:JetBrains.Util.NetFX.Interop.GraphicsContainers.PaintGraphicsContainer.System#Windows#Forms#IWin32Window#Handle">
+            <inheritdoc />
+        </member>
+        <member name="T:JetBrains.Util.NetFX.Interop.GraphicsContainers.ScreenGraphics">
+            <summary>
+            A must-dispose class for creating a GDI+ graphics object associated with the screen device context.
+            </summary>
+        </member>
+        <member name="F:JetBrains.Util.NetFX.Interop.GraphicsContainers.ScreenGraphics.myDpi">
+            <summary>
+            There are scenarios when this is now known, would throw in such cases when trying to get the DPI.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.ScreenGraphics.#ctor">
+            <summary>
+            Initializes the object by attaching to the screen's device context.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.ScreenGraphics.#ctor(JetBrains.Util.Interop.DpiResolution)">
+            <summary>
+            Initializes the object by attaching to the screen's device context. Knows the desired DPI, so is safe to use in all scenarios.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.ScreenGraphics.#ctor(System.Windows.Forms.Control)">
+            <summary>
+            Attempts to create a graphics upon the control. If the control handle is not yet available, or the control has already been disposed, uses the screen device context.
+            </summary>
+        </member>
+        <member name="P:JetBrains.Util.NetFX.Interop.GraphicsContainers.ScreenGraphics.Graphics">
+            <summary>
+            Gets the <see cref="P:JetBrains.Util.NetFX.Interop.GraphicsContainers.ScreenGraphics.Graphics" /> object. Don't dispose, dispose the whole <see cref="T:JetBrains.Util.NetFX.Interop.GraphicsContainers.ScreenGraphics" /> instance instead.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.ScreenGraphics.op_Implicit(JetBrains.Util.NetFX.Interop.GraphicsContainers.ScreenGraphics)~System.Drawing.Graphics">
+            <summary>
+            Same as <see cref="P:JetBrains.Util.NetFX.Interop.GraphicsContainers.ScreenGraphics.Graphics" />.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.ScreenGraphics.System#IDisposable#Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:JetBrains.Util.NetFX.Interop.GraphicsContainers.ScreenGraphics.JetBrains#Util#NetFX#Interop#GraphicsContainers#IGraphicsContainerDpi#DpiRecord">
+            <inheritdoc />
+        </member>
+        <member name="T:JetBrains.Util.NetFX.Interop.GraphicsContainers.SimpleGraphicsContainer">
+            <summary>
+            Just holds the given DC, won't dispose of it.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.SimpleGraphicsContainer.#ctor(System.Drawing.Graphics,JetBrains.Util.Interop.DpiResolution)">
+            <summary>
+            Attaches to the given DC.
+            </summary>
+            <param name="graphics">DC</param>
+            <param name="dpi">The known resoution. Use this overload if known.</param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.SimpleGraphicsContainer.#ctor(System.Drawing.Graphics)">
+            <summary>
+            Attaches to the given DC.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.SimpleGraphicsContainer.#ctor(System.Drawing.Graphics,System.Windows.Forms.Control)">
+            <summary>
+            Attaches to the given DC.
+            </summary>
+            <param name="graphics">DC</param>
+            <param name="controlOriginating">An optional HWND which would be retured from the <see cref="T:System.Windows.Forms.IWin32Window" /> interface, might be used for telling the DPI reliably.</param>
+        </member>
+        <member name="P:JetBrains.Util.NetFX.Interop.GraphicsContainers.SimpleGraphicsContainer.Graphics">
+            <summary>
+            Gets the device context.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.GraphicsContainers.SimpleGraphicsContainer.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="T:JetBrains.Util.NetFX.Interop.RectsW">
+            <summary>
+            WinForms and WPF bound version of Rects. Works nicely only on Windows / NetFX! There're mock implementations which generally support its operations on all OSes, but that's compat code and you should not rely on that in the new code.
+            Use <see cref="T:JetBrains.Util.Media.JetRect"/> wherever possible because it is based on platform-independent types (<see cref="T:JetBrains.Util.Media.JetSize"/>, <see cref="T:JetBrains.Util.Media.JetRect"/>, etc) and works correctly everywhere.
+            </summary>
+        </member>
+        <member name="P:JetBrains.Util.NetFX.Interop.RectsW.MaxSize">
+            <summary>
+            Gets the size whose both components are <see cref="F:System.Int32.MaxValue" />.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.AbsMaximum(System.Drawing.Size)">
+            <summary>
+            Returns the maximum of the size dimensions absolute values.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.AlignedCenter(System.Drawing.Rectangle,System.Drawing.Rectangle)">
+            <summary>
+            Centers one rectangle within another.
+            </summary>
+            <param name="source">The rectangle to align. The returned value will have the same size.</param>
+            <param name="bounds">The bounds to align the <paramref name="source" /> within, may be smaller than <paramref name="source" />.</param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.AlignedCenter(System.Windows.Rect,System.Windows.Rect)">
+            <summary>
+            Centers one rectangle within another.
+            </summary>
+            <param name="source">The rectangle to align. The returned value will have the same size.</param>
+            <param name="bounds">The bounds to align the <paramref name="source" /> within, may be smaller than <paramref name="source" />.</param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.AlignedCenter(System.Drawing.Size,System.Drawing.Rectangle)">
+            <summary>
+            Centers one rectangle within another.
+            </summary>
+            <param name="source">The size of the rectangle to align. The returned value will have the same size.</param>
+            <param name="bounds">The bounds to align the <paramref name="source" /> within, may be smaller than <paramref name="source" />.</param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.AlignedCenter(System.Windows.Size,System.Windows.Rect)">
+            <summary>
+            Centers one rectangle within another.
+            </summary>
+            <param name="source">The size of the rectangle to align. The returned value will have the same size.</param>
+            <param name="bounds">The bounds to align the <paramref name="source" /> within, may be smaller than <paramref name="source" />.</param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.AlignedCenterAndCropped(System.Drawing.Rectangle,System.Drawing.Rectangle)">
+            <summary>
+            Centers one rectangle within another and crops down as needed.
+            </summary>
+            <param name="source">The rectangle to align. The returned value may be cropped down by the <paramref name="bounds" />.</param>
+            <param name="bounds">The bounds to align the <paramref name="source" /> within, may be smaller than <paramref name="source" />.</param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.AlignedCenterAndCropped(System.Drawing.Size,System.Drawing.Rectangle)">
+            <summary>
+            Centers one rectangle within another and crops down as needed.
+            </summary>
+            <param name="source">The size of the rectangle to align. The returned value may be cropped down by the <paramref name="bounds" />.</param>
+            <param name="bounds">The bounds to align the <paramref name="source" /> within, may be smaller than <paramref name="source" />.</param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.AlignedCenterAndCropped(System.Windows.Rect,System.Windows.Rect)">
+            <summary>
+            Centers one rectangle within another and crops down as needed.
+            </summary>
+            <param name="source">The rectangle to align. The returned value may be cropped down by the <paramref name="bounds" />.</param>
+            <param name="bounds">The bounds to align the <paramref name="source" /> within, may be smaller than <paramref name="source" />.</param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.AlignedCenterAndCropped(System.Windows.Size,System.Windows.Rect)">
+            <summary>
+            Centers one rectangle within another and crops down as needed.
+            </summary>
+            <param name="source">The size of the rectangle to align. The returned value may be cropped down by the <paramref name="bounds" />.</param>
+            <param name="bounds">The bounds to align the <paramref name="source" /> within, may be smaller than <paramref name="source" />.</param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.AlignedCenterAndDownscaled(System.Drawing.Rectangle,System.Drawing.Rectangle)">
+            <summary>
+            Centers one rectangle within another. If the <paramref name="source" /> does not fit into <paramref name="bounds" />, it's downscaled proportionally.
+            </summary>
+            <param name="source">The rectangle to align. The returned value may be downscaled.</param>
+            <param name="bounds">The bounds to align the <paramref name="source" /> within, may be smaller than <paramref name="source" />.</param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.AlignedCenterAndDownscaled(System.Windows.Rect,System.Windows.Rect)">
+            <summary>
+            Centers one rectangle within another. If the <paramref name="source" /> does not fit into <paramref name="bounds" />, it's downscaled proportionally.
+            </summary>
+            <param name="source">The rectangle to align. The returned value may be downscaled.</param>
+            <param name="bounds">The bounds to align the <paramref name="source" /> within, may be smaller than <paramref name="source" />.</param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.AlignedCenterAndDownscaled(System.Drawing.Size,System.Drawing.Rectangle)">
+            <summary>
+            Centers one rectangle within another. If the <paramref name="source" /> does not fit into <paramref name="bounds" />, it's downscaled proportionally.
+            </summary>
+            <param name="source">The size of the rectangle to align. The returned value may be downscaled.</param>
+            <param name="bounds">The bounds to align the <paramref name="source" /> within, may be smaller than <paramref name="source" />.</param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.AlignedCenterAndDownscaled(System.Windows.Size,System.Windows.Rect)">
+            <summary>
+            Centers one rectangle within another. If the <paramref name="source" /> does not fit into <paramref name="bounds" />, it's downscaled proportionally.
+            </summary>
+            <param name="source">The size of the rectangle to align. The returned value may be downscaled.</param>
+            <param name="bounds">The bounds to align the <paramref name="source" /> within, may be smaller than <paramref name="source" />.</param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.AlignedWithin(System.Windows.Rect,System.Windows.Rect)">
+            <summary>
+            Makes sure one rectangle is wholy located within the other, preferring to keep its size if possible and executing minimal moves.
+            </summary>
+            <param name="source">The rectangle to align.</param>
+            <param name="bounds">The bounds to align the <paramref name="source" /> within, may be smaller than <paramref name="source" />.</param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.AlignedWithinUsingMinSize(System.Drawing.Rectangle,System.Drawing.Rectangle,System.Drawing.Size)">
+            <summary>
+            Try to make sure one rectangle is located within the other, preferring to keep its size if possible and executing minimal moves.
+            If source rectangle is bigger than the bounds, ensure its left top corner is within the bounds.
+            </summary>
+            <param name="source">The rectangle to align.</param>
+            <param name="bounds">The bounds to align the <paramref name="source" /> within, may be smaller than <paramref name="source" />.</param>
+            <param name="minSize">The rectangle minimal size.</param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.AssertIsReal(System.Windows.Point,System.String)">
+            <summary>
+            Asserts that point coordinates are real numbers. Fluent.
+            Throws on <see cref="F:System.Double.NaN" />, <see cref="F:System.Double.PositiveInfinity" />, <see cref="F:System.Double.NegativeInfinity" />.
+            </summary>
+            <param name="pt">Point to test.</param>
+            <param name="failmessage">Optional. Message to include in the failure exception.</param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.AssertIsReal(System.Windows.Rect,System.String)">
+            <summary>
+            Asserts that rectangle coordinates are real numbers. Fluent.
+            Throws on <see cref="F:System.Double.NaN" />, <see cref="F:System.Double.PositiveInfinity" />, <see cref="F:System.Double.NegativeInfinity" />.
+            </summary>
+            <param name="rect">Point to test.</param>
+            <param name="failmessage">Optional. Message to include in the failure exception.</param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.AssertIsReal(System.Windows.Size,System.String)">
+            <summary>
+            Asserts that size dimensions are real numbers. Fluent.
+            Throws on <see cref="F:System.Double.NaN" />, <see cref="F:System.Double.PositiveInfinity" />, <see cref="F:System.Double.NegativeInfinity" />.
+            </summary>
+            <param name="size">Point to test.</param>
+            <param name="failmessage">Optional. Message to include in the failure exception.</param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Attach(System.Drawing.Rectangle@,System.Windows.Forms.DockStyle,System.Int32)">
+            <summary>
+            Returns a non-collapsed rectangle attached outside the <paramref name="anchor" /> rectangle. Modifies the <paramref name="anchor" /> rectangle!
+            </summary>
+            <param name="anchor">The attachment anchor. Increased to include the newly-attached rectangle on exit, so that to attach multiple rects in sequence.</param>
+            <param name="dockstyle">The docking style, which can be a side-dock only.</param>
+            <param name="size">The characteristic size of the side-attached rectangle (only either width or height, whichever is not defined by the attachment process).</param>
+            <returns>The rectangle attached at the given side.</returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Attach(System.Drawing.Rectangle@,System.Windows.Forms.DockStyle,System.Drawing.Size)">
+            <summary>
+            Returns a non-collapsed rectangle attached outside the <paramref name="anchor" /> rectangle. Modifies the <paramref name="anchor" /> rectangle!
+            </summary>
+            <param name="anchor">The attachment anchor. Increased to include the newly-attached rectangle on exit, so that to attach multiple rects in sequence.</param>
+            <param name="dockstyle">The docking style, which can be a side-dock only.</param>
+            <param name="size">The characteristic size of the side-attached rectangle (only either width or height is used, whichever is not defined by the attachment process).</param>
+            <returns>The rectangle attached at the given side.</returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Attach(System.Windows.Rect@,System.Windows.Controls.Dock,System.Double)">
+            <summary>
+            Returns a non-collapsed rectangle attached outside the <paramref name="anchor" /> rectangle. Modifies the <paramref name="anchor" /> rectangle!
+            </summary>
+            <param name="anchor">The attachment anchor. Increased to include the newly-attached rectangle on exit, so that to attach multiple rects in sequence.</param>
+            <param name="dockstyle">The docking style, which can be a side-dock only.</param>
+            <param name="size">The characteristic size of the side-attached rectangle (only either width or height, whichever is not defined by the attachment process).</param>
+            <returns>The rectangle attached at the given side.</returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Attach(System.Windows.Rect@,System.Windows.Controls.Dock,System.Windows.Size)">
+            <summary>
+            Returns a non-collapsed rectangle attached outside the <paramref name="anchor" /> rectangle. Modifies the <paramref name="anchor" /> rectangle!
+            </summary>
+            <param name="anchor">The attachment anchor. Increased to include the newly-attached rectangle on exit, so that to attach multiple rects in sequence.</param>
+            <param name="dockstyle">The docking style, which can be a side-dock only.</param>
+            <param name="size">The characteristic size of the side-attached rectangle (only either width or height is used, whichever is not defined by the attachment process).</param>
+            <returns>The rectangle attached at the given side.</returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Attached(System.Drawing.Rectangle,System.Windows.Forms.DockStyle,System.Int32)">
+            <summary>
+            Returns a non-collapsed rectangle attached outside the <paramref name="anchor" /> rectangle. Does not modify the <paramref name="anchor" /> rectangle.
+            </summary>
+            <param name="anchor">The attachment anchor.</param>
+            <param name="dockstyle">The docking style, which can be a side-dock only.</param>
+            <param name="size">The characteristic size of the side-attached rectangle (only either width or height, whichever is not defined by the attachment process).</param>
+            <returns>The rectangle attached at the given side.</returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Attached(System.Drawing.Rectangle,System.Windows.Forms.DockStyle,System.Drawing.Size)">
+            <summary>
+            Returns a non-collapsed rectangle attached outside the <paramref name="anchor" /> rectangle. Does not modify the <paramref name="anchor" /> rectangle.
+            </summary>
+            <param name="anchor">The attachment anchor.</param>
+            <param name="dockstyle">The docking style, which can be a side-dock only.</param>
+            <param name="size">The characteristic size of the side-attached rectangle (only either width or height is used, whichever is not defined by the attachment process).</param>
+            <returns>The rectangle attached at the given side.</returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Attached(System.Windows.Rect,System.Windows.Controls.Dock,System.Double)">
+            <summary>
+            Returns a non-collapsed rectangle attached outside the <paramref name="anchor" /> rectangle. Does not modify the <paramref name="anchor" /> rectangle.
+            </summary>
+            <param name="anchor">The attachment anchor.</param>
+            <param name="dockstyle">The docking style, which can be a side-dock only.</param>
+            <param name="size">The characteristic size of the side-attached rectangle (only either width or height, whichever is not defined by the attachment process).</param>
+            <returns>The rectangle attached at the given side.</returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Attached(System.Windows.Rect,System.Windows.Controls.Dock,System.Windows.Size)">
+            <summary>
+            Returns a non-collapsed rectangle attached outside the <paramref name="anchor" /> rectangle. Does not modify the <paramref name="anchor" /> rectangle.
+            </summary>
+            <param name="anchor">The attachment anchor.</param>
+            <param name="dockstyle">The docking style, which can be a side-dock only.</param>
+            <param name="size">The characteristic size of the side-attached rectangle (only either width or height is used, whichever is not defined by the attachment process).</param>
+            <returns>The rectangle attached at the given side.</returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.ClippedSmart(System.Drawing.Rectangle,System.Drawing.Rectangle)">
+            <summary>
+            Performs the smart clipping that returns a non-all-zeros rectangle even if there is no intersection.
+            Ie, when the <paramref name="source" /> rect lays outside the <paramref name="bounds" /> over some side, the result is a zero-thick projection on that side.
+            </summary>
+            <param name="source"></param>
+            <param name="bounds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.ClippedSmart(System.Windows.Rect,System.Windows.Rect)">
+            <summary>
+            Performs the smart clipping that returns a non-all-zeros rectangle even if there is no intersection.
+            Ie, when the <paramref name="source" /> rect lays outside the <paramref name="bounds" /> over some side, the result is a zero-thick projection on that side.
+            </summary>
+            <param name="source"></param>
+            <param name="bounds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Collapsed(System.Drawing.Rectangle,JetBrains.UI.Anchoring2D)">
+            <summary>
+            Collapses a rectangle down to a point.
+            The inside modes are located on the inner sides of the rectangle, and outside ones are one point outside.
+            The bottom-right sides are not included within the rectangle area.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Collapsed(System.Windows.Rect,JetBrains.UI.Anchoring2D)">
+            <summary>
+            Collapses a rectangle down to a point.
+            The inside modes are located on the inner sides of the rectangle, and outside ones are one point outside.
+            The bottom-right sides are not included within the rectangle area.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Constrained(System.Drawing.Size,System.Drawing.Size)">
+            <summary>
+            Constrains the <paramref name="source" /> size by the <paramref name="limit" />.
+            </summary>
+            <param name="source">The source size to be limited. May be non-normalized.</param>
+            <param name="limit">The limiting size. Must be normalized.</param>
+            <returns>The constrainted <paramref name="source" />, guaranteed to be normalized.</returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Constrained(System.Windows.Size,System.Windows.Size)">
+            <summary>
+            Constrains the <paramref name="source" /> size by the <paramref name="limit" />.
+            </summary>
+            <param name="source">The source size to be limited. May be non-normalized.</param>
+            <param name="limit">The limiting size. Must be normalized.</param>
+            <returns>The constrainted <paramref name="source" />, guaranteed to be normalized.</returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Deflated(System.Drawing.Rectangle,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Deflates all the rectangle's sides by the given amount. If the numbers are positive, the rectangle will shrink.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Deflated(System.Drawing.Rectangle,System.Drawing.Size)">
+            <summary>
+            Deflates all the rectangle's sides by the given amount. If the numbers are positive, the rectangle will shrink.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Deflated(System.Windows.Rect,System.Windows.Size)">
+            <summary>
+            Deflates all the rectangle's sides by the given amount. If the numbers are positive, the rectangle will shrink.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Deflated(System.Drawing.Rectangle,System.Windows.Forms.Padding)">
+            <summary>
+            Deflates all the rectangle's sides by the given amount. If the numbers are positive, the rectangle will shrink.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Deflated(System.Windows.Rect,System.Windows.Thickness)">
+            <summary>
+            Deflates all the rectangle's sides by the given amount. If the numbers are positive, the rectangle will shrink.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Dock(System.Drawing.Rectangle@,System.Windows.Forms.DockStyle,System.Int32)">
+            <summary>
+            Returns a non-collapsed rectangle docked within the <paramref name="space" /> rectangle. Modifies the <paramref name="space" /> rectangle!
+            </summary>
+            <param name="space">The docking space. Decreased to exclude the newly-docked rectangle on exit, so that to dock multiple rects in sequence.</param>
+            <param name="dockstyle">The docking style, which can be either any side or fill.</param>
+            <param name="size">The characteristic size of the side-docked rectangle (either width or height, whichever is not defined by the docking process). In the <see cref="F:System.Windows.Forms.DockStyle.Fill" /> case, this parameter is ignored.</param>
+            <returns>The rectangle docked at the given side.</returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Dock(System.Windows.Rect@,System.Nullable{System.Windows.Controls.Dock},System.Double)">
+            <summary>
+            Returns a non-collapsed rectangle docked within the <paramref name="space" /> rectangle. Modifies the <paramref name="space" /> rectangle!
+            </summary>
+            <param name="space">The docking space. Decreased to exclude the newly-docked rectangle on exit, so that to dock multiple rects in sequence.</param>
+            <param name="dock">The docking style, which can be either any side or fill.</param>
+            <param name="size">The characteristic size of the side-docked rectangle (either width or height, whichever is not defined by the docking process). In the <see cref="F:System.Windows.Forms.DockStyle.Fill" /> case, this parameter is ignored.</param>
+            <returns>The rectangle docked at the given side.</returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Dock(System.Drawing.Rectangle@,System.Windows.Forms.DockStyle,System.Drawing.Size)">
+            <summary>
+            Returns a non-collapsed rectangle docked within the <paramref name="space" /> rectangle. Modifies the <paramref name="space" /> rectangle!
+            </summary>
+            <param name="space">The docking space. Decreased to exclude the newly-docked rectangle on exit, so that to dock multiple rects in sequence.</param>
+            <param name="dockstyle">The docking style, which can be either any side or fill.</param>
+            <param name="size">The characteristic size of the side-docked rectangle (only either width or height is used, whichever is not defined by the docking process). In the <see cref="F:System.Windows.Forms.DockStyle.Fill" /> case, this parameter is ignored.</param>
+            <returns>The rectangle docked at the given side.</returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Dock(System.Windows.Rect@,System.Nullable{System.Windows.Controls.Dock},System.Windows.Size)">
+            <summary>
+            Returns a non-collapsed rectangle docked within the <paramref name="space" /> rectangle. Modifies the <paramref name="space" /> rectangle!
+            </summary>
+            <param name="space">The docking space. Decreased to exclude the newly-docked rectangle on exit, so that to dock multiple rects in sequence.</param>
+            <param name="dock">The docking style, which can be either any side or fill.</param>
+            <param name="size">The characteristic size of the side-docked rectangle (only either width or height is used, whichever is not defined by the docking process). In the <see cref="F:System.Windows.Forms.DockStyle.Fill" /> case, this parameter is ignored.</param>
+            <returns>The rectangle docked at the given side.</returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Docked(System.Drawing.Rectangle,System.Windows.Forms.DockStyle,System.Int32)">
+            <summary>
+            Returns a non-collapsed rectangle docked within the <paramref name="space" /> rectangle. Does not modify the <paramref name="space" /> rectangle.
+            </summary>
+            <param name="space">The docking space.</param>
+            <param name="dockstyle">The docking style, which can be either any side or fill.</param>
+            <param name="size">The characteristic size of the side-docked rectangle (either width or height, whichever is not defined by the docking process). In the <see cref="F:System.Windows.Forms.DockStyle.Fill" /> case, this parameter is ignored.</param>
+            <returns>The rectangle docked at the given side.</returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Docked(System.Windows.Rect,System.Nullable{System.Windows.Controls.Dock},System.Double)">
+            <summary>
+            Returns a non-collapsed rectangle docked within the <paramref name="space" /> rectangle. Does not modify the <paramref name="space" /> rectangle.
+            </summary>
+            <param name="space">The docking space.</param>
+            <param name="dock">The docking style, which can be either any side or fill.</param>
+            <param name="size">The characteristic size of the side-docked rectangle (either width or height, whichever is not defined by the docking process). In the <see cref="F:System.Windows.Forms.DockStyle.Fill" /> case, this parameter is ignored.</param>
+            <returns>The rectangle docked at the given side.</returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Docked(System.Drawing.Rectangle,System.Windows.Forms.DockStyle,System.Drawing.Size)">
+            <summary>
+            Returns a non-collapsed rectangle docked within the <paramref name="space" /> rectangle. Does not modify the <paramref name="space" /> rectangle.
+            </summary>
+            <param name="space">The docking space.</param>
+            <param name="dockstyle">The docking style, which can be either any side or fill.</param>
+            <param name="size">The characteristic size of the side-docked rectangle (only either width or height is used, whichever is not defined by the docking process). In the <see cref="F:System.Windows.Forms.DockStyle.Fill" /> case, this parameter is ignored.</param>
+            <returns>The rectangle docked at the given side.</returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Docked(System.Windows.Rect,System.Nullable{System.Windows.Controls.Dock},System.Windows.Size)">
+            <summary>
+            Returns a non-collapsed rectangle docked within the <paramref name="space" /> rectangle. Does not modify the <paramref name="space" /> rectangle.
+            </summary>
+            <param name="space">The docking space.</param>
+            <param name="dock">The docking style, which can be either any side or fill.</param>
+            <param name="size">The characteristic size of the side-docked rectangle (only either width or height is used, whichever is not defined by the docking process). In the <see cref="F:System.Windows.Forms.DockStyle.Fill" /> case, this parameter is ignored.</param>
+            <returns>The rectangle docked at the given side.</returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.EnsuredEmptySize(System.Drawing.Size)">
+            <summary>
+            Returns <see cref="F:System.Drawing.Size.Empty" /> if the given <paramref name="size" /> is "enhanced-empty", that is, either it's <see cref="P:System.Drawing.Size.IsEmpty" />, or one of its dimensions is zero. Otherwise, returns the original size.
+            Curcumvents the fact that <see cref="P:System.Drawing.Size.IsEmpty" /> requires both dimensions to be simultaneousely zero.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.EnsuredEmptySize(System.Windows.Size)">
+            <summary>
+            Returns zero size if the given <paramref name="size" /> is "enhanced-empty", that is, either it's <see cref="P:System.Drawing.Size.IsEmpty" />, or one of its dimensions is zero. Otherwise, returns the original size.
+            Curcumvents the fact that <see cref="P:System.Drawing.Size.IsEmpty" /> requires both dimensions to be simultaneousely zero.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.FromLtrbNonnegative(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Creates a rectangle in a way similar to <see cref="M:System.Drawing.Rectangle.FromLTRB(System.Int32,System.Int32,System.Int32,System.Int32)" />, but ensures that no dimension is negative.
+            If near is less than far, they're both set to the middle value.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.FromLtrbNonnegative(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Creates a rectangle in a way similar to <see cref="M:System.Drawing.Rectangle.FromLTRB(System.Int32,System.Int32,System.Int32,System.Int32)" />, but ensures that no dimension is negative.
+            If near is less than far, they're both set to the middle value.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.GetBorder(System.Drawing.Rectangle,System.Drawing.Size)">
+            <summary>
+            Gets a set of non-overlapping rectangles forming a border just inside the given rect, of the thickness specified.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.GetCenter(System.Drawing.Rectangle)">
+            <summary>
+            Gets a point that is the center of the rectangle.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.GetCenter(System.Windows.Rect)">
+            <summary>
+            Gets a point that is the center of the rectangle.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Inflated(System.Drawing.Rectangle,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Inflates all the rectangle's sides by the given amount. If the numbers are positive, the rectangle will grow.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Inflated(System.Drawing.Rectangle,System.Drawing.Size)">
+            <summary>
+            Inflates all the rectangle's sides by the given amount. If the numbers are positive, the rectangle will grow.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Inflated(System.Drawing.Rectangle,System.Windows.Forms.Padding)">
+            <summary>
+            Inflates all the rectangle's sides by the given amount. If the numbers are positive, the rectangle will grow.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Inflated(System.Windows.Rect,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Inflates all the rectangle's sides by the given amount. If the numbers are positive, the rectangle will grow.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Inflated(System.Windows.Rect,System.Windows.Size)">
+            <summary>
+            Inflates all the rectangle's sides by the given amount. If the numbers are positive, the rectangle will grow.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Inflated(System.Windows.Rect,System.Windows.Thickness)">
+            <summary>
+            Inflates all the rectangle's sides by the given amount. If the numbers are positive, the rectangle will grow.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.IsCollapsed(System.Drawing.Size)">
+            <summary>
+            Gets whether the given size is collapsed, that is, has a zero or negative dimension.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.IsCollapsed(System.Windows.Size)">
+            <summary>
+            Gets whether the given size is collapsed, that is, has a zero or negative dimension.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.IsCollapsed(System.Drawing.Rectangle)">
+            <summary>
+            Gets whether the given rectangle is collapsed, that is, has a zero or negative dimension.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.IsCollapsed(System.Windows.Rect)">
+            <summary>
+            Gets whether the given rectangle is collapsed, that is, has a zero or negative dimension.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.IsCollapsed(System.Nullable{System.Windows.Rect})">
+            <summary>
+            Gets whether the given rectangle is collapsed, that is, has a zero or negative dimension.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.IsConstrained(System.Drawing.Size,System.Drawing.Size)">
+            <summary>
+            Checks whether the <paramref name="source" /> size satisfies the <paramref name="limit" />, in terms of the <see cref="M:JetBrains.Util.NetFX.Interop.RectsW.Constrained(System.Drawing.Size,System.Drawing.Size)" /> function.
+            </summary>
+            <param name="source">The source size to be limited. May be non-normalized.</param>
+            <param name="limit">The limiting size. Must be normalized.</param>
+            <returns>Whether executing <see cref="M:JetBrains.Util.NetFX.Interop.RectsW.Constrained(System.Drawing.Size,System.Drawing.Size)" /> over <paramref name="source" /> and <paramref name="limit" /> won't change the <paramref name="source" />.</returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.IsConstrained(System.Windows.Size,System.Windows.Size)">
+            <summary>
+            Checks whether the <paramref name="source" /> size satisfies the <paramref name="limit" />, in terms of the <see cref="M:JetBrains.Util.NetFX.Interop.RectsW.Constrained(System.Drawing.Size,System.Drawing.Size)" /> function.
+            </summary>
+            <param name="source">The source size to be limited. May be non-normalized.</param>
+            <param name="limit">The limiting size. Must be normalized.</param>
+            <returns>Whether executing <see cref="M:JetBrains.Util.NetFX.Interop.RectsW.Constrained(System.Drawing.Size,System.Drawing.Size)" /> over <paramref name="source" /> and <paramref name="limit" /> won't change the <paramref name="source" />.</returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.IsEmptyArea(System.Drawing.Size)">
+            <summary>
+            Checks whether the size represents an empty area.
+            Unlike <see cref="P:System.Drawing.Size.IsEmpty" />, returns <c>True</c> if either of dimensions is empty (OR condition).
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.IsEmptyArea(System.Drawing.Rectangle)">
+            <summary>
+            Checks whether the rectangle represents an empty area.
+            Unlike <see cref="P:System.Drawing.Rectangle.IsEmpty" />, returns <c>True</c> if either of dimensions is empty (OR condition), and ignores the <see cref="P:System.Drawing.Rectangle.Location" /> completely.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.IsInfinite(System.Drawing.Size)">
+            <summary>
+            Gets whether the given rectangle is close to maxvalues.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.IsNanOrInf(System.Windows.Point)">
+            <summary>
+            Gets whether any of the coordinates are NAN or INF (<see cref="M:JetBrains.NumberUtil.IsNanOrInf(System.Double)" />).
+            </summary>
+            <seealso cref="M:JetBrains.Util.NetFX.Interop.RectsW.AssertIsReal(System.Windows.Point,System.String)" />
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.IsNanOrInf(System.Windows.Size)">
+            <summary>
+            Gets whether any of the coordinates are NAN or INF (<see cref="M:JetBrains.NumberUtil.IsNanOrInf(System.Double)" />).
+            </summary>
+            <seealso cref="M:JetBrains.Util.NetFX.Interop.RectsW.AssertIsReal(System.Windows.Size,System.String)" />
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.IsNanOrInf(System.Windows.Vector)">
+            <summary>
+            Gets whether any of the coordinates are NAN or INF (<see cref="M:JetBrains.NumberUtil.IsNanOrInf(System.Double)" />).
+            </summary>
+            <seealso cref="M:JetBrains.Util.NetFX.Interop.RectsW.AssertIsReal(System.Windows.Size,System.String)" />
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.IsNanOrInf(System.Windows.Rect)">
+            <summary>
+            Gets whether any of the coordinates are NAN or INF (<see cref="M:JetBrains.NumberUtil.IsNanOrInf(System.Double)" />).
+            </summary>
+            <seealso cref="M:JetBrains.Util.NetFX.Interop.RectsW.AssertIsReal(System.Windows.Rect,System.String)" />
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.IsNormalized(System.Drawing.Size)">
+            <summary>
+            Checks whether the size corresponds to a normalized rectangle.
+            A normalized rectangle is such whose left coordinate is not greater than right, and top coordinate is not greater than bottom.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.IsNormalized(System.Windows.Size)">
+            <summary>
+            Checks whether the size corresponds to a normalized rectangle.
+            A normalized rectangle is such whose left coordinate is not greater than right, and top coordinate is not greater than bottom.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.IsNormalized(System.Drawing.Rectangle)">
+            <summary>
+            Checks whether the rectangle is normalized.
+            A normalized rectangle is such whose left coordinate is not greater than right, and top coordinate is not greater than bottom.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.IsNormalized(System.Windows.Rect)">
+            <summary>
+            Checks whether the rectangle is normalized.
+            A normalized rectangle is such whose left coordinate is not greater than right, and top coordinate is not greater than bottom.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Max(System.Drawing.Size,System.Drawing.Size)">
+            <summary>
+            Gets the normalized maximum of two sizes, max operation executed independently against both dimensions.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Max(System.Windows.Size,System.Windows.Size)">
+            <summary>
+            Gets the normalized maximum of two sizes, max operation executed independently against both dimensions.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Min(System.Drawing.Size,System.Drawing.Size)">
+            <summary>
+            Gets the normalized minimum of two sizes, min operation executed independently against both dimensions.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Min(System.Windows.Size,System.Windows.Size)">
+            <summary>
+            Gets the normalized minimum of two sizes, min operation executed independently against both dimensions.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.MultiplyElementWise(System.Windows.Vector,System.Windows.Vector)">
+            <summary>
+            Performs element-wise multiplication (aka Hadamard product, aka Schur product) for two vectors.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Normalized(System.Drawing.Rectangle)">
+            <summary>
+            Normalizes the rectangle so that it has non-negative <see cref="P:System.Drawing.Rectangle.Width" /> and <see cref="P:System.Drawing.Rectangle.Height" />, and passes the <see cref="M:JetBrains.Util.NetFX.Interop.RectsW.IsNormalized(System.Drawing.Rectangle)" /> with <c>True</c>.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Normalized(System.Windows.Rect)">
+            <summary>
+            Normalizes the rectangle so that it has non-negative <see cref="P:System.Drawing.Rectangle.Width" /> and <see cref="P:System.Drawing.Rectangle.Height" />, and passes the <see cref="M:JetBrains.Util.NetFX.Interop.RectsW.IsNormalized(System.Drawing.Rectangle)" /> with <c>True</c>.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Normalized(System.Drawing.Size)">
+            <summary>
+            Normalizes the size so that it <see cref="M:JetBrains.Util.NetFX.Interop.RectsW.IsNormalized(System.Drawing.Size)" />. All the negative components are pulled up to become zero.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.SetBottom(System.Drawing.Rectangle@,System.Int32)">
+            <summary>
+            Adjusts the rectangle so that only one of the Left, Top, Right, Bottom components changes. Width or Height are changed as appropriate.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.SetBottom(System.Windows.Rect@,System.Double)">
+            <summary>
+            Adjusts the rectangle so that only one of the Left, Top, Right, Bottom components changes. Width or Height are changed as appropriate.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.SetLeft(System.Drawing.Rectangle@,System.Int32)">
+            <summary>
+            Adjusts the rectangle so that only one of the Left, Top, Right, Bottom components changes. Width or Height are changed as appropriate.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.SetLeft(System.Windows.Rect@,System.Double)">
+            <summary>
+            Adjusts the rectangle so that only one of the Left, Top, Right, Bottom components changes. Width or Height are changed as appropriate.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.SetRight(System.Drawing.Rectangle@,System.Int32)">
+            <summary>
+            Adjusts the rectangle so that only one of the Left, Top, Right, Bottom components changes. Width or Height are changed as appropriate.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.SetRight(System.Windows.Rect@,System.Double)">
+            <summary>
+            Adjusts the rectangle so that only one of the Left, Top, Right, Bottom components changes. Width or Height are changed as appropriate.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.SetTop(System.Drawing.Rectangle@,System.Int32)">
+            <summary>
+            Adjusts the rectangle so that only one of the Left, Top, Right, Bottom components changes. Width or Height are changed as appropriate.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.SetTop(System.Windows.Rect@,System.Double)">
+            <summary>
+            Adjusts the rectangle so that only one of the Left, Top, Right, Bottom components changes. Width or Height are changed as appropriate.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Shifted(System.Drawing.Rectangle,System.Drawing.Size)">
+            <summary>
+            Offsets the rectangle location by the given amount.
+            </summary>
+            <param name="source">The source rectangle.</param>
+            <param name="offset">The offset distance.</param>
+            <returns>The resulting rectangle.</returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Shifted(System.Drawing.Rectangle,System.Drawing.Point)">
+            <summary>
+            Offsets the rectangle location by the given amount.
+            </summary>
+            <param name="source">The source rectangle.</param>
+            <param name="offset">The offset distance.</param>
+            <returns>The resulting rectangle.</returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Size(System.Int32,System.Int32)">
+            <summary>
+            Creates a new <see cref="T:System.Drawing.Size" /> object that is guaranteed to be normalized and, if at least one of its sides is empty, to be <see cref="P:System.Drawing.Size.IsEmpty" />.
+            </summary>
+            <param name="width">The desired width.</param>
+            <param name="height">The desired height.</param>
+            <returns>A normalized size whose sides can only simultaneousely be <c>0</c>.</returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Size(System.Double,System.Double)">
+            <summary>
+            Creates a new <see cref="T:System.Drawing.Size" /> object that is guaranteed to be normalized and, if at least one of its sides is zero, to be all-zero.
+            </summary>
+            <param name="width">The desired width.</param>
+            <param name="height">The desired height.</param>
+            <returns>A normalized size whose sides can only simultaneousely be <c>0</c>.</returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Stack(System.Collections.Generic.IEnumerable{System.Windows.Size},System.Double,System.Windows.Controls.Orientation)">
+            <summary>
+            Implements the size-stacking.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.StackHorizontally(System.Collections.Generic.IEnumerable{System.Drawing.Size},System.Int32)">
+            <summary>
+            Stacks a number of sizes horizontally and returns the resulting size.
+            If a size in the list is collapsed, it's not included and the gaps for it are not added.
+            </summary>
+            <param name="sizes">The list of sizes to stack.</param>
+            <param name="gap">The gap to insert between the adjacent stack-items.</param>
+            <returns>The bounding rect of the result.</returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.StackHorizontally(System.Int32,System.Drawing.Size[])">
+            <summary>
+            Stacks a number of sizes horizontally and returns the resulting size.
+            If a size in the list is collapsed, it's not included and the gaps for it are not added.
+            </summary>
+            <param name="sizes">The list of sizes to stack.</param>
+            <param name="gap">The gap to insert between the adjacent stack-items.</param>
+            <returns>The bounding rect of the result.</returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.StackVertically(System.Collections.Generic.IEnumerable{System.Drawing.Size},System.Int32)">
+            <summary>
+            Stacks a number of sizes vertically and returns the resulting size.
+            If a size in the list is collapsed, it's not included and the gaps for it are not added.
+            </summary>
+            <param name="sizes">The list of sizes to stack.</param>
+            <param name="gap">The gap to insert between the adjacent stack-items.</param>
+            <returns>The bounding rect of the result.</returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.StackVertically(System.Int32,System.Drawing.Size[])">
+            <summary>
+            Stacks a number of sizes vertically and returns the resulting size.
+            If a size in the list is collapsed, it's not included and the gaps for it are not added.
+            </summary>
+            <param name="sizes">The list of sizes to stack.</param>
+            <param name="gap">The gap to insert between the adjacent stack-items.</param>
+            <returns>The bounding rect of the result.</returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Unioned(System.Drawing.Rectangle,System.Drawing.Rectangle)">
+            <summary>
+            Unites the two rectangle and returns a rect that encompasses both.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.Unioned(System.Windows.Rect,System.Windows.Rect)">
+            <summary>
+            Unites the two rectangle and returns a rect that encompasses both.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.UnionedHorizontally(System.Drawing.Rectangle,System.Drawing.Rectangle)">
+            <summary>
+            Unites the horizontal coordinates of the rectangles, and takes the y-coordinates solely from <paramref name="source" />.
+            </summary>
+            <param name="source">The first rectangle, features the y-coordinates of the retval.</param>
+            <param name="other">The second rectangle.</param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.UnionedHorizontally(System.Windows.Rect,System.Windows.Rect)">
+            <summary>
+            Unites the horizontal coordinates of the rectangles, and takes the y-coordinates solely from <paramref name="source" />.
+            </summary>
+            <param name="source">The first rectangle, features the y-coordinates of the retval.</param>
+            <param name="other">The second rectangle.</param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.UnionedVertically(System.Drawing.Rectangle,System.Drawing.Rectangle)">
+            <summary>
+            Unites the vertical coordinates of the rectangles, and takes the x-coordinates solely from <paramref name="source" />.
+            </summary>
+            <param name="source">The first rectangle, features the x-coordinates of the retval.</param>
+            <param name="other">The second rectangle.</param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.UnionedVertically(System.Windows.Rect,System.Windows.Rect)">
+            <summary>
+            Unites the vertical coordinates of the rectangles, and takes the x-coordinates solely from <paramref name="source" />.
+            </summary>
+            <param name="source">The first rectangle, features the x-coordinates of the retval.</param>
+            <param name="other">The second rectangle.</param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.WithBottom(System.Drawing.Rectangle,System.Int32)">
+            <summary>
+            Adjusts the rectangle so that only one of the Left, Top, Right, Bottom components changes. Width or Height are changed as appropriate.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.WithBottom(System.Windows.Rect,System.Double)">
+            <summary>
+            Adjusts the rectangle so that only one of the Left, Top, Right, Bottom components changes. Width or Height are changed as appropriate.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.WithLeft(System.Drawing.Rectangle,System.Int32)">
+            <summary>
+            Adjusts the rectangle so that only one of the Left, Top, Right, Bottom components changes. Width or Height are changed as appropriate.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.WithLeft(System.Windows.Rect,System.Double)">
+            <summary>
+            Adjusts the rectangle so that only one of the Left, Top, Right, Bottom components changes. Width or Height are changed as appropriate.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.WithRight(System.Drawing.Rectangle,System.Int32)">
+            <summary>
+            Adjusts the rectangle so that only one of the Left, Top, Right, Bottom components changes. Width or Height are changed as appropriate.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.WithRight(System.Windows.Rect,System.Double)">
+            <summary>
+            Adjusts the rectangle so that only one of the Left, Top, Right, Bottom components changes. Width or Height are changed as appropriate.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.WithTop(System.Drawing.Rectangle,System.Int32)">
+            <summary>
+            Adjusts the rectangle so that only one of the Left, Top, Right, Bottom components changes. Width or Height are changed as appropriate.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.WithTop(System.Windows.Rect,System.Double)">
+            <summary>
+            Adjusts the rectangle so that only one of the Left, Top, Right, Bottom components changes. Width or Height are changed as appropriate.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.StackImpl(System.Collections.Generic.IEnumerable{System.Drawing.Size},System.Int32,System.Boolean)">
+            <summary>
+            Implements the size-stacking.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Util.NetFX.Interop.RectsW.RectsComparer">
+            <summary>
+            A comparer for the rectangles.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.RectsComparer.Compare(System.Collections.Generic.IEnumerable{System.Drawing.Rectangle},System.Collections.Generic.IEnumerable{System.Drawing.Rectangle})">
+            <summary>
+            Compares two objects and returns a value indicating whether one is less than, equal to, or greater than the other.
+            </summary>
+            <returns>
+            Value Condition Less than zerox is less than beta.Zerox equals beta.Greater than zerox is greater than beta.
+            </returns>
+            <param name="beta">The second object to compare.</param>
+            <param name="alpha">The first object to compare.</param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.RectsW.RectsComparer.Compare(System.Drawing.Rectangle,System.Drawing.Rectangle)">
+            <summary>
+            Compares two objects and returns a value indicating whether one is less than, equal to, or greater than the other.
+            </summary>
+            <returns>
+            Value Condition Less than zerox is less than beta.Zerox equals beta.Greater than zerox is greater than beta.
+            </returns>
+            <param name="beta">The second object to compare.</param>
+            <param name="alpha">The first object to compare.</param>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.SizeAndLength.AvalonLengthToWinFormsLength_Ceiling(System.Double,System.Double)">
+            <summary>
+            Turns a double length into an int, coercing NaN and Inf values.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.SizeAndLength.AvalonLengthToWinFormsLength_Floor(System.Double,System.Double)">
+            <summary>
+            Turns a double length into an int, coercing NaN and Inf values.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.SizeAndLength.AvalonLengthToWinFormsLength_Round(System.Double,System.Double)">
+            <summary>
+            Turns a double length into an int, coercing NaN and Inf values.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.SizeAndLength.WinFormsLengthToAvalonLength(System.Int32,System.Double)">
+            <summary>
+            Turns an int length into an Avalon double length, converting max-int to corresponding infinities.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Interop.SizeAndLength.WinFormsLengthToAvalonLength(System.Single,System.Double)">
+            <summary>
+            Turns a float length into a double, Inf values are automatically OK.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Media.Colors.ColorManagementWinUI.Mix(System.Windows.Media.Color,System.Windows.Media.Color,System.Double)">
+            <summary>
+            Mixes two colors together in the proportion specified.
+            </summary>
+            <param name="colorA">First color.</param>
+            <param name="colorB">Second color.</param>
+            <param name="proportion">A number in between <c>0.0</c> and <c>1.0</c>.</param>
+            <returns>The new color.</returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Media.Colors.ColorManagementWinUI.RGB(System.Windows.Media.Color)">
+            <summary>
+            Produces an RGB color out of R, G and B values (R is less significant).
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Media.Colors.ColorsWinEx.MixWith(System.Windows.Media.Color,System.Windows.Media.Color,System.Single)">
+            <summary>
+            Mixes two colors together.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Media.Colors.ColorsWinEx.RGB(System.Windows.Media.Color)">
+            <summary>
+            Converts color to rgb32 format
+            </summary>
+        </member>
+        <member name="T:JetBrains.Util.NetFX.Media.Colors.JetSystemColors">
+            <summary>
+            A runtime-agnostic table of “system” color constants.
+            This currently only has direct meaning on Windows NT.
+            For correct use on any system, incl remote usage within backend, use the Theming subsystem.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Util.NetFX.Media.Colors.JetSystemColors.SystemColorCode">
+            <summary>
+            Important! Matches numerically WinForms colors.
+            Until we add our own impl for retrieving system colors, these must be binary compatible.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Util.NetFX.Media.Colors.SystemColorsWin">
+            <summary>
+            Delegates to WinForms for now. We probably should have a native impl for Windows when we start splitting, with default colors fallback for other environments.
+            </summary>
+        </member>
+        <member name="P:JetBrains.Util.NetFX.Media.Icons.IconPlaceholderWindows.IconPlaceholderGdip">
+            <summary>
+            Gets the default placeholder image to be used in place of images yet to be drawn.
+            </summary>
+        </member>
+        <member name="P:JetBrains.Util.NetFX.Media.Icons.IconPlaceholderWindows.IconPlaceholderAvalon">
+            <summary>
+            Gets the default placeholder image to be used in place of images yet to be drawn.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Media.Icons.TiImageConverterAscii.Ascii.LookupAsciiCharByEnergy(System.Double)">
+            <summary>
+            Looks up an ASCII char which has its relative energy among all other ASCII chars closest to the target value, in [0…1] range.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Media.Icons.TiImageConverterAvalon.FromAvalonImageSource(System.Windows.Media.ImageSource,JetBrains.Util.OnError)">
+            <summary>
+            Converts an Avalon image into a <see cref="T:JetBrains.Util.Icons.TiImage" />.
+            Note that not all image sources are supported (only what either <see cref="M:JetBrains.Util.NetFX.Media.Icons.TiImageConverterAvalon.FromAvalonBitmap(System.Windows.Media.Imaging.BitmapSource)" /> or <see cref="M:JetBrains.Util.NetFX.Media.Icons.TiImageConverterAvalon.FromAvalonDrawing(System.Windows.Media.Drawing,JetBrains.Util.OnError)" /> takes), and in the drawing case not all of the possible drawings are supported either (see <see cref="M:JetBrains.Util.NetFX.Media.Icons.TiImageConverterAvalon.FromAvalonDrawing(System.Windows.Media.Drawing,JetBrains.Util.OnError)" /> for details). All these violations would be reported into <paramref name="onerror" />, and as much of the image as possible would be retained.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Media.Icons.TiImageConverterAvalon.FromAvalonDrawing_ConvertToPathAndPremulTransform(System.Windows.Media.Geometry,System.Windows.Media.Transform)">
+            <summary>
+            For any geometry (possibly, with a transform on it), applies the additional transform-to-origin and produces a Path Geometry with all transforms premultiplied, i.e. accounted for in the path coordinates and with no additional transform prop on the object.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Media.Icons.TiImageConverterAvalon.FromAvalonDrawing_Geometry_Brush(System.Windows.Media.Brush,System.Windows.Rect,JetBrains.Util.OnError)">
+            <summary>
+            Extracts the brush info.
+            </summary>
+            <param name="brush">Either NULL, to record the NULL brush correctly. Or one of the supported brush types.</param>
+            <param name="boundsGeometry">Bounds of the brushed geometry, for transforming from absolute to relative</param>
+            <param name="onerror"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Media.Icons.TiImageConverterAvalon.FromAvalonDrawing_PathGeometry(System.Windows.Media.PathGeometry,JetBrains.Util.OnError)">
+            <summary>
+            Converts Path Geometry figures/segments.
+            </summary>
+            <param name="apath">Avalon path. All transforms must be premultiplied, transform prop is ignored.</param>
+            <param name="onerror"></param>
+        </member>
+        <member name="F:JetBrains.Util.NetFX.Media.Icons.TiImageConverterAvalon.Properties.TiImageProperty">
+            <summary>
+            Allows to annotate an Avalon image source which has originated as a <see cref="T:JetBrains.Util.Icons.TiImage" /> with the original portable image object.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Media.Icons.TiImageConverterGdip.ToGdipBitmap(JetBrains.Util.Icons.TiImage,JetBrains.Util.Interop.DpiResolution,System.Nullable{JetBrains.Util.Media.JetSize})">
+            <summary>
+            Renders a <see cref="T:JetBrains.Util.Icons.TiImage" /> into a GDI+ Bitmap with the best rendered for the current platform: Avalon renderer where available, or manual rendering otherwise. At that, should work on any OS, but give better results than always manually-drawing.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Media.Icons.TiImageConverterGdip.ToGdipBitmap(JetBrains.Util.Icons.TiRasterImage)">
+            <summary>
+            Coerces raster image pixels to a GDI+ bitmap.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Media.Icons.TiImageConverterGdip.ToGdipBitmapAvalonRendered(JetBrains.Util.Icons.TiImage,JetBrains.Util.Interop.DpiResolution,System.Nullable{JetBrains.Util.Media.JetSize})">
+            <summary>
+            Renders a <see cref="T:JetBrains.Util.Icons.TiImage" /> into a GDI+ Bitmap with the main Avalon renderer. Best result on Windows NT.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Media.Icons.TiImageConverterGdip.ToGdipBitmapManuallyRendered(JetBrains.Util.Icons.TiImage,JetBrains.Util.Interop.DpiResolution,System.Nullable{JetBrains.Util.Media.JetSize})">
+            <summary>
+            Renders a <see cref="T:JetBrains.Util.Icons.TiImage" /> into a GDI+ Bitmap without using the Avalon rendering engine but only the GDI+ rendering functions. At that, should work on any OS.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Util.NetFX.Media.Icons.TiImageConverterGdip.ToGdipPainting(JetBrains.Util.Icons.TiImage)">
+            <summary>
+            Produces a function which custom-paints the image into a GDI+ device context, without using the Avalon rendering functions. At that, should work on any OS.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Util.NetFX.Reflection.PropertyDescriptorArgs">
+            <summary>
+            Data class to create property descriptor
+            </summary>
+        </member>
+        <member name="P:JetBrains.Util.NetFX.Reflection.PropertyDescriptorArgs.Category">
+            <summary>
+            Property category
+            </summary>
+        </member>
+        <member name="P:JetBrains.Util.NetFX.Reflection.PropertyDescriptorArgs.Name">
+            <summary>
+            Property name
+            </summary>
+        </member>
+        <member name="P:JetBrains.Util.NetFX.Reflection.PropertyDescriptorArgs.DisplayName">
+            <summary>
+            Property Display name
+            </summary>
+        </member>
+        <member name="P:JetBrains.Util.NetFX.Reflection.PropertyDescriptorArgs.Description">
+            <summary>
+            Property description
+            </summary>
+        </member>
+        <member name="P:JetBrains.Util.NetFX.Reflection.PropertyDescriptorArgs.IsReadOnly">
+            <summary>
+            Whether property is read  only
+            </summary>
+        </member>
+        <member name="P:JetBrains.Util.NetFX.Reflection.PropertyDescriptorArgs.HasModalUITypeEditor">
+            <summary>
+            Whether there should be a <see cref="T:JetBrains.Util.NetFX.Reflection.ModalUITypeEditor"/> specified for a property descriptor
+            </summary>
+        </member>
+        <member name="P:JetBrains.Util.NetFX.Reflection.PropertyDescriptorArgs.CustomAttributes">
+            <summary>
+            Extra property attributes. Optional.
+            </summary>
+        </member>
+        <member name="P:JetBrains.Util.NetFX.Reflection.PropertyDescriptorArgs.PropertyType">
+            <summary>
+            Property type
+            </summary>
+        </member>
+        <member name="P:JetBrains.Util.NetFX.Reflection.PropertyDescriptorArgs.DefaultValue">
+            <summary>
+            Default property value
+            </summary>
+        </member>
+        <member name="P:JetBrains.Util.NetFX.Reflection.PropertyDescriptorArgs.ConverterType">
+            <summary>
+            Property converter type. Optional.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Util.NetFX.Reflection.PropertyDescriptorArgs`1">
+            <summary>
+            Data class to create property descriptor
+            </summary>
+        </member>
+        <member name="P:JetBrains.Util.NetFX.Reflection.PropertyDescriptorArgs`1.DefaultValue">
+            <summary>
+            Default property value
+            </summary>
+        </member>
+        <member name="T:JetBrains.Util.NetFX.Reflection.SimplePropertyDescriptor">
+            <summary>
+            Implementation of <see cref="T:System.ComponentModel.PropertyDescriptor"/>
+            </summary>
+        </member>
+    </members>
+</doc>

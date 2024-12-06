@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assembly name="System.Diagnostics.Tools">
+  <member name="M:System.CodeDom.Compiler.GeneratedCodeAttribute.#ctor(System.String,System.String)">
+    <parameter name="tool">
+    </parameter>
+    <parameter name="version">
+    </parameter>
+  </member>
+</assembly>

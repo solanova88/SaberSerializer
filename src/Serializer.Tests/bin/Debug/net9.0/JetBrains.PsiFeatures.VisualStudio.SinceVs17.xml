@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.PsiFeatures.VisualStudio.SinceVs17</name>
+    </assembly>
+    <members>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.SinceVs17.TextControl.Intellisense.VsTextControlIntelliCodeFrontend17.TryGetSuggestionBroker">
+            <summary>
+            internal class Microsoft.VisualStudio.IntelliCode.SuggestionService.Implementation.SuggestionBroker
+            Assembly: Microsoft.VisualStudio.IntelliCode, Version=2.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.SinceVs17.TextControl.Intellisense.VsTextControlIntelliCodeFrontend17.TryGetSuggestionSession(System.Object)">
+            <summary>
+            internal class Microsoft.VisualStudio.IntelliCode.SuggestionService.Implementation.SuggestionSession : SuggestionSessionBase, IObscuringTip
+            Assembly: Microsoft.VisualStudio.IntelliCode, Version=2.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+            </summary>
+        </member>
+    </members>
+</doc>

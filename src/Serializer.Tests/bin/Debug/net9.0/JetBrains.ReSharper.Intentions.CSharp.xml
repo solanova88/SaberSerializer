@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.ReSharper.Intentions.CSharp</name>
+    </assembly>
+    <members>
+        <member name="P:JetBrains.ReSharper.Intentions.CSharp.ContextActions.AddUsingAction.ActionContext.IsCaretOnSpecificVariable">
+            <summary>
+            If set, there is single variable present in <see cref="P:JetBrains.ReSharper.Intentions.CSharp.ContextActions.AddUsingAction.ActionContext.VariableDeclarations"/>.
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Intentions.CSharp.ContextActions.AddUsingDeclarationAction">
+            <remarks>
+            Do not register it with <c>[ContextAction]</c>, see <see cref="M:JetBrains.ReSharper.Intentions.CSharp.ContextActions.AddUsingAction.CreateBulbItems"/> instead
+            </remarks>
+        </member>
+        <member name="M:JetBrains.ReSharper.Intentions.CSharp.ContextActions.AddUsingStatementBulbAction.CollectDeclaredResourceUsageRange(JetBrains.ReSharper.Psi.CSharp.Tree.ICSharpStatement,System.Collections.Generic.IEnumerable{JetBrains.ReSharper.Psi.CSharp.Tree.ILocalVariableDeclaration})">
+            <summary>
+            Collects the statements range starting with <paramref name="declarationStatement"/> and ending at
+            the last statement that references any of:
+            <list type="bullet">
+            <item><paramref name="declarations"/></item>
+            <item>
+            a non-primitive local parameter or variable that is used in the same statement
+            as <paramref name="declarations"/> is used, transitively
+            </item>
+            </list>
+            <para>
+            For example:
+            <code>
+            // resulting range starts with declarations statement
+            var declarations = ...; // first statement is always accepted
+            object a = declarations[0];
+            int i = a.Int; // &lt;- accepted, `a` may transitively lead to any of `declarations`
+            // resulting range ends here
+            int j = i; // &lt;- not accepted, the only reference that may lead to resource transitively is of primitive type
+            </code>
+            </para>
+            <para>Does analyze local function calls and references within them.</para>
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Intentions.CSharp.ContextActions.ConvertStringEscapeSequenceAction.DoExecute(JetBrains.ReSharper.Psi.Tree.ITokenNode,JetBrains.DocumentModel.DocumentRange,JetBrains.ReSharper.Intentions.CSharp.ContextActions.ConvertStringEscapeSequenceAction.EscapeMode,System.Boolean,System.Boolean)">
+            <param name="literalNode"></param>
+            <param name="sourceRange"></param>
+            <param name="escapeMode"></param>
+            <param name="isCaretOnOpeningQuote"></param>
+            <param name="safeHexEscape">
+            Escape \x sequences safely, i.e. with leading zeroes.
+            Otherwise, it may tie with subsequent 0-9a-f token.
+            </param>
+            <returns>Delta for selection range end offset.</returns>
+        </member>
+        <member name="M:JetBrains.ReSharper.Intentions.CSharp.ContextActions.ConvertStringEscapeSequenceAction.LexerHelper.AppendEscapedIfPossible(System.Text.StringBuilder,JetBrains.ReSharper.Intentions.CSharp.ContextActions.ConvertStringEscapeSequenceAction.EscapeMode,JetBrains.ReSharper.Psi.CSharp.CSharpLanguageLevel,JetBrains.Util.TextRange,System.Boolean)">
+            <summary>
+            Try to escape current token and append it to <paramref name="outputBuilder"/>. If token can not be escaped,
+            then append token of <paramref name="sourceTokenRange"/> (if any, i.e. range is not empty) instead.
+            </summary>
+        </member>
+        <member name="P:JetBrains.ReSharper.Intentions.CSharp.ContextActions.NonI18n.UseEnvironmentNewLineAction.Text">
+            <summary>Gets the text.</summary>
+            <value>The text.</value>
+        </member>
+        <member name="T:JetBrains.ReSharper.Intentions.CSharp.QuickFixes.AddParenthesesAroundIndexOperandFix.AddParenthesesAroundIndexOperandAction">
+            <summary>
+            <c>^1 + 2</c> -> <c>^(1 + 2)</c> fixer
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Intentions.CSharp.QuickFixes.AddParenthesesAroundIndexOperandFix.AddParenthesesAroundIndexOperandAction.#ctor(JetBrains.ReSharper.Psi.CSharp.Tree.IIndexFromEndExpression)">
+            <summary>
+            <c>^1 + 2</c> -> <c>^(1 + 2)</c> fixer
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Intentions.CSharp.QuickFixes.AddParenthesesAroundIndexOperandFix.AddParenthesesAroundRangeOperandsAction">
+            <summary>
+            <c>1 + 2..</c> -> <c>(1 + 2)..</c> fixer;
+            does support complex case <c>^1 + 2..</c> -> <c>^(1 + 2)..</c> as well
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Intentions.CSharp.QuickFixes.AddParenthesesAroundIndexOperandFix.AddParenthesesAroundRangeOperandsAction.#ctor(JetBrains.ReSharper.Psi.CSharp.Tree.IRangeExpression)">
+            <summary>
+            <c>1 + 2..</c> -> <c>(1 + 2)..</c> fixer;
+            does support complex case <c>^1 + 2..</c> -> <c>^(1 + 2)..</c> as well
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Intentions.CSharp.QuickFixes.CSharpFleetIntentionAllowList">
+            <summary>
+            Used as temporary solution for not making all these fixes public 
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Intentions.CSharp.Util.PsiUtil.FindLoopWhereHeaderContains(JetBrains.ReSharper.Psi.CSharp.Tree.ICSharpTreeNode)">
+            <summary>
+            Checks whether expression is directly or indirectly (lambda) embedded inside loop header.
+            </summary>
+            <param name="expression"></param>
+            <returns>Returns loop that contains expression in its header</returns>
+        </member>
+    </members>
+</doc>

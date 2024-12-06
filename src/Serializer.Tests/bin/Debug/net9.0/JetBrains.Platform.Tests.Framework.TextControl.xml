@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.Platform.Tests.Framework.TextControl</name>
+    </assembly>
+    <members>
+        <member name="M:JetBrains.TestFramework.TextControl.TestJetActionEditorMarginBehavior.IsEnabledLive(JetBrains.Lifetimes.Lifetime,JetBrains.Application.Settings.ContextRange)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TestFramework.TextControl.TestJetActionEditorMarginBehavior.IsEnabledTransient(JetBrains.Application.Settings.ContextRange)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

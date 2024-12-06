@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.ReSharper.UnitTesting.MSTest.Provider</name>
+    </assembly>
+    <members>
+        <member name="M:JetBrains.ReSharper.UnitTesting.MSTest.Provider.New.TestHost.TestHostMsTestRunner.TestHostLauncher.IsLegacyMode(System.Xml.XmlDocument)">
+            <remarks>
+            Must return false, or VS 16.7.0 will start process without calling us.
+            But for legacy mode must return true.
+            </remarks>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.Platform.VisualStudio.SinceVs16</name>
+    </assembly>
+    <members>
+        <member name="F:JetBrains.Platform.VisualStudio.SinceVs16.Shell.Actions.VsReSharperMainMenuFixesSinceVs16.InstanceIdPropertyName">
+            <summary>
+            We need to identify VS menu items. Text is not a reliable way to do that. The natural identifier is CommandID, but menu item does not expose it.
+            To match CommandID to menu item we use InstanceID property of IVsUIDataSource, which is stored in the menu item's DataContext.
+            Using DTE we found InstanceID by CommandID (see <see cref="M:JetBrains.Platform.VisualStudio.SinceVs16.Shell.Actions.VsReSharperMainMenuFixesSinceVs16.DoWork(System.ComponentModel.Design.CommandID)"/>), and than use it to match menu items.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.SinceVs16.Shell.Install.VsPackageInstallHelperSinceVs16.#ctor(JetBrains.VsIntegration.Shell.Install.VsPackageAssembly.VsPackageClassEmitters.PackageInfo,JetBrains.Util.ILogger)">
+            <inheritdoc />
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.SinceVs16.Shell.Install.VsPackageInstallHelperSinceVs16.GetVsPackageBaseClass">
+            <summary>
+            (DK) It requires types from the assembly Microsoft.VisualStudio.Shell.15.0 which could not be available if VS15+ is not installed in the system.
+            The logic moved to a separate method to avoid FileNotFoundException("Could not load file or assembly...") when called for VS before 15.
+            </summary>
+        </member>
+        <member name="F:JetBrains.Platform.VisualStudio.SinceVs16.Shell.Package.VsAsyncPackage.JoinableTaskCollection">
+            <summary>
+            The collection of asynchronous tasks started by this package.
+            </summary>
+        </member>
+        <member name="F:JetBrains.Platform.VisualStudio.SinceVs16.Shell.Package.VsAsyncPackage.JoinableTaskFactory">
+            <summary>
+            Gets the factory to use for asynchronous tasks started by this package.
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.SinceVs16.Shell.Package.VsAsyncPackage.DisposalToken">
+            <summary>
+            Exposes a CancellationToken that can be used to check if the package has been disposed.
+            This can happen for asynchronous tasks that are running on a background thread when Visual Studio has started to shut down.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.SinceVs16.Shell.Package.VsAsyncPackage.Microsoft#VisualStudio#Shell#Interop#IAsyncLoadablePackageInitialize#Initialize(Microsoft.VisualStudio.Shell.Interop.IAsyncServiceProvider,Microsoft.VisualStudio.Shell.Interop.IProfferAsyncService,Microsoft.VisualStudio.Shell.Interop.IAsyncProgressCallback)">
+            <summary>
+            Initializes the package. Provides a way get access to IAsyncServiceProvider and IProfferAsyncService without needing to use IServiceProvider.
+            </summary>
+            <param name="asyncServiceProvider">An asynchronous service provider.</param>
+            <param name="profferAsyncService">Provides a way to register a provider for services that can be retrieved asynchronously. Similar to IProfferService.</param>
+            <param name="asyncProgressCallback">Provides a way for asynchronous service and package owners to report progress.</param>
+            <returns>Returns IVsTask.</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.SinceVs16.Shell.Package.VsAsyncPackage.Microsoft#VisualStudio#Shell#Interop#IAsyncServiceProvider#QueryServiceAsync(System.Guid@)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.SinceVs16.Shell.Package.VsAsyncPackage.Microsoft#VisualStudio#Shell#IAsyncServiceProvider#GetServiceAsync(System.Type)">
+            <summary>
+            Gets a service asynchronously.
+            </summary>
+            <param name="serviceType">The type of the service.</param>
+            <returns>Returns a task.</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.SinceVs16.Shell.Package.VsAsyncPackage.Microsoft#VisualStudio#Shell#IAsyncServiceProvider2#GetServiceAsync(System.Type,System.Boolean)">
+            <summary>
+            Gets a service asynchronously.
+            </summary>
+            <param name="serviceType">The type of the service.</param>
+            <param name="swallowExceptions">True not to report exceptions (except critical ones).</param>
+            <returns>Returns a task.</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.SinceVs16.Shell.Package.VsAsyncPackage.Microsoft#VisualStudio#Shell#Interop#IVsAsyncToolWindowFactoryProvider#GetAsyncToolWindowFactory(System.Guid)">
+            <summary>
+            Returns the asynchronous tool window factory interface for the tool window identified by
+            <paramref name="guidPersistenceSlot" />, if asynchronous creation is supported for the tool window.
+            If asynchronous creation is not supported, null is returned.
+            </summary>
+            <param name="guidPersistenceSlot">Type of the window to be created</param>
+            <returns>The asynchronous factory interface, or null if not supported</returns>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.SinceVs16.TextControl.MultiSelectionBrokerEx">
+            <summary>
+            Helper methods to operate <see cref="T:Microsoft.VisualStudio.Text.IMultiSelectionBroker"/>
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.SinceVs16.TextControl.MultiSelectionBrokerEx.TrySetSelections(Microsoft.VisualStudio.Text.IMultiSelectionBroker,System.Collections.Generic.IList{JetBrains.TextControl.Transport.DocOffsetAndVirtualRange},JetBrains.Platform.VisualStudio.SinceVs10.DocumentModel.VsDocumentInSyncMoments,System.Nullable{JetBrains.DocumentModel.RunningDocumentId},System.Nullable{JetBrains.Application.Changes.ModificationStamp})">
+            <summary>
+            Sets the selection to specified <see cref="!:ranges"/>. Last of them becomes primary.
+            All previous selections are removed
+            </summary>
+            <param name="broker">Multi-selection broker obtained from corresponding text control</param>
+            <param name="ranges">Desired selected ranges</param>
+            <param name="vsDocumentInSyncMoments"></param>
+            <param name="maybeDocId"></param>
+            <param name="maybeModificationStamp"></param>
+            <returns>True if all the operations succeeded</returns>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.SinceVs16.TextControl.TextControlComponents.VsTextControlSelectionController16.#ctor(System.Lazy{Microsoft.VisualStudio.Text.Outlining.IOutliningManagerService},System.Lazy{JetBrains.Platform.VisualStudio.SinceVs10.DocumentModel.VsDocumentInSyncMoments})">
+            <inheritdoc />
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.SinceVs16.Zones.IRoslynSourceGeneratorsAwareZone">
+            <summary>
+            Visual Studio integrated products when Roslyn that supports source generators is available. VS 16.8.3 and above.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.SinceVs16.Zones.ISinceVs16FrontEnvZone">
+            <summary>
+            Visual Studio integrated products, VS 16.0 and above.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Shell.Interop.IAsyncLoadablePackageInitialize.Initialize(Microsoft.VisualStudio.Shell.Interop.IAsyncServiceProvider,Microsoft.VisualStudio.Shell.Interop.IProfferAsyncService,Microsoft.VisualStudio.Shell.Interop.IAsyncProgressCallback)">
+            <summary>Initializes the package.</summary>
+            <param name="pServiceProvider">The service provider.</param>
+            <param name="pProfferService">The proffer service.</param>
+            <param name="pProgressCallback">The callback</param>
+            <returns>Returns <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsTask" />.</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Shell.Interop.IAsyncServiceProvider.QueryServiceAsync(System.Guid@)">
+            <summary>Queries for a specific service asynchronously.</summary>
+            <param name="guidService">The GUID of the service.</param>
+            <returns>Returns <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsTask" />.</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.PsiFeatures.VisualStudio.SinceVs12</name>
+    </assembly>
+    <members>
+        <member name="T:JetBrains.PsiFeatures.VisualStudio.SinceVs12.PeekSessions.TodoItems.WebBrowserHostUiHandler">
+            <summary>
+            Forces WebBrowser to support high DPI and disable context menu.
+            </summary>
+        </member>
+        <member name="P:JetBrains.PsiFeatures.VisualStudio.SinceVs12.WebFilesExclusion.ISuspiciousWebFilesCache.HardCheckDone">
+            <summary>
+            Turns true when we done checking suspicious files dependencies and other hard filters.
+            </summary>
+        </member>
+        <member name="P:JetBrains.PsiFeatures.VisualStudio.SinceVs12.WebFilesExclusion.ISuspiciousWebFilesCache.SoftCheckDone">
+            <summary>
+            Turns true when we done checking fast filters.
+            </summary>
+        </member>
+        <member name="P:JetBrains.PsiFeatures.VisualStudio.SinceVs12.WebFilesExclusion.ISuspiciousWebFilesCache.WaitingForUserDecisionTree">
+            <summary>
+            Tree with the suspicious folders and children files which have no user decision about excluding from analysis.
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.SinceVs12.WebFilesExclusion.ISuspiciousWebFilesCache.ShouldBuildPsi(JetBrains.ReSharper.Psi.IPsiSourceFile)">
+            <summary>
+            Checks whether we should build PSI for a psi file or not.
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.SinceVs12.WebFilesExclusion.ISuspiciousWebFilesCache.ShouldBuildPsi(JetBrains.ProjectModel.IProjectFile)">
+            <summary>
+            Checks whether we should build PSI for a project file or not.
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.SinceVs12.WebFilesExclusion.ISuspiciousWebFilesCache.MergeUserDecision(System.Collections.Generic.IList{JetBrains.ReSharper.Refactorings.Move.AdjustNamespaces.Impl.ProjectItemInfo})">
+            <summary>
+            Marks every status as user defined, merges given decisions.
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.SinceVs12.WebFilesExclusion.ISuspiciousWebFilesCache.Clear">
+            <summary>
+            Clears all collected data. No files will be excluded from analysis after call.
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.SinceVs12.WebFilesExclusion.SuspiciousWebFilesCache.SoftCheckFiles(System.Collections.Generic.Queue{JetBrains.ProjectModel.IProjectFile})">
+            <summary>
+            Checks files with soft filters
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.SinceVs12.WebFilesExclusion.SuspiciousWebFilesCache.HardCheckFilesAndBuildTree(System.Collections.Generic.Queue{JetBrains.ReSharper.Psi.Modules.IPsiModule},System.Collections.Generic.ICollection{JetBrains.Util.VirtualFileSystemPath})">
+            <summary>
+            Checks files for dependencies and uses hard filters
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.SinceVs12.WebFilesExclusion.SuspiciousWebFilesCache.CreateAllFilesNodes(System.Collections.Generic.ICollection{JetBrains.Util.VirtualFileSystemPath},System.Collections.Generic.Queue{JetBrains.ReSharper.Refactorings.Move.AdjustNamespaces.Impl.ProjectItemInfo})">
+            <summary>
+            Creates 'all files' node in folders where it is possible
+            </summary>
+        </member>
+    </members>
+</doc>

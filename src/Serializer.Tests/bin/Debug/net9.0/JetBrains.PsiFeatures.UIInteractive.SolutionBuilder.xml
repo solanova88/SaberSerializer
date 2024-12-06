@@ -1,0 +1,492 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.PsiFeatures.UIInteractive.SolutionBuilder</name>
+    </assembly>
+    <members>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Actions.SolBuilderBuildActions.GetSelection(JetBrains.Application.DataContext.IDataContext)">
+            <summary>
+            Gets the selected projects to build (for the build actions that run on selection).
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Actions.SolBuilderBuildActions.JetBrains#Application#UI#ActionsRevised#Menu#IExecutableAction#Update(JetBrains.Application.DataContext.IDataContext,JetBrains.Application.UI.Actions.ActionPresentation,JetBrains.Application.UI.Actions.DelegateUpdate)">
+            <summary>
+            Updates action visual presentation. If presentation.Enabled is set to false, Execute
+            will not be called.
+            </summary>
+            <param name="context">DataContext</param>
+            <param name="presentation">presentation to update</param>
+            <param name="nextUpdate">delegate to call</param>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Actions.SolBuilderCancelAction.Execute(JetBrains.Application.DataContext.IDataContext,JetBrains.Application.UI.Actions.DelegateExecute)">
+            <summary>
+            Executes action. Called after Update, that set ActionPresentation.Enabled to true.
+            </summary>
+            <param name="context">DataContext</param>
+            <param name="nextExecute">delegate to call</param>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Actions.SolBuilderCancelAction.Update(JetBrains.Application.DataContext.IDataContext,JetBrains.Application.UI.Actions.ActionPresentation,JetBrains.Application.UI.Actions.DelegateUpdate)">
+            <summary>
+            Updates action visual presentation. If presentation.Enabled is set to false, Execute
+            will not be called.
+            </summary>
+            <param name="context">DataContext</param>
+            <param name="presentation">presentation to update</param>
+            <param name="nextUpdate">delegate to call</param>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.New.View.BuildResultsView">
+            <summary>
+            BuildResultsView
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.New.View.BuildResultsView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.New.View.ProjectLogView">
+            <summary>
+            ProjectLogView
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.New.View.ProjectLogView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.New.View.VerticalProgressView">
+            <summary>
+            VerticalProgressView
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.New.View.VerticalProgressView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.New.BuilderTreeDescriptor.BuilderTreePreviewControl.JetBrains#Application#UI#Controls#TreeView#IPreviewControl#PreviewPanelContent">
+            <inheritdoc />
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Internal.TimeTracking.View.BuildTimeView">
+            <summary>
+            BuildTimeView
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Internal.TimeTracking.View.BuildTimeView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Internal.CopyLocal.View.CopyLocalFilesView">
+            <summary>
+            CopyLocalFilesView
+            </summary>
+            <summary>
+            Interaction logic for CopyLocalFilesView.xaml
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Internal.CopyLocal.View.CopyLocalFilesView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Internal.ProjectTracking.View.ProjectChangingReasonTrackerView">
+            <summary>
+            ProjectChangingReasonTrackerView
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Internal.ProjectTracking.View.ProjectChangingReasonTrackerView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.View.ProjectRequestAdaptedView">
+            <summary>
+            ProjectRequestAdaptedView
+            </summary>
+            <summary>
+            Interaction logic for ProjectRequestAdaptedView.xaml
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.View.ProjectRequestAdaptedView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.View.SolutionBuilderDashboardView">
+            <summary>
+            SolutionBuilderDashboardView
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.View.SolutionBuilderDashboardView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.View.SolutionBuilderProgressView">
+            <summary>
+            SolutionBuilderProgressView
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.View.SolutionBuilderProgressView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.View.SolutionBuilderRequestView">
+            <summary>
+            SolutionBuilderRequestView
+            </summary>
+            <summary>
+            Interaction logic for SolutionBuilderRequestView.xaml
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.View.SolutionBuilderRequestView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.View.SolutionBuilderSwitchedOffView">
+            <summary>
+            SolutionBuilderSwitchedOffView
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.View.SolutionBuilderSwitchedOffView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.View.SolutionRequestAdaptedView">
+            <summary>
+            SolutionRequestAdaptedView
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.View.SolutionRequestAdaptedView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.BuildEventOccurrence">
+            <summary>
+            A textual occurrence for presenting the build results messages.
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.BuildEventOccurrence.InitCommon(JetBrains.ProjectModel.IProjectModelElement,JetBrains.Util.TextRange,JetBrains.ProjectModel.Features.SolutionBuilders.SolBuildEvent,JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.BuildEventOccurrence.DocumentForFileCache)">
+            <summary>
+            Common init for both location-bound and location-unbound events.
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.BuildEventOccurrence.InitWithLocation(JetBrains.ProjectModel.Features.SolutionBuilders.SolBuildEvent,JetBrains.ProjectModel.IProjectModelElement,JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.BuildEventOccurrence.DocumentForFileCache)">
+            <summary>
+            Try using the location info from the event, if available and valid.
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.BuildEventOccurrence.InitWithoutLocation(JetBrains.ProjectModel.Features.SolutionBuilders.SolBuildEvent,JetBrains.ProjectModel.IProjectModelElement,JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.BuildEventOccurrence.DocumentForFileCache)">
+            <summary>
+            No location in evt data, or failed to make use of it.
+            Attach to hte project file itself.
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.BuildEventOccurrence.DocumentForFileCache">
+            <summary>
+            When doing subsequent events for the same file, allows to reuse the document for that file.
+            </summary>
+        </member>
+        <member name="F:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.BuildEventOccurrence.FeatureFlags.TrackLocationChanges">
+            <summary>
+            When code is edited above the warning, its location is tracked.
+            </summary>
+        </member>
+        <member name="F:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.BuildEventOccurrence.FeatureFlags.GroupBuildResultsByMembers">
+            <summary>
+            Enables grouping by project structure.
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.EventWithContext">
+            <summary>
+            Build event, plus additional data.
+            </summary>
+        </member>
+        <member name="F:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.EventWithContext.BuildProject">
+            <summary>
+            The owning build project, or <c>Null</c> if it's solution-owned.
+            </summary>
+        </member>
+        <member name="F:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.EventWithContext.Container">
+            <summary>
+            The owning project model elem: either <see cref="T:JetBrains.ProjectModel.IProject"/> or <see cref="T:JetBrains.ProjectModel.ISolution"/>.
+            </summary>
+        </member>
+        <member name="F:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.EventWithContext.Event">
+            <summary>
+            Event itself.
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.SolBuildEventsBrowserDescriptor">
+            <summary>
+            Opens the Find Results View with the build events from the session.
+            </summary>
+        </member>
+        <member name="F:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.SolBuildEventsBrowserDescriptor.myFuncDomainFilter">
+            <summary>
+            Filters down the set of events displayed down to some domain, eg events of a single project.
+            </summary>
+        </member>
+        <member name="F:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.SolBuildEventsBrowserDescriptor.myFuncPriorityFilter">
+            <summary>
+            Filters down the set of events displayed based on their priority.
+            </summary>
+        </member>
+        <member name="F:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.SolBuildEventsBrowserDescriptor.myKindFilter">
+            <summary>
+            If the specific item is present, then the filter passes that kind of events.
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.SolBuildEventsBrowserDescriptor.#ctor(JetBrains.Lifetimes.Lifetime,JetBrains.ProjectModel.Features.SolutionBuilders.BuildSession,JetBrains.ProjectModel.ISolution,System.Func{JetBrains.ProjectModel.Features.SolutionBuilders.SolBuildEvent,JetBrains.ProjectModel.Features.SolutionBuilders.BuildSessionProject,System.Boolean},JetBrains.ReSharper.Psi.IPsiServices,JetBrains.Application.Settings.ISettingsStore,JetBrains.Application.Threading.IShellLocks,JetBrains.Application.UI.Progress.UITaskExecutor)">
+            <summary>
+            Ctor.
+            </summary>
+            <param name="lifetime"></param>
+            <param name="session">Session that gives the events to show.</param>
+            <param name="solution">Current solution, just in case.</param>
+            <param name="funcDomainFilter">Allows to limit down the set of <paramref name="session"/> events to show. All-<c>True</c> by default.</param>
+            <param name="psiServices"></param>
+            <param name="settings"></param>
+            <param name="threading"></param>
+            <param name="uiTaskExecutor"></param>
+        </member>
+        <member name="P:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.SolBuildEventsBrowserDescriptor.HasSignificantEvents">
+            <summary>
+            Gets whether there are occurrences significant enough to be shown.
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.SolBuildEventsBrowserDescriptor.GetEventsFilteredButKind">
+            <summary>
+            Gets the list of events (solution+project), filtered by domain and priority, but not filtered by kind.
+            Here only invariant-thru-life-of-view filters are applied (kind filter might change).
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.SolBuildEventsBrowserDescriptor.Init_SelectDefaultKindFilter">
+            <summary>
+            Based on what we have (errors? only warnings? neither?), select the initial by-kind filter value.
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.SolBuildEventsBrowserDescriptor.Init_SetItemsOnFilterChange(JetBrains.Application.Threading.IShellLocks,JetBrains.Application.Settings.ISettingsStore,JetBrains.ProjectModel.ISolution,JetBrains.Application.UI.Progress.UITaskExecutor)">
+            <summary>
+            Initially, and then when user changes the filter, fill in with items.
+            </summary>
+            <param name="threading"></param>
+            <param name="settings"></param>
+            <param name="solution"></param>
+            <param name="uiTaskExecutor"></param>
+        </member>
+        <member name="F:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.SolBuildEventsFilterActions.myIsExclusive">
+            <summary>
+            Whether all other kinds should be suppressed when selecting this one.
+            </summary>
+        </member>
+        <member name="F:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.SolBuildEventsFilterActions.myKinds">
+            <summary>
+            Kinds corresponding to this filter.
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.SolBuildEventsFilterActions.Execute(JetBrains.Application.DataContext.IDataContext)">
+            <summary>
+            Executes action. Called after Update, that set ActionPresentation.Enabled to true.
+            </summary>
+            <param name="context">DataContext</param>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.SolBuildEventsFilterActions.Update(JetBrains.Application.DataContext.IDataContext,JetBrains.Application.UI.Actions.CheckedActionPresentation)">
+            <summary>
+            Updates action visual presentation. If presentation.Enabled is set to false, Execute
+            will not be called.
+            </summary>
+            <param name="context">DataContext</param>
+            <param name="presentation">presentation to update</param>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.SolBuildEventWithLocation">
+            <summary>
+            A build event, plus file-line-column info.
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.TogglingFilter`1">
+            <summary>
+            Operates a filter that sets or removes individual items.
+            </summary>
+        </member>
+        <member name="F:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.TogglingFilter`1.myEffective">
+            <summary>
+            Items currently in effect.
+            </summary>
+        </member>
+        <member name="P:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.TogglingFilter`1.Effective">
+            <summary>
+            Gets the filter effective at the moment.
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.TogglingFilter`1.Apply(System.Boolean,`0[])">
+            <summary>
+            Applies the new filter.
+            </summary>
+            <param name="isExclusive">Whether all other kinds should be off. Otherwise, works as Toggle.</param>
+            <param name="kinds">Kinds corresponding to this filter.</param>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.TogglingFilter`1.IsIncluded(System.Boolean,`0[])">
+            <summary>
+            Checks if the particular filter is currently in effect.
+            </summary>
+            <param name="isExclusive">Whether all other kinds should be off.</param>
+            <param name="kinds">Kinds corresponding to this filter.</param>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.TogglingFilter`1.SetExclusively(`0[])">
+            <summary>
+            Sets these items on the filter, resets all else.
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.TogglingFilter`1.Toggle(`0[])">
+            <summary>
+            Toggles the given items.
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.BuildRunnerComponent.ExecuteBuildAction(JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Actions.SolBuilderBuildActions.ItemDesc,JetBrains.ProjectModel.IProject[])">
+            <summary>
+            Isolated build action implementation.
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.BuildRunnerComponent.RunPostBuild(JetBrains.ProjectModel.Features.SolutionBuilders.SolutionBuilderRequest,JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Actions.SolBuilderBuildActions.ItemDesc.RunOrDebug,JetBrains.Application.Threading.IThreading,JetBrains.ProjectModel.Features.RunConfig.IRunConfig,JetBrains.ProjectModel.ISolution)">
+            <summary>
+            Runs the post-build action on the session.
+            </summary>
+        </member>
+        <member name="F:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.DashboardLayoutCalculator.MinPreferredRowHeight">
+            <summary>
+            Add more rows as the rowheight is above this limit (this tradess off indicator height for its width, which is good for reading its text)
+            </summary>
+        </member>
+        <member name="F:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.DashboardLayoutCalculator.NaturalIndicatorHeight">
+            <summary>
+            Having constant pixel sizes of borders etc at any scale looks bad, let's render it at this height and than scale to any size required (downscaling included).
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.DashboardLayoutCalculator.GetRowCountApproxFromFactor(System.Double,System.Windows.Size,System.Int32)">
+            <summary>
+            An inverse to <see cref="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.DashboardLayoutCalculator.CalculatedLayout.GetIndicatorAspect"/>.
+            As there's the <see cref="M:System.Math.Ceiling(System.Double)"/> function that can't exactly be inverted, it has been ignored here. Round the rowcount up or down, depending on the conditions.
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.DashboardLayoutCalculator.RowCountCeiling(System.Double,System.Int32)">
+            <summary>
+            Round the number of rows to the closest meaningful integer (not any number of rows is meaningful, it must be a divider of the indicators count).
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.DashboardLayoutCalculator.RowCountFloor(System.Double,System.Int32)">
+            <summary>
+            Round the number of rows to the closest meaningful integer (not any number of rows is meaningful, it must be a divider of the indicators count).
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.DashboardLayoutCalculator.RowCountRoundCore(System.Int32,System.Double,System.Func{System.Double,System.Double})">
+            <summary>
+            Round the number of rows to the closest meaningful integer (not any number of rows is meaningful, it must be a divider of the indicators count).
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.DashboardLayoutCalculator.Run_ChooseRowCount(System.Windows.Size,System.Int32)">
+            <summary>
+            Optimizes the count of project indicator rows (total rows is greater by one).
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.DashboardLayoutCalculator.CalculatedLayout.GetFullRowIndicatorLogicalSize">
+            <summary>
+            Same as <see cref="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.DashboardLayoutCalculator.CalculatedLayout.GetIndicatorLogicalSize"/>, just for an indicator that occupies the whole row (like solution indicator does).
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.DashboardLayoutCalculator.CalculatedLayout.GetIndicatorAspect">
+            <summary>
+            Indicator width-to-height factor in both logical and visual sizes.
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.DashboardLayoutCalculator.CalculatedLayout.GetIndicatorLogicalSize">
+            <summary>
+            Logical indicator size (the only size the indicator control knows about; always have the same height to preserve line-thickness-to-body-size proportions when the view is resized).
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.DashboardLayoutCalculator.CalculatedLayout.GetIndicatorVisualHeight">
+            <summary>
+            Indicator size as it sits in the <see cref="F:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.DashboardLayoutCalculator.CalculatedLayout.ViewSize"/>, as seen on screen.
+            <see cref="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.DashboardLayoutCalculator.CalculatedLayout.GetIndicatorLogicalSize"/> is render-transformed to become this.
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.DashboardLayoutCalculator.CalculatedLayout.GetIndicatorVisualSize">
+            <summary>
+            Indicator size as it sits in the <see cref="F:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.DashboardLayoutCalculator.CalculatedLayout.ViewSize"/>, as seen on screen.
+            <see cref="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.DashboardLayoutCalculator.CalculatedLayout.GetIndicatorLogicalSize"/> is render-transformed to become this.
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.DashboardLayoutCalculator.CalculatedLayout.GetIndicatorVisualWidth">
+            <summary>
+            Indicator size as it sits in the <see cref="F:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.DashboardLayoutCalculator.CalculatedLayout.ViewSize"/>, as seen on screen.
+            <see cref="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.DashboardLayoutCalculator.CalculatedLayout.GetIndicatorLogicalSize"/> is render-transformed to become this.
+            </summary>
+        </member>
+        <member name="F:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.Dim.Base.InactiviyDimFactor">
+            <summary>
+            Add this much shade to simulate inactive color on an active one.
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.MonospacedTextAbbreviator`1">
+            <summary>
+            Creates short abbreviated names for the entities.
+            Fits given pixel width at given font characteristics.
+            Works for monospaced fonts only => just turns pixels into charcount, and uses <see cref="T:JetBrains.Util.Text.StringAbbreviator`1"/>.
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Legacy.MonospacedTextAbbreviator`1.Run(System.Collections.Generic.ICollection{`0},System.Func{`0,System.String},System.Double,System.Windows.Controls.TextBlock)">
+            <summary>
+            Produces abbreviated names for the given set of items.
+            </summary>
+            <param name="items">The list of items to process.</param>
+            <param name="FItemName">The way of getting the item names.</param>
+            <param name="pixelwidth">Max number of pixels of width allowed in the output.</param>
+            <param name="renderer">Gives the font properties and margins, serves as the measurer.</param>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Options.TwoItemView">
+            <summary>
+            TwoItemView
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.UIInteractive.SolutionBuilder.Options.TwoItemView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>

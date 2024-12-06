@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.Platform.VisualStudio.JustVs15</name>
+    </assembly>
+    <members>
+        <member name="T:JetBrains.Platform.VisualStudio.JustVs15.Shell.Hacks.SuppressOwnerlessFloatingWindowsJustVs15">
+            <summary>
+              See base comment.
+              Uses the vs-version-specific DLL copy.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.JustVs15.Zones.IJustVs15FrontEnvZone">
+            <summary>
+            Visual Studio integrated products, VS 15.0 only.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,2048 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.Platform.Text.Protocol</name>
+    </assembly>
+    <members>
+        <member name="T:JetBrains.TextControl.CaretVisualPlacement">
+            <summary>
+            After positioning the caret in the document, scrolls the text control to reveal the caret position.
+            This affects the visual location of the caret after scrolling.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.CaretVisualPlacement.DontScrollIfVisible">
+            <summary>
+            Does not do any scrolling if the new caret position is already visible.
+            If the caret gets too close to the edge, <see cref="F:JetBrains.TextControl.CaretVisualPlacement.Generic"/> would scroll it away. This mode avoids the effect.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.CaretVisualPlacement.Generic">
+            <summary>
+            When moving within the active text control, ensures the caret is not too close to the edge with minimal amount of scrolling.
+            When jumping to another text control, places the caret at the predefined position.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.CaretVisualPlacement.DirectionalUp">
+            <summary>
+            When moving within the active text control, works almost as <see cref="F:JetBrains.TextControl.CaretVisualPlacement.Generic"/>, but avoids scrolling the caret away from a too-near edge if this means scrolling against the caret movement direction.
+            When jumping to another text control, places the caret at the predefined position consistent with generic scrolling in the given direction within the same text control.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.CaretVisualPlacement.DirectionalDown">
+            <summary>
+            When moving within the active text control, works almost as <see cref="F:JetBrains.TextControl.CaretVisualPlacement.Generic"/>, but avoids scrolling the caret away from a too-near edge if this means scrolling against the caret movement direction.
+            When jumping to another text control, places the caret at the predefined position consistent with generic scrolling in the given direction within the same text control.
+            </summary>
+        </member>
+        <member name="E:JetBrains.TextControl.Data.IRangeableContainer`1.RemovedOnDocumentChange">
+            <summary>
+            Fired at the end of document change processing when invalidated items are automatically removed from container due to document change.
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.DocOffset">
+            <summary>
+              <para>Represents an (<see cref="F:JetBrains.TextControl.DocOffset.Offset" />) in a text <see cref="T:JetBrains.DocumentModel.IDocument">document</see>.</para>
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocOffset.Offset">
+            <summary>
+            An offset from the specific character to the beginning of the document, calculated as the number of bytes in the character string preceding this character when encoded with UTF-16LE variable-length encoding, divided by two. This matches the indexing of late Windows NT LPCWSTR and .NET CLI System.String in-memory string representations.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffset.Limited(JetBrains.TextControl.DocOffset,JetBrains.TextControl.DocOffset)">
+            <summary>
+            Limits the current value. Returns a copy that's guaranteed to be in the <c>[</c><paramref name="minInclusive" /><c>, </c><paramref name="maxExclusive" /><c>)</c> limits.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffset.Minus1">
+            <summary>
+            Subtracts one from the current value.
+            Does not modify the original object.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffset.Plus1">
+            <summary>
+            Adds one to the current value.
+            Does not modify the original object.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffset.Equals(System.Object)">
+            <summary>
+            Indicates whether this instance and a specified object are equal.
+            </summary>
+            <returns>
+            true if <paramref name="obj" /> and this instance are the same type and represent the same value; otherwise, false.
+            </returns>
+            <param name="obj">Another object to compare to. </param>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffset.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>
+            A 32-bit signed integer that is the hash code for this instance.
+            </returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffset.System#IComparable#CompareTo(System.Object)">
+            <summary>
+            Compares the current instance with another object of the same type.
+            </summary>
+            <returns>
+            A 32-bit signed integer that indicates the relative order of the objects being compared. The return value has these meanings: Value Meaning Less than zero This instance is less than <paramref name="obj" />. Zero This instance is equal to <paramref name="obj" />. Greater than zero This instance is greater than <paramref name="obj" />.
+            </returns>
+            <param name="obj">An object to compare with this instance. </param>
+            <exception cref="T:System.ArgumentException"><paramref name="obj" /> is not the same type as this instance. </exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffset.CompareTo(JetBrains.TextControl.DocOffset)">
+            <summary>
+            Compares the current object with another object of the same type.
+            </summary>
+            <returns>
+            A 32-bit signed integer that indicates the relative order of the objects being compared. The return value has the following meanings: Value Meaning Less than zero This object is less than the <paramref name="other" /> parameter.Zero This object is equal to <paramref name="other" />. Greater than zero This object is greater than <paramref name="other" />.
+            </returns>
+            <param name="other">An object to compare with this object.</param>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffset.System#IConvertible#GetTypeCode">
+            <summary>
+            Returns the <see cref="T:System.TypeCode" /> for this instance.
+            </summary>
+            <returns>
+            The enumerated constant that is the <see cref="T:System.TypeCode" /> of the class or value type that implements this interface.
+            </returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffset.System#IConvertible#ToBoolean(System.IFormatProvider)">
+            <summary>
+            Converts the value of this instance to an equivalent Boolean value using the specified culture-specific formatting information.
+            </summary>
+            <returns>
+            A Boolean value equivalent to the value of this instance.
+            </returns>
+            <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffset.System#IConvertible#ToByte(System.IFormatProvider)">
+            <summary>
+            Converts the value of this instance to an equivalent 8-bit unsigned integer using the specified culture-specific formatting information.
+            </summary>
+            <returns>
+            An 8-bit unsigned integer equivalent to the value of this instance.
+            </returns>
+            <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffset.System#IConvertible#ToChar(System.IFormatProvider)">
+            <summary>
+            Converts the value of this instance to an equivalent Unicode character using the specified culture-specific formatting information.
+            </summary>
+            <returns>
+            A Unicode character equivalent to the value of this instance.
+            </returns>
+            <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffset.System#IConvertible#ToDateTime(System.IFormatProvider)">
+            <summary>
+            Converts the value of this instance to an equivalent <see cref="T:System.DateTime" /> using the specified culture-specific formatting information.
+            </summary>
+            <returns>
+            A <see cref="T:System.DateTime" /> instance equivalent to the value of this instance.
+            </returns>
+            <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffset.System#IConvertible#ToDecimal(System.IFormatProvider)">
+            <summary>
+            Converts the value of this instance to an equivalent <see cref="T:System.Decimal" /> number using the specified culture-specific formatting information.
+            </summary>
+            <returns>
+            A <see cref="T:System.Decimal" /> number equivalent to the value of this instance.
+            </returns>
+            <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffset.System#IConvertible#ToDouble(System.IFormatProvider)">
+            <summary>
+            Converts the value of this instance to an equivalent double-precision floating-point number using the specified culture-specific formatting information.
+            </summary>
+            <returns>
+            A double-precision floating-point number equivalent to the value of this instance.
+            </returns>
+            <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffset.System#IConvertible#ToInt16(System.IFormatProvider)">
+            <summary>
+            Converts the value of this instance to an equivalent 16-bit signed integer using the specified culture-specific formatting information.
+            </summary>
+            <returns>
+            An 16-bit signed integer equivalent to the value of this instance.
+            </returns>
+            <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffset.System#IConvertible#ToInt32(System.IFormatProvider)">
+            <summary>
+            Converts the value of this instance to an equivalent 32-bit signed integer using the specified culture-specific formatting information.
+            </summary>
+            <returns>
+            An 32-bit signed integer equivalent to the value of this instance.
+            </returns>
+            <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffset.System#IConvertible#ToInt64(System.IFormatProvider)">
+            <summary>
+            Converts the value of this instance to an equivalent 64-bit signed integer using the specified culture-specific formatting information.
+            </summary>
+            <returns>
+            An 64-bit signed integer equivalent to the value of this instance.
+            </returns>
+            <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffset.System#IConvertible#ToSByte(System.IFormatProvider)">
+            <summary>
+            Converts the value of this instance to an equivalent 8-bit signed integer using the specified culture-specific formatting information.
+            </summary>
+            <returns>
+            An 8-bit signed integer equivalent to the value of this instance.
+            </returns>
+            <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffset.System#IConvertible#ToSingle(System.IFormatProvider)">
+            <summary>
+            Converts the value of this instance to an equivalent single-precision floating-point number using the specified culture-specific formatting information.
+            </summary>
+            <returns>
+            A single-precision floating-point number equivalent to the value of this instance.
+            </returns>
+            <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffset.System#IConvertible#ToString(System.IFormatProvider)">
+            <summary>
+            Converts the value of this instance to an equivalent <see cref="T:System.String" /> using the specified culture-specific formatting information.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> instance equivalent to the value of this instance.
+            </returns>
+            <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffset.System#IConvertible#ToType(System.Type,System.IFormatProvider)">
+            <summary>
+            Converts the value of this instance to an <see cref="T:System.Object" /> of the specified <see cref="T:System.Type" /> that has an equivalent value, using the specified culture-specific formatting information.
+            </summary>
+            <returns>
+            An <see cref="T:System.Object" /> instance of type <paramref name="conversionType" /> whose value is equivalent to the value of this instance.
+            </returns>
+            <param name="conversionType">The <see cref="T:System.Type" /> to which the value of this instance is converted. </param>
+            <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffset.System#IConvertible#ToUInt16(System.IFormatProvider)">
+            <summary>
+            Converts the value of this instance to an equivalent 16-bit unsigned integer using the specified culture-specific formatting information.
+            </summary>
+            <returns>
+            An 16-bit unsigned integer equivalent to the value of this instance.
+            </returns>
+            <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffset.System#IConvertible#ToUInt32(System.IFormatProvider)">
+            <summary>
+            Converts the value of this instance to an equivalent 32-bit unsigned integer using the specified culture-specific formatting information.
+            </summary>
+            <returns>
+            An 32-bit unsigned integer equivalent to the value of this instance.
+            </returns>
+            <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffset.System#IConvertible#ToUInt64(System.IFormatProvider)">
+            <summary>
+            Converts the value of this instance to an equivalent 64-bit unsigned integer using the specified culture-specific formatting information.
+            </summary>
+            <returns>
+            An 64-bit unsigned integer equivalent to the value of this instance.
+            </returns>
+            <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffset.Equals(JetBrains.TextControl.DocOffset)">
+            <summary>
+            Indicates whether the current object is equal to another object of the same type.
+            </summary>
+            <returns>
+            true if the current object is equal to the <paramref name="other" /> parameter; otherwise, false.
+            </returns>
+            <param name="other">An object to compare with this object.</param>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffset.System#IFormattable#ToString(System.String,System.IFormatProvider)">
+            <summary>
+            Formats the value of the current instance using the specified format.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> containing the value of the current instance in the specified format.
+            </returns>
+            <param name="format">The <see cref="T:System.String" /> specifying the format to use.-or- null to use the default format defined for the type of the <see cref="T:System.IFormattable" /> implementation. </param>
+            <param name="formatProvider">The <see cref="T:System.IFormatProvider" /> to use to format the value.-or- null to obtain the numeric format information from the current locale setting of the operating system. </param>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="T:JetBrains.TextControl.DocOffsetAndVirtual">
+            <summary>
+            <para>Represents the (<see cref="P:JetBrains.TextControl.DocOffsetAndVirtual.Offset"/>) in a text <see cref="T:JetBrains.DocumentModel.IDocument">document</see>, which is basically a document offset.</para>
+            <para>However, this position is often derived from a <see cref="T:JetBrains.TextControl.TextControlLineColumn"/>, which is in the text control Line-Column coordinate system, and not all column indices map into document offsets. If the column index is beyond the EOL of that line, then it's said to be in the Virtual Space. <see cref="P:JetBrains.TextControl.DocOffsetAndVirtual.TextControlVirtualDelta"/> is the offset into the Virtual Space from the nearest valid document <see cref="P:JetBrains.TextControl.DocOffsetAndVirtual.Offset"/>.</para>
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocOffsetAndVirtual.myNeutralVirtualDelta">
+            <summary>
+            Number of virtual columns past the last real document position.
+            Neutral means that it is equally presented in document and text control columns (<see cref="P:JetBrains.TextControl.DocOffsetAndVirtual.TextControlVirtualDelta"/>, <see cref="P:JetBrains.TextControl.DocOffsetAndVirtual.DocVirtualDelta"/>).
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffsetAndVirtual.#ctor(JetBrains.TextControl.DocOffset,JetBrains.Util.dataStructures.TypedIntrinsics.Int32{JetBrains.TextControl.TextControlColumn})">
+            <summary>
+            Creates an offset that represents some point within the text control's virtual space.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffsetAndVirtual.#ctor(JetBrains.TextControl.DocOffset,JetBrains.Util.dataStructures.TypedIntrinsics.Int32{JetBrains.DocumentModel.DocColumn})">
+            <summary>
+            Creates an offset that represents some point within the text control's virtual space.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffsetAndVirtual.#ctor(JetBrains.TextControl.DocOffset,System.Int32)">
+            <summary>
+            Creates an offset that represents some point within the text control's virtual space.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffsetAndVirtual.#ctor(JetBrains.TextControl.DocOffset@)">
+            <summary>
+            Creates an offset that corresponds to a real document offset, without any shift to the virtual space.
+            </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocOffsetAndVirtual.DocVirtualDelta">
+            <summary>
+            For logical positions over actual document characters this is zero. For logical positions over the Virtual Space (column indices beyond the end of line), the number of virtual space characters from the EOL.
+            </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocOffsetAndVirtual.IsInVirtualSpace">
+            <summary>
+            Gets whether the point isn't over document chars, but somewhere in the virtual space of the text control.
+            This means that <see cref="P:JetBrains.TextControl.DocOffsetAndVirtual.DocVirtualDelta"/> and <see cref="P:JetBrains.TextControl.DocOffsetAndVirtual.TextControlVirtualDelta"/> are both above zero.
+            </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocOffsetAndVirtual.Offset">
+            <summary>
+            For logical positions over actual document characters, the <see cref="T:JetBrains.DocumentModel.IDocument">document</see> offset. For logical positions over the Virtual Space (column indices beyond the end of line), the EOL offset.
+            </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocOffsetAndVirtual.TextControlVirtualDelta">
+            <summary>
+            For logical positions over actual document characters this is zero. For logical positions over the Virtual Space (column indices beyond the end of line), the number of virtual space characters from the EOL.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffsetAndVirtual.Limited(JetBrains.TextControl.DocOffset,JetBrains.TextControl.DocOffset)">
+            <summary>
+            Limits the value of <see cref="P:JetBrains.TextControl.DocOffsetAndVirtual.Offset"/>. Returns a copy that's guaranteed to be in the <c>[</c><paramref name="minInclusive" /><c>, </c><paramref name="maxExclusive" /><c>)</c> limits.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffsetAndVirtual.Equals(System.Object)">
+            <summary>
+            Indicates whether this instance and a specified object are equal.
+            </summary>
+            <returns>
+            true if <paramref name="obj" /> and this instance are the same type and represent the same value; otherwise, false.
+            </returns>
+            <param name="obj">Another object to compare to. </param><filterpriority>2</filterpriority>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffsetAndVirtual.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>
+            A 32-bit signed integer that is the hash code for this instance.
+            </returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffsetComparer.System#Collections#Generic#IComparer{JetBrains#TextControl#DocOffset}#Compare(JetBrains.TextControl.DocOffset,JetBrains.TextControl.DocOffset)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffsetComparer.System#Collections#IComparer#Compare(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffsetComparer.System#Collections#IEqualityComparer#Equals(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffsetComparer.System#Collections#Generic#IEqualityComparer{JetBrains#TextControl#DocOffset}#Equals(JetBrains.TextControl.DocOffset,JetBrains.TextControl.DocOffset)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffsetComparer.System#Collections#IEqualityComparer#GetHashCode(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffsetComparer.System#Collections#Generic#IEqualityComparer{JetBrains#TextControl#DocOffset}#GetHashCode(JetBrains.TextControl.DocOffset)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffsetEx.ContainsOrTouches(JetBrains.Util.TextRange,JetBrains.TextControl.DocOffset)">
+            <inheritdoc cref="M:JetBrains.Util.TextRange.Contains(System.Int32)"/>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffsetEx.ContainsCharIndex(JetBrains.Util.TextRange,JetBrains.TextControl.DocOffset)">
+            <inheritdoc cref="M:JetBrains.Util.TextRange.ContainsCharIndex(System.Int32)"/>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffsetEx.GetCoordsByOffset(JetBrains.DocumentModel.IDocument,JetBrains.TextControl.DocOffset)">
+            <inheritdoc cref="M:JetBrains.DocumentModel.IDocument.GetCoordsByOffset(System.Int32)" />
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffsetEx.GetDocOffsetByCoords(JetBrains.DocumentModel.IDocument,JetBrains.DocumentModel.DocumentCoords)">
+            <inheritdoc cref="M:JetBrains.DocumentModel.IDocument.GetOffsetByCoords(JetBrains.DocumentModel.DocumentCoords)" />
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffsetEx.GetLineEndDocOffsetNoLineBreak(JetBrains.DocumentModel.IDocument,JetBrains.Util.dataStructures.TypedIntrinsics.Int32{JetBrains.DocumentModel.DocLine})">
+            <inheritdoc cref="M:JetBrains.DocumentModel.IDocument.GetLineEndOffsetNoLineBreak(JetBrains.Util.dataStructures.TypedIntrinsics.Int32{JetBrains.DocumentModel.DocLine})" />
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffsetEx.GetLineEndDocOffsetWithLineBreak(JetBrains.DocumentModel.IDocument,JetBrains.Util.dataStructures.TypedIntrinsics.Int32{JetBrains.DocumentModel.DocLine})">
+            <inheritdoc cref="M:JetBrains.DocumentModel.IDocument.GetLineEndOffsetWithLineBreak(JetBrains.Util.dataStructures.TypedIntrinsics.Int32{JetBrains.DocumentModel.DocLine})" />
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffsetEx.GetLineStartDocOffset(JetBrains.DocumentModel.IDocument,JetBrains.Util.dataStructures.TypedIntrinsics.Int32{JetBrains.DocumentModel.DocLine})">
+            <inheritdoc cref="M:JetBrains.DocumentModel.IDocument.GetLineStartOffset(JetBrains.Util.dataStructures.TypedIntrinsics.Int32{JetBrains.DocumentModel.DocLine})" />
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffsetEx.InsertText(JetBrains.DocumentModel.IDocument,JetBrains.TextControl.DocOffset,System.String,JetBrains.DocumentModel.TextModificationSide)">
+            <inheritdoc cref="M:JetBrains.DocumentModel.IDocument.InsertText(System.Int32,System.String,JetBrains.DocumentModel.TextModificationSide)" />
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffsetEx.RangeNormalized(JetBrains.TextControl.DocOffset,JetBrains.TextControl.DocOffset)">
+            <summary>
+            Makes a normalized range, meaning it will always go forward and have a nonnegative length, but its ends might be flipped. <see cref="M:JetBrains.TextControl.DocOffsetEx.RangeTo(JetBrains.TextControl.DocOffset,JetBrains.TextControl.DocOffset)" />.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffsetEx.RangeOfLength(JetBrains.TextControl.DocOffset,System.Int32)">
+            <summary>
+            Makes an unnormalized range, meaning it might be going backwards if <paramref name="length" /> is less than <c>0</c>.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.DocOffsetEx.RangeTo(JetBrains.TextControl.DocOffset,JetBrains.TextControl.DocOffset)">
+            <summary>
+            Makes an unnormalized range, meaning it might be going backwards if <paramref name="end" /> is less than <see cref="!:start" />. See <see cref="M:JetBrains.TextControl.DocOffsetEx.RangeNormalized(JetBrains.TextControl.DocOffset,JetBrains.TextControl.DocOffset)" />.
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.DocumentMarkup.ErrorStripeAttributes">
+            <summary>
+            On an <see cref="T:JetBrains.TextControl.DocumentMarkup.IHighlighter" /> instance, describes if/how to paint a marker on the Error Stripe.
+            For registered highlighters, derived from <see cref="T:JetBrains.TextControl.DocumentMarkup.RegisterHighlighterAttribute" />.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.ErrorStripeAttributes.#ctor(JetBrains.TextControl.DocumentMarkup.ErrorStripeMarkerKind,System.String)">
+            <summary>
+              <inheritdoc cref="T:JetBrains.TextControl.DocumentMarkup.ErrorStripeAttributes" />
+            </summary>
+            <param name="kind"><inheritdoc cref="P:JetBrains.TextControl.DocumentMarkup.ErrorStripeAttributes.MarkerKind" /></param>
+            <param name="idErrorStripeColorHighlighterAttribute"><inheritdoc cref="P:JetBrains.TextControl.DocumentMarkup.ErrorStripeAttributes.ErrorStripeColorHighlighterAttributeId" /></param>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.ErrorStripeAttributes.ErrorStripeColorHighlighterAttributeId">
+            <summary>
+              <para>If this highlighter, when applied to a document, is to be shown on the error stripe, defines the ID of another <see cref="T:JetBrains.TextControl.DocumentMarkup.RegisterHighlighterAttribute" /> whose foreground color gives the error stripe mark color.</para>
+              <para>When not set, a <c>NULL</c> is used here (and never an empty string).</para>
+            </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.ErrorStripeAttributes.ErrorStripeColorHighlighterAttributeIdHash">
+            <inheritdoc cref="P:JetBrains.TextControl.DocumentMarkup.ErrorStripeAttributes.ErrorStripeColorHighlighterAttributeId"/>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.ErrorStripeAttributes.MarkerKind">
+            <summary>
+            Default value if not <see cref="P:JetBrains.TextControl.DocumentMarkup.ErrorStripeAttributes.IsShowingMarkerOnErrorStripe" />, otherwise the (possibly still default) marker kind.
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.DocumentMarkup.ErrorStripeMarkerCategories">
+            <summary>
+            Groups of <see cref="T:JetBrains.TextControl.DocumentMarkup.ErrorStripeMarkerKind" />.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.ErrorStripeMarkerCategories.Info">
+            <summary>
+            <see cref="F:JetBrains.TextControl.DocumentMarkup.ErrorStripeMarkerKind.Info" /> markers only.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.ErrorStripeMarkerCategories.CodeAnalysis">
+            <summary>
+            <see cref="F:JetBrains.TextControl.DocumentMarkup.ErrorStripeMarkerKind.Error" />, <see cref="F:JetBrains.TextControl.DocumentMarkup.ErrorStripeMarkerKind.Warning" />, <see cref="F:JetBrains.TextControl.DocumentMarkup.ErrorStripeMarkerKind.Suggestion" />. Just common markers.
+            Errors and warnings and suggestions from the Daemon.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.ErrorStripeMarkerCategories.Usage">
+            <summary>
+            <see cref="F:JetBrains.TextControl.DocumentMarkup.ErrorStripeMarkerKind.Usage" /> markers only.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.ErrorStripeMarkerCategories.Any">
+            <summary>
+            Any <see cref="T:JetBrains.TextControl.DocumentMarkup.ErrorStripeMarkerKind" />.
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.DocumentMarkup.ErrorStripeMarkerKind">
+            <summary>
+            The sort of a marker this highlighter makes on the Error Stripe (“Marker Bar”).
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.ErrorStripeMarkerKind.Info">
+            <summary>
+            A common marker which is not from code analysis (Daemon) and not a highlighted usage.
+            Example: T O D O item. Your custom markers probably go here.
+            Lowest priority of the mall.
+            <see cref="T:JetBrains.TextControl.DocumentMarkup.ErrorStripeMarkerCategories" />: <see cref="F:JetBrains.TextControl.DocumentMarkup.ErrorStripeMarkerCategories.Info" />.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.ErrorStripeMarkerKind.Suggestion">
+            <summary>
+            A code analysis (Daemon) marker which is not an error nor a warning, but still important enough to be shown on the Error Stripe as a marker and navigated to. Usually, a suggestion.
+            Lowest priority of the Daemon markers.
+            <see cref="T:JetBrains.TextControl.DocumentMarkup.ErrorStripeMarkerCategories" />: <see cref="F:JetBrains.TextControl.DocumentMarkup.ErrorStripeMarkerCategories.CodeAnalysis" />.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.ErrorStripeMarkerKind.Warning">
+            <summary>
+            A warning-level code analysis (Daemon) marker.
+            Wins over suggestion, loses to error.
+            <see cref="T:JetBrains.TextControl.DocumentMarkup.ErrorStripeMarkerCategories" />: <see cref="F:JetBrains.TextControl.DocumentMarkup.ErrorStripeMarkerCategories.CodeAnalysis" />.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.ErrorStripeMarkerKind.Error">
+            <summary>
+            An error-level code analysis (Daemon) marker.
+            Wins over suggestion and warning.
+            <see cref="T:JetBrains.TextControl.DocumentMarkup.ErrorStripeMarkerCategories" />: <see cref="F:JetBrains.TextControl.DocumentMarkup.ErrorStripeMarkerCategories.CodeAnalysis" />.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.ErrorStripeMarkerKind.Usage">
+            <summary>
+            A highlight-usages marker. When present, has the highest priority because it's context-specific.
+            However, an error stripe can split a marker into two sub-parts to simultaneously display a usage marker and a code analysis marker.
+            <see cref="T:JetBrains.TextControl.DocumentMarkup.ErrorStripeMarkerCategories" />: <see cref="F:JetBrains.TextControl.DocumentMarkup.ErrorStripeMarkerCategories.Usage" />.
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.DocumentMarkup.GutterMarksTransport">
+            <summary>
+            Transport for the gutter marks logic over the text control, serving both IDE Glyph Margin and Jet Action Margin, placed in <see cref="F:JetBrains.TextControl.Transport.TransportTextControl.PropertyBag" /> by backend when ready to serve.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.GutterMarksTransport.PropertyBagId">
+            <summary>
+            Text control transport has a bag for per-text-control extensions, like this class, and that's the ID for putting this class in the bag.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.GutterMarksTransport.BwdGetTooltip">
+            <summary>
+            The tooltip manager wants a tooltip on front end, a request goes backwards to calculate text for the tooltip.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.GutterMarksTransport.BwdGutterMarksInLinesSessions">
+            <summary>
+            A list of request-response sessions for getting gutter marks in specific text view lines layout, kept by independent clients.
+            Normally, should be only one session per text control, but as formally one can be from Jet Action Margin and one from VS Glyph Margin, let them be independent to avoid crosstalk.
+            Created by frontend when it has a new view of either kind which needs gutter marks.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.GutterMarksTransport.BwdOnMouseDown">
+            <summary>
+            Mouse down on front, asked backward to do something (like show drop down menu on mousedown), or tell it needs a click.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.GutterMarksTransport.BwdMouseHoverGutterMarks">
+            <summary>
+            Contains gutter marks that is currently on mouse hovering 
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.GutterMarksTransport.FwdTmpTryGetGutterMarkAnchoringRect">
+            <summary>
+            Query popup over gutter mark of whatever kind.
+            // TODO: when we think up a transport for popup window contexts, this could just originate on backend, and be attached to the context correctly on frontend
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.GutterMarksTransport.IsJetActionMarginMode">
+            <summary>
+            When <c>True</c>, gutter marks are only put on the Jet Action Margin. IDE Glyph Margin is kept clean..
+            When <c>False</c>, gutter marks are only put on the IDE Glyph Margin, and the Jet Action Margin is hidden.
+            Applies mainly to VS.
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.DocumentMarkup.GutterMarksTransport.GutterMarksInLinesSession">
+            <inheritdoc cref="F:JetBrains.TextControl.DocumentMarkup.GutterMarksTransport.BwdGutterMarksInLinesSessions" />
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.GutterMarksTransport.GutterMarksInLinesSession.BwdLinesRequest">
+            <summary>
+            Most recent request for info on lines, sent to backend. The response (directed forward) is expected in <see cref="F:JetBrains.TextControl.DocumentMarkup.GutterMarksTransport.GutterMarksInLinesSession.FwdGlyphsInLinesResponse" />.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.GutterMarksTransport.GutterMarksInLinesSession.FwdGlyphsInLinesResponse">
+            <summary>
+            Last response to some <see cref="F:JetBrains.TextControl.DocumentMarkup.GutterMarksTransport.GutterMarksInLinesSession.BwdLinesRequest" />, maybe to some prev value in that prop.
+            Must be sorted by start offset in text view coordinates (line identity).
+            The view is designed to use an older value when the latest one is not available yet, so this isn't a problem if the response here is not for the freshest request, provided that a response to the fresh request is given later. The view will paint with previous info in the period.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.GutterMarksTransport.LineGlyphInfo.ToString">
+            <inheritdoc />
+        </member>
+        <member name="T:JetBrains.TextControl.DocumentMarkup.GutterMarksTransport.LineRequestOption">
+            <summary>
+            Custom option that can be passed to backend along with <see cref="T:JetBrains.TextControl.DocumentMarkup.GutterMarksTransport.LineRequest" />.
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.DocumentMarkup.GutterMarksTransport.MouseDownRequest">
+            <summary>
+            </summary>
+            <param name="DocumentRanges">Doc ranges covered by clicked glyph position.</param>
+            <param name="GlyphIcon">Actual displayed icon which were clicked, to show as menu title.</param>
+            <param name="TmpPopupWindowContext">TODO: transport popup window contexts correctly. Front knows how to show the menu correctly, and should provide context here.</param>
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.GutterMarksTransport.MouseDownRequest.#ctor(System.Collections.Immutable.ImmutableArray{JetBrains.Util.TextRange},JetBrains.Application.Changes.ModificationStamp,JetBrains.UI.Icons.IconId,JetBrains.Platform.RdFramework.Reflection.RdReflectInProcessBlackBox{JetBrains.Application.UI.PopupLayout.PopupWindowContextSource})">
+            <summary>
+            </summary>
+            <param name="DocumentRanges">Doc ranges covered by clicked glyph position.</param>
+            <param name="GlyphIcon">Actual displayed icon which were clicked, to show as menu title.</param>
+            <param name="TmpPopupWindowContext">TODO: transport popup window contexts correctly. Front knows how to show the menu correctly, and should provide context here.</param>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.GutterMarksTransport.MouseDownRequest.DocumentRanges">
+            <summary>Doc ranges covered by clicked glyph position.</summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.GutterMarksTransport.MouseDownRequest.GlyphIcon">
+            <summary>Actual displayed icon which were clicked, to show as menu title.</summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.GutterMarksTransport.MouseDownRequest.TmpPopupWindowContext">
+            <summary>TODO: transport popup window contexts correctly. Front knows how to show the menu correctly, and should provide context here.</summary>
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.GutterMarksTransport.TooltipResponse.ToString">
+            <inheritdoc />
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.GutterMarksTransport.VisualLineIdentity.VisualBufferRangeNoLineBreak">
+            <summary>
+            Range in the specific version of the visual text buffer of the text view.
+            Not incl line break.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.GutterMarksTransport.VisualLineIdentity.VisualBufferSnapshotVersion">
+            <summary>
+            Indicates if outdated. Visual buffer snapshot (in which the range is taken) version number.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.GutterMarksTransport.VisualLineIdentity.ToString">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.IGutterMarkHoverHandler.OnHover(JetBrains.Lifetimes.Lifetime)">
+            <summary>
+            Executes on main thread under readlock
+            </summary>
+            <param name="lifetime">Is terminated when hover is finished,on main thread under readlock </param>
+        </member>
+        <member name="T:JetBrains.TextControl.DocumentMarkup.IGutterMarkInfo">
+            <inheritdoc cref="T:JetBrains.TextControl.DocumentMarkup.IGutterMarkType" />
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.IGutterMarkInfo.IconId">
+            <summary>
+            Icon to display on gutter.
+            If the implementation is based on menu items, it should elect the best icon here.
+            </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.IGutterMarkInfo.Priority">
+            <summary>
+            If more than one gutter mark icon lays up claim on the same text view line, this is used to determine whose icon wins and is actually displayed.
+            The other icons won't be immediately visible. <c>NULL</c> means lowest priority.
+            Note that this priority only affects choosing which icon to show if there're multiple candidates, but does not affect sorting of menu items yielded by <see cref="M:JetBrains.TextControl.DocumentMarkup.IGutterMarkInfo.GetBulbMenuItems" /> when displaying a menu, those items got their own anchors.
+            </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.IGutterMarkInfo.RichText">
+            <summary>
+            Tooltip for the gutter mark icon.
+            If the implementation is based on menu items, it should elect relevant text here.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.IGutterMarkInfo.GetBulbMenuItems">
+            <summary>
+            Fills in the bulb menu items when opening a menu on the gutter mark. A <c>NULL</c> or empty list means there will be a gutter mark with a tooltip, but no clickable actions on it.
+            If more than one gutter mark sits on the same text view line, their actions are combined on the menu; those with no actions are not represented on the menu.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.IGutterMarkInfo.GetHoverHandler">
+            <summary>
+            Mouse hover handler the gutter mark icon.
+            Is null if hover handling is not needed 
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.DocumentMarkup.IGutterMarkType">
+            <summary>
+              <para>A gutter mark is rendered to the left of the text view line and displays information such as base/drived types, unit testing glyph, etc.</para>
+              <para>Instances of <see cref="T:JetBrains.TextControl.DocumentMarkup.IGutterMarkType" /> are defined per kind of similar gutter marks, not per gutter mark instance.</para>
+              <para>A specific gutter mark instance is made by creating a <see cref="T:JetBrains.TextControl.DocumentMarkup.IHighlighter">highlighter</see> in the <see cref="!:IDocumentMarkup">markup model</see>, and is represented by an <see cref="T:JetBrains.TextControl.DocumentMarkup.IGutterMarkInfo" /> description of a gutter mark obtained from <see cref="M:JetBrains.TextControl.DocumentMarkup.IGutterMarkType.GetGutterMarkInfo(JetBrains.TextControl.DocumentMarkup.IHighlighter)" /> for that specific highlighter.</para>
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.IGutterMarkType.GetGutterMarkInfo(JetBrains.TextControl.DocumentMarkup.IHighlighter)">
+            <summary>
+            Default info that is used is no specific 'IGutterMarkInfo' is passed. Should be not-null for daemon marks.
+            </summary>
+            <param name="highlighter"></param>
+        </member>
+        <member name="T:JetBrains.TextControl.DocumentMarkup.HighlighterAdornmentsAndClassificationsTransport.HighlighterTransport">
+            <summary>
+            NOTE: blittable, serializers not required.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.HighlighterAdornmentsAndClassificationsTransport.HighlighterTransport.CompareTo(JetBrains.TextControl.DocumentMarkup.HighlighterAdornmentsAndClassificationsTransport.HighlighterTransport)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.HighlighterAdornmentsAndClassificationsTransport.HighlighterTransport.CompareTo(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.HighlighterAdornmentsAndClassificationsTransport.HighlighterTransport.Equals(JetBrains.TextControl.DocumentMarkup.HighlighterAdornmentsAndClassificationsTransport.HighlighterTransport)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.HighlighterAdornmentsAndClassificationsTransport.HighlighterTransport.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.HighlighterAdornmentsAndClassificationsTransport.HighlighterTransport.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="T:JetBrains.TextControl.DocumentMarkup.HighlighterAdornmentsAndClassificationsTransport.Session">
+            <summary>
+            Keeps the connected ranges-highlighters sets independent, in case there're multiple players.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.HighlighterAdornmentsAndClassificationsTransport.Session.BwdRanges">
+            <summary>
+            Ranges for which highlighters are needed on front, filled by front based on the current viewport.
+            Must be sorted. Must not overlap.
+            NOTE: why set: we probably want to exclude massive collapsed regions. // TODO: really exclude
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.HighlighterAdornmentsAndClassificationsTransport.Session.FwdHighlighters">
+            <summary>
+            The highlighters collected by back, for rendering on front.
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.DocumentMarkup.HighlightersSnapshot`1">
+            <summary>
+            A set of highlighters with a snapshot of their positions for a certain document revision.
+            A typed wrapper which has structural (deep) equality.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.HighlightersSnapshot`1.#ctor(System.Collections.Immutable.ImmutableArray{`0},JetBrains.Application.Changes.ModificationStamp)">
+            <summary>
+            A set of highlighters with a snapshot of their positions for a certain document revision.
+            A typed wrapper which has structural (deep) equality.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.HighlightersSnapshot`1.Equals(JetBrains.TextControl.DocumentMarkup.HighlightersSnapshot{`0})">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.HighlightersSnapshot`1.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="T:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentData">
+            <summary>
+            Transport model part for an adornment.
+            NOTE: non-blittable, contains text.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentData.Placement">
+            <inheritdoc cref="T:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentPlacement" />
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentData.WidthInCharacters">
+            <summary>
+            For IntraText adorns used for Virtual Indentation: indent presented in the form of IntraText adorns
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentData.CompareTo(JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentData)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentData.CompareTo(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentData.Equals(JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentData)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentData.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentData.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="T:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentFlags">
+            <summary>
+            Joins together boolean props for <see cref="T:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentData" />.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentFlags.Transparent">
+            <summary>
+            Virtual indenting presentation form.
+            Intra text adornments that should reserve space, but don't be drawn.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentFlags.Whitespace">
+            <summary>
+            Virtual indenting presentation form.
+            Intra text adornments that should reserve space, and show real characters count under range.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentFlags.IsCustomAdornment">
+            <summary>
+            Implies that the adornment logically does NOT relate to the Inlay Hints. <br/>
+            If true general Inlay Hints options will NOT be applied to the adornment during rendering.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentFlags.IsCtrlNotRequiredForNavigation">
+            <summary>
+            Marks that the adornment does not require Ctrl to be pressed down to respond to clicks
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentIconDockingPosition">
+            <summary>
+            Icon's docking position relating to the adorn's text.
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentKind">
+            <summary>
+            Affects adornment's presentation
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentPlacement">
+            <summary>
+              <para>Defines adornment's placement in an ascending order from left to right.</para>
+              <para>For an INTER-line adornment, defines its placement in between the lines.</para>
+              <para>For an INTRA-text adornment, defines its placement in between the adjacent characters.</para>
+              <para>If an INTRA-text adorn is placed on a document offset <c>N</c>, then it's laid out in between characters at offsets <c>N-1</c> and <c>N</c>, ordered by <see cref="P:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentPlacement.Priority" /> in ascending order.</para>
+              <para>INTER-line adorns vertical order is defined by <see cref="P:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentPlacement.Priority" />. The higher the value the lower the adorn is placed.</para>
+              <para>For an INTRA-text adorn there are also special anchoring effects based on <paramref name="Priority" />:</para>
+              <para>When <c>&lt;0</c> — adornment is “anchored” to the <c>N-1</c>th character and prefers to stay together with it when laying out text.</para>
+              <para>When <c>&gt;=0</c> — adornment is “anchored” to the <c>N</c>th character and prefers to stay together with it when laying out text.</para>
+              <para>Negative zero might be treated as if it were a positive zero. Avoid using zero values here for clarity.</para>
+            </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentPlacement.Position">
+            <inheritdoc cref="T:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentPosition"/>
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentPlacement.CompareTo(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="T:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentPosition">
+            <summary>
+            <para> The position of an adornment relative to the text it is attached to. </para>
+            <para> AFTER_LINE_END position prevents the caret to be moved to the related adornment right side. </para>
+            <para> AFTER_LINE_END position does NOT imply that the related adornment will be moved to the line end even if its offset is not located at the line end. Keep it relevant when creating a highlighter. </para>
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentsTransportBase.BwdGetTooltip">
+            <summary>
+            Requests tooltip for an adorn, offsets are adjusted to the current backend sync version.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentsTransportBase.BwdOnMouseDown">
+            <summary>
+            Asks for a click reaction on the adornment, offsets are adjusted to the current backend sync version.
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentsTransportBase.AdornmentHighlighter">
+            <summary>
+            Transport for an individual adornment highlighter (data + range).
+            NOTE: non-blittable, contains text in Data.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentsTransportBase.AdornmentHighlighter.AttributeIdHash">
+            <summary>
+            For all adorns: background color.
+            For adorns with text: text foreground color.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentsTransportBase.AdornmentHighlighter.Position">
+            <summary>
+            Doc offset in some document version; the modification stamp of the document must be defined externally outside this object together with a set of adorns.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentsTransportBase.AdornmentHighlighter.CompareTo(JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentsTransportBase.AdornmentHighlighter)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentsTransportBase.AdornmentHighlighter.CompareTo(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentsTransportBase.AdornmentHighlighter.Equals(JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentsTransportBase.AdornmentHighlighter)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentsTransportBase.AdornmentHighlighter.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentsTransportBase.AdornmentHighlighter.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentsTransportBase.AdornmentHighlighter.ToString">
+            <inheritdoc />
+        </member>
+        <member name="T:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentsTransportBase.Session">
+            <summary>
+            Keeps the connected ranges-highlighters sets independent, in case there're multiple players.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentsTransportBase.Session.BwdIsPushToHintActive">
+            <summary>
+            Front tells when to send push-to-hint-only adorns for rendering.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentsTransportBase.Session.BwdRanges">
+            <summary>
+            Ranges for which highlighters are needed on front, filled by front based on the current viewport.
+            Must be sorted. Must not overlap.
+            NOTE: why set: we probably want to exclude massive collapsed regions. // TODO: really exclude
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentsTransportBase.Session.FwdAdornments">
+            <summary>
+            The highlighters collected by back, for rendering on front.
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.DocumentMarkup.Adornments.ICodeCompletionPopupWindowFilter">
+            todo: should not be in protocol project, backend component, but currently used on frontend in adornments
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.Adornments.InterLineAdornments.InterLineAdornmentProperties.ExtraLinesAbove">
+            <summary>Inserts a space the size of a single editor's line height above the adornment. </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.Adornments.InterLineAdornments.InterLineAdornmentProperties.ExtraLinesBelow">
+            <summary>Inserts a space the size of a single editor's line height below the adornment. </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.Adornments.InterLineAdornments.InterLineAdornmentProperties.IndentWidthInCharacters">
+            <summary>If not null - used for calculating adorn's indent from the editor's left edge using characters width. </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.Adornments.InterLineAdornments.InterLineAdornmentProperties.IconDockingPosition">
+            <summary><see cref="T:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentIconDockingPosition"/></summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.Adornments.InterLineAdornments.InterLineAdornmentProperties.IconSizeScaleFactor">
+            <summary> 0.5 &lt;= IconSizeScaleFactor &lt;= 5 </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.DocumentMarkup.Adornments.InterLineAdornments.InterLinePosition">
+            <param name="IsAboveLine">If true places adorn above line.<br/>If false places adorn below line.</param>
+            <param name="ExtraLinesAbove">Inserts a space the size of a single editor's line height above the adornment. </param>
+            <param name="ExtraLinesBelow">Inserts a space the size of a single editor's line height below the adornment. </param>
+            <param name="IndentWidthInCharacters">If not null - used for calculating adorn's indent from the editor's left edge using characters width. </param>
+            <param name="IconDockingPosition"><see cref="T:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentIconDockingPosition"/></param>
+            <param name="IconSizeScaleFactor"> 0.5 &lt;= IconSizeScaleFactor &lt;= 5 </param>
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.Adornments.InterLineAdornments.InterLinePosition.#ctor(System.Boolean,System.Byte,System.Byte,System.Nullable{System.Int32},JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentIconDockingPosition,System.Double)">
+            <param name="IsAboveLine">If true places adorn above line.<br/>If false places adorn below line.</param>
+            <param name="ExtraLinesAbove">Inserts a space the size of a single editor's line height above the adornment. </param>
+            <param name="ExtraLinesBelow">Inserts a space the size of a single editor's line height below the adornment. </param>
+            <param name="IndentWidthInCharacters">If not null - used for calculating adorn's indent from the editor's left edge using characters width. </param>
+            <param name="IconDockingPosition"><see cref="T:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentIconDockingPosition"/></param>
+            <param name="IconSizeScaleFactor"> 0.5 &lt;= IconSizeScaleFactor &lt;= 5 </param>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.Adornments.InterLineAdornments.InterLinePosition.IsAboveLine">
+            <summary>If true places adorn above line.<br/>If false places adorn below line.</summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.Adornments.InterLineAdornments.InterLinePosition.ExtraLinesAbove">
+            <summary>Inserts a space the size of a single editor's line height above the adornment. </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.Adornments.InterLineAdornments.InterLinePosition.ExtraLinesBelow">
+            <summary>Inserts a space the size of a single editor's line height below the adornment. </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.Adornments.InterLineAdornments.InterLinePosition.IndentWidthInCharacters">
+            <summary>If not null - used for calculating adorn's indent from the editor's left edge using characters width. </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.Adornments.InterLineAdornments.InterLinePosition.IconDockingPosition">
+            <summary><see cref="T:JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentIconDockingPosition"/></summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.Adornments.InterLineAdornments.InterLinePosition.IconSizeScaleFactor">
+            <summary> 0.5 &lt;= IconSizeScaleFactor &lt;= 5 </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.DocumentMarkup.Adornments.IntraTextAdornments.Careting.IntraTextPosition">
+            <summary>
+            For an intra text adornment, adds its full position description (document offset before which the adorn is inserted + intra placement details between the chars).
+            </summary>
+            <param name="RealDocOffset"> Doc offset in some document version; the modification stamp of the document must be defined externally outside this object together with a set of adorns.</param>
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.Adornments.IntraTextAdornments.Careting.IntraTextPosition.#ctor(JetBrains.TextControl.DocOffset,JetBrains.TextControl.DocumentMarkup.Adornments.AdornmentPlacement)">
+            <summary>
+            For an intra text adornment, adds its full position description (document offset before which the adorn is inserted + intra placement details between the chars).
+            </summary>
+            <param name="RealDocOffset"> Doc offset in some document version; the modification stamp of the document must be defined externally outside this object together with a set of adorns.</param>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.Adornments.IntraTextAdornments.Careting.IntraTextPosition.RealDocOffset">
+            <summary> Doc offset in some document version; the modification stamp of the document must be defined externally outside this object together with a set of adorns.</summary>
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.Adornments.IntraTextAdornments.Careting.IntraTextPosition.System#IComparable{JetBrains#TextControl#DocumentMarkup#Adornments#IntraTextAdornments#Careting#IntraTextPosition}#CompareTo(JetBrains.TextControl.DocumentMarkup.Adornments.IntraTextAdornments.Careting.IntraTextPosition)">
+            <inheritdoc />
+        </member>
+        <member name="T:JetBrains.TextControl.DocumentMarkup.CustomizedHighlighterAttributes">
+            <summary>
+            Very similar to <see cref="T:JetBrains.TextControl.DocumentMarkup.HighlighterAttributes"/> but with all the user customizations in the current IDE taken into account.
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.DocumentMarkup.FCustomizeHighlighter">
+            Lightweight IHighlighterCustomization, with different impl on frontend and backend
+        </member>
+        <member name="T:JetBrains.TextControl.DocumentMarkup.HighlighterAttributeIdHash">
+            <summary>
+            Defines the identity hash function for attribute IDs which are passed thru transport.
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.DocumentMarkup.HighlighterLayer">
+            <summary>
+            Values for <see cref="P:JetBrains.TextControl.DocumentMarkup.RegisterHighlighterAttribute.Layer"/>, <see cref="P:JetBrains.TextControl.DocumentMarkup.HighlightingAttributeRegistry.HighlighterData.Layer"/>.
+            Defines priorities for highlighters against other highlighters, but in a tricky fashion.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.HighlighterTooltipKind.TextEditor">
+            <summary>
+            A tooltip on a highlighter over a text range in a text editor.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.HighlighterTooltipKind.ErrorStripe">
+            <summary>
+            A tooltip on an error stripe mark representing a highlighter.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.HighlighterTooltipKind.StatusBar">
+            <summary>
+            Text to be shown in the IDE status bar (if the highlighter is severe enough, and we decide to put its text to the Status Bar Messenger).
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.HighlighterTooltipKind.GutterMark">
+            <summary>
+            A tooltip over a glyph on a gutter margin of some sort, if a highlighter produces a gutter mark.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.HighlighterTooltipKind.QuickDoc">
+            <summary>
+            A tooltip dumped directly into a quickdoc
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.DocumentMarkup.HighlighterTooltipKind.GutterMarkBulbMenu">
+            <summary>
+            A bulb menu item text when gutter marks are included with the bulb menu
+            </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.IHighlighter.Attributes">
+            <summary>
+            Gets the highlighter attributes, as defined by the highlighter registration.
+            NO user customizations are reflected here. Use <see cref="!:IHighlighterCustomization"/> to take user customizations into account.
+            </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.IHighlighter.Layer">
+            <seealso cref="T:JetBrains.TextControl.DocumentMarkup.HighlighterLayer"/>
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.IHighlighter.TryGetTooltip(JetBrains.TextControl.DocumentMarkup.HighlighterTooltipKind)">
+            <summary>
+            Gets a tooltip for the highlighter.
+            <c>NULL</c> if a tooltip of this kind should not be shown.
+            </summary>
+            <param name="where">Where this tooltip is intended to be shown. Generally, a tooltip provider does not care and would just return a tooltip, ignoring this value.</param>
+            <returns>The tooltip rich text, or <c>NULL</c> if the tooltip of this kind does not need to be shown.</returns>
+            <seealso cref="!:IHighlighterTooltipProvider"/>
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.IHighlightingAttributeRegistry.IsNotRecyclable(System.String)">
+            <summary>
+            If NotRecyclable is true, highlighter will be removed if its range is intersected by changes range,
+            otherwise it will not be removed.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.IHighlightingAttributeRegistry.IsDefined(System.String)">
+            <summary>
+            Gets if this attr ID is known. Otherwise calling other methods would register an error.
+            Ideally, this should not exist, but now the highlighter attr IDs are hard coded and they sometimes violate zoning and presence of other package considerations.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.IHighlightingAttributeRegistry.GetAttributeIdByHashCode(JetBrains.Util.Maths.OWORD)">
+            <summary>
+            Looks up the original attribute ID by its hash made with <see cref="T:JetBrains.TextControl.DocumentMarkup.HighlighterAttributeIdHash"/>.
+            Throws if not found.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.IHighlightingAttributeRegistry.TryGetVsBaseClassificationType(System.String)">
+            <summary>
+            Gets <see cref="P:JetBrains.TextControl.DocumentMarkup.RegisterHighlighterAttribute.VsBaseClassificationType" /> if available.
+            </summary>
+            <param name="id">An ID. Silently skips if invalid.</param>
+            <returns></returns>
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.HighlightingAttributeRegistry.#ctor(JetBrains.Lifetimes.Lifetime,JetBrains.Application.Environment.ShellPartCatalogSet,JetBrains.Application.Components.IComponentContainer,JetBrains.Util.ILogger)">
+            Entry point for container
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.HighlightingAttributeRegistry.#ctor(JetBrains.Lifetimes.Lifetime,JetBrains.Application.Catalogs.IPartCatalogSet,JetBrains.Application.Components.IComponentContainer,JetBrains.Util.ILogger)">
+            extension point for overriding part catalog set. FullPartCatalogSet cannot be used everywhere because of RSRP-498541
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.HighlightingAttributeRegistry.JetBrains#TextControl#DocumentMarkup#IHighlightingAttributeRegistry#IsDefined(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TextControl.DocumentMarkup.HighlightingAttributeRegistry.GetAttributeIdByHashCode(JetBrains.Util.Maths.OWORD)">
+            <inheritdoc />
+        </member>
+        <member name="T:JetBrains.TextControl.DocumentMarkup.PaletteColorIndex">
+            <summary>
+            Used in high contrast mode only.
+            </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.RegisterHighlighterAttribute.Layer">
+            <seealso cref="T:JetBrains.TextControl.DocumentMarkup.HighlighterLayer"/>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.RegisterHighlighterAttribute.ForegroundColor">
+            <summary>
+            List of colors, delimited by ':'
+            In case of VS2003 first COLORINDEX color will be used
+            </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.RegisterHighlighterAttribute.BackgroundColor">
+            <summary>
+            List of colors, delimited by ':'
+            In case of VS2003 first COLORINDEX color will be used
+            </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.RegisterHighlighterAttribute.EffectColor">
+            <summary>
+            Obsolete. Use ForegroundColor, DarkForegroundColor, BackgroundColor and DarkBackgroundColor to define effect colors.
+            </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.RegisterHighlighterAttribute.ErrorStripeKind">
+            <summary>
+              <para>A kind of the Error Stripe Marker, if this highlighter is to be shown as a marker on the error stripe when applied to a document or a text control. This is defined by <see cref="P:JetBrains.TextControl.DocumentMarkup.RegisterHighlighterAttribute.EffectType" /> set to <see cref="!:"/> being non-<c>NULL</c>.</para>
+              <para>You may omit setting this value explicitly if the default (<see cref="F:JetBrains.TextControl.DocumentMarkup.ErrorStripeMarkerKind.Info" />) fits you, which is commonly OK.</para>
+              <para>For a non-error-stripe highlighter, this MUST not be set to any non-default value.</para>
+              <para>This value is considered on the original highlighter in the document or text control which has <see cref="P:JetBrains.TextControl.DocumentMarkup.RegisterHighlighterAttribute.ErrorStripeColorHighlighterAttributeId" /> non-<c>NULL</c> and NOT on the highlighter pointed to by <see cref="P:JetBrains.TextControl.DocumentMarkup.RegisterHighlighterAttribute.ErrorStripeColorHighlighterAttributeId" />.</para>
+            </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.RegisterHighlighterAttribute.ErrorStripeColorHighlighterAttributeId">
+            <summary>
+              <para>If this highlighter, when applied to a document or a text control, is to be shown on the error stripe, defines the ID of another <see cref="T:JetBrains.TextControl.DocumentMarkup.RegisterHighlighterAttribute" /> whose foreground color gives the error stripe marker color.</para>
+              <para><see cref="P:JetBrains.TextControl.DocumentMarkup.RegisterHighlighterAttribute.ErrorStripeKind" /> is considered on the highlighter which has a <see cref="P:JetBrains.TextControl.DocumentMarkup.RegisterHighlighterAttribute.ErrorStripeColorHighlighterAttributeId" />, but not on the highlighter pointed to by this ID.</para>
+            </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.RegisterHighlighterAttribute.RiderPresentableName">
+            <summary>
+            Optional string which will be shown in a corresponding Color Scheme Page.
+            Two slashes is a default IJ convention for nesting. e.g Foo//Bar, Foo//Baz will create two children under Foo
+            </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.RegisterHighlighterAttribute.NotRecyclable">
+            <summary>
+            Property for deciding whether to delete highlighter immediately if it intersects with modified range
+            or push it through highlighter-reusing-machinery (thingy which eliminates blinking).
+            If the highlighter is produced by a long-running stage consider setting this to false for better UX
+            ALL CARET DEPENDENT HIGHLIGHTERS MUST BE NOT RECYCLABLE!!! Crucial for Rider
+            </summary>
+            <remarks>
+            If NotRecyclable is true, highlighter will be removed if its range is intersected by changes range,
+            otherwise it will not be removed.
+            </remarks>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.RegisterHighlighterAttribute.TransmitUpdates">
+            <summary>
+            [Rider specific]
+            Property for deciding whether to send updates of this highlighter to the frontend.
+            </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.RegisterHighlighterAttribute.FallbackAttributeId">
+            <summary>
+            [Rider specific]
+            Name of the corresponding default attributeId in R# or TextAttributesKey in IDEA platform.
+            Used for keeping default IDEA's attributes hierarchy in settings for highlighter representation.
+            e.g. You can configure SOME_LANGUAGE_KEYWORD highlighter color for only one particular language,
+            or configure the colors for keywords in all languages by changing DEFAULT_KEYWORD.
+            e.g CPP_CLASS_FIELD_ATTRIBUTE falls back to FIELD_IDENTIFIER_ATTRIBUTE
+            e.g AnalysisHighlightingAttributeIds.ERROR falls back to CodeInsightColors.ERRORS_ATTRIBUTES in IDEA
+            </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.RegisterHighlighterAttribute.RiderReplaceWith">
+            <summary>
+            [Rider specific]
+            Unique id which will be used in Rider instead of one specified in <see cref="P:JetBrains.TextControl.DocumentMarkup.RegisterHighlighterAttribute.Id" />
+            Making impossible to distinguish these highlighters.
+            It's necessary for keep default IDEA's behavior (e.g. IDEA has the same Ids for errors and warnings across all languages).
+            </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.RegisterHighlighterAttribute.VsGenerateClassificationDefinition">
+            <summary>
+            [VS specific]
+            Generate VS ClassificationTypeDefinition and ClassificationFormatDefinition for this highlighter.
+            </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.RegisterHighlighterAttribute.VsPresentableName">
+            <summary>
+            [VS specific]
+            Used for ClassificationFormatDefinition generation.
+            </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.RegisterHighlighterAttribute.VsBaseClassificationType">
+            <summary>
+            [VS specific]
+            A predefined VS classification type to be used as a base type for the classification definition of this highlighter.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:JetBrains.TextControl.DocumentMarkup.RegisterHighlighterAttribute.VsUseInheritedColors" -->
+        <member name="P:JetBrains.TextControl.DocumentMarkup.RegisterHighlighterAttribute.VsCustomOrderAfter">
+            <summary>
+            [VS specific]
+            Allows to define custom Order(After="..") attribute for generated VS classification format definitions.
+            </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.RegisterHighlighterAttribute.VsCustomOrderBefore">
+            <summary>
+            [VS specific]
+            Allows to define custom Order(Before="..") attribute for generated VS classification format definitions.
+            </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.RegisterHighlighterAttribute.GroupId">
+            <summary>
+            [Rider specific]
+            A unique identifier corresponding to a group the highlighter belongs to
+            <see cref="!:RegisterHighlighterGroupAttribute.GroupId"/>
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.DocumentMarkup.VisualStudio.VsCodeAnalysisClassificationTypeNames">
+            <summary>
+            See: Microsoft.CodeAnalysis.Classification.ClassificationTypeNames
+            Assembly: Microsoft.CodeAnalysis.Workspaces, Version=4.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+            C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\VBCSharp\LanguageServices\Core\Microsoft.CodeAnalysis.Workspaces.dll
+            </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.DocumentMarkup.VisualStudio.VsCodeAnalysisClassificationTypeNames.AdditiveTypeNames">
+            <summary>
+            Additive classifications types supply additional context to other classifications.
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.DocumentMarkup.VisualStudio.VsPredefinedClassificationType">
+            <summary>
+            Predefined VS classification types.
+            Type: Microsoft.VisualStudio.Language.StandardClassification.PredefinedClassificationTypeNames
+            Assembly: Microsoft.VisualStudio.Language.StandardClassification, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.DocumentMarkup.VisualStudio.VsWellKnownHighlighterAttributeIds">
+            <summary>
+            VS built-in highlighting IDs, or to be precise names of well-known IClassificationTypes in Visual Studio.
+            </summary>
+            <remarks>
+            Use DumpVsTextViewClassificationTagsAction internal action to know the other ones.
+            </remarks> 
+        </member>
+        <member name="T:JetBrains.TextControl.ErrorStripe.ErrorStripeIndicatorTransport">
+            <summary>
+            Error stripe might have one or more indicators above the marker bar. Or none.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.ErrorStripe.ErrorStripeIndicatorTransport.#ctor(System.Double)">
+            <param name="priority"><inheritdoc cref="F:JetBrains.TextControl.ErrorStripe.ErrorStripeIndicatorTransport.Priority" /></param>
+        </member>
+        <member name="F:JetBrains.TextControl.ErrorStripe.ErrorStripeIndicatorTransport.BwdOnMouseLeftButtonDownOrClick">
+            <summary>
+            Mouse down on front, asked backward to do something (like show drop down menu on mousedown), or tell it needs a click.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.ErrorStripe.ErrorStripeIndicatorTransport.BwdOnMouseRightButtonDownOrClick">
+            <summary>
+            Mouse down on front, asked backward to do something (like show drop down menu on mousedown), or tell it needs a click.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.ErrorStripe.ErrorStripeIndicatorTransport.FwdTmpTryGetPopupWindowContext">
+            <summary>
+            // TODO: when we think up a transport for popup window contexts, this could just originate on backend, and be attached to the context correctly on frontend
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.ErrorStripe.ErrorStripeIndicatorTransport.Priority">
+            <summary>
+            Defines ordering for indicators on the error stripe view, in ascending order.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.ErrorStripe.ErrorStripeIndicatorTransport.PropertyBag">
+            <summary>
+            Bag for custom properties.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.ErrorStripe.ErrorStripeIndicatorTransport.Read(JetBrains.Rd.SerializationCtx,JetBrains.Serialization.UnsafeReader)">
+            <summary>
+            Used by rd reflection serializers.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.ErrorStripe.ErrorStripeIndicatorTransport.Write(JetBrains.Rd.SerializationCtx,JetBrains.Serialization.UnsafeWriter,JetBrains.TextControl.ErrorStripe.ErrorStripeIndicatorTransport)">
+            <summary>
+            Used by rd reflection serializers.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.ErrorStripe.ErrorStripeIndicatorTransport.OnBindNested(JetBrains.Lifetimes.Lifetime)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TextControl.ErrorStripe.ErrorStripeIndicatorTransport.OnPreBindNested(JetBrains.Lifetimes.Lifetime)">
+            <inheritdoc />
+        </member>
+        <member name="T:JetBrains.TextControl.ErrorStripe.ErrorStripeTransport">
+            <seealso cref="T:JetBrains.TextControl.Transport.TransportTextControl" />
+        </member>
+        <member name="F:JetBrains.TextControl.ErrorStripe.ErrorStripeTransport.HasSkippedHighlighters">
+            <seealso cref="!:IDocumentMarkup.HasSkippedHighlightings" />
+        </member>
+        <member name="F:JetBrains.TextControl.ErrorStripe.ErrorStripeTransport.LayoutSetting">
+            <summary>
+            <see cref="F:JetBrains.TextControl.ErrorStripe.ErrorStripeSettings.ErrorStripeLayout" /> for this error stripe.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.ErrorStripe.ErrorStripeTransport.WidthSettings">
+            <summary>
+            <see cref="F:JetBrains.TextControl.ErrorStripe.ErrorStripeSettings.ErrorStripeWidth" /> for this error stripe.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.ErrorStripe.ErrorStripeTransport.ErrorStripeMarker.ErrorStripeKind">
+            <summary>
+            Kind of this marker, might be <see cref="F:JetBrains.TextControl.DocumentMarkup.ErrorStripeMarkerKind.Info" /> if this is a highligh-usages highlighter (?).
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.ErrorStripe.ErrorStripeTransport.ErrorStripeMarker.HighlighterAttributesPrimaryId">
+            <summary>
+            HighlighterAttribute ID for the source of the primary color.
+            As we only list existing markers (not empty marker slots), this must never be NULL or empty.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.ErrorStripe.ErrorStripeTransport.ErrorStripeMarker.HighlighterAttributesSecondaryId">
+            <summary>
+            Secondary color, if we show two colors per marker (e.g. error and usages).
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.ErrorStripe.ErrorStripeTransport.ErrorStripeMarker.OriginalSlotFraction">
+            <summary>
+            The slot for which this marker has been allocated, as a fraction in the set of all slots (slot index divided by total number of slots). Keeping the fraction allows to stretch the markers more or less realistically when marker bar changes its height and before new markers have been calculated.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.ErrorStripe.ErrorStripeTransport.ErrorStripeMarker.TextRange">
+            <summary>
+            The doc range which corresponds to the slot for which the marker were created, at the moment the marker were created.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.ErrorStripe.ErrorStripeTransport.ErrorStripeMarker.Equals(JetBrains.TextControl.ErrorStripe.ErrorStripeTransport.ErrorStripeMarker)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TextControl.ErrorStripe.ErrorStripeTransport.ErrorStripeMarker.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TextControl.ErrorStripe.ErrorStripeTransport.ErrorStripeMarker.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TextControl.ErrorStripe.ErrorStripeTransport.ErrorStripeMarker.ToString">
+            <inheritdoc />
+        </member>
+        <member name="F:JetBrains.TextControl.ErrorStripe.ErrorStripeTransport.MarkerBarTransport.BwdGetTooltip">
+            <summary>
+            Asks for a tooltip on the marker which were created for a slot on this text range.
+            NOTE that if the marker bar view is nontransparent, it's OK to fire this event for an empty slot (or for a specific document position even).
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.ErrorStripe.ErrorStripeTransport.MarkerBarTransport.BwdOnMouseDown">
+            <summary>
+            Asks for a click reaction on the marker which were created for a slot on this text range.
+            NOTE that if the marker bar view is nontransparent, it's OK to fire this event for an empty slot (or for a specific document position even).
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.ErrorStripe.ErrorStripeTransport.MarkerBarTransport.BwdSlots">
+            <summary>
+            Error stripe marker slots layout. Gives a set of document offsets which split document into slices which contribute into corresponding markers. Even if VS operates on lines (when in non-word-wrap mode), this still holds document offsets, even though rounded to line boundaries.
+            Each int is the end of the slot, non-inclusively. The first slot starts at <c>0</c> (inclusively), the next slot starts (inclusively) where the prev one ends (end non-inclusively).
+            Populated by frontend based on the text view buffer layout against its scrollbar, and scrollbar height.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.ErrorStripe.ErrorStripeTransport.MarkerBarTransport.FwdMarkers">
+            <summary>
+            Backend analyzes highlighters in the document markup and sends which markers should be displayed on the error stripe, based on <see cref="F:JetBrains.TextControl.ErrorStripe.ErrorStripeTransport.MarkerBarTransport.BwdSlots" /> layout of the document.
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.ErrorStripe.ErrorStripeTransport.SlotsAllocation">
+            <summary>
+            Error stripe slots correspond either to the raw offset of the character (e.g. in VS Word Wrap mode), or to line numbers (in non-wrap mode, so all stuff from one line gets into the same slot).
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.IDE.ZoneMarker">
+            Why IDE in Text Control solution?
+            Temporary measure until we have proper separation for protocol entities in IDE project to pass zone validation
+        </member>
+        <member name="P:JetBrains.TextControl.ITextControlOptions.ReadOnly">
+            <summary>
+            Get or set the readonly state of the text control. The implementation and side effects depend on text control kind (see remarks section).
+            </summary>
+            <remarks>
+            Standalone SyntaxEditor text controls. Readonly is a property of a document. So if the document is open in several text contols or views, they will all be affected.
+            Visual Studio. Readonly is a property of a text view, so if you have two views in the same tab (splitted views), one of them could be readonly while another one is editable.
+            </remarks>
+        </member>
+        <member name="P:JetBrains.TextControl.ITextControlOptions.TabSize">
+            <summary>
+            Get or set the tab size used by the text control.
+            </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.ITextControlOptions.VerticalScrollbarMode">
+            <summary>
+            This option exists since VS12.
+            </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.ITextControlOptions.FileHealthIndicator">
+            <summary>
+            This option exists since VS16.
+            </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.ITextControlOptions.EditingContextMargin">
+            <summary>
+            This option exists since VS16.
+            </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.ITextControlOptions.ShowErrorsOnVerticalScrollBar">
+            <summary>
+            (DK) A temporary property, duplicates VerticalScrollbarMode. TODO redesign in 192.
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.ITextControlsProtocolZone">
+            Common zone for serializable stuff for text controls support
+        </member>
+        <member name="F:JetBrains.TextControl.SelectionEnd.Active">
+            <summary>
+              <para>The active end of the selection (the one which moves when you do Shift+Arrow; where the caret is).</para>
+              <para>When selection is represented by a range with a “start” and an “end”, this is the “end”.</para>
+              <para>If asked and in doubt, use this one (that's why it's the default value for the type).</para>
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.SelectionEnd.Anchor">
+            <summary>
+              <para>The anchor end of the selection (the one which remains in place when you do Shift+Arrow; the selection is drawn from the anchor to the current location of the caret).</para>
+              <para>When selection is represented by a range with a “start” and an “end”, this is the “start”.</para>
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.TextControlAutomation">
+            <summary>
+              <para>A view model which allows placing a <see cref="!:ITextControl">text control</see> that you have created in the backend into UI.</para>
+              <para>How to use:</para>
+              <para>(1) Basic scenario is when you need to just define text and coloring, which can be fully provided thru an <see cref="T:JetBrains.DocumentModel.IDocument" /> that you get by calling <see cref="M:JetBrains.DocumentModel.IIdeInMemoryDocumentFactory.CreateIdeDocumentFromText(JetBrains.Lifetimes.Lifetime,System.String,System.String,System.Func{JetBrains.DocumentModel.IDocument,JetBrains.Util.ModificationCookie})" />. Then create a <see cref="T:JetBrains.TextControl.TextControlAutomation" /> with <see cref="!:TextControlAutomationBackendHelpers.FromDocument" /> and use as any other view model to have a view created for it.</para>
+              <para>(2) If you need <see cref="!:ITextControl" />-specific features with your editor, such as caret operations, do the same and then use text controls in the <see cref="F:JetBrains.TextControl.TextControlAutomation.ConnectedTextControls" /> live collection. They will appear as soon as there's one or more views running.</para>
+              <para>(3) If you definitely need a single <see cref="!:ITextControl" /> instance, or must be able to use it even before the views are created, then create an <see cref="!:ITextControl" /> with <see cref="!:ITextControlManager.CreateTextControl" />, fill in the <see cref="T:JetBrains.TextControl.TextControlAutomation" /> object with its <see cref="!:ITextControl.Id" />, and use in the view model. A proper text control view will be created automatically when this viewmodel is presented.</para>
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.TextControlAutomation.ConnectedTextControls">
+            <summary>
+              <para>When a text control view is created on front end and a text control gets connected to it, either an existing or a new one, it gets registered in this collection for the lifetime of the view. See docs on <see cref="F:JetBrains.TextControl.TextControlAutomation.UserCreatedTextControl" /> for details.</para>
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.TextControlAutomation.DocumentId">
+            <summary>
+            The document for which an editor view (one ore more text controls) will be created.
+            You should lock an <see cref="T:JetBrains.DocumentModel.IDocument" /> to have this stable ID for at least the lifetime of the view model.
+            If you supply a <see cref="F:JetBrains.TextControl.TextControlAutomation.UserCreatedTextControl">user-created text control</see>, this must be its <see cref="P:JetBrains.TextControl.RunningTextControlId.DocumentId">document ID</see>.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.TextControlAutomation.HostedIn">
+            <summary>
+            The type of the window where the text control is hosted.
+            </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.TextControlAutomation.New">
+            <summary>
+            Accessor for creator factory methods.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.TextControlAutomation.Preferences">
+            <summary>
+            Overrides for text control preferences.
+            Baseline values (those left NULL) are taken either from <see cref="M:JetBrains.TextControl.ITextControlSchemeManager.GetDefaultPreferences" /> or from the underlying IDE defaults.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.TextControlAutomation.UserCreatedTextControl">
+            <summary>
+            <para>Optional. If you already have created a backend text control, pass it here, and the first text control view created on front end will be connected to it. Secondary views creation will be disabled in this case (so no splitter functionality). <see cref="F:JetBrains.TextControl.TextControlAutomation.ConnectedTextControls" /> will have this as the single entry for the lifetime when the view is actually created and connected.</para>
+            <para>If NULL, then front end will create text controls for every text view (there might be more than one since user is allowed to split the original text view, and each split part is a text view which needs a text control), and advertise in <see cref="F:JetBrains.TextControl.TextControlAutomation.ConnectedTextControls" /> collection.</para>
+            <para>How to choose whether to supply:</para>
+            <para>• If your feature does not care about <see cref="!:ITextControl" /> API at all (supplies text and coloring via <see cref="T:JetBrains.DocumentModel.IDocument" />), then create this object with just a <see cref="F:JetBrains.TextControl.TextControlAutomation.DocumentId" /> (e.g. with <see cref="!:TextControlAutomationBackendHelpers.FromDocument" />).</para>
+            <para>• If your feature wants to interact with the resulting <see cref="!:ITextControl">text controls</see>, use the <see cref="F:JetBrains.TextControl.TextControlAutomation.ConnectedTextControls" /> collection to bind to each text control.</para>
+            // TODO: example
+            <para>• If your feature needs strictly one single text control, or needs it available before spawning the view, create it beforehand with <see cref="!:ITextControlManager.CreateTextControl" /> overloads and supply</para>
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.TextControlAutomationFlags.WantsTabNavigation">
+            <summary>
+            Do not translate Tab and Shift+Tab so that parent form could use them to navigate between controls.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.TextControlAutomationFlags.AllowMultipleViewsWithUserDefinedTextControl">
+            <summary>
+            Allows creation of secondary views, such as by splitting the main view into parts.
+            All of the views will be in <see cref="F:JetBrains.TextControl.TextControlAutomation.ConnectedTextControls" />.
+            Normally, the behavior is as follows: if <see cref="F:JetBrains.TextControl.TextControlAutomation.UserCreatedTextControl" /> is NULL, secondary views can be created; if it's defined, then it's supposed to be connected to the only view. This flag overrides the behavior in the latter case. This isn't supposed to be needed in normal features.
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.TextControlColumn">
+            <summary>
+            Type disambig for <see cref="T:JetBrains.Util.dataStructures.TypedIntrinsics.Int32`1"/>.
+            Represents zero-based column indices in the text control view.
+            This does not correspond directly to the document lines and columns because of the collapsed regions and other view transformations.
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.TextControlHostedIn">
+            <summary>
+            If the text control is hosted in a window, it requires special processing for Alt+F4, Esc, etc.
+            Message filtering method depends on the window type.
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.TextControlLine">
+            <summary>
+            Type disambig for <see cref="T:JetBrains.Util.dataStructures.TypedIntrinsics.Int32`1"/>.
+            Represents zero-based line indices in the text control view.
+            This does not correspond directly to the document lines and columns because of the collapsed regions and other view transformations.
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.TextControlLineColumn">
+            <summary>
+            Represents the document position in terms of Line and Column indices.
+            Note that this has nothing to do with screen pixels, which cannot be operated on backend interfaces like <see cref="!:ITextControl"/>.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.TextControlLineColumn.GetStartOfRow">
+            <summary>
+            Gets a new visual position located at the same row as the original one, but in the first column.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.TextControlLineColumn.OffsetHorizontally(JetBrains.Util.dataStructures.TypedIntrinsics.Int32{JetBrains.TextControl.TextControlColumn})">
+            <summary>
+            Returns a new position with the same row and an offset column.
+            Does not change the current object.
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.TextControlLineColumnRange">
+            <summary>
+            A range between two <see cref="T:JetBrains.TextControl.TextControlLineColumn"/>s.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.TextControlLineColumnRange.ToNormalized">
+            <summary>
+            Normalizes the range so that its start position went before the end position.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.TextControlLineColumnRange.Equals(System.Object)">
+            <summary>
+            Indicates whether this instance and a specified object are equal.
+            </summary>
+            <returns>
+            true if <paramref name="obj"/> and this instance are the same type and represent the same value; otherwise, false.
+            </returns>
+            <param name="obj">Another object to compare to. </param><filterpriority>2</filterpriority>
+        </member>
+        <member name="M:JetBrains.TextControl.TextControlLineColumnRange.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>
+            A 32-bit signed integer that is the hash code for this instance.
+            </returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:JetBrains.TextControl.TextControlLineColumnRange.Equals(JetBrains.TextControl.TextControlLineColumnRange)">
+            <summary>
+            Indicates whether the current object is equal to another object of the same type.
+            </summary>
+            <returns>
+            true if the current object is equal to the <paramref name="other"/> parameter; otherwise, false.
+            </returns>
+            <param name="other">An object to compare with this object.</param>
+        </member>
+        <member name="T:JetBrains.TextControl.TextControlOptionsBinding">
+            <summary>
+            Sourcing options values from creation-time stuff.
+            Should basically be done by all text controls upon creation.
+            Apart from that, should be bound to the actual view. And called from user code to change either options.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.TextControlOverridableOption`1.#ctor(JetBrains.DataFlow.PropertyId{`0},`0,System.Nullable{`0})">
+            <inheritdoc />
+        </member>
+        <member name="P:JetBrains.TextControl.TextControlOverridableOption`1.Effective">
+            <summary>
+            Read-only. Has the effective value of the <see cref="F:JetBrains.TextControl.TextControlOverridableOption`1.Original" />+<see cref="F:JetBrains.TextControl.TextControlOverridableOption`1.Override" />.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.TextControlOverridableOption`1.ToString">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TextControl.TextControlOverridableOption`1.OnBindNested(JetBrains.Lifetimes.Lifetime)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TextControl.TextControlOverridableOption`1.OnPreBindNested(JetBrains.Lifetimes.Lifetime)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TextControl.TextControlPreferences.OverridePreferencesLive(JetBrains.Lifetimes.Lifetime,JetBrains.TextControl.TextControlPreferences,JetBrains.TextControl.TextControlPreferences)">
+            <summary>
+            Takes two sets of nullable preferences, lower-priority and higher-priority. Higher-priority takes precedence if non-NULL for a certain option, otherwise, lower-priority.
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.TextControlScrollType">
+            <summary>
+            Applies when the text control is scrolled to reveal a certain <see cref="!:ITextControlPos">position</see>.
+            Defines how the desired position will be accomodared inside the viewport area.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.TextControlScrollType.DontCare">
+            <summary>
+            Scrolls so that the position is visible anywhere in the viewport.
+            There're no other guarantees or heuristics applied.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.TextControlScrollType.CenterInView">
+            <summary>
+            Scrolls so that the position were at about the center of the viewport.
+            The view is scrolled even if the position is already visible.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.TextControlScrollType.TopOfView">
+            <summary>
+            Scrolls so that the position were at about the top of the viewport.
+            The view is scrolled even if the position is already visible.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.TextControlScrollType.UpperHalf">
+            <summary>
+            Scrolls so that the position were in the upper half of the viewport.
+            The view is scrolled even if the position is already visible.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.TextControlScrollType.LowerHalf">
+            <summary>
+            Scrolls so that the position were in the lower half of the viewport.
+            The view is scrolled even if the position is already visible.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.TextControlScrollType.Smart">
+            <summary>
+            <para>Smart scrolling mode. Should be used in most cases.</para>
+            <para>Does minimal scrolling (or none at all) required to place the position into the viewport not too close to its edges.</para>
+            </summary>
+            <remarks>
+            <para>If the position is already visible in the view and is not too close to the edges, no scrolling is performed. This fits for navigating adjacent occurrences without the view jumping.</para>
+            <para>Otherwise, places the position above the viewport center if it were above the viewport, and vice versa.</para>
+            </remarks>
+        </member>
+        <member name="F:JetBrains.TextControl.TextControlScrollType.SmartDirectionalUp">
+            <summary>
+            A flavor of <see cref="F:JetBrains.TextControl.TextControlScrollType.Smart"/> for special cases. Relaxes the “not too close to the edge” constraint: would not scroll against the direction if the target is at least visible.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.TextControlScrollType.SmartDirectionalDown">
+            <summary>
+            A flavor of <see cref="F:JetBrains.TextControl.TextControlScrollType.Smart"/> for special cases. Relaxes the “not too close to the edge” constraint: would not scroll against the direction if the target is at least visible.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.TextControlSelectionHelper.GetAnchorToActiveSpanForContinuousSelection(System.Collections.Generic.IList{JetBrains.TextControl.Transport.DocOffsetAndVirtualRange})">
+            <summary>
+            In case the text control does not support applying continuous selection, calculates the minimum spanning range and arranges its ends so that the first point is the anchor and the second is the active one. The anchor and active are determined from the given ranges in the same way as on <see cref="!:ITextControlSelection.Ranges" />.
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.TextControlsManagement.TextControlTransportRoot">
+            <summary>
+            The root for all protocolable stuff about text control.
+            This is NOT a component, this is a model. To import, take from either <see cref="T:JetBrains.TextControl.TextControlsManagement.TextControlTransportRoot.OnBackend" /> or <see cref="T:JetBrains.TextControl.TextControlsManagement.TextControlTransportRoot.OnFrontend" /> depending on which side you think you are at.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.TextControlsManagement.TextControlTransportRoot.PropertyBag">
+            <summary>
+            Bag for custom properties. This is the way to extend basic text control transport root with transport classes for additional services around the text control.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.TextControlsManagement.TextControlTransportRoot.TransportTextControls">
+            <summary>
+            Gets the list of transport text controls.
+            These entities come from either side of the protocol.
+            For all of them, backend services are created on back side, including putting an <see cref="!:ITextControl" /> instance into <see cref="!:TextControlManager.TextControls" /> automatically.
+            On front end, it depends:
+            * If frontend-originated, then some visual representation must already exist (e.g. IDE opened a tab).
+            * If backend-originated, then it's intended either for:
+            * * A user control inserted into UI — make an automation object then of the Text Control ID and place it into your view model, either a transport view model (like BeControls) from the back side, or a regular view model <see cref="T:JetBrains.TextControl.TextControlAutomation" /> on the front side. A corresponding text control view would be spawned.
+            * * A mock text control (<see cref="!:UselessTextControl" />) — call <see cref="!:UselessTextControl.Create(JetBrains.Lifetimes.Lifetime,JetBrains.TextControl.RunningTextControlId,JetBrains.Application.Components.IComponentContainer,JetBrains.Util.ILogger)" /> to mock up a front part manually.
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.TextControlsManagement.TextControlTransportRoot.OnBackend">
+            <summary>
+            Use to access the Text Controls Transport Root when you're running on the back end.
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.TextControlsManagement.TextControlTransportRoot.OnFrontend">
+            <summary>
+            Use to access the Text Controls Transport Root when you're running on the front end.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.Transport.DocOffsetAndVirtualRange.ToString">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TextControl.Transport.DocOffsetAndVirtualRangeEx.ToNonVirtualRange(JetBrains.TextControl.Transport.DocOffsetAndVirtualRange)">
+            <summary>Ignores any virtual space on the range ends.</summary>
+        </member>
+        <member name="M:JetBrains.TextControl.Transport.DocOffsetAndVirtualRangeEx.ToNonVirtualRangeNormalized(JetBrains.TextControl.Transport.DocOffsetAndVirtualRange)">
+            <summary>Ignores any virtual space on the range ends.</summary>
+        </member>
+        <member name="T:JetBrains.TextControl.Transport.RunningTransportTextControls">
+            <summary>
+            TMP cross-process root for text controls.
+            Probably to be joined with the <see cref="!:TextControlsManagement.RunningTextControls" />.
+            </summary>
+        </member>
+        <member name="M:JetBrains.TextControl.Transport.ScrollingRequest.Equals(JetBrains.TextControl.Transport.ScrollingRequest)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TextControl.Transport.ScrollingRequest.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.TextControl.Transport.ScrollingRequest.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="T:JetBrains.TextControl.Transport.TextControlActiveState">
+            <summary>
+            Whether the text control is visible on screen or is active.
+            These are not exactly flags because they cannot be freely combined, later states imply all previous ones.
+            Values can be arithmetically compared.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.Transport.TextControlActiveState.Invisible">
+            <summary>
+            The text control is not visible on screen (and is not active).
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.Transport.TextControlActiveState.Visible">
+            <summary>
+            The text control is currently visible on screen. It does not have keyboard focus, and its window frame is not active.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.Transport.TextControlActiveState.CurrentFrame">
+            <summary>
+            The text control is currently visible on screen (if you are in this state, <see cref="F:JetBrains.TextControl.Transport.TextControlActiveState.Visible" /> is kind of implied). It does not have keyboard focus at the moment, but had it recently, and no other window frame has been activated since.
+            This happens when you open a popup or a dialog over the text control: the text control itself loses focus, but no other window frame ("considerable piece" of IDE UI, like a tool window or a non-text-control editor tab) has been activated. Many features which are active while there is an active text control might consider this state to avoid deactivating/reactivating on every alt+enter popup, menu or refactoring shown.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.Transport.TextControlActiveState.Focused">
+            <summary>
+            The text control is currently visible on screen and has keyboard focus (if you are in this state, <see cref="F:JetBrains.TextControl.Transport.TextControlActiveState.Visible" /> and <see cref="F:JetBrains.TextControl.Transport.TextControlActiveState.CurrentFrame" /> are kind of implied).
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.Transport.TextControlOptions.DefaultTabIndentSize">
+            <summary>
+            Provide some sane default value for stuff which is not valid to be left zero.
+            </summary>
+        </member>
+        <member name="P:JetBrains.TextControl.Transport.TextControlOptions.JetBrains#TextControl#ITextControlOptions#FileHealthIndicator">
+            <inheritdoc />
+        </member>
+        <member name="P:JetBrains.TextControl.Transport.TextControlOptions.JetBrains#TextControl#ITextControlOptions#EditingContextMargin">
+            <inheritdoc />
+        </member>
+        <member name="P:JetBrains.TextControl.Transport.TextControlOptions.JetBrains#TextControl#ITextControlOptions#HighlightCurrentLine">
+            <inheritdoc />
+        </member>
+        <member name="P:JetBrains.TextControl.Transport.TextControlOptions.JetBrains#TextControl#ITextControlOptions#HorizontalScrollbar">
+            <inheritdoc />
+        </member>
+        <member name="P:JetBrains.TextControl.Transport.TextControlOptions.JetBrains#TextControl#ITextControlOptions#IndentSize">
+            <inheritdoc />
+        </member>
+        <member name="P:JetBrains.TextControl.Transport.TextControlOptions.JetBrains#TextControl#ITextControlOptions#IsVirtualSpaceEnabled">
+            <inheritdoc />
+        </member>
+        <member name="P:JetBrains.TextControl.Transport.TextControlOptions.JetBrains#TextControl#ITextControlOptions#LineNumbers">
+            <inheritdoc />
+        </member>
+        <member name="P:JetBrains.TextControl.Transport.TextControlOptions.JetBrains#TextControl#ITextControlOptions#ReadOnly">
+            <inheritdoc />
+        </member>
+        <member name="P:JetBrains.TextControl.Transport.TextControlOptions.JetBrains#TextControl#ITextControlOptions#ShowErrorsOnVerticalScrollBar">
+            <inheritdoc />
+        </member>
+        <member name="P:JetBrains.TextControl.Transport.TextControlOptions.JetBrains#TextControl#ITextControlOptions#TabSize">
+            <inheritdoc />
+        </member>
+        <member name="P:JetBrains.TextControl.Transport.TextControlOptions.JetBrains#TextControl#ITextControlOptions#UseTabs">
+            <inheritdoc />
+        </member>
+        <member name="P:JetBrains.TextControl.Transport.TextControlOptions.JetBrains#TextControl#ITextControlOptions#VerticalScrollbar">
+            <inheritdoc />
+        </member>
+        <member name="P:JetBrains.TextControl.Transport.TextControlOptions.JetBrains#TextControl#ITextControlOptions#VerticalScrollbarMode">
+            <inheritdoc />
+        </member>
+        <member name="P:JetBrains.TextControl.Transport.TextControlOptions.JetBrains#TextControl#ITextControlOptions#WhiteSpaces">
+            <inheritdoc />
+        </member>
+        <member name="P:JetBrains.TextControl.Transport.TextControlOptions.JetBrains#TextControl#ITextControlOptions#WordWrap">
+            <inheritdoc />
+        </member>
+        <member name="P:JetBrains.TextControl.Transport.TextControlOptions.JetBrains#TextControl#ITextControlOptions#ZoomControl">
+            <inheritdoc />
+        </member>
+        <member name="P:JetBrains.TextControl.Transport.TextControlOptions.JetBrains#TextControl#ITextControlOptions#ZoomLevel">
+            <inheritdoc />
+        </member>
+        <member name="P:JetBrains.TextControl.Transport.TextControlOptions.JetBrains#TextControl#ITextControlOptions#HideAllMargins">
+            <inheritdoc />
+        </member>
+        <member name="P:JetBrains.TextControl.Transport.TextControlOptions.JetBrains#TextControl#ITextControlOptions#HideContextMenu">
+            <inheritdoc />
+        </member>
+        <member name="T:JetBrains.TextControl.Transport.TransportTextControl">
+            <summary>
+            This is the core implementation of this generation of text controls, friendly with cross-process back/front separation.
+            This object is serializable into the Rd Protocol and is supposed to live on the protocol transport.
+            On back side, it's wrapper with the classic <see cref="T:System.Web.UI.ITextControl" /> interface for use in feature code. Normally, features only work with that interface.
+            On frontends, there's supposed to be little or no code which works with our text control implementations but for bindings to the actual media of the host.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.Transport.TransportTextControl.TmpAllSyncCallsTransactionReuseKey">
+            <summary>
+            We wouldn't need this after we get rid of the TMP* sync calls.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.Transport.TransportTextControl.BwdActiveState">
+            <summary>
+            Focus, visibility, and currentframedness states combined.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.Transport.TransportTextControl.BwdExecuteActionHandlers">
+            <summary>
+            Sends backwards a request to execute the action handlers chain for the action identified by its ActionID.
+            This is initiated either by user triggering a command in the text editor, or by emulating it with an <see cref="F:JetBrains.TextControl.Transport.TransportTextControl.FwdEmulateAction" /> call.
+            If neither handler cancels execution, the last-chance handler would send forwards the <see cref="F:JetBrains.TextControl.Transport.TransportTextControl.FwdExecuteFinalActionHandler" /> signal so that the text control did the actual action execution in its implementation.
+            </summary>
+            <seealso cref="F:JetBrains.TextControl.Transport.TransportTextControl.FwdExecuteFinalActionHandler" />
+            <seealso cref="F:JetBrains.TextControl.Transport.TransportTextControl.BwdExecuteTypingHandlers" />
+            <seealso cref="F:JetBrains.TextControl.Transport.TransportTextControl.FwdEmulateAction" />
+        </member>
+        <member name="F:JetBrains.TextControl.Transport.TransportTextControl.BwdExecuteTypingHandlers">
+            <summary>
+            Sends backwards a request to execute the typing handlers chain for the given char.
+            This is initiated either by user typing in the text editor, or by emulating it with an <see cref="F:JetBrains.TextControl.Transport.TransportTextControl.FwdEmulateTypingSync" />/<see cref="F:JetBrains.TextControl.Transport.TransportTextControl.FwdEmulateTypingRequestResponse" /> call.
+            If neither handler cancels execution, the last-chance handler would send forwards the <see cref="F:JetBrains.TextControl.Transport.TransportTextControl.FwdExecuteFinalTypingHandler" /> signal so that the text control did the actual typing.
+            </summary>
+            <seealso cref="F:JetBrains.TextControl.Transport.TransportTextControl.FwdExecuteFinalTypingHandler" />
+            <seealso cref="F:JetBrains.TextControl.Transport.TransportTextControl.BwdExecuteActionHandlers" />
+            <seealso cref="F:JetBrains.TextControl.Transport.TransportTextControl.FwdEmulateTypingSync" />
+            <seealso cref="F:JetBrains.TextControl.Transport.TransportTextControl.FwdEmulateTypingRequestResponse" />
+        </member>
+        <member name="F:JetBrains.TextControl.Transport.TransportTextControl.FwdBatchUpdateRequests">
+            <summary>
+            Records batch update requests, the key is just unique, and the value is the batch update request description.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.Transport.TransportTextControl.FwdExecuteFinalActionHandler">
+            <summary>
+            After running the action handlers chain in response to <see cref="F:JetBrains.TextControl.Transport.TransportTextControl.BwdExecuteActionHandlers" /> and reaching the end, sends forward this signal for the editor implementation to do its own implementation execution. The frontend is supposed to know the active action execution session, so there's no data.
+            This only could be sent in response to <see cref="F:JetBrains.TextControl.Transport.TransportTextControl.BwdExecuteActionHandlers" />.
+            </summary>
+            <seealso cref="F:JetBrains.TextControl.Transport.TransportTextControl.BwdExecuteActionHandlers" />
+            <seealso cref="F:JetBrains.TextControl.Transport.TransportTextControl.FwdExecuteFinalTypingHandler" />
+        </member>
+        <member name="F:JetBrains.TextControl.Transport.TransportTextControl.FwdExecuteFinalTypingHandler">
+            <summary>
+            After running the typing handlers chain in response to <see cref="F:JetBrains.TextControl.Transport.TransportTextControl.BwdExecuteTypingHandlers" /> and reaching the end, sends forward this signal for the editor implementation to do the actual typing. The frontend is supposed to know the active typing session, so there's no data.
+            This only could be sent in response to <see cref="F:JetBrains.TextControl.Transport.TransportTextControl.BwdExecuteTypingHandlers" />.
+            </summary>
+            <seealso cref="F:JetBrains.TextControl.Transport.TransportTextControl.BwdExecuteTypingHandlers" />
+            <seealso cref="F:JetBrains.TextControl.Transport.TransportTextControl.FwdExecuteFinalActionHandler" />
+        </member>
+        <member name="F:JetBrains.TextControl.Transport.TransportTextControl.FwdScrollTo">
+            <summary>
+            In case a view is late to connect, make it a persistent prop rather than signal. A nonce allows for repeated calls.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.Transport.TransportTextControl.FwdTmpGetWindowFrame">
+            <summary>
+            PLAN: window frames should become protocolable objects.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.Transport.TransportTextControl.PropertyBag">
+            <summary>
+            Bag for custom properties. This is the way to extend basic text control transport with transport classes for additional services around the text control.
+            </summary>
+        </member>
+        <member name="T:JetBrains.TextControl.Transport.TransportTextControlMouseAndModifierKeys">
+            <summary>
+            For <see cref="F:JetBrains.TextControl.Transport.TransportTextControl.BwdMouseAndModifierKeys" />.
+            </summary>
+            <param name="KeysAndButtons"><inheritdoc cref="!:TextControlMouseEventArgs.KeysAndButtons" /></param>
+            <param name="ViewportPosition"><inheritdoc cref="!:TextControlMouseEventArgs.ViewportPosition" /></param>
+            <param name="DocumentPosition"><inheritdoc cref="!:TextControlMouseEventArgs.DocumentPosition" /></param>
+            <param name="ClickCount"><inheritdoc cref="!:TextControlMouseEventArgs.ClickCount" /></param>
+            <param name="IsMouseOutsideTextExtent"><inheritdoc cref="!:TextControlMouseEventArgs.IsMouseOutsideTextExtent" /></param>
+        </member>
+        <member name="M:JetBrains.TextControl.Transport.TransportTextControlMouseAndModifierKeys.#ctor(JetBrains.Interop.WinApi.KeyStateMasks,System.Nullable{JetBrains.Util.Media.JetPhysicalPoint},System.Nullable{JetBrains.TextControl.DocOffsetAndVirtual},System.UInt32,System.Boolean)">
+            <summary>
+            For <see cref="F:JetBrains.TextControl.Transport.TransportTextControl.BwdMouseAndModifierKeys" />.
+            </summary>
+            <param name="KeysAndButtons"><inheritdoc cref="!:TextControlMouseEventArgs.KeysAndButtons" /></param>
+            <param name="ViewportPosition"><inheritdoc cref="!:TextControlMouseEventArgs.ViewportPosition" /></param>
+            <param name="DocumentPosition"><inheritdoc cref="!:TextControlMouseEventArgs.DocumentPosition" /></param>
+            <param name="ClickCount"><inheritdoc cref="!:TextControlMouseEventArgs.ClickCount" /></param>
+            <param name="IsMouseOutsideTextExtent"><inheritdoc cref="!:TextControlMouseEventArgs.IsMouseOutsideTextExtent" /></param>
+        </member>
+        <member name="P:JetBrains.TextControl.Transport.TransportTextControlMouseAndModifierKeys.KeysAndButtons">
+            <summary><inheritdoc cref="!:TextControlMouseEventArgs.KeysAndButtons" /></summary>
+        </member>
+        <member name="P:JetBrains.TextControl.Transport.TransportTextControlMouseAndModifierKeys.ViewportPosition">
+            <summary><inheritdoc cref="!:TextControlMouseEventArgs.ViewportPosition" /></summary>
+        </member>
+        <member name="P:JetBrains.TextControl.Transport.TransportTextControlMouseAndModifierKeys.DocumentPosition">
+            <summary><inheritdoc cref="!:TextControlMouseEventArgs.DocumentPosition" /></summary>
+        </member>
+        <member name="P:JetBrains.TextControl.Transport.TransportTextControlMouseAndModifierKeys.ClickCount">
+            <summary><inheritdoc cref="!:TextControlMouseEventArgs.ClickCount" /></summary>
+        </member>
+        <member name="P:JetBrains.TextControl.Transport.TransportTextControlMouseAndModifierKeys.IsMouseOutsideTextExtent">
+            <summary><inheritdoc cref="!:TextControlMouseEventArgs.IsMouseOutsideTextExtent" /></summary>
+        </member>
+        <member name="T:JetBrains.TextControl.VerticalScrollbarMode">
+            <summary>
+            Controls the behavior and layout of the text editor vertical scroll bar.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.VerticalScrollbarMode.Simple">
+            <summary>
+            Standard vertical scroll bar without any annotations and enhancements.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.VerticalScrollbarMode.ShowAnnotations">
+            <summary>
+            Show annotations over vertical scroll bar. Annotations are: changes, marks, errors and caret position.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.VerticalScrollbarMode.ShowChanges">
+            <summary>
+            Show changes on vertical scroll bar. Requires Show Annotations to be enabled.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.VerticalScrollbarMode.ShowMarks">
+            <summary>
+            Show marks (breakpoints and bookmarks) on vertical scroll bar. Requires Show Annotations to be enabled.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.VerticalScrollbarMode.ShowErrors">
+            <summary>
+            Show errors on vertical scroll bar. Requires Show Annotations to be enabled.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.VerticalScrollbarMode.ShowCaretPosition">
+            <summary>
+            Show caret position on vertical scroll bar. Requires Show Annotations to be enabled.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.VerticalScrollbarMode.UseMapMode">
+            <summary>
+            Use map mode for vertical scroll bar.
+            </summary>
+            <remarks>
+            In map mode, when you click a location on the scroll bar, the cursor jumps to that location in the file instead of just scrolling up or down a page.
+            </remarks>
+        </member>
+        <member name="F:JetBrains.TextControl.VerticalScrollbarMode.ShowSourceImage">
+            <summary>
+            Lines of code are shown, in miniature, on the scroll bar. Requires Map Mode to be enabled.
+            </summary>
+        </member>
+        <member name="F:JetBrains.TextControl.VerticalScrollbarMode.ShowPreviewTooltip">
+            <summary>
+            Show a tooltip with a preview of the code. Requires Map Mode to be enabled.
+            </summary>
+        </member>
+        <member name="T:JetBrains.IDE.OpenFileOptions">
+            <summary>
+            </summary>
+            <param name="Activation">Whether opened text control should be getting keyboard focus or visibility.</param>
+            <param name="TargetFrameworkId"><see cref="P:JetBrains.IDE.OpenFileOptions.TargetFrameworkId" /> set for the file open. Null if unknown or don't care.</param>
+            <param name="TabOptions">In what type of tab the text control should be open.</param>
+            <param name="FileView">What type of <see cref="P:JetBrains.IDE.OpenFileOptions.FileView" /> is to be used.</param>
+            <param name="SelectionAndCaret">
+              <para>Set selection ranges by the same rules as <see cref="!:JetBrains.TextControl.ITextControlSelection.Ranges" /> (which puts caret at the active end — the last offset of the last range).</para>
+              <para><c>NULL</c> means dont care (IDE will use MRU values). If set, must have at least one range.</para>
+            </param>
+            <param name="FireAndForget">
+              <para>Specially for cases when we do not need the instance of the opened <see cref="!:ITextControl" /> but just need the effect of VS' opening it in a tab, without waiting for it to fully apply.</para>
+              <para>Completes the task as soon as VS is instructed to open the editor, and MIGHT return NULL even if in the end an <see cref="!:ITextControl" /> opens correctly.</para>
+              <para>Skips validations related to finding the text control. This is the only way that works when the file being opened is in the middle of a rename transaction.</para>
+            </param>
+        </member>
+        <member name="M:JetBrains.IDE.OpenFileOptions.#ctor(JetBrains.IDE.TabActivation,JetBrains.Util.Dotnet.TargetFrameworkIds.TargetFrameworkId,JetBrains.IDE.TabOptions,JetBrains.IDE.FileView,System.Nullable{System.ValueTuple{System.Collections.Immutable.ImmutableArray{JetBrains.TextControl.Transport.DocOffsetAndVirtualRange},JetBrains.Application.Changes.ModificationStamp}},System.Boolean)">
+            <summary>
+            </summary>
+            <param name="Activation">Whether opened text control should be getting keyboard focus or visibility.</param>
+            <param name="TargetFrameworkId"><see cref="P:JetBrains.IDE.OpenFileOptions.TargetFrameworkId" /> set for the file open. Null if unknown or don't care.</param>
+            <param name="TabOptions">In what type of tab the text control should be open.</param>
+            <param name="FileView">What type of <see cref="P:JetBrains.IDE.OpenFileOptions.FileView" /> is to be used.</param>
+            <param name="SelectionAndCaret">
+              <para>Set selection ranges by the same rules as <see cref="!:JetBrains.TextControl.ITextControlSelection.Ranges" /> (which puts caret at the active end — the last offset of the last range).</para>
+              <para><c>NULL</c> means dont care (IDE will use MRU values). If set, must have at least one range.</para>
+            </param>
+            <param name="FireAndForget">
+              <para>Specially for cases when we do not need the instance of the opened <see cref="!:ITextControl" /> but just need the effect of VS' opening it in a tab, without waiting for it to fully apply.</para>
+              <para>Completes the task as soon as VS is instructed to open the editor, and MIGHT return NULL even if in the end an <see cref="!:ITextControl" /> opens correctly.</para>
+              <para>Skips validations related to finding the text control. This is the only way that works when the file being opened is in the middle of a rename transaction.</para>
+            </param>
+        </member>
+        <member name="P:JetBrains.IDE.OpenFileOptions.Activation">
+            <summary>Whether opened text control should be getting keyboard focus or visibility.</summary>
+        </member>
+        <member name="P:JetBrains.IDE.OpenFileOptions.TargetFrameworkId">
+            <summary><see cref="P:JetBrains.IDE.OpenFileOptions.TargetFrameworkId" /> set for the file open. Null if unknown or don't care.</summary>
+        </member>
+        <member name="P:JetBrains.IDE.OpenFileOptions.TabOptions">
+            <summary>In what type of tab the text control should be open.</summary>
+        </member>
+        <member name="P:JetBrains.IDE.OpenFileOptions.FileView">
+            <summary>What type of <see cref="P:JetBrains.IDE.OpenFileOptions.FileView" /> is to be used.</summary>
+        </member>
+        <member name="P:JetBrains.IDE.OpenFileOptions.SelectionAndCaret">
+            <summary>
+              <para>Set selection ranges by the same rules as <see cref="!:JetBrains.TextControl.ITextControlSelection.Ranges" /> (which puts caret at the active end — the last offset of the last range).</para>
+              <para><c>NULL</c> means dont care (IDE will use MRU values). If set, must have at least one range.</para>
+            </summary>
+        </member>
+        <member name="P:JetBrains.IDE.OpenFileOptions.FireAndForget">
+            <summary>
+              <para>Specially for cases when we do not need the instance of the opened <see cref="!:ITextControl" /> but just need the effect of VS' opening it in a tab, without waiting for it to fully apply.</para>
+              <para>Completes the task as soon as VS is instructed to open the editor, and MIGHT return NULL even if in the end an <see cref="!:ITextControl" /> opens correctly.</para>
+              <para>Skips validations related to finding the text control. This is the only way that works when the file being opened is in the middle of a rename transaction.</para>
+            </summary>
+        </member>
+        <member name="F:JetBrains.IDE.OpenFileOptions.DefaultActivate">
+            <summary>
+            Depending on option in Search and navigation options default may means
+            either "normal tab" or "preview tab"
+            </summary>
+        </member>
+        <member name="F:JetBrains.IDE.OpenFileOptions.DefaultNoActivate">
+            <summary>
+            Depending on option in Search and navigation options default may means
+            either "normal tab" or "preview tab"
+            </summary>
+        </member>
+        <member name="F:JetBrains.IDE.OpenFileOptions.NormalActivate">
+            <summary>
+            Never opens in a provisional tab.
+            </summary>
+        </member>
+        <member name="F:JetBrains.IDE.OpenFileOptions.NormalNoActivate">
+            <summary>
+            Never opens in a provisional tab.
+            </summary>
+        </member>
+        <member name="F:JetBrains.IDE.OpenFileOptions.ProvisionalActivate">
+            <summary>
+            Always opens in a provisional tab.
+            </summary>
+        </member>
+        <member name="F:JetBrains.IDE.TabActivation.None">
+            <summary>
+            Don't care. Just cause the IDE to have the tab open, do not show or focus it if possible.
+            The implementation MIGHT need to behave as if <see cref="F:JetBrains.IDE.TabActivation.Focused" /> and <see cref="F:JetBrains.IDE.TabActivation.Visible" />.
+            </summary>
+        </member>
+        <member name="F:JetBrains.IDE.TabActivation.Focused">
+            <summary>
+            Set keyboard focus to the newly opened editor tab, or show the existing tab and set keyboard focus to it.
+            Implementation MUST fulfill this requirement. This is the only option which is strictly guaranteed by the implementation.
+            </summary>
+        </member>
+        <member name="F:JetBrains.IDE.TabActivation.Visible">
+            <summary>
+            Make sure the newly opened or existing tab is visible on screen, but try not to steal keyboard focus from the current focused UI element.
+            This might not always be possible, e.g. when keyboard focus is on a frame which would be hidden by the new tab, like in a sibling tab.
+            The implementation MIGHT behave as if <see cref="F:JetBrains.IDE.TabActivation.Focused" />. The implementation MUST make sure the tab is visible on screen.
+            </summary>
+        </member>
+    </members>
+</doc>

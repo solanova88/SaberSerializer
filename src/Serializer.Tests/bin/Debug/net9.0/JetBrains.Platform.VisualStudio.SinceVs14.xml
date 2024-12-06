@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.Platform.VisualStudio.SinceVs14</name>
+    </assembly>
+    <members>
+        <member name="M:JetBrains.Platform.VisualStudio.SinceVs14.LightBulbs.VsLightBulbSuppressService14.PatternID.Matches(JetBrains.Platform.VisualStudio.SinceVs14.LightBulbs.VsLightBulbSuppressService14.ActionID)">
+            <summary>
+              It is the main part of the pattern matching algorithm. It uses the following idea:
+                * We allow null fields in <see cref="T:JetBrains.Platform.VisualStudio.SinceVs14.LightBulbs.VsLightBulbSuppressService14.PatternID"/>.
+                  If some field in the pattern is null then we will not use it for comparison.
+                * We don't allow null fields in <see cref="T:JetBrains.Platform.VisualStudio.SinceVs14.LightBulbs.VsLightBulbSuppressService14.ActionID"/>.
+                  We don't want to distinguish such cases as:
+                    1) Some field is missing in the action class
+                    2) Some field is really null
+                    3) Some field contains type's default value
+                  So in all these cases the field in <see cref="T:JetBrains.Platform.VisualStudio.SinceVs14.LightBulbs.VsLightBulbSuppressService14.ActionID"/> will be equal to the default value of its type.
+              The method also only check if the field in <see cref="T:JetBrains.Platform.VisualStudio.SinceVs14.LightBulbs.VsLightBulbSuppressService14.ActionID"/> starts with / contains the corresponding field in <see cref="T:JetBrains.Platform.VisualStudio.SinceVs14.LightBulbs.VsLightBulbSuppressService14.PatternID"/>.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.SinceVs14.Shell.Imaging.IVsIconImageMonikers">
+            <summary>
+            Maps R# icon ids into VS image monikers
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.SinceVs14.Shell.Imaging.IVsIconImageMonikers.GetImageMoniker(JetBrains.UI.Icons.IconId)">
+            <summary>
+            If there is no moniker for the icon, returns an invalid image moniker (Guid.Empty : 0) (see Microsoft.VisualStudio.Imaging.ImageLibrary.InvalidImageMoniker).
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.SinceVs14.Shell.Install.VsEmitHighResolutionIconsSinceVs14">
+            <summary>
+            Emits high resolution icons for VS14 CTP3+.
+            </summary>
+            <remarks>
+            To emit high resolution icons we need to:
+            1) Store xaml/baml and/or png icons to the package resources.
+            2) Create imagemanifest-file and put it to the folder where pkgdef and vsixmanifest reside.
+            3) Mark command buttonss with the new "IconIsMoniker" attribute in package's CTO (see CtoBuilder and VsctCommandFlags).
+            </remarks>
+        </member>
+        <member name="P:JetBrains.Platform.VisualStudio.SinceVs14.Shell.VsSettingsManagerSinceVs14.VsSettingChanged">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.SinceVs14.Shell.VsSettingsManagerSinceVs14.GetNames(System.String,JetBrains.Util.OnError)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.SinceVs14.Shell.VsSettingsManagerSinceVs14.GetValue``1(System.String,JetBrains.Util.OnError)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.SinceVs14.Shell.VsSettingsManagerSinceVs14.GetValueOrDefault``1(System.String,``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.Platform.VisualStudio.SinceVs14.Shell.VsSettingsManagerSinceVs14.SetValueAsync(System.String,System.Object,System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.SinceVs14.Zones.IRoslynAwareZone">
+            <summary>
+            Visual Studio integrated products when Roslyn is available. VS 14.0 and above.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.VisualStudio.SinceVs14.Zones.ISinceVs14FrontEnvZone">
+            <summary>
+            Visual Studio integrated products, VS 14.0 and above.
+            </summary>
+        </member>
+    </members>
+</doc>

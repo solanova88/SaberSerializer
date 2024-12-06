@@ -1,0 +1,1002 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.ReSharper.Cpp</name>
+    </assembly>
+    <members>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Resources.CppThemedIcons.ClangTidy">
+             <summary>
+            	<para>
+            		<para>ClangTidy Themed Icon generated identifiers:</para>
+            		<para>— <see cref="T:JetBrains.ReSharper.Psi.Cpp.Resources.CppThemedIcons.ClangTidy"></see> identifier class, for use in attributes, XAML, and generic parameters;</para>
+            		<para>— <see cref="F:JetBrains.ReSharper.Psi.Cpp.Resources.CppThemedIcons.ClangTidy.Id"></see> identifier object, as a field in the identifier class, for use where an <see cref="T:JetBrains.UI.Icons.IconId"></see> value is expected.</para>
+            		<para>
+            			<code>
+                           pXqD##80BM        
+                           pX--.'''BM        
+                           pX--.'''BM        
+                           pX--.'''BM        
+                           pX--.'''BM        
+                          ^pX--.'''BM/       
+                         ?wT_--.'''^iWV      
+                         4w``--.''''_W$      
+                         4wpXqD##80BMW$      
+                       ,Sp+  `````` .BX      
+                    '*apT`  ```````  BB      
+               "=LlP4|^`  ``.'````` -Bq      
+               ek=_.    ```+{`````` *Bv      
+               \4_      -=aP'````` _#8`      
+                fh*` `^fOR{`     `+Dq'       
+                 ~5wbpXOqRRRD###88qc`        
+            </code>
+            		</para>
+            	</para>
+            </summary>
+            <remarks>
+            	<para>For details on Themed Icons and their use, see Remarks on the outer class.</para>
+            </remarks>
+            <example>
+            	<code>&lt;Image Source="{icons:ThemedIcon myres:PopetilThemedIconsThemedIcons+ClangTidy}" /&gt;        &lt;!-- XAML --&gt;</code>
+            </example>
+            <example>
+            	<code>[Item(Name="Sample", Icon=typeof(PopetilThemedIconsThemedIcons.ClangTidy))]        // C# Type attribute</code>
+            </example>
+            <example>
+            	<code>IconId iconid = PopetilThemedIconsThemedIcons.ClangTidy.Id;        // IconId identifier object</code>
+            </example>
+            <example>
+            	<code>themediconmanager.GetIcon&lt;PopetilThemedIconsThemedIcons.ClangTidy&gt;()        // Icon image for rendering</code>
+            </example>
+        </member>
+        <member name="F:JetBrains.ReSharper.Psi.Cpp.Resources.CppThemedIcons.ClangTidy.Id">
+            <inheritdoc cref="T:JetBrains.ReSharper.Psi.Cpp.Resources.CppThemedIcons.ClangTidy">identifier class</inheritdoc>
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Resources.CppThemedIcons.ClangTidy.Load_Color">
+            <summary>Loads the image for Themed Icon ClangTidy theme aspect Color.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Resources.CppThemedIcons.ClangTidy.Load_Gray">
+            <summary>Loads the image for Themed Icon ClangTidy theme aspect Gray.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Resources.CppThemedIcons.ClangTidy.Load_GrayDark">
+            <summary>Loads the image for Themed Icon ClangTidy theme aspect GrayDark.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Resources.CppThemedIcons.ClangTidy.GetThemeImages">
+            <summary>Returns the set of theme images for Themed Icon ClangTidy.</summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Resources.CppThemedIcons.Performance">
+             <summary>
+            	<para>
+            		<para>Performance Themed Icon generated identifiers:</para>
+            		<para>— <see cref="T:JetBrains.ReSharper.Psi.Cpp.Resources.CppThemedIcons.Performance"></see> identifier class, for use in attributes, XAML, and generic parameters;</para>
+            		<para>— <see cref="F:JetBrains.ReSharper.Psi.Cpp.Resources.CppThemedIcons.Performance.Id"></see> identifier object, as a field in the identifier class, for use where an <see cref="T:JetBrains.UI.Icons.IconId"></see> value is expected.</para>
+            		<para>
+            			<code>
+                                  `_~*?T1Cf{)
+                              -"\{C7L+=^^=;aa
+                           ';slc;,__:,"~^=;P5
+                   ``-'''^Jl+,''__:,"~^==;(PL
+               `=c|?*\LLcL"'''__:~;^^==;;LPP`
+              `zT'``':^===''__:+ePPPY!;+*Sh" 
+               Tz``=llllv^__:,"}PPPPP?*LE4=  
+               _vT'.+lFc,_:,"~^;zIj{J\?P4=   
+                '{C_'___:,"~^==;;+*\L|6V~    
+                cYL'__:,"~^==;;+*\LTSGv`     
+               '=T5|=,"~^==;;+*\L?YhGv       
+              `^,`:7E1+==;;+*\L725r*b7       
+              =='-` 'zaYc+*\T}Y1Ya:\O+       
+             '+^_'````:vVEj64j!::'_A4-       
+             =\~::__:,""~c='_LEHe2pP.        
+             *r+;^^:_-`         -_-          
+            </code>
+            		</para>
+            	</para>
+            </summary>
+            <remarks>
+            	<para>For details on Themed Icons and their use, see Remarks on the outer class.</para>
+            </remarks>
+            <example>
+            	<code>&lt;Image Source="{icons:ThemedIcon myres:PopetilThemedIconsThemedIcons+Performance}" /&gt;        &lt;!-- XAML --&gt;</code>
+            </example>
+            <example>
+            	<code>[Item(Name="Sample", Icon=typeof(PopetilThemedIconsThemedIcons.Performance))]        // C# Type attribute</code>
+            </example>
+            <example>
+            	<code>IconId iconid = PopetilThemedIconsThemedIcons.Performance.Id;        // IconId identifier object</code>
+            </example>
+            <example>
+            	<code>themediconmanager.GetIcon&lt;PopetilThemedIconsThemedIcons.Performance&gt;()        // Icon image for rendering</code>
+            </example>
+        </member>
+        <member name="F:JetBrains.ReSharper.Psi.Cpp.Resources.CppThemedIcons.Performance.Id">
+            <inheritdoc cref="T:JetBrains.ReSharper.Psi.Cpp.Resources.CppThemedIcons.Performance">identifier class</inheritdoc>
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Resources.CppThemedIcons.Performance.Load_Color">
+            <summary>Loads the image for Themed Icon Performance theme aspect Color.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Resources.CppThemedIcons.Performance.Load_Gray">
+            <summary>Loads the image for Themed Icon Performance theme aspect Gray.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Resources.CppThemedIcons.Performance.Load_GrayDark">
+            <summary>Loads the image for Themed Icon Performance theme aspect GrayDark.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Resources.CppThemedIcons.Performance.GetThemeImages">
+            <summary>Returns the set of theme images for Themed Icon Performance.</summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Resources.CppThemedIcons.Unreal">
+             <summary>
+            	<para>
+            		<para>Unreal Themed Icon generated identifiers:</para>
+            		<para>— <see cref = "T:JetBrains.ReSharper.Psi.Cpp.Resources.CppThemedIcons.Unreal"></see> identifier class, for use in attributes, XAML, and generic parameters;</para>
+            		<para>— <see cref = "F:JetBrains.ReSharper.Psi.Cpp.Resources.CppThemedIcons.Unreal.Id"></see> identifier object, as a field in the identifier class, for use where an <see cref = "T:JetBrains.UI.Icons.IconId"></see> value is expected.</para>
+            		<para>
+            			<code>
+                          .:;e*`             
+                         :_I8-               
+                         `:_6u`              
+                  `*JVpX[?~^_rDTr[hpk}r.     
+                `rDE;:.-~Th888847~-.:;2DT`   
+                }D*```    ```````     `;De   
+               ^mI```-c2j|:`````` ;*\ ``7m!  
+              `6w:.. Ykkkkj .. :"--:: ..-Kb. 
+              cb*---`-rsz?:`-- n3) .-----;bi 
+             `XP:-----````----````.-------j4.
+             !Xc:::::::~rJ2oooo2s?;:::::::\Xr
+             {E;,,,,,\3E7~:-``'-^)kj*_,,,,"Ey
+             /a7^^^=[j=.          `;2I\^^^Lac
+              ~v55tT;`               ;){55s; 
+                                             
+                                             
+            </code>
+            		</para>
+            	</para>
+            </summary>
+            <remarks>
+            	<para>For details on Themed Icons and their use, see Remarks on the outer class.</para>
+            </remarks>
+            <example>
+            	<code>&lt;Image Source="{icons:ThemedIcon myres:WexuporThemedIconsThemedIcons+Unreal}" /&gt;        &lt;!-- XAML --&gt;</code>
+            </example>
+            <example>
+            	<code>[Item(Name="Sample", Icon=typeof(WexuporThemedIconsThemedIcons.Unreal))]        // C# Type attribute</code>
+            </example>
+            <example>
+            	<code>IconId iconid = WexuporThemedIconsThemedIcons.Unreal.Id;        // IconId identifier object</code>
+            </example>
+            <example>
+            	<code>themediconmanager.GetIcon&lt;WexuporThemedIconsThemedIcons.Unreal&gt;()        // Icon image for rendering</code>
+            </example>
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Resources.CppThemedIcons.CppModule">
+             <summary>
+            	<para>
+            		<para>CppModule Themed Icon generated identifiers:</para>
+            		<para>— <see cref="T:JetBrains.ReSharper.Psi.Cpp.Resources.CppThemedIcons.CppModule"></see> identifier class, for use in attributes, XAML, and generic parameters;</para>
+            		<para>— <see cref="F:JetBrains.ReSharper.Psi.Cpp.Resources.CppThemedIcons.CppModule.Id"></see> identifier object, as a field in the identifier class, for use where an <see cref="T:JetBrains.UI.Icons.IconId"></see> value is expected.</para>
+            		<para>
+            			<code>
+            
+                    `._~!r)iii)r!~_.`
+                  .,~;,'``````.-,~!r=,.
+                .,,"-      ```..--,~/c;,.
+              `.,;- "7|c,  ``.'-!xoy*-~c~.`
+              -~_.` "iT);:-`.-^\Tuak*'~r!~-
+              _r,`  ^l7|)c^`-_+1ueVh+'"/+r_
+              "i^   ~tiTL+~_"~+JIVEX+-,=ri"
+              "i~```={li+^!cT7?/JEh6r-"=ri"
+              _r^..`=xFt;'/55ar_rKhX+-"!\r_
+              -~^"_.!uI]!.=li7/"cEU6r-~r!~-
+              `.^+=,r5oI!-~rr+!=TEU4?-=c~.`
+                .,=r/==~==;!!!!!!!/+cT!,.
+                  .,;LL?+/!;;;!/+?Lc!,.
+                    `._~!r)iii)r!~_.`
+            
+            </code>
+            		</para>
+            	</para>
+            </summary>
+            <remarks>
+            	<para>For details on Themed Icons and their use, see Remarks on the outer class.</para>
+            </remarks>
+            <example>
+            	<code>&lt;Image Source="{icons:ThemedIcon myres:CppThemedIcons+CppModule}" /&gt;        &lt;!-- XAML --&gt;</code>
+            </example>
+            <example>
+            	<code>[Item(Name="Sample", Icon=typeof(CppThemedIcons.CppModule))]        // C# Type attribute</code>
+            </example>
+            <example>
+            	<code>IconId iconid = CppThemedIcons.CppModule.Id;        // IconId identifier object</code>
+            </example>
+            <example>
+            	<code>themediconmanager.GetIcon&lt;CppThemedIcons.CppModule&gt;()        // Icon image for rendering</code>
+            </example>
+             <summary>
+            	<para>
+            		<para>CppModule Themed Icon generated identifiers:</para>
+            		<para>— <see cref = "T:JetBrains.ReSharper.Psi.Cpp.Resources.CppThemedIcons.CppModule"></see> identifier class, for use in attributes, XAML, and generic parameters;</para>
+            		<para>— <see cref = "F:JetBrains.ReSharper.Psi.Cpp.Resources.CppThemedIcons.CppModule.Id"></see> identifier object, as a field in the identifier class, for use where an <see cref = "T:JetBrains.UI.Icons.IconId"></see> value is expected.</para>
+            		<para>
+            			<code>
+            
+                    `._~!r)iii)r!~_.`
+                  .,~;,'``````.-,~!r=,.
+                .,,"-      ```..--,~/c;,.
+              `.,;- "7|c,  ``.'-!xoy*-~c~.`
+              -~_.` "iT);:-`.-^\Tuak*'~r!~-
+              _r,`  ^l7|)c^`-_+1ueVh+'"/+r_
+              "i^   ~tiTL+~_"~+JIVEX+-,=ri"
+              "i~```={li+^!cT7?/JEh6r-"=ri"
+              _r^..`=xFt;'/55ar_rKhX+-"!\r_
+              -~^"_.!uI]!.=li7/"cEU6r-~r!~-
+              `.^+=,r5oI!-~rr+!=TEU4?-=c~.`
+                .,=r/==~==;!!!!!!!/+cT!,.
+                  .,;LL?+/!;;;!/+?Lc!,.
+                    `._~!r)iii)r!~_.`
+            
+            </code>
+            		</para>
+            	</para>
+            </summary>
+            <remarks>
+            	<para>For details on Themed Icons and their use, see Remarks on the outer class.</para>
+            </remarks>
+            <example>
+            	<code>&lt;Image Source="{icons:ThemedIcon myres:CppThemedIcons+CppModule}" /&gt;        &lt;!-- XAML --&gt;</code>
+            </example>
+            <example>
+            	<code>[Item(Name="Sample", Icon=typeof(CppThemedIcons.CppModule))]        // C# Type attribute</code>
+            </example>
+            <example>
+            	<code>IconId iconid = CppThemedIcons.CppModule.Id;        // IconId identifier object</code>
+            </example>
+            <example>
+            	<code>themediconmanager.GetIcon&lt;CppThemedIcons.CppModule&gt;()        // Icon image for rendering</code>
+            </example>
+             <summary>
+            	<para>
+            		<para>CppModule Themed Icon generated identifiers:</para>
+            		<para>— <see cref = "T:JetBrains.ReSharper.Psi.Cpp.Resources.CppThemedIcons.CppModule"></see> identifier class, for use in attributes, XAML, and generic parameters;</para>
+            		<para>— <see cref = "F:JetBrains.ReSharper.Psi.Cpp.Resources.CppThemedIcons.CppModule.Id"></see> identifier object, as a field in the identifier class, for use where an <see cref = "T:JetBrains.UI.Icons.IconId"></see> value is expected.</para>
+            		<para>
+            			<code>
+            
+                    `._~!r)iii)r!~_.`
+                  .,~;,'``````.-,~!r=,.
+                .,,"-      ```..--,~/c;,.
+              `.,;- "7|c,  ``.'-!xoy*-~c~.`
+              -~_.` "iT);:-`.-^\Tuak*'~r!~-
+              _r,`  ^l7|)c^`-_+1ueVh+'"/+r_
+              "i^   ~tiTL+~_"~+JIVEX+-,=ri"
+              "i~```={li+^!cT7?/JEh6r-"=ri"
+              _r^..`=xFt;'/55ar_rKhX+-"!\r_
+              -~^"_.!uI]!.=li7/"cEU6r-~r!~-
+              `.^+=,r5oI!-~rr+!=TEU4?-=c~.`
+                .,=r/==~==;!!!!!!!/+cT!,.
+                  .,;LL?+/!;;;!/+?Lc!,.
+                    `._~!r)iii)r!~_.`
+            
+            </code>
+            		</para>
+            	</para>
+            </summary>
+            <remarks>
+            	<para>For details on Themed Icons and their use, see Remarks on the outer class.</para>
+            </remarks>
+            <example>
+            	<code>&lt;Image Source="{icons:ThemedIcon myres:CppThemedIcons+CppModule}" /&gt;        &lt;!-- XAML --&gt;</code>
+            </example>
+            <example>
+            	<code>[Item(Name="Sample", Icon=typeof(CppThemedIcons.CppModule))]        // C# Type attribute</code>
+            </example>
+            <example>
+            	<code>IconId iconid = CppThemedIcons.CppModule.Id;        // IconId identifier object</code>
+            </example>
+            <example>
+            	<code>themediconmanager.GetIcon&lt;CppThemedIcons.CppModule&gt;()        // Icon image for rendering</code>
+            </example>
+             <summary>
+            	<para>
+            		<para>CppModule Themed Icon generated identifiers:</para>
+            		<para>— <see cref = "T:JetBrains.ReSharper.Psi.Cpp.Resources.CppThemedIcons.CppModule"></see> identifier class, for use in attributes, XAML, and generic parameters;</para>
+            		<para>— <see cref = "F:JetBrains.ReSharper.Psi.Cpp.Resources.CppThemedIcons.CppModule.Id"></see> identifier object, as a field in the identifier class, for use where an <see cref = "T:JetBrains.UI.Icons.IconId"></see> value is expected.</para>
+            		<para>
+            			<code>
+            
+                    `._~!r)iii)r!~_.`
+                  .,~;,'``````.-,~!r=,.
+                .,,"-      ```..--,~/c;,.
+              `.,;- "7|c,  ``.'-!xoy*-~c~.`
+              -~_.` "iT);:-`.-^\Tuak*'~r!~-
+              _r,`  ^l7|)c^`-_+1ueVh+'"/+r_
+              "i^   ~tiTL+~_"~+JIVEX+-,=ri"
+              "i~```={li+^!cT7?/JEh6r-"=ri"
+              _r^..`=xFt;'/55ar_rKhX+-"!\r_
+              -~^"_.!uI]!.=li7/"cEU6r-~r!~-
+              `.^+=,r5oI!-~rr+!=TEU4?-=c~.`
+                .,=r/==~==;!!!!!!!/+cT!,.
+                  .,;LL?+/!;;;!/+?Lc!,.
+                    `._~!r)iii)r!~_.`
+            
+            </code>
+            		</para>
+            	</para>
+            </summary>
+            <remarks>
+            	<para>For details on Themed Icons and their use, see Remarks on the outer class.</para>
+            </remarks>
+            <example>
+            	<code>&lt;Image Source="{icons:ThemedIcon myres:CppThemedIcons+CppModule}" /&gt;        &lt;!-- XAML --&gt;</code>
+            </example>
+            <example>
+            	<code>[Item(Name="Sample", Icon=typeof(CppThemedIcons.CppModule))]        // C# Type attribute</code>
+            </example>
+            <example>
+            	<code>IconId iconid = CppThemedIcons.CppModule.Id;        // IconId identifier object</code>
+            </example>
+            <example>
+            	<code>themediconmanager.GetIcon&lt;CppThemedIcons.CppModule&gt;()        // Icon image for rendering</code>
+            </example>
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Caches.CppHashedPlatformCompilationPropertiesProvider">
+            <summary>
+            Provides compilation properties for a C++ platform which name is hashed for NDA reasons. Test in the platform plugin (search by usages of provider).
+            Added for Guerilla Games.
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Util.CppCachesHashFunctions">
+            <summary>
+            Provides deterministic hash-functions that can be serialized in caches.
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Util.CppMacroUtil.IsClosed(JetBrains.ReSharper.Psi.Tree.ITreeNode)">
+            If subtree rooted at \p node contains any node from macro substitution then it should contain corresponding macro call
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Util.CastTo`1.From``1(``0)">
+            This does not cause boxing for value types.
+            Useful in generic methods.
+        </member>
+        <member name="F:JetBrains.ReSharper.Psi.Cpp.Util.CppCompilationPropertiesProviderAttribute.PROJECT_MODEL_PRIORITY">
+            <summary>
+            Providers with <see cref="F:JetBrains.ReSharper.Psi.Cpp.Util.CppCompilationPropertiesProviderAttribute.PROJECT_MODEL_PRIORITY"/> (i.e. Unreal Engine) intended to be checked first.
+            </summary>
+        </member>
+        <member name="F:JetBrains.ReSharper.Psi.Cpp.Util.CppCompilationPropertiesProviderAttribute.PLATFORM_PRIORITY">
+            <summary>
+            Providers with <see cref="F:JetBrains.ReSharper.Psi.Cpp.Util.CppCompilationPropertiesProviderAttribute.PLATFORM_PRIORITY"/> (i.e. Nintendo) intended to be checked before providers with <see cref="F:JetBrains.ReSharper.Psi.Cpp.Util.CppCompilationPropertiesProviderAttribute.NORMAL_PRIORITY"/>, but after <see cref="F:JetBrains.ReSharper.Psi.Cpp.Util.CppCompilationPropertiesProviderAttribute.PROJECT_MODEL_PRIORITY"/> providers.
+            </summary>
+        </member>
+        <member name="P:JetBrains.ReSharper.Psi.Cpp.Util.CppCompilationPropertiesProviderAttribute.Priority">
+            <summary>
+            Providers with lower priority executes first
+            </summary>
+        </member>
+        <member name="F:JetBrains.ReSharper.Psi.Cpp.Util.CppDependentInfo.Uninitialized">
+            This value can not be passed to any function expected CppDependentInfo,
+            It's needed only for compact implementation of CppDependentInfoCachedValue
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Util.CppEvaluationFailureKind">
+            <summary>
+            Please check <see cref="M:JetBrains.ReSharper.Psi.Cpp.Expressions.CppEvaluationErrorTracker.MayProvideContext(JetBrains.ReSharper.Psi.Cpp.Util.CppEvaluationFailureKind)"/> for reasoning why we
+            need XXXWithContext entries.
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Util.CppOverridenProjectFileProperties">
+            Files having these properties will use the provided compilation flags directly, i.e.
+            they will *not* get any extra flags from the project.
+            
+            These properties are only created in code and never loaded from VS solutions.
+            See CppProjectSnapshot for examples.
+        </member>
+        <member name="F:JetBrains.ReSharper.Psi.Cpp.Util.CppOverridenProjectConfiguration.PROJECT_PROPERTIES_KEY">
+            When present inside `VCXProjectConfiguration`, will be preferred over actual properties written inside it.
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Util.ICppUE4ModuleNamesProvider.GetAnyBuildCsFor(JetBrains.Util.VirtualFileSystemPath)">
+            <summary>
+              Returns .Build.cs file which corresponds to the .h/.cpp code file passed as <paramref name="path" />.
+              This .Build.cs file can be either module description or subrule description.
+              If you need to get real module .Build.cs's file call <see cref="M:JetBrains.ReSharper.Psi.Cpp.Util.ICppUE4ModuleNamesProvider.GetModuleBuildCsFor(JetBrains.Util.VirtualFileSystemPath,JetBrains.ReSharper.Psi.Cpp.Util.ICppUE4ProjectPropertiesProvider,System.Boolean)" /> instead but you need enabled <see cref="T:JetBrains.ReSharper.Psi.Cpp.Util.ICppUE4ProjectPropertiesProvider" /> for that!
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Util.ICppUE4ModuleNamesProvider.GetModuleBuildCsFor(JetBrains.Util.VirtualFileSystemPath,JetBrains.ReSharper.Psi.Cpp.Util.ICppUE4ProjectPropertiesProvider,System.Boolean)">
+            <summary>
+              If <paramref name="propertiesProvider" /> is disabled - acts the same way as <see cref="M:JetBrains.ReSharper.Psi.Cpp.Util.ICppUE4ModuleNamesProvider.GetAnyBuildCsFor(JetBrains.Util.VirtualFileSystemPath)" />.
+              Otherwise:
+              If <paramref name="path" /> is a valid subrule file (for instance, PATH/ModuleName_Windows.Build.cs)
+              returns it's base module file (for instance, OTHER_PATH/ModuleName.Build.cs).
+              Otherwise <paramref name="path" /> probably is module itself and it will be returned.
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Util.ICppUE4ModuleNamesProvider.GetUE4ModuleNameOf(JetBrains.Util.VirtualFileSystemPath)">
+            <summary>
+              Returns name of module described by <paramref name="buildCs" />
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Symbols.CppClassBuilder.SetUsedAsType">
+            \pre must be called once
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Symbols.CppCtorInitializerStatementResolveEntityBase.GetResolvedTarget">
+            could be ICppVariableDeclaratorResolveEntity for field or ICppClassResolveEntity/ICppDependentTypeResolveEntity for base
+        </member>
+        <member name="F:JetBrains.ReSharper.Psi.Cpp.Symbols.CppEnumeratorResolveEntity.myInitializer">
+            can be replaced \c ICppExpression or resolved \c ICppResolvedExpression
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Symbols.CppGenerateImplicitMembersUtil.GenerateImplicitlyGeneratedMembers(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppMutableClassResolveEntity,JetBrains.ReSharper.Psi.Cpp.Symbols.ICppFileResolveEntitiesCache)">
+            @return \c false iff \code GeneratingImplicitMembersStatus() == CppGeneratigImplicitMembersStatus::None \endcode
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Symbols.ICppClassResolveEntity.GetDefinitionSymbol">
+            CppLambdaClassResolveEntity returns \c null
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Symbols.ICppClassResolveEntity.GetAggregateMembers">
+            \return sorted list of non-static fields and anonymous classes
+            \note this function can be free and implemented using function \c GetChildren,
+            but it requires additional allocation of list of class children
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Symbols.ICppClassResolveEntity.GetAllMembersSorted">
+            \return all class members including constructors, destructors, finalizers and conversions
+            \note this function can be free and implemented using function \c GetChildren and methods \c GetConstructors(), \c GetDestructors(), ...,
+            but it requires additional allocation of list of class children
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Symbols.ICppClassResolveEntity.HasImmediateVirtualFunctions">
+            \note this function can be free and implemented using function \c GetChildren and methods \c GetConversions(), \c GetDestructors(),
+            but it requires additional allocation of list of class children
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Symbols.ICppClassResolveEntity.HasInheritingConstructors">
+            \note this function can be free and implemented using function \c GetChildren ,
+            but it requires additional allocation of list of class children
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Symbols.ICppClassResolveEntity.ContainsSymbol(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppClassOrDelegateSymbolOrModuleEntity)">
+            <remarks>
+              this function can be free and implemented using property <c>SymbolParts</c>,
+              but it requires additional allocation of list of symbols
+            </remarks>
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Symbols.ICppFunctionDeclaratorResolveEntity.GetFirstDefaultArgIndex">
+            @return int::MaxValue if `this` doesn't have default arguments
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Symbols.CppTemplateArgumentPackNonGenericBase">
+            BASES /////////////////////////////////////////////////////////////////////////////////////////
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Symbols.CppTypeTemplateArgument">
+            TYPE TEMPLATE ARGUMENT ////////////////////////////////////////////////////////////////////////
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Symbols.ICppExpressionTemplateArgument">
+            EXPRESSION TEMPLATE ARGUMENT //////////////////////////////////////////////////////////////////
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Symbols.ICppTemplateTemplateArgument">
+            TEMPLATE TEMPLATE ARGUMENT //////////////////////////////////////////////////////////////////
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Symbols.CppClassResolveEntityWithSubstitutionClrImportedInstantiatedState.ChildByNameImpl(JetBrains.ReSharper.Psi.Cpp.Symbols.CppQualifiedNamePart)">
+            @note must be called when \c ResolveMutex is locked
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Symbols.CppConceptDefinitionWithAppliedArgumentsResolveEntity.GetValue">
+            \pre
+            <code>!IsDependent(GetDependentInfo())</code>
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Symbols.CppBitfieldSizeUtil.TryGetBitfieldSize(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppAttribute)">
+            <remarks>
+              May return <c>nullptr</c> if bitfield size presents complicated expression. Use overload if you need precise value
+            </remarks>
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Symbols.CppLinkageEntityUtil.IsTemplateClass(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppLinkageEntity)">
+            Returns true if class is a template or a template substitution
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Symbols.CppResolveEntityUtil.IsAccessibleFrom(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppResolveEntity,JetBrains.ReSharper.Psi.Cpp.Symbols.ICppClassResolveEntity@,JetBrains.ReSharper.Psi.Cpp.Symbols.ICppClassResolveEntity,JetBrains.ReSharper.Psi.Cpp.Symbols.ICppFriendDeclTargetResolveEntity,JetBrains.ReSharper.Psi.Cpp.Symbols.CppViewPos@)">
+            @returns \c TriBool::Indeterminate iff \p ent is \c protected and EmbracingClass(\p scope) has dependent bases
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Doxygen.DoxygenSimpleListCommand">
+            \brief \@li and \@arg commands
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Parsing.Preprocessor.CppInclusionContextUtil.CalculateClrScope(JetBrains.ProjectModel.IProject,JetBrains.ReSharper.Psi.Modules.IPsiModule,JetBrains.ReSharper.Psi.Cpp.Caches.CppFileLocation)">
+            \pre ClrCacheIsReady
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Parsing.Preprocessor.CppPreprocessor.CppMacroArgumentExpansionProcessor">
+            Performs required processing during macro argument substitution into
+            the macro body
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Parsing.Preprocessor.CppPreprocessor.CppMacroSubstitutionProcessor">
+            Performs required processing during substitution of macro invokation
+            with it actual replacement body
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Parsing.Preprocessor.CppPreprocessor.CppIfElifDirectiveProcessor">
+            What does that?
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Parsing.Preprocessor.CppPreprocessor.CppIncludeDirectiveContentProcessor">
+            Performs required processing during substitution of include directive body
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Parsing.Preprocessor.CppPreprocessor.CppIncludeDirectiveContentProcessor.#ctor(JetBrains.ReSharper.Psi.Cpp.Parsing.Preprocessor.CppPreprocessor,System.String)">
+            Performs required processing during substitution of include directive body
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Parsing.Preprocessor.CppPreprocessor.EnumerateTokens">
+            Word enumeration harness primarily (and solely, though) by word-index engine
+        </member>
+        <member name="F:JetBrains.ReSharper.Psi.Cpp.Parsing.Preprocessor.CppPreprocessor.myProcessingChain">
+            Tip of the processing chain actual for the given `CppPreprocessor` instance;
+            PP instances chaining extends this particular (processing) chain also
+        </member>
+        <member name="F:JetBrains.ReSharper.Psi.Cpp.Parsing.Preprocessor.CppPreprocessor.myScratchpad">
+            Scratchpad instance; for detailed description see `CppPPScratchpad`
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Parsing.Preprocessor.CppPreprocessor.ITokenProcessor">
+            `ITokenProcessor` -- abstracts the treatment of every (pre-)processed token before
+            pushing it to the scratchpad; primary goal -- to provide facility for token processing,
+            preserving ability to write-through them instantly reducing the count of the copy of a single
+            particular token
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Parsing.Preprocessor.CppPreprocessor.CppPPScratchpad">
+            `CppPPScratchpad` -- holy grail of the whole PP infrastructure; stores actual sequence of PREPROCESSED
+            tokens; sharing this across `CppPreprocessor` instances allows to perform write-through pushes of
+            preprocessed tokens, avoiding making of copies for every PP in the chain. Owned by the root `CppPreprocessor` instance.
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Parsing.CppDoxygenParsing.TryParseDoxygenSimpleList(JetBrains.Util.dataStructures.FrugalLocalList{JetBrains.ReSharper.Psi.Cpp.Doxygen.IPairedCommand}@)">
+            Parse simple unnested lists (Commands \@arg and \@li)
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Parsing.CppDoxygenParsing.AdvanceToEnd(JetBrains.Util.dataStructures.FrugalLocalList{JetBrains.ReSharper.Psi.Cpp.Doxygen.IPairedCommand}@,System.Int32)">
+            Advances until meets something that closes one of openCommands [or given number of newlines].
+            NB: also does not advance through multiline comment postfix at the end of comment.
+            \param openCommands stack of open paired doxygen Commands or HTML tags
+            \param skipNewLineCount number of newlines allowed to skip. -1 stays for infinity.
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Parsing.CppDoxygenParsing.EatNewlineAndIndent(System.Int32)">
+            eats newlines and whitespace after it
+            \param newLineCount number of newlines to skip.
+            Must be non-zero. Negative values
+            \return indent of the current token
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Parsing.CppInnerLexer">
+            <remarks>
+            <b>README PLEASE</b> (if you want to make changes in lexer)<br/>
+            <br/>
+            There's a duplicated implementation of <c>CppInnerLexer</c> on frontend-side (in kotlin, see CPP-38979).
+            Frontend implementation runs the same tests as backend implementation, so usually when you change something in C#
+            and add test for that, it would fail on frontend. At the moment of writing this comment, frontend tests
+            are <b>NOT</b> included in merge robot, so they can be fixed post facto.<br/>
+            <br/>
+            If you make any changes to this implementation, please consider changing frontend implementation as well.<br/>
+            If you are not sure how to do that properly, consider asking in #radler-internal Slack channel.<br/>
+            We have similar comment for frontend implementation.<br/>
+            </remarks>
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Parsing.CppTokenKind">
+            <remarks>
+            Consider reading <see cref="T:JetBrains.ReSharper.Psi.Cpp.Parsing.CppInnerLexer"/> comment before making any changes here.
+            </remarks>
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Expressions.CppEvaluationFail.#ctor(JetBrains.ReSharper.Psi.Cpp.Util.CppExpressionEvaluationFailure)">
+            Do not use directly, only through <see cref="M:JetBrains.ReSharper.Psi.Cpp.Expressions.ICppEvaluationErrorTracker.Fail(JetBrains.ReSharper.Psi.Cpp.Util.CppEvaluationFailureKind)"/>
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Expressions.CppValueUtil.AsExpression(JetBrains.ReSharper.Psi.Cpp.Expressions.ICppValue)">
+            <remarks>
+            Temporary transition function, just to keep compatibility with old code during refactorings
+            </remarks>
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Expressions.CppValueUtil.GetValueIfNumericAndNonNegative(JetBrains.ReSharper.Psi.Cpp.Expressions.ICppValue)">
+            <summary>
+            Do <b>NOT</b> use to convert to <c>size_t</c>. Use only when you don't know target type (or conversions are prohibited).
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Expressions.CppValueUtil.IsZero(JetBrains.ReSharper.Psi.Cpp.Expressions.ICppValueExpression,JetBrains.ReSharper.Psi.Cpp.Expressions.CppExpressionEvaluator)">
+            <summary>
+            This function checks: <br/>
+            - If integral value is zero <br/>
+            - If boolean value is false <br/>
+            - If enumerator has underlying value is zero <br/>
+            - If designator has zero initializer <br/>
+            - If pointer is not null <br/>
+            - If referenced value is zero <br/>
+            - If object value can be converted to `false` (note: not to 0 or 0u) <br/>
+            <br/>
+            This logic is redundant in most cases. <br/>
+            <br/>
+            If you just want to evaluate some boolean condition - use <see cref="M:JetBrains.ReSharper.Psi.Cpp.Expressions.CppExpressionEvaluationUtil.EvaluateCondition(JetBrains.ReSharper.Psi.Cpp.Expressions.ICppResolvedExpression,JetBrains.ReSharper.Psi.Cpp.Expressions.CppExpressionEvaluator)"/>
+            or <see cref="M:JetBrains.ReSharper.Psi.Cpp.Expressions.CppExpressionEvaluationUtil.EvaluateAndConvertToTriBool(JetBrains.ReSharper.Psi.Cpp.Expressions.ICppResolvedExpression,JetBrains.ReSharper.Psi.Cpp.Expressions.CppExpressionEvaluator)"/>.<br/>
+            <br/>
+            If you want to check that some literal has "0" value - you don't need conversions at all.<br/>
+            <br/>
+            Moreover, you likely need to check it in specific context (as an index in subscription operator, as an argument
+            passed to somewhere). In those cases you should convert value to specific type (size_t/int/etc..). Otherwise, it's
+            simply incorrect: 0x10000000u is zero when passed as `int` but this function reports false.
+            The same applies to other comparisons with zero. <br/>
+            <br/>
+            Having `CppObjectValue` as an input here is even more weird case because of unexpected conversion to `bool`.<br/>
+            <br/>
+            Prefer <see cref="M:JetBrains.ReSharper.Psi.Cpp.Expressions.CppExpressionEvaluationUtil.EvaluateAndConvert(JetBrains.ReSharper.Psi.Cpp.Expressions.ICppResolvedExpression,JetBrains.ReSharper.Psi.Cpp.Types.CppQualType,JetBrains.ReSharper.Psi.Cpp.Expressions.CppExpressionEvaluator)"/> with specified target type and check resulting value.<br/>
+            There are helpers for common types like <see cref="M:JetBrains.ReSharper.Psi.Cpp.Expressions.CppExpressionEvaluationUtil.EvaluateToInt(JetBrains.ReSharper.Psi.Cpp.Expressions.ICppResolvedExpression,JetBrains.ReSharper.Psi.Cpp.Expressions.CppExpressionEvaluator)"/> and <see cref="M:JetBrains.ReSharper.Psi.Cpp.Expressions.CppExpressionEvaluationUtil.EvaluateToSizeT(JetBrains.ReSharper.Psi.Cpp.Expressions.ICppResolvedExpression,JetBrains.ReSharper.Psi.Cpp.Expressions.CppExpressionEvaluator)"/>
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Expressions.CppValueUtil.IsZero(JetBrains.ReSharper.Psi.Cpp.Expressions.ICppResolvedExpression,JetBrains.ReSharper.Psi.Cpp.Expressions.CppExpressionEvaluator)">
+            <summary>
+            See <see cref="M:JetBrains.ReSharper.Psi.Cpp.Expressions.CppValueUtil.IsZero(JetBrains.ReSharper.Psi.Cpp.Expressions.ICppValueExpression,JetBrains.ReSharper.Psi.Cpp.Expressions.CppExpressionEvaluator)"/> for obsolete explanation.
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Expressions.CppValueUtil.IsZero(JetBrains.ReSharper.Psi.Cpp.Expressions.CppExpressionValue,JetBrains.ReSharper.Psi.Cpp.Expressions.CppExpressionEvaluator)">
+            <summary>
+            See <see cref="M:JetBrains.ReSharper.Psi.Cpp.Expressions.CppValueUtil.IsZero(JetBrains.ReSharper.Psi.Cpp.Expressions.ICppValueExpression,JetBrains.ReSharper.Psi.Cpp.Expressions.CppExpressionEvaluator)"/> why it's obsolete.
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Expressions.CppValueUtil.IsZeroOrNegative(JetBrains.ReSharper.Psi.Cpp.Expressions.CppExpressionValue,JetBrains.ReSharper.Psi.Cpp.Expressions.CppExpressionEvaluator)">
+            <summary>
+            See <see cref="M:JetBrains.ReSharper.Psi.Cpp.Expressions.CppValueUtil.IsZero(JetBrains.ReSharper.Psi.Cpp.Expressions.ICppValueExpression,JetBrains.ReSharper.Psi.Cpp.Expressions.CppExpressionEvaluator)"/> why it's obsolete.
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Expressions.CppValueUtil.CompareWithZeroResult">
+            <summary>
+            See <see cref="M:JetBrains.ReSharper.Psi.Cpp.Expressions.CppValueUtil.IsZero(JetBrains.ReSharper.Psi.Cpp.Expressions.ICppValueExpression,JetBrains.ReSharper.Psi.Cpp.Expressions.CppExpressionEvaluator)"/> why it's obsolete.
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Expressions.CppValueUtil.CppCompareWithZeroVisitor">
+            <summary>
+            See <see cref="M:JetBrains.ReSharper.Psi.Cpp.Expressions.CppValueUtil.IsZero(JetBrains.ReSharper.Psi.Cpp.Expressions.ICppValueExpression,JetBrains.ReSharper.Psi.Cpp.Expressions.CppExpressionEvaluator)"/> why it's obsolete.
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Expressions.CppValueUtil.TryPerformPointerArithmetic(JetBrains.ReSharper.Psi.Cpp.Expressions.ICppValue,JetBrains.ReSharper.Psi.Cpp.Expressions.ICppValue,JetBrains.ReSharper.Psi.Cpp.Types.CppQualType,JetBrains.ReSharper.Psi.Cpp.Types.CppQualType,JetBrains.ReSharper.Psi.Cpp.Symbols.CppOperatorKind,JetBrains.ReSharper.Psi.Cpp.Language.CppLanguageDialect,JetBrains.ReSharper.Psi.Cpp.Expressions.CppExpressionEvaluator)">
+            <returns>`null` when it's not a pointer operation</returns>
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Expressions.CppExpressionValue">
+            <summary>
+            Same as <see cref="T:JetBrains.ReSharper.Psi.Cpp.Expressions.ICppValue"/> but knows about origin expression
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Language.PragmaFlagsEx.IsParameterless(JetBrains.ReSharper.Psi.Cpp.Language.PragmaCommandFlags)">
+            <summary>
+            Checks if pragma may not have any args or specification like '#pragma once' where no args allowed
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Lang.CppClionResolveEmulator.GetClionTypeOf(JetBrains.ReSharper.Psi.Cpp.Tree.ICppExpressionNode,JetBrains.ReSharper.Psi.Cpp.Util.CppTypeContext@,JetBrains.ReSharper.Psi.Cpp.Symbols.ICppFileResolveEntitiesCache)">
+            \pre IsTypeOrUnknownDependent(\p expr.GetDependentInfo())
+        </member>
+        <member name="F:JetBrains.ReSharper.Psi.Cpp.Lookup.CppCompletionResult.QualifierConstraints">
+            concepts which qualifier of mem-access expressions satisfies, see test/data/CodeCompletion/Concepts06.cpp
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Lookup.CppViewPosUtil.ViewPosWhereClassIsComplete(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppClassResolveEntity)">
+            this function can be used for such checks as
+            - `IsDeleted` for special members;
+            - `NeedImplicitDisposable` for class;
+            - ...
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Overload.CppConversionHelper.TryFromStandardConversion(JetBrains.ReSharper.Psi.Cpp.Expressions.CppExpressionInfo,JetBrains.ReSharper.Psi.Cpp.Types.CppQualType)">
+            If a conversion exists, this routine will return the standard conversion sequence required to perform this
+            conversion. Otherwise, this routine will return null.
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Overload.CppConversionHelper.DoOverloadResolutionForUserDefinedConversions(JetBrains.ReSharper.Psi.Cpp.Expressions.CppExpressionInfo,JetBrains.ReSharper.Psi.Cpp.Types.CppQualType,System.Boolean,System.Boolean,JetBrains.ReSharper.Psi.Cpp.Overload.CppImplicitConversionSequence@)">
+             Determines whether there is a user-defined conversion sequence
+             (C++ [over.ics.user]) that converts expression From to the type
+             ToType. If such a conversion exists, User will contain the
+             user-defined conversion sequence that performs such a conversion
+             and this routine will return true. Otherwise, this routine returns
+             false and User is unspecified.
+            
+             \param AllowExplicitConversions  true if the conversion should consider C++0x
+             "explicit" conversion functions as well as non-explicit conversion
+             functions (C++0x [class.conv.fct]p2).
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Overload.CppCompareConversionEngine.IsBetterImplicitConversion(JetBrains.ReSharper.Psi.Cpp.Overload.CppImplicitConversionSequence,JetBrains.ReSharper.Psi.Cpp.Overload.CppImplicitConversionSequence)">
+            CompareImplicitConversionSequences - Compare two implicit
+            conversion sequences to determine whether one is better than the
+            other or if they are indistinguishable (C++ 13.3.3.2).
+        </member>
+        <member name="P:JetBrains.ReSharper.Psi.Cpp.Overload.CppReferenceBindingInfo.IsDirectBinding">
+            DirectBinding - True when this is a reference binding that is a
+            direct binding (C++ [dcl.init.ref]).
+        </member>
+        <member name="P:JetBrains.ReSharper.Psi.Cpp.Overload.CppReferenceBindingInfo.IsLvalueReference">
+            \brief Whether this is an lvalue reference binding (otherwise, it's
+            an rvalue reference binding).
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Overload.CppStandardConversionSequence">
+            CppStandardConversionSequence - represents a standard conversion
+            sequence (C++ 13.3.3.1.1). A standard conversion sequence
+            contains between zero and three conversions. If a particular
+            conversion is not needed, it will be set to the identity conversion
+            (ICK_Identity). Note that the three conversions are
+            specified as separate members (rather than in an array) so that
+            we can keep the size of a standard conversion sequence to a
+            single word.
+        </member>
+        <member name="P:JetBrains.ReSharper.Psi.Cpp.Overload.CppStandardConversionSequence.First">
+            First -- The first conversion can be an lvalue-to-rvalue
+            conversion, array-to-pointer conversion, or
+            function-to-pointer conversion.
+        </member>
+        <member name="P:JetBrains.ReSharper.Psi.Cpp.Overload.CppStandardConversionSequence.Second">
+            Second - The second conversion can be an integral promotion,
+            floating point promotion, integral conversion, floating point
+            conversion, floating-integral conversion, pointer conversion,
+            pointer-to-member conversion, or boolean conversion.
+        </member>
+        <member name="P:JetBrains.ReSharper.Psi.Cpp.Overload.CppStandardConversionSequence.Third">
+            Third - The third conversion can be a qualification conversion.
+        </member>
+        <member name="P:JetBrains.ReSharper.Psi.Cpp.Overload.CppStandardConversionSequence.IsDeprecatedCharPtrConv">
+            \brief Whether this is the deprecated conversion of a
+            string literal to a pointer to non-const character data
+            (C++ 4.2p2).
+        </member>
+        <member name="P:JetBrains.ReSharper.Psi.Cpp.Overload.CppStandardConversionSequence.SourceType">
+            FromType - The type that this conversion is converting
+            from.
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Overload.CppUserDefinedConversionSequence">
+            CppUserDefinedConversionSequence - Represents a user-defined
+            conversion sequence (C++ 13.3.3.1.2).
+        </member>
+        <member name="P:JetBrains.ReSharper.Psi.Cpp.Overload.CppUserDefinedConversionSequence.InitialConversion">
+            \brief Represents the standard conversion that occurs before
+            the actual user-defined conversion.
+            
+            C++11 13.3.3.1.2p1:
+            If the user-defined conversion is specified by a constructor
+            (12.3.1), the initial standard conversion sequence converts
+            the source type to the type required by the argument of the
+            constructor. If the user-defined conversion is specified by
+            a conversion function (12.3.2), the initial standard
+            conversion sequence converts the source type to the implicit
+            object parameter of the conversion function.
+            NOTE: As an extension we can also store User-defined conversion if conversion sequence is 
+            created during direct-initialization.
+        </member>
+        <member name="P:JetBrains.ReSharper.Psi.Cpp.Overload.CppUserDefinedConversionSequence.FinalConversion">
+            After - Represents the standard conversion that occurs after
+            the actual user-defined conversion.
+        </member>
+        <member name="P:JetBrains.ReSharper.Psi.Cpp.Overload.CppUserDefinedConversionSequence.ConvertingFunction">
+            ConvertingFunction - The function that will perform the
+            user-defined conversion. Null if the conversion is an
+            aggregate initialization from an initializer list.
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Overload.CppAmbiguousConversionSequence">
+            Represents an ambiguous user-defined conversion sequence.
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Overload.CppBadConversionSequence">
+            CppBadConversionSequence - Records information about an invalid
+            conversion sequence.
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Overload.CppImplicitConversionKind">
+            CppImplicitConversionKind - The kind of implicit conversion used to
+            convert an argument to a parameter's type. The enumerator values
+            match with Table 9 of (C++ 13.3.3.1.1) and are listed such that
+            better conversion kinds have smaller values.
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Overload.CppOverloadingCandidate">
+            CppOverloadingCandidate - A single candidate in an overload set (C++ 13.3).
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Overload.CppOverloadingCandidate.FailureKind">
+            FailureKind - The reason why this candidate is not viable.
+            Actually an OverloadFailureKind.
+        </member>
+        <member name="P:JetBrains.ReSharper.Psi.Cpp.Overload.CppOverloadingCandidate.Conversions">
+            Conversions - The conversion sequences used to convert the
+            function arguments to the function parameters
+        </member>
+        <member name="P:JetBrains.ReSharper.Psi.Cpp.Overload.CppOverloadingCandidate.Viable">
+            Viable - True to indicate that this overload candidate is viable.
+        </member>
+        <member name="P:JetBrains.ReSharper.Psi.Cpp.Overload.CppOverloadingCandidate.ExplicitCallArguments">
+            \brief The number of call arguments that were explicitly provided,
+            to be used while performing partial ordering of function templates.
+        </member>
+        <member name="F:JetBrains.ReSharper.Psi.Cpp.Overload.CppConversionFunctionOverloadingCandidate.FinalConversion">
+            FinalConversion - For a conversion function (where Function is
+            a CXXConversionDecl), the standard conversion that occurs
+            after the call to the overload candidate to convert the result
+            of calling the conversion function to the required type.
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Overload.CppOverloadingCollectionBuilder.AddBuiltinOperatorCandidates(JetBrains.ReSharper.Psi.Cpp.CppSmallList{JetBrains.ReSharper.Psi.Cpp.Overload.CppOverloadingCandidate}@,JetBrains.ReSharper.Psi.Cpp.Symbols.CppOperatorKind,System.ReadOnlySpan{JetBrains.ReSharper.Psi.Cpp.Expressions.ICppExpression})">
+            AddBuiltinOperatorCandidates - Add the appropriate built-in
+            operator overloads to the candidate set (C++ [over.built]), based
+            on the operator @p Op and the arguments given. For example, if the
+            operator is a binary '+', this routine might add "int
+            operator+(int, int)" to cover integer addition.
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Overload.CppOverloadingCollectionBuilder.CppBuiltinCandidateTypeSet">
+            BuiltinCandidateTypeSet - A set of types that will be used for the
+            candidate operator functions for built-in operators (C++
+            [over.built]). The types are separated into pointer types and
+            enumeration types.
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Overload.CppOverloadingCollectionBuilder.CppBuiltinOperatorOverloadBuilder">
+            Helper class to manage the addition of builtin operator overload
+            candidates. It provides shared state and utility methods used throughout
+            the process, as well as a helper method to add each group of builtin
+            operator overloads from the standard to a candidate set.
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Presentation.CppPresenterUtil">
+            <summary>
+              Extensions for template arguments, parameters etc
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Resolve.CppGroupedVariableDeclaratorResolveEntity.Create(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppVariableDeclaratorResolveEntity,JetBrains.ReSharper.Psi.Cpp.Resolve.ICppVariableTemplateDeclaratorResolveEntity)">
+            checks and returns array or single
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Resolve.DropDecorationsVisitor.AddDependencyOnPrimaryTemplate(JetBrains.ReSharper.Psi.Cpp.Symbols.CppUndeterminedSpecializationResolveEntity)">
+            @returns \c null iff \p undeterminedSpecialization is not dependent on \c myPrimaryTemplate
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Resolve.DropDecorationsVisitor.AddDependencyOnPrimaryTemplate(JetBrains.ReSharper.Psi.Cpp.Symbols.CppDependentResolveEntity)">
+            @returns \c null iff \p depEnt is not dependent on \c myPrimaryTemplate
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Resolve.DropDecorationsVisitor.AddDependencyOnPrimaryTemplate(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppDependentTypeResolveEntity)">
+            @returns \c null iff \p resolveEntity is not dependent on \c myPrimaryTemplate
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Resolve.DropDecorationsVisitor.AddDependencyOnPrimaryTemplate(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppTypeTemplateResolveEntity)">
+            @returns \c null iff \p classTemplate is not dependent on \c myPrimaryTemplate
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Resolve.DropDecorationsVisitor.VisitTemplateArguments(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppTemplateArgument[])">
+            @returns \c null iff \p args is not dependent on \c myPrimaryTemplate
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:JetBrains.ReSharper.Psi.Cpp.Resolve.ICppDeductionGuide" -->
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Resolve.ICppFunctionTemplateLikeDeducibleResolveEntity.PickSpecializationInSFINAEContext(JetBrains.ReSharper.Psi.Cpp.Util.CppTypeContext@,JetBrains.ReSharper.Psi.Cpp.Symbols.CppSubstitutionContext,JetBrains.ReSharper.Psi.Cpp.Overload.ICppTemplateFunctionCallDeductionErrorConsumer,JetBrains.ReSharper.Psi.Cpp.Expressions.ICppResolvedExpression@)">
+            @returns \c null instead of declarator with type containing substitution failure
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Resolve.ICppGroupedFunctionDeclaratorResolveEntity.InstantiateFunctionBody(JetBrains.ReSharper.Psi.Cpp.Symbols.CppViewPos@,System.Boolean)">
+            @return \c true iff function has body visible from \p vp and \p forceChameleonInstantiation == \c true or
+            function really need body (functions with auto return type and constexpr functions)
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.UE4.CppUE4Util.IsUClass(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppClassSymbol)">
+            Returns \c true if symbol marked by \c UCLASS
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.UE4.CppUE4Util.IsUStruct(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppClassResolveEntity)">
+            Returns \c true if symbol marked by \c USTRUCT
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.UE4.CppUE4Util.IsUEnum(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppClassResolveEntity)">
+            Returns \c true if entity marked by \c UENUM
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.UE4.CppUE4Util.IsUInterface(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppClassResolveEntity)">
+            Returns \c true if entity marked by \c UINTERFACE
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.UE4.CppUE4Util.IsIInterface(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppClassResolveEntity)">
+            Returns \c true if entity is IInterface (which means that it is named correctly and follows specially named entity marked by \c UINTERFACE)
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.UE4.CppUE4Util.IsUFunction(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppDeclaratorResolveEntity)">
+            Returns \c true if entity marked by \c UFUNCTION
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.UE4.CppUE4Util.IsUFunction(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppFunctionDeclaratorResolveEntity)">
+            Returns \c true if entity marked by \c UFUNCTION
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.UE4.CppUE4Util.IsUFunction(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppDeclaratorSymbol)">
+            Returns \c true if symbol marked by \c UFUNCTION
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.UE4.CppUE4Util.IsUProperty(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppDeclaratorResolveEntity)">
+            Returns \c true if entity marked by \c UPROPERTY
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.UE4.CppUE4Util.IsUProperty(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppDeclaratorSymbol)">
+            Returns \c true if symbol marked by \c UPROPERTY
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.UE4.CppUE4Util.IsUClassMember(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppDeclaratorResolveEntity)">
+            Returns \c true if entity is declared inside class marked by \c UCLASS
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.UE4.CppUE4Util.IsActor(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppClassResolveEntity,JetBrains.ReSharper.Psi.Cpp.Symbols.CppViewPos@)">
+            Returns \c true if entity is related to some Actor class
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.UE4.CppUE4Util.IsComponent(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppClassResolveEntity,JetBrains.ReSharper.Psi.Cpp.Symbols.CppViewPos@)">
+            Returns \c true if entity is related to some Component class
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.UE4.CppUE4Util.IsRpcFunction(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppFunctionDeclaratorResolveEntity)">
+            <returns><c>true</c> if entity is an <c>UFUNCTION</c> with RPC specifiers (thus definition for this function and declaration of _Implementation method will be generated by UHT)</returns>
+            <remarks>Returns <c>true</c> also when entity is an <c>UFUNCTION</c> with <c>BlueprintNativeEvent</c> specifier!</remarks>
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.UE4.CppUE4Util.IsRpcFunctionWithValidation(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppFunctionDeclaratorResolveEntity)">
+            Returns \c true if entity is an \c UFUNCTION with RPC and \c WithValidation specifiers (thus declaration of _Validate method will be generated by UHT)
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.UE4.CppUE4Util.LooksLikeGeneratedRpcFunction(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppFunctionDeclaratorResolveEntity)">
+            <summary>
+            Returns <c>true</c> if entity is generated function (by UHT/R++) and it's naming resembles RPC function.
+            If you need to be sure that it is RPC function - use <see cref="M:JetBrains.ReSharper.Psi.Cpp.UE4.CppUE4Util.FindPrototypeOfRpcCandidate(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppFunctionDeclaratorResolveEntity,JetBrains.ReSharper.Psi.Cpp.UE4.RpcWrapperType@)"/> but it is more expensive.
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.UE4.CppUE4Util.IsBlueprintImplementableEventFunction(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppFunctionDeclaratorResolveEntity)">
+            Returns \c true if entity is an \c UFUNCTION with \c BlueprintImplementableEvent specifier (thus definition for this function will be generated by UHT)
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.UE4.CppUE4Util.IsBlueprintCallableFunction(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppFunctionDeclaratorResolveEntity)">
+            Returns \c true if entity is an \c UFUNCTION with \c BlueprintCallable specifier
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.UE4.CppUE4Util.CanContainUEMembers(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppClassResolveEntity)">
+            Returns \c true if entity is related to UCLASS, USTRUCT or IINTERFACE
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.UE4.CppUE4Util.CanBeFinal(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppClassResolveEntity)">
+            Returns \c true if making entity final won't break UnrealHeaderTool
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.UE4.CppUE4Util.FindPrototypeOfRpcCandidate(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppFunctionDeclaratorResolveEntity,JetBrains.ReSharper.Psi.Cpp.UE4.RpcWrapperType@)">
+            <summary>
+            Tries to find in class declaration of prototype function for specified RPC function
+            </summary>
+            <param name="rpcCandidate">target RPC function (for instance, <c>ServerSomething_Validate</c>)</param>
+            <param name="outCandidateType">if <c>rpcCandidate</c> is indeed RPC function then returns its type. Otherwise - <c>RpcWrapperType.None</c></param>
+            <returns><c>nullptr</c> if prototype function does not exist, otherwise - prototype <c>UFUNCTION</c> (for instance, <c>ServerSomething</c>)</returns>
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.UE4.CppUE4Util.FindGeneratedRpcFunction(JetBrains.ReSharper.Psi.Cpp.Resolve.CppGroupedFunctionDeclaratorResolveEntity,JetBrains.ReSharper.Psi.Cpp.UE4.RpcWrapperType)">
+            <summary>
+            Tries to find in class generated function for specified RPC <c>UFUNCTION</c>
+            </summary>
+            <param name="prototype">target RPC function</param>
+            <param name="targetType">generated function type to look for</param>
+            <returns><c>nullptr</c> if <c>prototype</c> <c>UFUNCTION</c> is invalid; valid resolve entity - otherwise</returns>
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.UE4.CppUE4Util.GetGeneratedRpcFunctionName(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppFunctionDeclaratorResolveEntity,JetBrains.ReSharper.Psi.Cpp.UE4.RpcWrapperType)">
+            Returns name of generated function for specified RPC \c UFUNCTION
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.UE4.CppUE4Util.GetRelatedUInterface(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppClassResolveEntity,JetBrains.ReSharper.Psi.Cpp.Types.ICppResolvedTypeFactory)">
+            <summary>
+            Tries to find UInterface related to IInterface
+            </summary>
+            <param name="cent">IInterface class resolve entity</param>
+            <param name="tf">Type factory</param>
+            <returns><c>nullptr</c> if UInterface does not exist, otherwise - UInterface resolve entity</returns>
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.UE4.CppUE4Util.TransformLinkageEntity(JetBrains.ReSharper.Psi.Cpp.Symbols.CppDeclaratorLinkageEntity,JetBrains.ReSharper.Psi.Cpp.Symbols.ICppFunctionDeclaratorResolveEntity,JetBrains.ReSharper.Psi.Cpp.UE4.RpcWrapperType,JetBrains.ReSharper.Psi.Cpp.UE4.RpcWrapperType,JetBrains.ReSharper.Psi.Cpp.Types.ICppResolvedTypeFactory)">
+            Creates new linkage entity for corresponding RPC function
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.UE4.CppUE4Util.DeletedUE4Ctor">
+            Schedules generation of RPC wrappers and Replication machinery if needed
+            Schedules generation of event executor wrappers if needed
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.UE4.UnrealPrefixes">
+            <summary>
+            Provides set of functions for different class prefixes used by Unreal Engine
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Tree.PragmaParameterReference">
+            <summary>
+            Reference from #pragma directive to a Cpp symbol. In some dialects like Unity HLSL we have pragmas which references to render function (i.e. '#pragma vertext vert' specifies 'vert' function as a vertex shader). 
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:JetBrains.ReSharper.Psi.Cpp.Tree.TemplateDeclaration.TemplateKeyword" -->
+        <member name="P:JetBrains.ReSharper.Psi.Cpp.Tree.TryStatement.TryKeyword">
+            Could be `try`, `_try` or `__try`
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.CppElementFactory.CreateNamespaceAliasDefinition(System.String,System.String)">
+            namespace aliasName = namespaceName;
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Types.CppTypesUtil.GetReferenceRelation(JetBrains.ReSharper.Psi.Cpp.Types.CppQualType,JetBrains.ReSharper.Psi.Cpp.Types.CppQualType,JetBrains.ReSharper.Psi.Cpp.Util.CppTypeContext@,System.Boolean@)">
+            CompareReferenceRelationship - Compare the two types T1 and T2 to
+            determine whether they are reference-related,
+            reference-compatible, reference-compatible with added
+            qualification, or incompatible, for use in C++ initialization by
+            reference (C++ [dcl.ref.init]p4). Neither type can be a reference
+            type, and the first type (T1) is the pointee type of the reference
+            type being initialized.
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Types.CppTypesUtil.NormalizeFunctionTypeForOverride(JetBrains.ReSharper.Psi.Cpp.Types.CppQualType,JetBrains.ReSharper.Psi.Cpp.Types.ICppResolvedTypeFactory)">
+            <summary>
+              Normalizes and discards calling convention
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Psi.Cpp.Types.CppReferenceRelation">
+            CppReferenceRelation - Expresses the result of comparing two
+            types (cv1 T1 and cv2 T2) to determine their compatibility for the
+            purposes of initialization by reference (C++ [dcl.init.ref]p4).
+        </member>
+        <member name="F:JetBrains.ReSharper.Psi.Cpp.Types.CppReferenceRelation.Incompatible">
+            Incompatible - The two types are incompatible, so direct
+            reference binding is not possible.
+        </member>
+        <member name="F:JetBrains.ReSharper.Psi.Cpp.Types.CppReferenceRelation.Related">
+            Related - The two types are reference-related, which means
+            that their unqualified forms (T1 and T2) are either the same
+            or T1 is a base class of T2.
+        </member>
+        <member name="F:JetBrains.ReSharper.Psi.Cpp.Types.CppReferenceRelation.CompatibleWithAddedQualification">
+            CompatibleWithAddedQualification - The two types are
+            reference-compatible with added qualification, meaning that
+            they are reference-compatible and the qualifiers on T1 (cv1)
+            are greater than the qualifiers on T2 (cv2).
+        </member>
+        <member name="F:JetBrains.ReSharper.Psi.Cpp.Types.CppReferenceRelation.Compatible">
+            Compatible - The two types are reference-compatible and
+            have equivalent qualifiers (cv1 == cv2).
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Types.ICppResolveCache.TryGetCachedType(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppRawDeclaratorResolveEntity)">
+            @return CppQualType::NullType() if there is no cached type for @p key
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.Types.CppMemberLayoutUtil.GetOffsetOfMember(JetBrains.ReSharper.Psi.Cpp.Symbols.ICppClassResolveEntity,JetBrains.ReSharper.Psi.Cpp.Symbols.ICppDeclaratorResolveEntity,JetBrains.ReSharper.Psi.Cpp.Util.CppTypeContext@)">
+            <summary>
+            Calculates offset of member relative to some class. Works fine with base classes and anonymous nested types.
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Psi.Cpp.CppSmallEnumerable`1.GetRaw">
+            Implementation detail
+        </member>
+        <member name="T:JetBrains.ReSharper.Cpp.Util.CppExceptionWrapper">
+            <summary>
+            Allows storing and rethrowing exceptions while preserving original stack trace.
+            </summary>
+        </member>
+    </members>
+</doc>

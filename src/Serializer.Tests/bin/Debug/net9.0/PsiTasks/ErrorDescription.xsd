@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" id="XMLSchema1">
+
+    <xs:element name="Errors" type="Errors"/>
+
+    <xs:complexType name="Errors">
+        <xs:sequence>
+            <xs:element name="Usings" type="xs:string"/>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="SeverityConfiguration" type="SeverityConfiguration" maxOccurs="1"/>
+                <xs:element name="PointerConfiguration" type="PointerConfiguration" minOccurs="0" maxOccurs="1" />
+
+                <xs:element name="Error" type="Highlighting"/>
+                <xs:element name="Warning" type="Highlighting"/>
+                <xs:element name="Info" type="Highlighting"/>
+                <xs:element name="LocalAndGlobal" type="Highlighting"/>
+
+                <xs:element name="Error.QuickFixes"/>
+                <xs:element name="Warning.QuickFixes"/>
+                <xs:element name="Info.QuickFixes"/>
+                <xs:element name="LocalAndGlobal.QuickFixes"/>
+            </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="baseClass"/>
+        <xs:attribute name="baseInterfaces"/>
+        <xs:attribute name="usings"/>
+        <xs:attribute name="language" type="Language"/>
+        <xs:attribute name="implementationLanguage" type="EscapedLanguage"/>
+        <xs:attribute name="configurableSeverityImplementationLanguage" type="EscapedLanguage"/>
+        <xs:attribute name="allHighlightingsStorage" type="xs:string"/>
+        <xs:attribute name="nullable" type="NullableMode" />
+        <xs:attribute name="defaultResourceType" type="xs:string" />
+        <xs:attribute name="defaultHighlightingLanguageTypeExpression" type="xs:string" />
+        <xs:attribute name="forkTranslationForAllHighlightings" type="xs:boolean" />
+    </xs:complexType>
+
+    <xs:complexType name="SeverityConfiguration">
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="Group">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" name="Tag">
+                            <xs:complexType>
+                                <xs:all>
+                                    <xs:element name="Title" minOccurs="1" maxOccurs="1">
+                                        <xs:complexType mixed="true">
+                                            <xs:attribute name="resourceName"/>
+                                            <xs:attribute name="resourceType"/>
+                                        </xs:complexType>
+                                    </xs:element>
+                                    <xs:element name="CompoundItemName" minOccurs="0" maxOccurs="1">
+                                        <xs:complexType mixed="true">
+                                            <xs:attribute name="resourceName"/>
+                                            <xs:attribute name="resourceType"/>
+                                        </xs:complexType>
+                                    </xs:element>
+                                    <xs:element name="Description" minOccurs="1" maxOccurs="1">
+                                        <xs:complexType mixed="true">
+                                            <xs:attribute name="resourceName"/>
+                                            <xs:attribute name="resourceType"/>
+                                        </xs:complexType>
+                                    </xs:element>
+                                    <xs:element name="Setting" type="HighlightingSetting" minOccurs="0" maxOccurs="1"/>
+                                    <xs:element name="Settings" type="HighlightingSettings" minOccurs="0" maxOccurs="1" />
+                                </xs:all>
+                                <xs:attribute name="name" type="xs:string"/>
+                                <xs:attribute name="externalName"/>
+                                <xs:attribute name="alternatives" type="xs:string"/>
+                                <xs:attribute name="analyzerId" type="xs:strings"/>
+                                <xs:attribute name="default" type="Severity"/>
+                                <xs:attribute name="localDefault" type="Severity"/>
+                                <xs:attribute name="globalDefault" type="Severity"/>
+                                <xs:attribute name="type" type="SeverityType"/>
+                                <xs:attribute name="usesSolutionAnalysisWhenAvailable" type="xs:boolean"/>
+                                <xs:attribute name="internal" type="xs:boolean"/>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                    <xs:attribute name="name" type="xs:string" use="required"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+  
+    <xs:complexType name="PointerConfiguration">
+      <xs:sequence>
+        <xs:choice>
+          <xs:element name="DeclaredElements" type="xs:string" minOccurs="0" maxOccurs="1" />
+          <xs:element name="Custom" type="CustomPointer" minOccurs="0" maxOccurs="unbounded" />
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="Language">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="C#"/>
+            <xs:enumeration value="F#"/>
+            <xs:enumeration value="VB"/>
+            <xs:enumeration value="JAVA_SCRIPT"/>
+            <xs:enumeration value="TYPE_SCRIPT"/>
+            <xs:enumeration value="C++"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="EscapedLanguage">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="CSHARP"/>
+            <xs:enumeration value="FSHARP"/>
+            <xs:enumeration value="VBASIC"/>
+            <xs:enumeration value="CSHARP,VBASIC"/>
+            <xs:enumeration value="JAVA_SCRIPT"/>
+            <xs:enumeration value="TYPE_SCRIPT"/>
+            <xs:enumeration value="CPP"/>
+            <xs:enumeration value="CSS"/>
+            <xs:enumeration value="Protobuf"/>
+            <xs:enumeration value="RESX"/>
+            <xs:enumeration value="XAML"/>
+            <xs:enumeration value="ASPX"/>
+            <xs:enumeration value="REGULAR_EXPRESSION"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="NullableMode">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="enable"/>
+            <xs:enumeration value="disable"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="Highlighting">
+        <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="Parameter" type="Parameter"/>
+                <xs:element name="Severity" type="SeverityTag"/>
+                <xs:element name="Range" maxOccurs="1">
+                    <xs:complexType mixed="true">
+                        <xs:choice minOccurs="0" maxOccurs="unbounded">
+                            <xs:element name="CustomBuilder" minOccurs="1" maxOccurs="1" type="CustomBuilder"/>
+                        </xs:choice>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="SecondaryRange" maxOccurs="1" type="SecondaryRangeOptions" />
+                <xs:element name="SecondaryRanges" maxOccurs="1" type="SecondaryRangeOptions" />
+                <xs:element name="CustomDisableRange" maxOccurs="1"/>
+                <xs:element name="TreeRange" maxOccurs="1"/>
+                <xs:element name="Message" minOccurs="0" maxOccurs="1" type="Message"/>
+                <xs:element name="RichMessage" minOccurs="0" maxOccurs="1" type="RichMessage"/>
+                <xs:element name="CustomCode" maxOccurs="1"/>
+                <xs:element name="NavigationOffset" maxOccurs="1"/>
+                <xs:element name="Behavour" maxOccurs="1" type="Behavior"/>
+                <xs:element name="Behaviour" maxOccurs="1" type="Behavior"/>
+                <xs:element name="IsValid" maxOccurs="1" type="IsValid"/>
+                <xs:element name="QuickFix" type="QuickFix"/>
+                <xs:element name="CodeStyleRule" type="xs:string"/>
+                <xs:element name="Description">
+                    <xs:complexType mixed="true">
+                        <xs:attribute name="resourceName"/>
+                        <xs:attribute name="resourceType"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="name" use="required"/>
+        <xs:attribute name="ID"/>
+        <xs:attribute name="analyzerId" type="xs:string" />
+        <xs:attribute name="MSVCCode"/>
+        <xs:attribute name="language"/>
+        <xs:attribute name="configurableSeverity"/>
+        <xs:attribute name="isSuppressedInTests" type="xs:boolean"/>
+        <xs:attribute name="forkTranslation" type="xs:boolean" />
+        <xs:attribute name="supportsPointer" type="SupportsPointer" />
+        <xs:attribute name="externalConfigurableSeverity"/>
+        <xs:attribute name="staticGroup"/>
+        <xs:attribute name="compilerGroup"/>
+        <xs:attribute name="baseClass"/>
+        <xs:attribute name="baseInterfaces"/>
+        <xs:attribute name="isSealed" type="xs:boolean"/>
+        <xs:attribute name="includeStatistics" type="xs:boolean"/>
+        <xs:attribute name="defaultSeverity" type="Severity" />
+    </xs:complexType>
+
+    <xs:complexType name="QuickFix">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="arguments"/>
+                <xs:attribute name="Parameters"/>
+                <xs:attribute name="cleanupTasks"/>
+                <xs:attribute name="enforceCleanup"/>
+                <xs:attribute name="cleanupPreprocess" type="xs:boolean"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="Parameter">
+        <xs:attribute name="type" use="required"/>
+        <xs:attribute name="name" use="required"/>
+        <xs:attribute name="isValid" type="ParameterIsValid"/>
+        <xs:attribute name="isStruct" type="xs:boolean"/>
+        <xs:attribute name="isCollection" type="xs:boolean"/>
+        <xs:attribute name="defaultValue" type="xs:string"/>
+        <xs:attribute name="forkTranslation" type="ParameterForkTranslation"/>
+        <xs:attribute name="pointer" type="ParameterPointer"/>
+    </xs:complexType>
+
+    <xs:complexType name="SecondaryRangeOptions" mixed="true">
+        <xs:attribute name="attributeID" type="AttributeId" />
+    </xs:complexType>
+
+    <xs:complexType name="HighlightingSetting">
+        <xs:sequence maxOccurs="1" minOccurs="1">
+            <xs:element name="Title" minOccurs="1" maxOccurs="1">
+                <xs:complexType mixed="true">
+                    <xs:attribute name="resourceName"/>
+                    <xs:attribute name="resourceType"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="Description" minOccurs="1" maxOccurs="1">
+                <xs:complexType mixed="true">
+                    <xs:attribute name="resourceName"/>
+                    <xs:attribute name="resourceType"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="name" use="required" type="xs:string"/>
+        <xs:attribute name="type" type="SettingType" use="required"/>
+        <xs:attribute name="defaultValue" type="xs:string" use="required"/>
+        <xs:attribute name="highlightingPrefix" type="xs:string" use="optional"/>
+    </xs:complexType>
+
+    <xs:complexType name="HighlightingSettings">
+        <xs:sequence minOccurs="2" maxOccurs="unbounded">
+            <xs:element name="Setting" type="HighlightingSetting"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="SettingType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="bool"/>
+      <xs:enumeration value="severity"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+    <xs:simpleType name="ParameterIsValid">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="skip"/>
+            <xs:enumeration value="struct"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ParameterForkTranslation">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="skip"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SupportsPointer">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="true"/>
+        <xs:enumeration value="false"/>
+        <xs:enumeration value="dummy"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ParameterPointer">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="skip"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="Message">
+        <xs:simpleContent>
+            <xs:sequence>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element name="Argument" type="PlainArgument"/>
+                    <xs:element name="PreCreate" maxOccurs="1"/>
+                    <xs:element name="CustomBuilder" minOccurs="1" maxOccurs="1" type="CustomBuilder"/>
+                </xs:choice>
+            </xs:sequence>
+            <xs:attribute name="value"/>
+            <xs:attribute name="resourceName"/>
+            <xs:attribute name="resourceType"/>
+            <xs:attribute name="languageTypeExpression"/>
+            <xs:attribute name="isPartial" type="xs:boolean"/>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="RichMessage">
+        <xs:simpleContent>
+            <xs:sequence>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element name="Argument" type="RichArgument" />
+                    <xs:element name="PreCreate" maxOccurs="1"/>
+                    <xs:element name="CustomBuilder" minOccurs="1" maxOccurs="1" type="CustomBuilder"/>
+                </xs:choice>
+            </xs:sequence>
+            <xs:attribute name="value"/>
+            <xs:attribute name="resourceName"/>
+            <xs:attribute name="resourceType"/>
+            <xs:attribute name="languageTypeExpression"/>
+            <xs:attribute name="isPartial" type="xs:boolean"/>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="PlainArgument">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="capitalize" type="xs:boolean"/>
+                <xs:attribute name="aggregate" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="RichArgument">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="kind" type="RichArgumentKind"/>
+                <xs:attribute name="presenter" type="RichTypePresenter"/>
+                <xs:attribute name="type" type="TypeArgumentKind"/>
+                <xs:attribute name="capitalize" type="xs:boolean"/>
+                <xs:attribute name="aggregate" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="CustomBuilder">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="isPartial" type="xs:boolean"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="RichTypePresenter">
+        <xs:union memberTypes="RichTypePresenterSuggestions RichTypePresenterAnyString"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="RichTypePresenterSuggestions">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="DeclaredElementPresenter.NAME_PRESENTER" />
+            <xs:enumeration value="DeclaredElementPresenter.KIND_PRESENTER" />
+            <xs:enumeration value="DeclaredElementPresenter.QUALIFIED_NAME_PRESENTER" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="RichTypePresenterAnyString">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="TypeArgumentKind">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="short"/>
+            <xs:enumeration value="long"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="RichArgumentKind">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Keyword"/>
+            <xs:enumeration value="Namespace"/>
+            <xs:enumeration value="Type"/>
+            <xs:enumeration value="TypeUnresolved"/>
+            <xs:enumeration value="Path"/>
+            <xs:enumeration value="Method"/>
+            <xs:enumeration value="LocalFunction"/>
+            <xs:enumeration value="Field"/>
+            <xs:enumeration value="Property"/>
+            <xs:enumeration value="Event"/>
+            <xs:enumeration value="Constructor"/>
+            <xs:enumeration value="String"/>
+            <xs:enumeration value="Number"/>
+            <xs:enumeration value="Comment"/>
+            <xs:enumeration value="TupleComponent"/>
+            <xs:enumeration value="Attribute"/>
+            <xs:enumeration value="SignOperator"/>
+            <xs:enumeration value="Parameter"/>
+            <xs:enumeration value="LocalVariable"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="string">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="resourceName"/>
+                <xs:attribute name="resourceType"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="Behavior">
+        <xs:attribute name="attributeID" type="AttributeId"/>
+        <xs:attribute name="qualifiedAttributeID" type="QualifiedAttributeId"/>
+        <xs:attribute name="overlapResolvePolicy" type="OverlapResolvePriority"/>
+    </xs:complexType>
+
+    <xs:complexType name="IsValid">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="isPartial" type="xs:boolean"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="SeverityConfig">
+        <xs:sequence>
+            <xs:element name="Group" type="SeverityGroup"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="SeverityGroup">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="Tag" type="SeverityTag"/>
+        </xs:sequence>
+        <xs:attribute name="name"/>
+    </xs:complexType>
+
+    <xs:complexType name="SeverityTag">
+        <xs:all maxOccurs="1" minOccurs="1">
+            <xs:element name="Title" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="CompoundItemName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="Description" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="Setting" type="HighlightingSetting" minOccurs="0" maxOccurs="1" />
+            <xs:element name="Settings" type="HighlightingSettings" minOccurs="0" maxOccurs="1" />
+        </xs:all>
+        <xs:attribute name="name"/>
+        <xs:attribute name="externalName"/>
+        <xs:attribute name="alternatives"/>
+        <xs:attribute name="analyzerId"/>
+        <xs:attribute name="type" type="SeverityType"/>
+        <xs:attribute name="usesSolutionAnalysisWhenAvailable" type="xs:boolean"/>
+        <xs:attribute name="internal" type="xs:boolean"/>
+        <xs:attribute name="default" type="Severity" use="required"/>
+    </xs:complexType>
+
+    <xs:simpleType name="Severity">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ERROR"/>
+            <xs:enumeration value="WARNING"/>
+            <xs:enumeration value="SUGGESTION"/>
+            <xs:enumeration value="HINT"/>
+            <xs:enumeration value="DO_NOT_SHOW"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="AttributeId">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="HINT"/>
+            <xs:enumeration value="WARNING"/>
+            <xs:enumeration value="DEADCODE"/>
+            <xs:enumeration value="SUGGESTION"/>
+            <xs:enumeration value="ERROR"/>
+            <xs:enumeration value="UNRESOLVED_ERROR"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="QualifiedAttributeId">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="CSharpHighlightingAttributeIds.OVERFLOW_CHECKED_OPERATION"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="OverlapResolvePriority">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="DEADCODE"/>
+            <xs:enumeration value="DEADCODE,10"/>
+            <xs:enumeration value="DEADCODE,-10"/>
+            <xs:enumeration value="WARNING"/>
+            <xs:enumeration value="WARNING,1"/>
+            <xs:enumeration value="WARNING,10"/>
+            <xs:enumeration value="WARNING,15"/>
+            <xs:enumeration value="WARNING,20"/>
+            <xs:enumeration value="WARNING,-5"/>
+            <xs:enumeration value="WARNING,-10"/>
+            <xs:enumeration value="ERROR"/>
+            <xs:enumeration value="ERROR,1"/>
+            <xs:enumeration value="ERROR,2"/>
+            <xs:enumeration value="ERROR,5"/>
+            <xs:enumeration value="ERROR,7"/>
+            <xs:enumeration value="ERROR,10"/>
+            <xs:enumeration value="ERROR,11"/>
+            <xs:enumeration value="ERROR,20"/>
+            <xs:enumeration value="ERROR,30"/>
+            <xs:enumeration value="ERROR,40"/>
+            <xs:enumeration value="ERROR,-5"/>
+            <xs:enumeration value="ERROR,-10"/>
+            <xs:enumeration value="UNRESOLVED_ERROR"/>
+            <xs:enumeration value="UNRESOLVED_ERROR,10"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SeverityType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="localAndGlobal"/>
+            <xs:enumeration value="global"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="CustomPointer">
+      <xs:attribute name="type" type="xs:string" use="required" />
+      <xs:attribute name="pointerType" type="xs:string" use="required" />
+      <xs:attribute name="create" type="xs:string" />
+      <xs:attribute name="find" type="xs:string" />
+    </xs:complexType>
+</xs:schema>
